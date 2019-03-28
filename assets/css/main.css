@@ -2930,18 +2930,18 @@ input, select, textarea {
 /* Touch */
 
 	body.is-touch .image.thumb:before {
-		opacity: 0.5 !important;
+		opacity: 0 !important;
 	}
 
 	body.is-touch .image.thumb:after {
 		display: none !important;
 	}
 	
-	body.is-touch .image2.thumb:before {
-		opacity: 0.5 !important;
+	body.is-touch .image.thumb:before {
+		opacity: 0 !important;
 	}
 
-	body.is-touch .image2.thumb:after {
+	body.is-touch .image.thumb:after {
 		display: none !important;
 	}
 
