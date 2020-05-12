@@ -1,0 +1,54 @@
+{
+	"pages": {
+		"prospect-dashboard": "pages/prospectDashboard.txt",
+		"customer-data": "pages/customerData.txt",
+		"process-tracking": "pages/processTracking.txt",
+		"dashboard": "pages/dashboard.txt",
+		"profile-contacts": "pages/profileContacts.txt",
+		"notifications": "pages/notifications.txt",
+		"notification-details": "pages/notificationDetails.txt",
+		"article-detail": "pages/articleDetail.txt",
+		"login-biometric": "pages/loginBiometric.txt",
+		"biometric-setup": "pages/biometricSetup.txt",
+		"security": "pages/security.txt",
+		"profile-section": "pages/profileSection.txt"
+	},
+	"components": {
+		"jova-game-banner": "components/jovaGameBanner.txt",
+		"countdown": "components/countdown.txt",
+		"process-trackline": "components/processTrackline.txt",
+		"process-container": "components/processContainer.txt",
+		"invoice-card": "components/invoiceCard.txt"
+	},
+	"modals": {
+		"jova-game": "modals/jovaGame.txt",
+		"blocking-email": "modals/blocking-email.txt",
+		"_30-special": "modals/_30Special.txt",
+		"custom-blocking-modal": "modals/customBlockingModal.txt",
+		"star-modal": "modals/starModal.txt",
+		"comment-modal": "modals/commentModal.txt",
+		"popupPermission": "modals/popupPermission.txt",
+		"payment-modals": {
+			"choose": "modals/payment/choose.txt",
+			"info": "modals/payment/info.txt",
+			"outcome": "modals/payment/outcome.txt"
+		},
+		"customizable": {
+			"disservice-modal": "modals/disserviceModal.txt",
+			"new-functionality-modal": "modals/newFunctionalityModal.txt"
+		},
+		"iene": "modals/iene.txt",
+		"generic-outcome": "modals/genericOutcome.txt",
+		"share": "modals/share.txt",
+		"biometric-activation": "modals/biometricActivation.txt",
+		"add-client-code": "modals/addClientCode.txt",
+		"profile": {
+			"password_edit": "modals/profile/passwordEdit.txt",
+			"contacts_edit": "modals/profile/contactsEdit.txt"
+		}
+
+	},
+	"providers": {
+		"popup-handler": "providers/popupHandler.txt"
+	}
+}
