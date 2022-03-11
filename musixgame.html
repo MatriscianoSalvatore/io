@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Salvatore Matrisciano</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="apple-touch-icon" sizes="180x180" href="images/icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
+		<link rel="manifest" href="resources/site.webmanifest">
+		<link rel="mask-icon" href="resources/safari-pinned-tab.svg" color="#000000">
+		<link rel="shortcut icon" href="images/icon.ico">
+		<meta name="apple-mobile-web-app-title" content="Salvatore Matrisciano">
+		<meta name="application-name" content="Salvatore Matrisciano">
+		<meta name="msapplication-TileColor" content="#2b5797">
+		<meta name="msapplication-config" content="resources/browserconfig.xml">
+		<meta name="theme-color" content="#0099ca">
+		<meta name="keywords" content="Salvatore Matrisciano" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="https://salvatorematrisciano.com" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+				<h1><strong>Salvatore Matrisciano</strong></h1>
+				<h1>Mobile Developer at <a href="http://www.deloitte.com">Deloitte</a>,</h1>
+				<h1>Computer Engineering Student at</h1>
+				<h1><a href="https://corsi.unibo.it/laurea/IngegneriaInformatica">Alma Mater Studiorum - Università di Bologna</a></h1>
+
+				<p>
+						<ul class="icons">
+							<li><a href="https://www.facebook.com/matrisciano.s" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://instagram.com/salvatore.matrisciano" class="icon fa-instagram"> <span class="label">Instagram</span></a></li>
+							<li><a href="https://twitter.com/matrisciano_s" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://github.com/matriscianosalvatore" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/salvatore-matrisciano"class="icon fa-linkedin"> <span class="label">Linkedin</span></a></li>
+							<li><a href="mailto:s.matrisciano@mail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+							<li><a href="Salvatore Matrisciano cv.pdf" class="icon fa-file-text-o"><span class="label">CV</span></a></li>
+						</ul>
+				</p>
+
+						&copy; Salvatore Matrisciano
+
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>Musixgame - Android app</h2>
+						</header>
+
+						<p>Musixgame is an Andorid music quiz game app. <br>
+						The app is written in <a href="https://kotlinlang.org/">Kotlin</a> with <a href="https://developer.android.com/jetpack/compose">Jetpack Compose</a>, using <a href="https://insert-koin.io/">Koin</a> and <a href="https://square.github.io/retrofit/">Retrofit2</a>, with a <a href="https://it.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel">Model View ViewModel Architecture</a>.<br>
+						For the development I used Android Studio, Git, Github, Firebase, <a href="https://firebase.google.com/products/auth">Firebase Authentication</a> (Facebook, Google and Email) and <a href="https://firebase.google.com/products/firestore">Cloud Firestore database</a>.<br>
+						Apk at <a href="https://keikenofficial.github.io/keiken-web">https://keikenofficial.github.io/keiken-web</a>.<br>
+						Code at <a href="https://github.com/MatriscianoSalvatore/musixgame">https://github.com/MatriscianoSalvatore/musixgame</a>.<br><br>
+
+						In the app there are 2 different games.<br><br>
+
+						The first one is “Guess the Word”.<br>
+						You can choose a song you like entering the title and the artist in a form, and then you’ll see a part of the lyrics of the song, with an obfuscated word chosen randomly.
+						If you guess the missing word you’ll gain 5 points, otherwise you’ll lose 1.<br><br>
+
+						The second game is “Who sings?”.<br>
+						You’ll be presented consecutively 3 lines of 3 different songs (chosen between the 60 top songs in Italy) and you’ll have to chose the artist that sings that line of song, choosing from a list of 3 different artists.
+						If you pick the correct artist before the 10 seconds countdown runs out you’ll gain 5 points, otherwise you’ll lose 1.<br><br>
+
+						In the leaderboard screen you can see the list of all the users ordered by score and in the profile screen you can see your name, email and score and you can logout.<br><br>
+
+						For the song's lyrics and all the music data I used <a href="https://developer.musixmatch.com/documentation">Musixmatch API</a>.<br>
+						For the first game I used <a href="https://developer.musixmatch.com/documentation/api-reference/track-get">track.get</a> api to get the track id of the song chosen by the user, and <a href="https://developer.musixmatch.com/documentation/api-reference/track-lyrics-get">track.lyrics.get</a> to get the lyrics.<br>
+						For the second game I used <a href="https://developer.musixmatch.com/documentation/api-reference/track-chart-get">chart.tracks.get</a> to get the top songs in Italy (track ids and artists) and <a href="https://developer.musixmatch.com/documentation/api-reference/track-snippet-get">track.snippet.get</a> to get the lyrics’lines.<br><br>
+
+
+						<i>February 2022</i>.</p>
+
+						<div align="center">
+						<img src="images/musixgame/01.jpeg" class = "image fit thumb" style="max-width: 360px; display: inline">
+						<img src="images/musixgame/02.jpeg" class = "image fit thumb" style="max-width: 360px; display: inline">
+						<img src="images/musixgame/03.jpeg" class = "image fit thumb" style="max-width: 360px; display: inline">
+						<img src="images/musixgame/04.jpeg" class = "image fit thumb" style="max-width: 360px; display: inline">
+						<img src="images/musixgame/05.jpeg" class = "image fit thumb" style="max-width: 360px; display: inline">
+						<img src="images/musixgame/06.jpeg" class = "image fit thumb" style="max-width: 360px; display: inline">
+						<img src="images/musixgame/07.jpeg" class = "image fit thumb" style="max-width: 360px; display: inline">
+						<img src="images/musixgame/08.jpeg" class = "image fit thumb" style="max-width: 360px; display: inline">
+						<img src="images/musixgame/09.jpeg" class = "image fit thumb" style="max-width: 360px; display: inline">
+						<img src="images/musixgame/10.jpeg" class = "image fit thumb" style="max-width: 360px; display: inline">
+						<img src="images/musixgame/11.jpeg" class = "image fit thumb" style="max-width: 360px; display: inline">
+						<img src="images/musixgame/12.jpeg" class = "image fit thumb" style="max-width: 360px; display: inline">
+
+
+						<br>
+						</div>
+
+					</section>
+
+				<!-- Three -->
+					<section id="three">
+
+						<div class="col-4 col-12-small">
+							<ul class="labeled-icons">
+								<li>
+									<h3 class="icon fa-home"><span class="label">Address</span></h3>
+									<a href="https://www.google.com/maps?q=bologna&um=1&ie=UTF-8&sa=X&ved=0ahUKEwi15IThyaXhAhUIDuwKHZazBuYQ_AUIDigB">Bologna, Italy</a>
+								</li>
+								<li>
+									<h3 class="icon fa-mobile"><span class="label">Phone</span></h3>
+									<a href="tel:+393405319167">+39 340 53 19 167</a>
+								</li>
+								<li>
+									<h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
+									<a href="mailto:s.matrisciano@mail.com">s.matrisciano@mail.com</a>
+								</li>
+							</ul>
+						</div>
+					</section>
+
+				<!-- Four -->
+
+		</div>
+
+		<!-- Footer -->
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
