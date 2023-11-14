@@ -203,11 +203,12 @@
 						<p></p>
 						<div class="row">
 							<div class="col-8 col-12-small">
-								<form method="post" action="mailto:s.matrisciano@mail.com">
+								<form action="mailto:s.matrisciano@mail.com" method="get" enctype="text/plain">
 									<div class="row gtr-uniform gtr-50">
 										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
 										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
+                    <div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
+										<div class="col-12"><textarea name="body" id="body" placeholder="Message" rows="4"></textarea></div>
 									</div>
 
 									<p>
