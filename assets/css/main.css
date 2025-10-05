@@ -2981,18 +2981,19 @@ input, select, textarea {
 				width: 30%;
 			}
 
-				#header h1 {
-					font-size: 1.25em;
-				}
+				#header h2, #header h3, #header h4, #header h5, #header h6 {
+			color: rgba(255, 255, 255, 0.7);
+			font-size: 1.35em;
+			line-height: 1.8em;
+			margin: 0;
+		}
 
-					#header h1 br {
-						display: none;
-					}
-
-				#header > .inner {
-					margin-bottom: 0;
-				}
-
+		#header h1 {
+			color: rgba(255, 255, 255, 0.88);
+			font-size: 1.7em;
+			line-height: 1.9em;
+			margin: 0;
+		}
 		/* Footer */
 
 			#footer .copyright li {
@@ -3045,13 +3046,19 @@ input, select, textarea {
 				display: block;
 			}
 
-				#header h1 {
-					font-size: 1.75em;
-				}
+				#header h2, #header h3, #header h4, #header h5, #header h6 {
+			color: rgba(255, 255, 255, 0.7);
+			font-size: 1.35em;
+			line-height: 1.8em;
+			margin: 0;
+		}
 
-					#header h1 br {
-						display: block;
-					}
+		#header h1 {
+			color: rgba(255, 255, 255, 0.88);
+			font-size: 1.7em;
+			line-height: 1.9em;
+			margin: 0;
+		}
 
 		/* Footer */
 
@@ -3140,9 +3147,19 @@ input, select, textarea {
 				padding: 2.25em 1.5em;
 			}
 
-				#header h1 {
-					font-size: 1.35em;
-				}
+			#header h2, #header h3, #header h4, #header h5, #header h6 {
+			color: rgba(255, 255, 255, 0.7);
+			font-size: 1.35em;
+			line-height: 1.8em;
+			margin: 0;
+		}
+
+		#header h1 {
+			color: rgba(255, 255, 255, 0.88);
+			font-size: 1.7em;
+			line-height: 1.9em;
+			margin: 0;
+		}
 
 		/* Footer */
 
@@ -3184,9 +3201,19 @@ input, select, textarea {
 				padding: 4.5em 1.5em;
 			}
 
-				#header h1 br {
-					display: none;
-				}
+				#header h2, #header h3, #header h4, #header h5, #header h6 {
+			color: rgba(255, 255, 255, 0.7);
+			font-size: 1.35em;
+			line-height: 1.8em;
+			margin: 0;
+		}
+
+		#header h1 {
+			color: rgba(255, 255, 255, 0.88);
+			font-size: 1.7em;
+			line-height: 1.9em;
+			margin: 0;
+		}
 
 		/* Footer */
 
