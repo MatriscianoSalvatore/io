@@ -2052,7 +2052,7 @@ input, select, textarea {
 				-ms-transition: opacity 0.2s ease-in-out;
 				transition: opacity 0.2s ease-in-out;
 				border-radius: 0.35em;
-				border: solid 3px rgba(255, 255, 255, 0.5);
+				border: solid 3px rgba(255, 255, 255, 0.7);
 				color: #fff;
 				content: 'View';
 				display: inline-block;
@@ -2574,11 +2574,11 @@ input, select, textarea {
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll,								scroll;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
-		background-position: top left,							top left;
-		background-repeat: repeat,								no-repeat;
-		background-size: auto,								150%;
-		color: rgba(255, 255, 255, 0.5);
+		background-image: linear-gradient(rgba(0,0,0,0.072), rgba(0, 0, 0, 0.072)),url("images/overlay.png"), url("../../images/bg.jpg");
+		background-position: top left, top left, top left;
+		background-repeat: repeat, repeat, no-repeat;
+		background-size: auto, auto, 150%;
+		color: rgba(255, 255, 255, 0.7);
 		height: 100%;
 		left: 0;
 		padding: 8em 4em;
@@ -2605,17 +2605,20 @@ input, select, textarea {
 		}
 
 		#header strong, #header b {
-			color: #ffffff;
+			color: rgba(255, 255, 255, 0.88);
 		}
 
 		#header h2, #header h3, #header h4, #header h5, #header h6 {
-			color: #ffffff;
+			color: rgba(255, 255, 255, 0.7);
+			font-size: 1.35em;
+			line-height: 1.8em;
+			margin: 0;
 		}
 
 		#header h1 {
-			color: rgba(255, 255, 255, 0.5);
-			font-size: 1.35em;
-			line-height: 1.75em;
+			color: rgba(255, 255, 255, 0.88);
+			font-size: 1.7em;
+			line-height: 1.9em;
 			margin: 0;
 		}
 
@@ -2631,7 +2634,7 @@ input, select, textarea {
 	}
 
 		#header .icons a {
-			color: rgba(255, 255, 255, 0.4);
+			color: rgba(255, 255, 255, 0.6);
 		}
 
 	#footer .copyright {
@@ -2895,7 +2898,7 @@ input, select, textarea {
 				-ms-box-sizing: content-box;
 				box-sizing: content-box;
 				border-radius: 100%;
-				border: solid 3px rgba(255, 255, 255, 0.5);
+				border: solid 3px rgba(255, 255, 255, 0.7);
 				content: '\f00d';
 				display: block;
 				font-size: 1em;
