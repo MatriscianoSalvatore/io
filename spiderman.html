@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fumetti Spider-Man</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#10182B;        /* blu notte, inchiostro di fondo */
+    --ink-2:#182339;      /* pannelli sul fondo scuro */
+    --paper:#F4EDDF;      /* carta d'albo invecchiata */
+    --paper-2:#EAE0CC;
+    --red:#D8232A;        /* rosso testata */
+    --red-dark:#A8181E;
+    --blue:#2B4C9B;       /* blu Spidey */
+    --yellow:#F2B41C;     /* giallo da copertina */
+    --web:#93A3BF;        /* argento-ragnatela per testi su scuro */
+    --ink-on-paper:#241D12;
+    --rule:#C9BBA0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none !important;animation:none !important} }
+  body{
+    background:var(--ink);
+    color:var(--web);
+    font-family:'Spectral',Georgia,serif;
+    font-size:17px;
+    line-height:1.65;
+  }
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px}
+
+  /* ---------- HERO ---------- */
+  header{
+    padding:64px 0 40px;
+    background:
+      radial-gradient(circle at 12% 0%, rgba(216,35,42,.18), transparent 42%),
+      radial-gradient(circle at 88% 12%, rgba(43,76,155,.28), transparent 46%),
+      var(--ink);
+    border-bottom:4px solid var(--red);
+  }
+  .corner-box{
+    display:inline-flex;flex-direction:column;align-items:center;justify-content:center;
+    background:var(--paper);color:var(--ink-on-paper);
+    border:3px solid var(--ink-on-paper);
+    padding:8px 12px;margin-bottom:22px;
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;
+    text-transform:uppercase;letter-spacing:.06em;font-size:13px;line-height:1.25;
+    box-shadow:6px 6px 0 var(--red);
+  }
+  .corner-box .big{font-family:'Anton',sans-serif;font-size:30px;letter-spacing:.02em}
+  h1{
+    font-family:'Anton',sans-serif;
+    font-size:clamp(44px,8vw,86px);
+    line-height:.95;letter-spacing:.01em;
+    color:#fff;text-transform:uppercase;
+  }
+  h1 .rosso{color:var(--red)}
+  .hero-sub{
+    margin-top:18px;max-width:640px;font-size:18px;color:var(--web);
+  }
+  .hero-meta{
+    margin-top:26px;display:flex;flex-wrap:wrap;gap:10px;
+    font-family:'Barlow Condensed',sans-serif;font-weight:600;
+    text-transform:uppercase;letter-spacing:.1em;font-size:13px;
+  }
+  .hero-meta span{
+    border:1px solid rgba(147,163,191,.4);padding:5px 12px;color:var(--web);
+  }
+
+  /* ---------- TIMELINE ---------- */
+  main{padding:56px 0 20px}
+  .timeline{position:relative}
+  .timeline::before{
+    content:"";position:absolute;left:29px;top:0;bottom:0;width:2px;
+    background:repeating-linear-gradient(to bottom, var(--web) 0 7px, transparent 7px 14px);
+    opacity:.45;
+  }
+  .stop{position:relative;padding:0 0 52px 84px}
+  .stop:last-child{padding-bottom:24px}
+  .stop-dot{
+    position:absolute;left:0;top:6px;width:60px;height:60px;border-radius:50%;
+    background:var(--ink-2);border:2px solid var(--red);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    font-family:'Barlow Condensed',sans-serif;color:#fff;
+  }
+  .stop-dot .n{font-family:'Anton',sans-serif;font-size:22px;line-height:1;color:var(--yellow)}
+  .stop-dot .y{font-size:12px;letter-spacing:.08em;color:var(--web)}
+
+  /* ---------- CARD ALBO ---------- */
+  .albo{
+    background:var(--paper);color:var(--ink-on-paper);
+    border:3px solid #241D12;
+    box-shadow:10px 10px 0 rgba(0,0,0,.45);
+  }
+  .masthead{
+    background:var(--red);color:#fff;
+    padding:16px 22px 13px;
+    border-bottom:3px solid #241D12;
+    display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap;
+  }
+  .albo.blu .masthead{background:var(--blue)}
+  .albo.giallo .masthead{background:var(--yellow);color:#241D12}
+  .masthead h2{
+    font-family:'Anton',sans-serif;text-transform:uppercase;
+    font-size:clamp(24px,4vw,34px);line-height:1;letter-spacing:.015em;
+  }
+  .masthead .anno{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;
+    letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;opacity:.9;
+  }
+  .halftone{
+    height:10px;border-bottom:3px solid #241D12;
+    background-image:radial-gradient(circle, rgba(36,29,18,.5) 1.3px, transparent 1.6px);
+    background-size:9px 9px;background-color:rgba(242,180,28,.35);
+  }
+  .albo-body{padding:24px 26px 26px}
+  .cover-slot{
+    float:left;width:230px;aspect-ratio:2/3;margin:4px 26px 14px 0;
+    border:3px solid #241D12;box-shadow:6px 6px 0 rgba(36,29,18,.25);
+    position:relative;overflow:hidden;background:var(--blue);
+  }
+  .cover-slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+  .cover-art{
+    position:absolute;inset:0;display:flex;flex-direction:column;
+    justify-content:space-between;padding:10px;color:#fff;
+    font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;
+  }
+  .cover-art .logo{font-family:'Anton',sans-serif;font-size:25px;line-height:1.05;letter-spacing:.01em;text-shadow:2px 2px 0 rgba(0,0,0,.35)}
+  .cover-art .num{
+    align-self:flex-end;background:var(--paper);color:#241D12;border:2px solid #241D12;
+    font-family:'Anton',sans-serif;font-size:24px;padding:2px 10px;
+  }
+  .cover-art .strip{font-weight:700;font-size:12.5px;letter-spacing:.14em;background:rgba(36,29,18,.55);padding:4px 9px;align-self:flex-start}
+  .cover-art::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(circle at 50% 120%, rgba(255,255,255,.22) 0 18%, transparent 19%),
+      repeating-conic-gradient(from 0deg at 50% 120%, transparent 0deg 9deg, rgba(255,255,255,.14) 9deg 10deg),
+      radial-gradient(circle, rgba(0,0,0,.16) 1.2px, transparent 1.6px);
+    background-size:auto,auto,8px 8px;
+  }
+  .c1 .cover-art{background:linear-gradient(160deg,#2B4C9B 0 55%,#D8232A 55% 100%)}
+  .c2 .cover-art{background:linear-gradient(160deg,#10182B 0 60%,#2B4C9B 60% 100%)}
+  .c3 .cover-art{background:linear-gradient(160deg,#D8232A 0 55%,#10182B 55% 100%)}
+  .c4 .cover-art{background:linear-gradient(160deg,#2B4C9B 0 50%,#F2B41C 50% 100%)}
+  .c5 .cover-art{background:conic-gradient(from 210deg,#D8232A,#2B4C9B,#F2B41C,#D8232A)}
+  .c6 .cover-art{background:linear-gradient(160deg,#8a1a1f 0 55%,#2B4C9B 55% 100%)}
+  .c7 .cover-art{background:linear-gradient(160deg,#10182B 0 45%,#D8232A 45% 100%)}
+  .albo-body::after{content:"";display:block;clear:both}
+  @media (max-width:560px){
+    .cover-slot{float:none;width:200px;margin:0 auto 18px}
+  }
+  .scheda{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:14px 26px;margin-bottom:20px;
+    border-bottom:1px solid var(--rule);padding-bottom:18px;
+  }
+  .scheda dt{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;
+    text-transform:uppercase;letter-spacing:.12em;color:var(--red-dark);
+  }
+  .albo.blu .scheda dt{color:var(--blue)}
+  .scheda dd{font-size:15.5px;line-height:1.5}
+  .badge-row{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+  .badge{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12.5px;
+    text-transform:uppercase;letter-spacing:.1em;
+    padding:4px 10px;border:2px solid #241D12;background:#fff;
+  }
+  .badge.start{background:var(--yellow)}
+  .badge.evento{background:var(--red);color:#fff}
+  .albo-body h3{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;
+    text-transform:uppercase;letter-spacing:.14em;color:#241D12;
+    margin:20px 0 6px;
+  }
+  .albo-body h3::before{content:"◈ ";color:var(--red)}
+  .albo-body p{margin-bottom:10px;font-size:16px}
+  .albo-body p:last-child{margin-bottom:0}
+  .screen{
+    margin-top:18px;background:var(--paper-2);border:1.5px dashed #8a7a5c;
+    padding:14px 18px;font-size:15.5px;
+  }
+  .screen strong{color:var(--red-dark)}
+
+  /* ---------- SEZIONI FINALI ---------- */
+  .panel{
+    background:var(--ink-2);border:1px solid rgba(147,163,191,.25);
+    padding:30px 30px 26px;margin:26px 0;
+  }
+  .panel h2{
+    font-family:'Anton',sans-serif;text-transform:uppercase;color:#fff;
+    font-size:clamp(22px,3.5vw,30px);margin-bottom:14px;letter-spacing:.02em;
+  }
+  .panel h2 em{font-style:normal;color:var(--yellow)}
+  .panel p{margin-bottom:12px;color:var(--web)}
+  .panel p:last-child{margin-bottom:0}
+  .panel strong{color:#fff}
+  table{width:100%;border-collapse:collapse;margin-top:8px;font-size:15px}
+  th{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+    letter-spacing:.1em;font-size:12.5px;color:var(--yellow);
+    text-align:left;padding:8px 10px;border-bottom:2px solid var(--red);
+  }
+  td{padding:9px 10px;border-bottom:1px solid rgba(147,163,191,.2);vertical-align:top;color:var(--web)}
+  td:first-child{color:#fff;font-weight:600}
+
+  footer{
+    padding:34px 0 46px;border-top:4px solid var(--red);margin-top:30px;
+    font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--web);text-align:center;
+  }
+  @media (max-width:640px){
+    .timeline::before{left:21px}
+    .stop{padding-left:62px}
+    .stop-dot{width:44px;height:44px}
+    .stop-dot .n{font-size:17px}.stop-dot .y{display:none}
+    .albo-body{padding:20px 18px 22px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="corner-box">
+      <span>Collezione di</span>
+      <span class="big">7</span>
+      <span>Volumi</span>
+    </div>
+    <h1>La mia collezione<br><span class="rosso">Spider-Man</span></h1>
+    <p class="hero-sub">Sette porte d'ingresso nella storia di Amazing Spider-Man, dal 1962 al 2022: un dossier con epoche, autori, albi originali USA, spillati italiani corrispondenti e tutto quello che questi volumi hanno generato fuori dalla carta.</p>
+    <div class="hero-meta">
+      <span>Edizioni Panini Comics</span>
+      <span>Universo principale · Terra-616</span>
+      <span>1962 → 2022</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="timeline">
+
+    <!-- 1 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">1</span><span class="y">1962</span></div>
+      <article class="albo">
+        <div class="masthead"><h2>Marvel Masterworks: Spider-Man 1</h2><span class="anno">USA 1962–1964</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot c1">
+            <div class="cover-art">
+              <span class="strip">Masterworks</span>
+              <span class="logo">Spider-Man<br>Vol. 1</span>
+              <span class="num">1962</span>
+            </div>
+            <img src="copertine/01-masterworks.jpg" alt="Copertina Marvel Masterworks: Spider-Man 1" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge start">★ Inizio di tutto</span>
+            <span class="badge">Era Lee/Ditko</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Collana</dt><dd>Marvel Masterworks (cartonato)</dd></div>
+            <div><dt>Autori</dt><dd>Stan Lee (testi), Steve Ditko (disegni)</dd></div>
+            <div><dt>Contiene</dt><dd>Amazing Fantasy #15 + Amazing Spider-Man #1–10</dd></div>
+            <div><dt>Spillato ITA</dt><dd>L'Uomo Ragno (Editoriale Corno) nn. 1–13 circa, dal 1970 — la prima edizione italiana in assoluto</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>È il punto zero: Amazing Fantasy #15 racconta l'origine del personaggio — il morso del ragno, zio Ben, "da grandi poteri derivano grandi responsabilità". I primi dieci numeri della serie regolare introducono quasi tutta la galleria storica dei nemici: Camaleonte, Avvoltoio, Dottor Octopus, Sandman, Lizard, Electro. Qui nasce anche il "metodo Marvel": il supereroe con i problemi quotidiani di un adolescente vero.</p>
+          <h3>Curiosità da collezionista</h3>
+          <p>Amazing Fantasy #15 è oggi tra gli albi più preziosi dell'età d'argento: una copia in condizioni eccellenti è stata battuta all'asta per oltre 3 milioni di dollari, record per un fumetto Marvel.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> l'origine di questo volume è stata adattata sul grande schermo tre volte (Spider-Man di Sam Raimi, 2002; The Amazing Spider-Man, 2012; e in forma implicita nel ciclo MCU). I villain che esordiscono qui hanno dominato i film: Doc Ock in Spider-Man 2, Sandman in Spider-Man 3, Lizard in The Amazing Spider-Man, Electro in TASM 2, l'Avvoltoio in Homecoming, Mysterio in Far From Home — e quasi tutti tornano insieme in No Way Home.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 2 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">2</span><span class="y">2001</span></div>
+      <article class="albo blu">
+        <div class="masthead"><h2>Tornando a casa</h2><span class="anno">USA 2001</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot c2">
+            <div class="cover-art">
+              <span class="strip">Must Have</span>
+              <span class="logo">Tornando<br>a casa</span>
+              <span class="num">2001</span>
+            </div>
+            <img src="copertine/02-tornando-a-casa.jpg" alt="Copertina Spider-Man: Tornando a casa" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge start">★ Inizio run Straczynski (2001–2007)</span>
+            <span class="badge">Eisner Award</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Collana</dt><dd>Marvel Must Have (cartonato)</dd></div>
+            <div><dt>Autori</dt><dd>J. Michael Straczynski (testi), John Romita Jr. (disegni)</dd></div>
+            <div><dt>Contiene</dt><dd>Amazing Spider-Man (1999) #30–35</dd></div>
+            <div><dt>Spillato ITA</dt><dd>L'Uomo Ragno: le storie di JMS iniziarono in Italia dal n. 335 (63 di nuova numerazione); indicativamente nn. 335–344 (2002)</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>La run più importante degli anni 2000. Straczynski (già creatore di Babylon 5) rilancia un personaggio in crisi creativa introducendo la mitologia dei totem: il misterioso Ezekiel pone la domanda che cambia tutto — "il ragno ti ha scelto, o è stato un caso?" — ed esordisce Morlun, il divoratore di totem. È anche l'inizio della celebre coppia con John Romita Jr. e la saga premiata con l'Eisner Award.</p>
+          <h3>Cosa semina</h3>
+          <p>L'intera idea di Spider-Verse discende da queste pagine: Morlun, gli Eredi e il concetto di ragno-totem nascono qui, tredici anni prima dell'evento. Subito dopo questo arco arriva il celebre smascheramento davanti a zia May ("La conversazione", ASM #37–38).</p>
+          <div class="screen"><strong>Oltre la carta:</strong> la mitologia dei totem è la spina dorsale concettuale dei film animati Spider-Verse. E il comprimario Ezekiel Sims è arrivato in live action come antagonista del film Madame Web (2024). La run è proseguita fino a Civil War, Back in Black e One More Day (2007).</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 3 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">3</span><span class="y">2008</span></div>
+      <article class="albo">
+        <div class="masthead"><h2>Un nuovo giorno</h2><span class="anno">USA 2008</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot c3">
+            <div class="cover-art">
+              <span class="strip">Must Have</span>
+              <span class="logo">Un nuovo<br>giorno</span>
+              <span class="num">2008</span>
+            </div>
+            <img src="copertine/03-un-nuovo-giorno.jpg" alt="Copertina Spider-Man: Un nuovo giorno" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge start">★ Inizio era Brand New Day / gestione Slott</span>
+            <span class="badge">Punto d'ingresso</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Collana</dt><dd>Marvel Must Have (cartonato)</dd></div>
+            <div><dt>Autori</dt><dd>Dan Slott (testi), Steve McNiven (disegni); prologo Swing Shift di Slott e Phil Jimenez</dd></div>
+            <div><dt>Contiene</dt><dd>Amazing Spider-Man #546–551 + Spider-Man: Swing Shift</dd></div>
+            <div><dt>Spillato ITA</dt><dd>Dal n. 489 la testata cambia titolo da L'Uomo Ragno a Spider-Man proprio con questa saga: nn. 489–492 circa (2008)</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Il più grande "anno zero" moderno della serie. Dopo il patto di One More Day, il matrimonio con Mary Jane non è mai esistito, nessuno ricorda l'identità segreta e Harry Osborn è vivo: tutto riparte da capo, con la serie che esce tre volte al mese e nuovi villain come Mister Negativo, Jackpot e Minaccia. È anche, di fatto, l'inizio della gestione Dan Slott che durerà dieci anni.</p>
+          <h3>Nota per la collezione</h3>
+          <p>Nel catalogo cartonato italiano attuale il seguito diretto di quest'era (Big Time, 2010) è scoperto: uscì in un cartonato Marvel Collection intorno al 2012 oggi fuori catalogo, mentre la ristampa in corso (Marvel Masterseries, dal 2026) è in brossura economica.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> Mister Negativo, esordio assoluto di questo volume, è diventato uno dei villain principali del videogioco Marvel's Spider-Man (PS4, 2018), tra i giochi più venduti di sempre su console PlayStation.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 4 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">4</span><span class="y">2014</span></div>
+      <article class="albo blu">
+        <div class="masthead"><h2>La fortuna dei Parker</h2><span class="anno">USA 2014</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot c4">
+            <div class="cover-art">
+              <span class="strip">Must Have</span>
+              <span class="logo">La fortuna<br>dei Parker</span>
+              <span class="num">2014</span>
+            </div>
+            <img src="copertine/04-fortuna-dei-parker.jpg" alt="Copertina Spider-Man: La fortuna dei Parker" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge start">★ Inizio Amazing Spider-Man vol. 3</span>
+            <span class="badge">Ponte verso Spider-Verse</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Collana</dt><dd>Marvel Must Have (cartonato)</dd></div>
+            <div><dt>Autori</dt><dd>Dan Slott (testi), Humberto Ramos (disegni), con Giuseppe Camuncoli</dd></div>
+            <div><dt>Contiene</dt><dd>Amazing Spider-Man (2014) #1–6</dd></div>
+            <div><dt>Spillato ITA</dt><dd>Con questo rilancio la testata da edicola diventa Amazing Spider-Man proseguendo la numerazione storica: nn. 619–624 circa (2014)</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Il grande ritorno: Peter riprende possesso del proprio corpo dopo l'anno e mezzo in cui il Dottor Octopus lo ha occupato (Superior Spider-Man) e deve ricostruirsi una vita mentre tutti ricordano quanto "Spider-Ock" fosse più efficiente di lui. Due esordi pesanti: Silk (Cindy Moon, morsa dallo stesso ragno di Peter) e Anna Maria Marconi.</p>
+          <h3>Il suo ruolo nella collezione</h3>
+          <p>Non è un inizio epocale come gli altri: è il trampolino diretto di Spider-Verse, perché qui si riattiva la minaccia degli Eredi. Indispensabile per capire il volume successivo.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> Silk, nata in queste pagine, è al centro di un progetto televisivo live action in sviluppo presso Sony (Silk: Spider Society). L'albo #4 con il suo esordio è tra i più ricercati dell'era moderna dagli speculatori.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 5 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">5</span><span class="y">2014</span></div>
+      <article class="albo giallo">
+        <div class="masthead"><h2>Spider-Verse</h2><span class="anno">USA 2014–2015</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot c5">
+            <div class="cover-art">
+              <span class="strip">Must Have</span>
+              <span class="logo">Spider-<br>Verse</span>
+              <span class="num">2014</span>
+            </div>
+            <img src="copertine/05-spider-verse.jpg" alt="Copertina Spider-Man: Spider-Verse" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge evento">Grande evento</span>
+            <span class="badge">Chiude il cerchio aperto da JMS</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Collana</dt><dd>Marvel Must Have (cartonato)</dd></div>
+            <div><dt>Autori</dt><dd>Dan Slott (testi), Olivier Coipel e Giuseppe Camuncoli (disegni)</dd></div>
+            <div><dt>Contiene</dt><dd>Amazing Spider-Man (2014) #9–15</dd></div>
+            <div><dt>Spillato ITA</dt><dd>Amazing Spider-Man nn. 627–633 circa (2015), con tie-in su albi paralleli</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>L'evento-saga per eccellenza degli anni 2010: tutti gli Spider-Man di ogni universo — Spider-Gwen, Spider-Man Noir, Miles Morales, Spider-Ham, il Peter dell'era Superior — uniti contro Morlun e la famiglia degli Eredi. Chiude il cerchio della mitologia dei totem aperto da Straczynski tredici anni prima.</p>
+          <h3>Curiosità</h3>
+          <p>Spider-Gwen esordisce nel preludio Edge of Spider-Verse #2 ed è diventata immediatamente uno dei personaggi Marvel più popolari del decennio. Il filone prosegue con Spider-Geddon (2018) ed End of the Spider-Verse (2022–23).</p>
+          <div class="screen"><strong>Oltre la carta:</strong> è la base diretta dei film animati Spider-Man: Un nuovo universo (2018, premio Oscar come miglior film d'animazione), Across the Spider-Verse (2023) e del capitolo conclusivo Beyond the Spider-Verse. Il concetto di ragni del multiverso ha ispirato anche il live action No Way Home (2021), tra i maggiori incassi della storia del cinema.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 6 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">6</span><span class="y">2018</span></div>
+      <article class="albo">
+        <div class="masthead"><h2>Ritorno alle origini</h2><span class="anno">USA 2018</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot c6">
+            <div class="cover-art">
+              <span class="strip">Marvel Collection</span>
+              <span class="logo">Ritorno<br>alle origini</span>
+              <span class="num">2018</span>
+            </div>
+            <img src="copertine/06-ritorno-alle-origini.jpg" alt="Copertina Amazing Spider-Man vol. 1: Ritorno alle origini" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge start">★ Inizio run Nick Spencer (2018–2021)</span>
+            <span class="badge">Fresh Start</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Collana</dt><dd>Marvel Collection (cartonato) — Amazing Spider-Man vol. 1</dd></div>
+            <div><dt>Autori</dt><dd>Nick Spencer (testi), Ryan Ottley (disegni)</dd></div>
+            <div><dt>Contiene</dt><dd>Amazing Spider-Man (2018) #1–5</dd></div>
+            <div><dt>Spillato ITA</dt><dd>Rilancio da edicola con doppia numerazione: Amazing Spider-Man nn. 1–5, ovvero 710–714 della numerazione storica (fine 2018)</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Dopo dieci anni di Dan Slott, il "Fresh Start" di Nick Spencer riporta Spider-Man all'essenziale: guai economici, senso di colpa, quotidianità. Soprattutto, ricostruisce la coppia Peter/Mary Jane smontando pezzo per pezzo l'eredità di One More Day — per molti lettori, la riparazione attesa da un decennio.</p>
+          <h3>Cosa apre</h3>
+          <p>È l'inizio della lunga trama del Kindred, il misterioso villain legato al passato di Peter che attraversa tutti i 74 numeri della run, fino a Sinister War e al finale del 2021. Come punto d'ingresso è il migliore dell'era recente.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> il tono "ritorno al quartiere" di questa run è in sintonia con l'immagine cinematografica del periodo (l'amichevole Spider-Man di quartiere dell'MCU) e con la coppia Peter/MJ tornata centrale anche al cinema.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 7 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">7</span><span class="y">2022</span></div>
+      <article class="albo blu">
+        <div class="masthead"><h2>Un mondo senza amore</h2><span class="anno">USA 2022</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot c7">
+            <div class="cover-art">
+              <span class="strip">Marvel Collection</span>
+              <span class="logo">Un mondo<br>senza amore</span>
+              <span class="num">2022</span>
+            </div>
+            <img src="copertine/07-un-mondo-senza-amore.jpg" alt="Copertina Amazing Spider-Man vol. 1: Un mondo senza amore" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge start">★ Inizio run Zeb Wells (2022–2024)</span>
+            <span class="badge">Verso il n. 900</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Collana</dt><dd>Marvel Collection (cartonato) — Amazing Spider-Man vol. 1</dd></div>
+            <div><dt>Autori</dt><dd>Zeb Wells (testi), John Romita Jr. (disegni)</dd></div>
+            <div><dt>Contiene</dt><dd>Amazing Spider-Man (2022) #1–5</dd></div>
+            <div><dt>Spillato ITA</dt><dd>Nuovo rilancio con doppia numerazione: Amazing Spider-Man nn. 1–5, ovvero 801–805 della numerazione storica (2022–23)</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>L'ultimo grande "anno zero" della serie prima del rilancio 2024. Parte da un mistero: sono passati sei mesi, Peter è in rotta con Avengers, Fantastici Quattro e zia May, ha chiuso con MJ (che ora ha una nuova famiglia) e nessuno spiega perché. Ai disegni torna John Romita Jr., lo stesso artista di Tornando a casa, vent'anni dopo: la tua collezione si apre e si chiude idealmente con lui.</p>
+          <h3>Cosa apre</h3>
+          <p>Il countdown verso lo storico numero 900 della numerazione originale, il ritorno prepotente di un Norman Osborn "redento" (Gold Goblin) e, più avanti nella run, la trasformazione di Kamala Khan e la guerra tra bande di Gang War.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> run uscita in piena era No Way Home, con la serie ai vertici delle classifiche di vendita USA. Gli eventi di questa gestione (in particolare quelli legati a Kamala Khan/Ms. Marvel) hanno avuto eco diretta nelle scelte editoriali e mediatiche Marvel del periodo.</div>
+        </div>
+      </article>
+    </section>
+
+  </div>
+
+  <!-- RIEPILOGO -->
+  <section class="panel">
+    <h2>La mappa in <em>una tabella</em></h2>
+    <table>
+      <thead>
+        <tr><th>#</th><th>Volume</th><th>Collana</th><th>Albi USA</th><th>Spillato ITA</th><th>Ruolo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Masterworks: Spider-Man 1</td><td>Marvel Masterworks</td><td>AF #15 + ASM #1–10 (1962–64)</td><td>Corno nn. 1–13 ca.</td><td>Origine di tutto</td></tr>
+        <tr><td>2</td><td>Tornando a casa</td><td>Marvel Must Have</td><td>ASM (1999) #30–35 (2001)</td><td>UR nn. 335–344 ca.</td><td>Inizio run JMS</td></tr>
+        <tr><td>3</td><td>Un nuovo giorno</td><td>Marvel Must Have</td><td>ASM #546–551 + Swing Shift (2008)</td><td>SM nn. 489–492 ca.</td><td>Inizio Brand New Day</td></tr>
+        <tr><td>4</td><td>La fortuna dei Parker</td><td>Marvel Must Have</td><td>ASM (2014) #1–6</td><td>ASM ITA nn. 619–624 ca.</td><td>Inizio vol. 3 / ponte</td></tr>
+        <tr><td>5</td><td>Spider-Verse</td><td>Marvel Must Have</td><td>ASM (2014) #9–15</td><td>ASM ITA nn. 627–633 ca.</td><td>Grande evento</td></tr>
+        <tr><td>6</td><td>Ritorno alle origini</td><td>Marvel Collection</td><td>ASM (2018) #1–5</td><td>ASM ITA nn. 1–5 (710–714)</td><td>Inizio run Spencer</td></tr>
+        <tr><td>7</td><td>Un mondo senza amore</td><td>Marvel Collection</td><td>ASM (2022) #1–5</td><td>ASM ITA nn. 1–5 (801–805)</td><td>Inizio run Wells</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:14px;font-size:14.5px">Le corrispondenze con gli spillati sono indicative sull'arco di numeri: gli albetti da edicola italiani erano antologici e contenevano anche le serie sorelle. La numerazione storica italiana è un'unica catena ininterrotta dal 1987 (Star Comics → Marvel Italia → Panini): questa collezione la attraversa dal n. 335 all'805, più la preistoria Corno del 1970.</p>
+  </section>
+
+  <!-- BUCHI E UPGRADE -->
+  <section class="panel">
+    <h2>I buchi e la via degli <em>omnibus</em></h2>
+    <p><strong>Salti temporali della collezione:</strong> 1964→2001 (quarant'anni di classici), 2008→2014 (era Slott centrale: Big Time, Spider-Island, L'ultimo desiderio, Superior Spider-Man), 2015→2018 (era Parker Industries) e gli interni delle run Spencer e Wells dopo i rispettivi volumi 1.</p>
+    <p><strong>Upgrade omnibus possibili (Panini, in italiano):</strong> Amazing Spider-Man Classic vol. 1–2 al posto del Masterworks; i due omnibus della run Straczynski al posto di Tornando a casa; l'omnibus Superior Spider-Man per colmare il ponte 2013–2014; l'omnibus Spider-Verse/Spider-Geddon al posto del Must Have, con tutti i tie-in e il sequel inclusi.</p>
+    <p><strong>Dove l'omnibus italiano non esiste:</strong> Brand New Day/era Slott 2008–2018 (Superior e Spider-Verse esclusi), run Spencer e run Wells: per questi periodi i cartonati Must Have e Marvel Collection restano l'edizione massima disponibile in italiano.</p>
+  </section>
+
+
+</main>
+
+<footer>
+  <div class="wrap">Dossier della collezione · Amazing Spider-Man · Terra-616</div>
+</footer>
+
+</body>
+</html>
