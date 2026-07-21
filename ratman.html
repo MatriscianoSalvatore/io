@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fumetti Rat-Man</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --carta:#EBE7DA;        /* grigio caldo da pulp, fondo pagina */
+    --carta-2:#E0DBC9;
+    --china:#191613;        /* inchiostro nero */
+    --giallo:#E9B70A;       /* giallo del costume di Rat-Man */
+    --giallo-scuro:#B8900A;
+    --rosso:#D0342C;        /* rosso da copertina parodica */
+    --topo:#8A8F98;         /* grigio topo */
+    --fumo:#6B675C;         /* testo secondario */
+    --bianco:#FFFDF4;       /* carta delle schede */
+    --filo:#CDC5AC;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none !important;animation:none !important} }
+  body{
+    background:
+      radial-gradient(circle, rgba(25,22,19,.045) 1.4px, transparent 1.8px),
+      var(--carta);
+    background-size:14px 14px;
+    color:var(--china);
+    font-family:'Spectral',Georgia,serif;
+    font-size:17px;
+    line-height:1.65;
+  }
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px}
+
+  /* ---------- HERO ---------- */
+  header{
+    padding:64px 0 40px;
+    background:
+      radial-gradient(circle at 88% -8%, rgba(233,183,10,.35), transparent 46%),
+      radial-gradient(circle at 6% 30%, rgba(208,52,44,.10), transparent 40%);
+    border-bottom:4px solid var(--china);
+  }
+  .corner-box{
+    display:inline-flex;flex-direction:column;align-items:center;justify-content:center;
+    background:var(--giallo);color:var(--china);
+    border:3px solid var(--china);
+    padding:8px 12px;margin-bottom:22px;
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;
+    text-transform:uppercase;letter-spacing:.06em;font-size:13px;line-height:1.25;
+    box-shadow:6px 6px 0 var(--china);
+    transform:rotate(-1.4deg);
+  }
+  .corner-box .big{font-family:'Anton',sans-serif;font-size:30px;letter-spacing:.02em}
+  h1{
+    font-family:'Anton',sans-serif;
+    font-size:clamp(42px,7.6vw,84px);
+    line-height:.95;letter-spacing:.01em;
+    color:var(--china);text-transform:uppercase;
+  }
+  h1 .g{color:var(--giallo-scuro)}
+  .hero-sub{
+    margin-top:18px;max-width:680px;font-size:18px;color:var(--fumo);
+  }
+  .hero-meta{
+    margin-top:26px;display:flex;flex-wrap:wrap;gap:10px;
+    font-family:'Barlow Condensed',sans-serif;font-weight:600;
+    text-transform:uppercase;letter-spacing:.1em;font-size:13px;
+  }
+  .hero-meta span{
+    border:2px solid var(--china);padding:5px 12px;color:var(--china);background:var(--bianco);
+  }
+
+  /* ---------- TIMELINE ---------- */
+  main{padding:56px 0 20px}
+  .timeline{position:relative}
+  .timeline::before{
+    content:"";position:absolute;left:29px;top:0;bottom:0;width:3px;
+    background:repeating-linear-gradient(to bottom, var(--rosso) 0 9px, transparent 9px 16px);
+    opacity:.7;
+  }
+  .stop{position:relative;padding:0 0 52px 84px}
+  .stop:last-child{padding-bottom:24px}
+  .stop-dot{
+    position:absolute;left:0;top:6px;width:60px;height:60px;border-radius:50%;
+    background:var(--giallo);border:3px solid var(--china);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    font-family:'Barlow Condensed',sans-serif;color:var(--china);text-align:center;
+    box-shadow:3px 3px 0 var(--china);
+  }
+  .stop-dot .n{font-family:'Anton',sans-serif;font-size:22px;line-height:1;color:var(--china)}
+  .stop-dot .y{font-size:11px;letter-spacing:.05em;color:#5d4a05;text-transform:uppercase}
+
+  /* ---------- CARD ALBO ---------- */
+  .albo{
+    background:var(--bianco);color:var(--china);
+    border:3px solid var(--china);
+    box-shadow:10px 10px 0 rgba(25,22,19,.22);
+  }
+  .albo:nth-child(odd){transform:rotate(.2deg)}
+  .masthead{
+    background:var(--china);color:var(--giallo);
+    padding:16px 22px 13px;
+    border-bottom:3px solid var(--china);
+    display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap;
+  }
+  .albo.giallo .masthead{background:var(--giallo);color:var(--china)}
+  .albo.rosso .masthead{background:var(--rosso);color:#fff}
+  .masthead h2{
+    font-family:'Anton',sans-serif;text-transform:uppercase;
+    font-size:clamp(22px,3.8vw,32px);line-height:1;letter-spacing:.015em;
+  }
+  .masthead .anno{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;
+    letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;opacity:.9;
+  }
+  .halftone{
+    height:10px;border-bottom:3px solid var(--china);
+    background-image:radial-gradient(circle, rgba(25,22,19,.5) 1.3px, transparent 1.6px);
+    background-size:9px 9px;background-color:rgba(233,183,10,.4);
+  }
+  .albo-body{padding:24px 26px 26px}
+  .cover-slot{
+    float:left;width:210px;aspect-ratio:18/26;margin:4px 26px 14px 0;
+    border:3px solid var(--china);box-shadow:6px 6px 0 rgba(25,22,19,.22);
+    position:relative;overflow:hidden;background:var(--topo);
+    transform:rotate(-.7deg);
+  }
+  .cover-slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+  .cover-art{
+    position:absolute;inset:0;display:flex;flex-direction:column;
+    justify-content:space-between;padding:10px;color:#fff;
+    font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;
+  }
+  .cover-art .logo{font-family:'Anton',sans-serif;font-size:23px;line-height:1.05;letter-spacing:.01em;text-shadow:2px 2px 0 rgba(0,0,0,.4)}
+  .cover-art .num{
+    align-self:flex-end;background:var(--giallo);color:var(--china);border:2px solid var(--china);
+    font-family:'Anton',sans-serif;font-size:22px;padding:2px 10px;
+  }
+  .cover-art .strip{font-weight:700;font-size:12.5px;letter-spacing:.14em;background:rgba(25,22,19,.6);padding:4px 9px;align-self:flex-start}
+  .cover-art::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(circle, rgba(255,255,255,.14) 1.4px, transparent 1.8px);
+    background-size:10px 10px;
+  }
+  .r1 .cover-art{background:linear-gradient(160deg,#E9B70A 0 55%,#B8900A 55% 100%)}
+  .r2 .cover-art{background:linear-gradient(160deg,#33528F 0 55%,#E9B70A 55% 100%)}
+  .r3 .cover-art{background:linear-gradient(160deg,#D0342C 0 50%,#191613 50% 100%)}
+  .r4 .cover-art{background:linear-gradient(160deg,#2E5A3C 0 55%,#E9B70A 55% 100%)}
+  .r5 .cover-art{background:linear-gradient(160deg,#5E2B70 0 50%,#D0342C 50% 100%)}
+  .r6 .cover-art{background:linear-gradient(160deg,#191613 0 55%,#33528F 55% 100%)}
+  .r7 .cover-art{background:linear-gradient(160deg,#C4501B 0 50%,#191613 50% 100%)}
+  .r8 .cover-art{background:linear-gradient(160deg,#8A8F98 0 45%,#191613 45% 100%)}
+  .r9 .cover-art{background:linear-gradient(160deg,#E9B70A 0 45%,#D0342C 45% 100%)}
+  .r10 .cover-art{background:linear-gradient(160deg,#1E4A2B 0 55%,#191613 55% 100%)}
+  .r11 .cover-art{background:linear-gradient(160deg,#33528F 0 50%,#D0342C 50% 100%)}
+  .r12 .cover-art{background:linear-gradient(160deg,#7A2340 0 55%,#E9B70A 55% 100%)}
+  .r13 .cover-art{background:linear-gradient(160deg,#C4501B 0 50%,#5E2B70 50% 100%)}
+  .r14 .cover-art{background:linear-gradient(160deg,#4E7A3A 0 55%,#191613 55% 100%)}
+  .r15 .cover-art{background:linear-gradient(160deg,#D0342C 0 45%,#8A8F98 45% 100%)}
+  .r16 .cover-art{background:linear-gradient(160deg,#E9B70A 0 60%,#33528F 60% 100%)}
+  .albo-body::after{content:"";display:block;clear:both}
+  .scheda{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:14px 26px;margin-bottom:20px;
+    border-bottom:1px solid var(--filo);padding-bottom:18px;
+  }
+  .scheda dt{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;
+    text-transform:uppercase;letter-spacing:.12em;color:var(--rosso);
+  }
+  .scheda dd{font-size:15.5px;line-height:1.5}
+  .badge-row{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+  .badge{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12.5px;
+    text-transform:uppercase;letter-spacing:.1em;
+    padding:4px 10px;border:2px solid var(--china);background:var(--carta);
+    transform:rotate(-.5deg);
+  }
+  .badge.start{background:var(--giallo)}
+  .badge.evento{background:var(--rosso);color:#fff}
+  .albo-body h3{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;
+    text-transform:uppercase;letter-spacing:.14em;color:var(--china);
+    margin:20px 0 6px;
+  }
+  .albo-body h3::before{content:"◉ ";color:var(--rosso)}
+  .albo-body p{margin-bottom:10px;font-size:16px}
+  .albo-body p:last-child{margin-bottom:0}
+  .screen{
+    margin-top:18px;background:var(--carta);border:2px dashed var(--china);
+    padding:14px 18px;font-size:15.5px;
+  }
+  .screen strong{color:var(--rosso)}
+
+  /* ---------- SEZIONI FINALI ---------- */
+  .panel{
+    background:var(--bianco);border:3px solid var(--china);
+    box-shadow:8px 8px 0 rgba(25,22,19,.18);
+    padding:30px 30px 26px;margin:26px 0;
+  }
+  .panel h2{
+    font-family:'Anton',sans-serif;text-transform:uppercase;color:var(--china);
+    font-size:clamp(22px,3.5vw,30px);margin-bottom:14px;letter-spacing:.02em;
+  }
+  .panel h2 em{font-style:normal;color:var(--rosso)}
+  .panel p{margin-bottom:12px;color:var(--china)}
+  .panel p:last-child{margin-bottom:0}
+  table{width:100%;border-collapse:collapse;margin-top:8px;font-size:15px}
+  th{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+    letter-spacing:.1em;font-size:12.5px;color:var(--rosso);
+    text-align:left;padding:8px 10px;border-bottom:3px solid var(--china);
+  }
+  td{padding:9px 10px;border-bottom:1px solid var(--filo);vertical-align:top}
+  td:first-child{font-weight:700}
+
+  footer{
+    padding:34px 0 46px;border-top:4px solid var(--china);margin-top:30px;
+    font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--fumo);text-align:center;
+  }
+  @media (max-width:640px){
+    .timeline::before{left:21px}
+    .stop{padding-left:62px}
+    .stop-dot{width:44px;height:44px}
+    .stop-dot .n{font-size:17px}.stop-dot .y{display:none}
+    .albo-body{padding:20px 18px 22px}
+  }
+  @media (max-width:560px){
+    .cover-slot{float:none;width:185px;margin:0 auto 18px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="corner-box">
+      <span>Collezione di</span>
+      <span class="big">15+1</span>
+      <span>Pezzi</span>
+    </div>
+    <h1>La mia collezione<br><span class="g">Rat-Man</span></h1>
+    <p class="hero-sub">I primi quindici numeri di Rat-Man Color Special, il "Coloratto" — la ristampa a colori con cui Panini ha riproposto dall'inizio la saga di Leo Ortolani — più un pezzo tridimensionale: la statuina n. 1 de I Mille Volti di Rat-Man con il suo albetto.</p>
+    <div class="hero-meta">
+      <span>Panini Comics · Leo Ortolani</span>
+      <span>Uscite 2004 → 2009 (+2015)</span>
+      <span>Prime edizioni B/N: 1989 → 2001</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="timeline">
+
+    <!-- 1 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">1</span><span class="y">2004</span></div>
+      <article class="albo giallo">
+        <div class="masthead"><h2>Color Special n. 1</h2><span class="anno">Agosto 2004</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot r1">
+            <div class="cover-art">
+              <span class="strip">Color Special</span>
+              <span class="logo">Le sconvolgenti<br>origini</span>
+              <span class="num">1</span>
+            </div>
+            <img src="copertine-ratman/01-color-special.jpg" alt="Copertina Rat-Man Color Special 1" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge start">★ L'inizio di tutto — l'esordio del 1989</span>
+            <span class="badge">Il primo "Coloratto"</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Contiene</dt><dd>Le sconvolgenti origini del Rat-Man!, Rat-Man contro il Ragno!, La minaccia verde!</dd></div>
+            <div><dt>Coloristi</dt><dd>Lorenzo Ortolani, Gian Luca Raimondi, Pamela Brughera, Francesco Marconi Galvagno</dd></div>
+            <div><dt>Prima uscita in B/N</dt><dd>Le origini: rivista Spot, giugno 1989. Le altre due storie: Rat-Man serie autoprodotta (Edizioni Foxtrot), 1995</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Il punto zero, ora in technicolor: "Le sconvolgenti origini del Rat-Man!" è la storia con cui Leo Ortolani presentò al mondo nel 1989 il suo supereroe con le orecchie da topo — piccolo, presuntuoso, irresistibilmente inetto — parodia del fumetto americano che finirà per superare in longevità molti dei modelli che sbeffeggia. A seguire, i primi scontri con le nemesi parodiche: il Ragno e la Minaccia Verde, ovvero Spider-Man e Goblin passati nel frullatore ortolaniano.</p>
+          <h3>Curiosità</h3>
+          <p>La collana nacque come esperimento estivo di soli due numeri, pensato per il pubblico da spiaggia delle edicole; andò così bene che diventò una serie regolare, soprannominata dai fan "il Coloratto". La colorazione è supervisionata da Lorenzo "Larry" Ortolani, fratello di Leo e colorista storico del personaggio.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> da queste origini nasce tutto il fenomeno Rat-Man, fino alla serie animata trasmessa dalla Rai nel 2006 con la voce di... be', di gente che ha fatto del suo meglio.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 2 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">2</span><span class="y">2004</span></div>
+      <article class="albo">
+        <div class="masthead"><h2>Color Special n. 2</h2><span class="anno">Ottobre 2004</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot r2">
+            <div class="cover-art">
+              <span class="strip">Color Special</span>
+              <span class="logo">Tòpin!</span>
+              <span class="num">2</span>
+            </div>
+            <img src="copertine-ratman/02-color-special.jpg" alt="Copertina Rat-Man Color Special 2" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge">Le prime parodie a raffica</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Contiene</dt><dd>Tòpin! The Wonder Mouse!, Dal futuro!, La Gatta!</dd></div>
+            <div><dt>Coloristi</dt><dd>Sergio Algozzino, Maurizio Clausi, Bruno Olivieri, Lorenzo Ortolani</dd></div>
+            <div><dt>Prima uscita in B/N</dt><dd>Rat-Man serie autoprodotta (Edizioni Foxtrot / Bande Dessinée), 1995–1996</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Il repertorio comico di Ortolani prende forma: arriva Tòpin, la "spalla meravigliosa" che nessun supereroe vorrebbe, un viaggio dal futuro che maltratta i paradossi temporali, e soprattutto La Gatta — la versione ratmaniana della femme fatale felina, primo capitolo del rapporto disastroso del nostro eroe con l'altro sesso, tema portante di tutta la saga.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> è l'albo che convinse Panini a trasformare l'esperimento in collana stabile — di fatto, il numero che ha salvato il Coloratto.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 3 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">3</span><span class="y">2005</span></div>
+      <article class="albo rosso">
+        <div class="masthead"><h2>Color Special n. 3</h2><span class="anno">Giugno 2005</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot r3">
+            <div class="cover-art">
+              <span class="strip">Color Special</span>
+              <span class="logo">Il ritorno!</span>
+              <span class="num">3</span>
+            </div>
+            <img src="copertine-ratman/03-color-special.jpg" alt="Copertina Rat-Man Color Special 3" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge start">★ Entra in scena la Squadra Segreta</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Contiene</dt><dd>Il ritorno!, La Squadra Segreta!</dd></div>
+            <div><dt>Coloristi</dt><dd>Lorenzo Ortolani, Gian Luca Raimondi</dd></div>
+            <div><dt>Prima uscita in B/N</dt><dd>Rat-Man (serie autoprodotta) n. 7, novembre 1996 e n. 8, dicembre 1996 — Edizioni Bande Dessinée</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Qui la serie comincia a mostrare il suo doppio fondo: dietro le gag entra in scena la Squadra Segreta, e con lei i primi indizi di quella mitologia nascosta — organizzazioni nell'ombra, misteri sull'origine dei poteri di Rat-Man — che Ortolani svilupperà per vent'anni fino a trasformare la parodia in una delle saghe più strutturate del fumetto italiano. Chi conosce solo il Rat-Man comico, da qui in poi scopre l'altro.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> il metodo "ridi ridi, poi ti spezzo il cuore" che debutta in queste storie è la cifra che ha reso Ortolani un autore di culto trasversale, citato con reverenza anche da colleghi e sceneggiatori fuori dal fumetto comico.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 4 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">4</span><span class="y">2005</span></div>
+      <article class="albo">
+        <div class="masthead"><h2>Color Special n. 4</h2><span class="anno">Settembre 2005</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot r4">
+            <div class="cover-art">
+              <span class="strip">Color Special</span>
+              <span class="logo">L'ultimo<br>segreto</span>
+              <span class="num">4</span>
+            </div>
+            <img src="copertine-ratman/04-color-special.jpg" alt="Copertina Rat-Man Color Special 4" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge evento">Una delle storie chiave della saga</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Contiene</dt><dd>L'ultimo segreto, Weekend di torrone</dd></div>
+            <div><dt>Coloristi</dt><dd>Lorenzo Ortolani, Pamela Brughera</dd></div>
+            <div><dt>Prima uscita in B/N</dt><dd>L'ultimo segreto: Rat-Man (serie autoprodotta) n. 9, marzo 1997, Edizioni Bande Dessinée. Weekend di torrone: serie autoprodotta, 1996 circa</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>L'accoppiata perfetta che riassume Rat-Man: da un lato "L'ultimo segreto", trentotto pagine che scavano nel mistero del personaggio e nei segreti che lo circondano — uno dei tasselli fondanti della trama lunga; dall'altro "Weekend di torrone", puro Ortolani comico da lacrime. Leggerli di fila è il modo migliore per capire perché questa serie funziona su due frequenze contemporaneamente.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> le storie di quest'epoca sono quelle da cui la serie animata Rai del 2006 ha attinto di più per tono e personaggi.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 5 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">5</span><span class="y">2006</span></div>
+      <article class="albo giallo">
+        <div class="masthead"><h2>Color Special n. 5</h2><span class="anno">Luglio 2006</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot r5">
+            <div class="cover-art">
+              <span class="strip">Color Special</span>
+              <span class="logo">La tela<br>strappata</span>
+              <span class="num">5</span>
+            </div>
+            <img src="copertine-ratman/05-color-special.jpg" alt="Copertina Rat-Man Color Special 5" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge">Tre storie: parodia supereroistica al massimo</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Contiene</dt><dd>La tela strappata, L'ira di Cover-Man, Il Collezionista</dd></div>
+            <div><dt>Coloristi</dt><dd>Lorenzo Ortolani, Gian Luca Raimondi</dd></div>
+            <div><dt>Prima uscita in B/N</dt><dd>Rat-Man Collection (Marvel Italia), 1998 circa</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>L'albo più "meta" del lotto: tra la tela strappata (ancora conti in sospeso col Ragno), l'esilarante Cover-Man — il supereroe che esiste solo in copertina, sberleffo a un vizio storico del fumetto americano — e il Collezionista, che prende di mira direttamente noi che compriamo gli albetti, Ortolani fa satira del mezzo dentro il mezzo. Per un collezionista, leggere "Il Collezionista" è un'esperienza pedagogica.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> Cover-Man è diventato un tormentone del fandom italiano, citato ogni volta che una copertina promette più di quanto l'albo mantenga — cioè spesso.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 6 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">6</span><span class="y">2006</span></div>
+      <article class="albo">
+        <div class="masthead"><h2>Color Special n. 6</h2><span class="anno">Autunno 2006</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot r6">
+            <div class="cover-art">
+              <span class="strip">Color Special</span>
+              <span class="logo">Io,<br>il clone!</span>
+              <span class="num">6</span>
+            </div>
+            <img src="copertine-ratman/06-color-special.jpg" alt="Copertina Rat-Man Color Special 6" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge evento">La parodia della Saga del Clone</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Contiene</dt><dd>Caccia al Ragno!, Io, il clone!</dd></div>
+            <div><dt>Coloristi</dt><dd>Gian Luca Raimondi, Lorenzo Ortolani</dd></div>
+            <div><dt>Prima uscita in B/N</dt><dd>Rat-Man Collection (Marvel Italia), 1998 circa</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Il dittico che chiude i conti con il Ragno: prima la caccia, poi "Io, il clone!" — la presa in giro definitiva della Saga del Clone di Spider-Man, l'evento editoriale più contorto degli anni '90. Ortolani smonta cloni, identità multiple e colpi di scena a ripetizione con una ferocia affettuosa che solo un vero lettore Marvel poteva permettersi. Curiosamente, oggi che possiedi anche la Saga del Clone... la parodia si gusta il doppio.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> le parodie marveliane di Ortolani gli sono valse negli anni l'invito ufficiale di Panini/Marvel a firmare copertine variant per gli albi americani veri — il parodiato che assume il parodista.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 7 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">7</span><span class="y">2007</span></div>
+      <article class="albo rosso">
+        <div class="masthead"><h2>Color Special n. 7</h2><span class="anno">2007</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot r7">
+            <div class="cover-art">
+              <span class="strip">Color Special</span>
+              <span class="logo">Crisi!</span>
+              <span class="num">7</span>
+            </div>
+            <img src="copertine-ratman/07-color-special.jpg" alt="Copertina Rat-Man Color Special 7" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge">Identità in crisi (letteralmente)</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Contiene</dt><dd>Crisi!, Io, il Rat-Man!</dd></div>
+            <div><dt>Coloristi</dt><dd>Pamela Brughera, Lorenzo Ortolani</dd></div>
+            <div><dt>Prima uscita in B/N</dt><dd>Rat-Man Collection (Marvel Italia), 1998–1999 circa</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Doppio affondo sul tema che regge tutta l'opera: chi è davvero Rat-Man? "Crisi!" gioca col titolo più abusato degli eventi supereroistici (ogni riferimento alle Crisi DC è voluto), mentre "Io, il Rat-Man!" mette il protagonista faccia a faccia con il proprio ruolo di eroe — con risultati prevedibilmente catastrofici e, come sempre più spesso in questa fase, un retrogusto malinconico che resta addosso.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> è il Rat-Man di questo periodo — buffo fuori, incrinato dentro — quello che i lettori della prima ora citano quando spiegano perché Ortolani non è "solo" un autore comico.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 8 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">8</span><span class="y">2007</span></div>
+      <article class="albo">
+        <div class="masthead"><h2>Color Special n. 8</h2><span class="anno">2007</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot r8">
+            <div class="cover-art">
+              <span class="strip">Color Special</span>
+              <span class="logo">L'araldo!</span>
+              <span class="num">8</span>
+            </div>
+            <img src="copertine-ratman/08-color-special.jpg" alt="Copertina Rat-Man Color Special 8" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge evento">La parodia cosmica</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Contiene</dt><dd>L'araldo!, L'intervista!, Niente è per sempre</dd></div>
+            <div><dt>Coloristi</dt><dd>Gian Luca Raimondi, Lorenzo Ortolani</dd></div>
+            <div><dt>Prima uscita in B/N</dt><dd>L'araldo!: serie autoprodotta, 1996 (ristampato su Rat-Man Collection nel settembre 1997). Le altre due: Rat-Man Collection, 1999 circa</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Si vola in alto: "L'araldo!" porta Rat-Man nel territorio di Galactus e Silver Surfer, la mitologia cosmica Marvel ridotta alle sue proporzioni più ridicole (e quindi più vere). Poi il registro cambia due volte — l'intervista al nostro eroe, e "Niente è per sempre", uno di quei titoli ortolaniani che sembrano una battuta e sono un avvertimento: nella saga di Rat-Man, davvero, niente lo è.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> l'amore-odio di Ortolani per la mitologia cosmica Marvel culminerà anni dopo nelle sue celebri parodie cinematografiche recensite a fumetti e nelle variant per gli albi cosmici veri.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 9 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">9</span><span class="y">2007</span></div>
+      <article class="albo giallo">
+        <div class="masthead"><h2>Color Special n. 9</h2><span class="anno">2007</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot r9">
+            <div class="cover-art">
+              <span class="strip">Color Special</span>
+              <span class="logo">L'allievo</span>
+              <span class="num">9</span>
+            </div>
+            <img src="copertine-ratman/09-color-special.jpg" alt="Copertina Rat-Man Color Special 9" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge start">★ L'uomo dentro il costume</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Contiene</dt><dd>L'allievo, Un uomo in calzamaglia</dd></div>
+            <div><dt>Coloristi</dt><dd>Lorenzo Ortolani</dd></div>
+            <div><dt>Prima uscita in B/N</dt><dd>Rat-Man Collection (Marvel Italia), 1999 circa</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Chiusura in bellezza del tuo blocco: "L'allievo" affronta il rapporto maestro-discepolo — con un Rat-Man ovviamente inadeguato a entrambi i ruoli — mentre "Un uomo in calzamaglia" è quasi un manifesto: la distanza comica e commovente tra l'uomo e il costume che indossa. Il titolo dice tutto del progetto Ortolani: guardare cosa c'è davvero dentro la calzamaglia di un supereroe. Di solito, un disastro. Sempre, un essere umano.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> il tema dell'"uomo dentro il costume" è quello che la critica ha riconosciuto a Ortolani come contributo d'autore al genere — la parodia che, a furia di smontare il supereroe, ha finito per capirlo meglio di molti fumetti seri.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 10 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">10</span><span class="y">2008</span></div>
+      <article class="albo">
+        <div class="masthead"><h2>Color Special n. 10</h2><span class="anno">2008</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot r10">
+            <div class="cover-art">
+              <span class="strip">Color Special</span>
+              <span class="logo">The<br>R-File!</span>
+              <span class="num">10</span>
+            </div>
+            <img src="copertine-ratman/10-color-special.jpg" alt="Copertina Rat-Man Color Special 10" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge">La parodia di X-Files</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Contiene</dt><dd>Il supereroe, The R-File</dd></div>
+            <div><dt>Coloristi</dt><dd>Lorenzo Ortolani, Gian Luca Raimondi</dd></div>
+            <div><dt>Prima uscita in B/N</dt><dd>The R-File!: Rat-Man (serie autoprodotta) n. 11, luglio 1997, Edizioni Bande Dessinée. Il supereroe: Rat-Man Collection, 1999–2000 circa</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Doppio registro perfettamente ortolaniano: "Il supereroe" torna a interrogarsi su cosa significhi davvero indossare quel costume, mentre "The R-File" scatena Rat-Man dentro la parodia di X-Files — misteri, complotti e agenti governativi versione Città Senza Nome, ai tempi in cui Mulder e Scully erano ovunque. La verità è là fuori; la competenza, molto meno.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> le parodie televisive di questa fase mostrano il metodo Ortolani applicato oltre i comics — lo stesso che negli anni lo porterà a recensire a fumetti film e serie TV, diventando un genere a sé.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 11 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">11</span><span class="y">2008</span></div>
+      <article class="albo rosso">
+        <div class="masthead"><h2>Color Special n. 11</h2><span class="anno">Giugno 2008</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot r11">
+            <div class="cover-art">
+              <span class="strip">Color Special</span>
+              <span class="logo">Il grande<br>Ratzinga!</span>
+              <span class="num">11</span>
+            </div>
+            <img src="copertine-ratman/11-color-special.jpg" alt="Copertina Rat-Man Color Special 11" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge start">★ Da qui la collana diventa regolare</span>
+            <span class="badge">La parodia robotica</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Contiene</dt><dd>Il grande Ratzinga!, Dimenticati dal tempo!</dd></div>
+            <div><dt>Coloristi</dt><dd>Gian Luca Raimondi, Lorenzo Ortolani</dd></div>
+            <div><dt>Prima uscita in B/N</dt><dd>Il grande Ratzinga!: Rat-Man (serie autoprodotta) n. 12, settembre 1997, Edizioni Bande Dessinée. Dimenticati dal tempo!: Rat-Man Collection, 2000 circa</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>"Il grande Ratzinga!" è la resa dei conti di Ortolani con i robotoni giapponesi della sua infanzia: Mazinga e soci passati al tritacarne, con il nostro eroe ai comandi di ciò che nessuno dovrebbe mai fargli comandare. E "Dimenticati dal tempo!" completa l'albo pescando nel repertorio avventuroso della saga. Curiosità editoriale: fu da questo numero che Panini, visto il successo, ufficializzò la cadenza regolare della collana — tre uscite l'anno, a giugno, agosto e ottobre.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> l'amore parodico per i robot giapponesi è un marchio di fabbrica ortolaniano che tornerà più volte, fino alle sue celebri recensioni a fumetti dei film di mecha e kaiju.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 12 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">12</span><span class="y">2008</span></div>
+      <article class="albo giallo">
+        <div class="masthead"><h2>Color Special n. 12</h2><span class="anno">Agosto 2008</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot r12">
+            <div class="cover-art">
+              <span class="strip">Color Special</span>
+              <span class="logo">Tentazioni</span>
+              <span class="num">12</span>
+            </div>
+            <img src="copertine-ratman/12-color-special.jpg" alt="Copertina Rat-Man Color Special 12" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge">Desideri e conseguenze</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Contiene</dt><dd>Tentazioni, Il pozzo del desiderio!</dd></div>
+            <div><dt>Coloristi</dt><dd>Gian Luca Raimondi, Lorenzo Ortolani</dd></div>
+            <div><dt>Prima uscita in B/N</dt><dd>Rat-Man Collection, 1999–2000 circa</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Un dittico costruito su un tema solo: il desiderio, e il disastro che ne consegue quando a desiderare è Rat-Man. Tra tentazioni a cui è impossibile resistere (soprattutto per lui) e un pozzo che promette di esaudire i sogni, Ortolani fa quello che gli riesce meglio: usare la gag per parlare di quanto siamo tutti, irrimediabilmente, il nostro peggior nemico.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> siamo nell'epoca d'oro della "storia breve perfetta" di Ortolani — meccanismi comici a orologeria studiati oggi anche nei corsi di sceneggiatura.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 13 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">13</span><span class="y">2008</span></div>
+      <article class="albo">
+        <div class="masthead"><h2>Color Special n. 13</h2><span class="anno">Ottobre 2008</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot r13">
+            <div class="cover-art">
+              <span class="strip">Color Special</span>
+              <span class="logo">Operazione<br>Geode!</span>
+              <span class="num">13</span>
+            </div>
+            <img src="copertine-ratman/13-color-special.jpg" alt="Copertina Rat-Man Color Special 13" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge">Fiaba e azione</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Contiene</dt><dd>La bella e la bestia!, Operazione Geode!</dd></div>
+            <div><dt>Coloristi</dt><dd>Lorenzo Ortolani, Gian Luca Raimondi</dd></div>
+            <div><dt>Prima uscita in B/N</dt><dd>Rat-Man Collection, 2000 circa</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Due facce della stessa era: "La bella e la bestia!" gioca con l'archetipo fiabesco — e con l'eterna, disastrosa vita sentimentale del nostro — mentre "Operazione Geode!" vira sull'azione in codice, missioni e nomi in codice compresi. È il periodo in cui la saga alterna con naturalezza commedia romantica, avventura e i primi lampi del disegno più maturo di Ortolani.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> il tema "bella e bestia" applicato a Rat-Man — chi dei due sia la bestia resta materia di dibattito — è uno dei giochi ricorrenti che i fan citano a memoria.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 14 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">14</span><span class="y">2009</span></div>
+      <article class="albo rosso">
+        <div class="masthead"><h2>Color Special n. 14</h2><span class="anno">Giugno 2009</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot r14">
+            <div class="cover-art">
+              <span class="strip">Color Special</span>
+              <span class="logo">L'incredibile<br>Ik!</span>
+              <span class="num">14</span>
+            </div>
+            <img src="copertine-ratman/14-color-special.jpg" alt="Copertina Rat-Man Color Special 14" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge evento">La parodia di Hulk</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Contiene</dt><dd>L'incredibile Ik!, La sentinella</dd></div>
+            <div><dt>Coloristi</dt><dd>Gian Luca Raimondi, Lorenzo Ortolani</dd></div>
+            <div><dt>Prima uscita in B/N</dt><dd>L'incredibile Ik!: Rat-Man (serie autoprodotta) n. 10, maggio 1997, Edizioni Bande Dessinée. La sentinella: Rat-Man Collection, 2000 circa</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>"L'incredibile Ik!" completa il giro delle grandi parodie Marvel: dopo il Ragno e l'araldo cosmico, tocca al Golia verde — la rabbia, i pantaloni strappati e la trasformazione, tutto riproporzionato alla statura (morale e fisica) di Rat-Man. "La sentinella" cambia registro e mostra l'altra faccia della saga, quella che si prende sul serio quando meno te lo aspetti.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> con Ragno, araldo e Ik, la tua collezione contiene ormai il "trittico Marvel" delle parodie ortolaniane — le stesse che anni dopo gli varranno le copertine variant ufficiali per gli albi Marvel veri.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 15 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">15</span><span class="y">2009</span></div>
+      <article class="albo giallo">
+        <div class="masthead"><h2>Color Special n. 15</h2><span class="anno">Agosto 2009</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot r15">
+            <div class="cover-art">
+              <span class="strip">Color Special</span>
+              <span class="logo">Cinzia<br>la barbara!</span>
+              <span class="num">15</span>
+            </div>
+            <img src="copertine-ratman/15-color-special.jpg" alt="Copertina Rat-Man Color Special 15" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge start">★ Cinzia protagonista</span>
+            <span class="badge">L'ultimo albo della tua serie (per ora)</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Contiene</dt><dd>Cinzia la barbara!, La gabbia</dd></div>
+            <div><dt>Coloristi</dt><dd>Gian Luca Raimondi, Lorenzo Ortolani</dd></div>
+            <div><dt>Prima uscita in B/N</dt><dd>Rat-Man Collection, 2000–2001 circa</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Chiusura del tuo blocco con un personaggio chiave: "Cinzia la barbara!" mette al centro Cinzia Otherside, la spalla più amata dell'universo ratmaniano, in versione parodia barbarica alla Conan. "La gabbia" completa l'albo con uno di quei racconti in cui la comicità si incrina e lascia intravedere il fondo malinconico della saga. Il fatto che il tuo ultimo albo sia "suo" è quasi profetico, visto dove arriverà il personaggio.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> Cinzia otterrà nel 2018 un intero romanzo a fumetti tutto suo — Cinzia, pubblicato da BAO — accolto come uno dei libri più maturi e amati di Ortolani: da spalla comica a protagonista di una storia su identità e accettazione.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 16: I Mille Volti di Rat-Man 1 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">+1</span><span class="y">2015</span></div>
+      <article class="albo">
+        <div class="masthead"><h2>I Mille Volti di Rat-Man n. 1</h2><span class="anno">Novembre 2015</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot r16">
+            <div class="cover-art">
+              <span class="strip">Statua + Albetto</span>
+              <span class="logo">I Mille<br>Volti</span>
+              <span class="num">1</span>
+            </div>
+            <img src="copertine-ratman/16-mille-volti-1.jpg" alt="I Mille Volti di Rat-Man n. 1" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge evento">Il pezzo tridimensionale della collezione</span>
+            <span class="badge">Rat-Man classico</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Cos'è</dt><dd>Statuina in PVC di circa 7 cm in blister da collezione + albetto spillato 16×21 di 8 pagine a colori con le strisce più celebri del personaggio</dd></div>
+            <div><dt>Produzione</dt><dd>Panini Comics con Infinite Statue / Cosmic Group, realizzata con la supervisione diretta di Leo Ortolani — in edicola dal 5 novembre 2015 a 9,90 €</dd></div>
+            <div><dt>Soggetto</dt><dd>Il numero 1 è dedicato al Rat-Man classico, in costume giallo d'ordinanza</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Il primo pezzo della collana che portò Rat-Man in tre dimensioni, in edicola, a cadenza mensile: ogni uscita una diversa incarnazione del protettore della Città Senza Nome, e la n. 1 non poteva che essere lui, il Rat-Man di sempre. Ortolani commentò l'iniziativa a modo suo: "ho sempre fatto fumetti con la speranza che un giorno ne venissero realizzati i pupazzini collezionabili, lo confesso".</p>
+          <h3>Curiosità</h3>
+          <p>La serie proseguì con le versioni parodiche più amate: Star Rats, Rat-800, Spider-Rat, Ratto, Walking Rat, Wolverat, Rat-Trek e altre ancora — un piccolo museo delle parodie ortolaniane in PVC. Il n. 1, come sempre in queste collane, è il più ricercato dai completisti.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> letteralmente oltre la carta — è l'unico pezzo della tua collezione che sta in piedi da solo. Insieme all'albetto allegato forma il ponte perfetto tra la collezione di fumetti e il collezionismo di statue, entrambi mondi in cui Rat-Man ha prosperato grazie a Infinite Statue.</div>
+        </div>
+      </article>
+    </section>
+
+  </div>
+
+  <!-- RIEPILOGO -->
+  <section class="panel">
+    <h2>La mappa in <em>una tabella</em></h2>
+    <table>
+      <thead>
+        <tr><th>#</th><th>Uscita a colori</th><th>Prima ed. B/N</th><th>Storie contenute</th><th>Nota</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>Ago 2004</td><td>Spot, giu 1989 + Foxtrot 1995</td><td>Le sconvolgenti origini del Rat-Man!, Rat-Man contro il Ragno!, La minaccia verde!</td><td>L'esordio del 1989 a colori</td></tr>
+        <tr><td>2</td><td>Ott 2004</td><td>Serie autoprodotta, 1995–96</td><td>Tòpin! The Wonder Mouse!, Dal futuro!, La Gatta!</td><td>Il numero che salvò la collana</td></tr>
+        <tr><td>3</td><td>Giu 2005</td><td>Rat-Man nn. 7–8, nov–dic 1996</td><td>Il ritorno!, La Squadra Segreta!</td><td>Inizia la mitologia nascosta</td></tr>
+        <tr><td>4</td><td>Set 2005</td><td>Rat-Man n. 9, mar 1997 (+ 1996 ca.)</td><td>L'ultimo segreto, Weekend di torrone</td><td>Mistero + comicità pura</td></tr>
+        <tr><td>5</td><td>Lug 2006</td><td>Rat-Man Collection, 1998 ca.</td><td>La tela strappata, L'ira di Cover-Man, Il Collezionista</td><td>La satira del fumetto stesso</td></tr>
+        <tr><td>6</td><td>2006</td><td>Rat-Man Collection, 1998 ca.</td><td>Caccia al Ragno!, Io, il clone!</td><td>La parodia della Saga del Clone</td></tr>
+        <tr><td>7</td><td>2007</td><td>Rat-Man Collection, 1998–99 ca.</td><td>Crisi!, Io, il Rat-Man!</td><td>Il tema dell'identità</td></tr>
+        <tr><td>8</td><td>2007</td><td>1996 (L'araldo!) + RMC 1999 ca.</td><td>L'araldo!, L'intervista!, Niente è per sempre</td><td>La parodia cosmica</td></tr>
+        <tr><td>9</td><td>2007</td><td>Rat-Man Collection, 1999 ca.</td><td>L'allievo, Un uomo in calzamaglia</td><td>L'uomo dentro il costume</td></tr>
+        <tr><td>10</td><td>2008</td><td>Rat-Man n. 11, lug 1997 + RMC 1999–2000 ca.</td><td>Il supereroe, The R-File</td><td>La parodia di X-Files</td></tr>
+        <tr><td>11</td><td>Giu 2008</td><td>Rat-Man n. 12, set 1997 + RMC 2000 ca.</td><td>Il grande Ratzinga!, Dimenticati dal tempo!</td><td>La parodia robotica</td></tr>
+        <tr><td>12</td><td>Ago 2008</td><td>Rat-Man Collection, 1999–2000 ca.</td><td>Tentazioni, Il pozzo del desiderio!</td><td>Desideri e conseguenze</td></tr>
+        <tr><td>13</td><td>Ott 2008</td><td>Rat-Man Collection, 2000 ca.</td><td>La bella e la bestia!, Operazione Geode!</td><td>Fiaba e azione</td></tr>
+        <tr><td>14</td><td>Giu 2009</td><td>Rat-Man n. 10, mag 1997 + RMC 2000 ca.</td><td>L'incredibile Ik!, La sentinella</td><td>La parodia di Hulk</td></tr>
+        <tr><td>15</td><td>Ago 2009</td><td>Rat-Man Collection, 2000–01 ca.</td><td>Cinzia la barbara!, La gabbia</td><td>Cinzia protagonista</td></tr>
+        <tr><td>+1</td><td>Nov 2015</td><td>—</td><td>I Mille Volti di Rat-Man n. 1: statua PVC + albetto con strisce celebri</td><td>Il pezzo in 3D</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:14px;font-size:14.5px">Rat-Man Color Special — il "Coloratto" — è la ristampa a colori delle storie di Leo Ortolani, in formato 18×26 da 64 pagine, con la colorazione supervisionata da Lorenzo "Larry" Ortolani. Le prime edizioni in bianco e nero attraversano tre epoche: l'esordio sulla rivista Spot (giugno 1989), la serie autoprodotta in dodici numeri (nn. 1–3 Edizioni Foxtrot, poi Edizioni Bande Dessinée, 1995–1997) e la serie regolare Rat-Man Collection di Marvel Italia (dal 1997). Le date dei nn. 6–10 del Color Special e alcune prime edizioni sono indicative ("circa"): fino al n. 10 la collana usciva a cadenza irregolare (dal n. 11, giugno 2008, si stabilizzò su tre uscite l'anno) e le fonti d'epoca non sempre concordano al mese.</p>
+  </section>
+
+  <!-- PERCORSO -->
+  <section class="panel">
+    <h2>Come <em>proseguire</em></h2>
+    <p><strong>Sulla stessa collana:</strong> il Coloratto è proseguito fino al n. 34 (2015), sempre 2-3 numeri l'anno, prima di essere sostituito nel 2016 da volumi a colori di grande formato dedicati alle saghe autoconclusive — il primo fu Ratto, la celebre parodia di Rambo che diventa riflessione sulla guerra. Per completare la serie ti mancano quindi i nn. 16–34, reperibili nel circuito dell'usato e delle fumetterie a prezzi generalmente abbordabili. E sul fronte statue, I Mille Volti di Rat-Man prosegue con le incarnazioni parodiche (Star Rats, Rat-800, Spider-Rat, Ratto e via dicendo): il tuo n. 1 è il capostipite.</p>
+    <p><strong>Per la saga completa:</strong> la serie madre è Rat-Man Collection (122 numeri, 1997–2017, in bianco e nero), conclusa da Ortolani con un finale vero e pianificato — rarità assoluta nel fumetto seriale. Le strade per recuperarla sono le ristampe Tutto Rat-Man e Rat-Man Gigante, oppure la caccia agli originali. E per il dopo: Ortolani ha continuato con progetti autoconclusivi (le parodie cinematografiche, Cinzia, Blu tramonto e altri) che sono ormai un universo a parte.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">Dossier della collezione · Rat-Man · Leo Ortolani</div>
+</footer>
+
+</body>
+</html>

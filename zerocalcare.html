@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fumetti Zerocalcare</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
+<style>
+  :root{
+    --carta:#F4EFE3;        /* carta da blocco, fondo pagina chiaro */
+    --carta-2:#ECE5D2;
+    --china:#1C1B18;        /* inchiostro nero */
+    --arancio:#E85D26;      /* arancione da copertina BAO */
+    --arancio-scuro:#B8431A;
+    --kaki:#5A6247;         /* verde militare (Kobane) */
+    --fumo:#6E6A5E;         /* grigio testo secondario */
+    --bianco:#FFFDF6;       /* carta delle schede */
+    --filo:#CFC5AB;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none !important;animation:none !important} }
+  body{
+    background:var(--carta);
+    color:var(--china);
+    font-family:'Spectral',Georgia,serif;
+    font-size:17px;
+    line-height:1.65;
+  }
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px}
+ 
+  /* ---------- HERO ---------- */
+  header{
+    padding:64px 0 40px;
+    background:
+      radial-gradient(circle at 90% -10%, rgba(232,93,38,.16), transparent 46%),
+      repeating-linear-gradient(0deg, transparent 0 31px, rgba(28,27,24,.05) 31px 32px),
+      var(--carta);
+    border-bottom:4px solid var(--china);
+  }
+  .corner-box{
+    display:inline-flex;flex-direction:column;align-items:center;justify-content:center;
+    background:var(--bianco);color:var(--china);
+    border:3px solid var(--china);
+    padding:8px 12px;margin-bottom:22px;
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;
+    text-transform:uppercase;letter-spacing:.06em;font-size:13px;line-height:1.25;
+    box-shadow:6px 6px 0 var(--arancio);
+    transform:rotate(-1.2deg);
+  }
+  .corner-box .big{font-family:'Anton',sans-serif;font-size:30px;letter-spacing:.02em}
+  h1{
+    font-family:'Anton',sans-serif;
+    font-size:clamp(42px,7.6vw,82px);
+    line-height:.95;letter-spacing:.01em;
+    color:var(--china);text-transform:uppercase;
+  }
+  h1 .rosso{color:var(--arancio)}
+  .hero-sub{
+    margin-top:18px;max-width:680px;font-size:18px;color:var(--fumo);
+  }
+  .hero-meta{
+    margin-top:26px;display:flex;flex-wrap:wrap;gap:10px;
+    font-family:'Barlow Condensed',sans-serif;font-weight:600;
+    text-transform:uppercase;letter-spacing:.1em;font-size:13px;
+  }
+  .hero-meta span{
+    border:2px solid var(--china);padding:5px 12px;color:var(--china);background:var(--bianco);
+  }
+ 
+  /* ---------- TIMELINE ---------- */
+  main{padding:56px 0 20px}
+  .timeline{position:relative}
+  .timeline::before{
+    content:"";position:absolute;left:29px;top:0;bottom:0;width:3px;
+    background:repeating-linear-gradient(to bottom, var(--china) 0 12px, transparent 12px 20px);
+    opacity:.75;
+  }
+  .stop{position:relative;padding:0 0 52px 84px}
+  .stop:last-child{padding-bottom:24px}
+  .stop-dot{
+    position:absolute;left:0;top:6px;width:60px;height:60px;border-radius:50%;
+    background:var(--bianco);border:3px solid var(--china);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    font-family:'Barlow Condensed',sans-serif;color:var(--china);text-align:center;
+    box-shadow:3px 3px 0 var(--arancio);
+  }
+  .stop-dot .n{font-family:'Anton',sans-serif;font-size:22px;line-height:1;color:var(--arancio)}
+  .stop-dot .y{font-size:11.5px;letter-spacing:.06em;color:var(--fumo);text-transform:uppercase}
+ 
+  /* ---------- CARD ---------- */
+  .albo{
+    background:var(--bianco);color:var(--china);
+    border:3px solid var(--china);
+    box-shadow:10px 10px 0 rgba(28,27,24,.18);
+  }
+  .albo:nth-child(odd){transform:rotate(.15deg)}
+  .masthead{
+    background:var(--china);color:var(--bianco);
+    padding:16px 22px 13px;
+    border-bottom:3px solid var(--china);
+    display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap;
+  }
+  .albo.arancio .masthead{background:var(--arancio);color:var(--bianco)}
+  .albo.kaki .masthead{background:var(--kaki);color:var(--bianco)}
+  .masthead h2{
+    font-family:'Anton',sans-serif;text-transform:uppercase;
+    font-size:clamp(22px,3.8vw,32px);line-height:1;letter-spacing:.015em;
+  }
+  .masthead .anno{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;
+    letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;opacity:.9;
+  }
+  .halftone{
+    height:10px;border-bottom:3px solid var(--china);
+    background-image:repeating-linear-gradient(45deg, rgba(28,27,24,.35) 0 2px, transparent 2px 6px);
+    background-color:rgba(232,93,38,.25);
+  }
+  .albo-body{padding:24px 26px 26px}
+  .cover-slot{
+    float:left;width:220px;aspect-ratio:17/24;margin:4px 26px 14px 0;
+    border:3px solid var(--china);box-shadow:6px 6px 0 rgba(28,27,24,.2);
+    position:relative;overflow:hidden;background:var(--carta-2);
+    transform:rotate(-.6deg);
+  }
+  .cover-slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+  .cover-art{
+    position:absolute;inset:0;display:flex;flex-direction:column;
+    justify-content:space-between;padding:10px;color:var(--bianco);
+    font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;
+  }
+  .cover-art .logo{font-family:'Anton',sans-serif;font-size:24px;line-height:1.05;letter-spacing:.01em;text-shadow:2px 2px 0 rgba(0,0,0,.35)}
+  .cover-art .num{
+    align-self:flex-end;background:var(--bianco);color:var(--china);border:2px solid var(--china);
+    font-family:'Anton',sans-serif;font-size:22px;padding:2px 10px;
+  }
+  .cover-art .strip{font-weight:700;font-size:12.5px;letter-spacing:.14em;background:rgba(28,27,24,.55);padding:4px 9px;align-self:flex-start}
+  .cover-art::before{
+    content:"";position:absolute;inset:0;
+    background:repeating-linear-gradient(45deg, rgba(255,255,255,.05) 0 3px, transparent 3px 9px);
+  }
+  .z1 .cover-art{background:linear-gradient(160deg,#C4501B 0 55%,#8C3212 55% 100%)}
+  .z2 .cover-art{background:linear-gradient(160deg,#27536B 0 55%,#16303F 55% 100%)}
+  .z3 .cover-art{background:linear-gradient(160deg,#1C1B18 0 55%,#E85D26 55% 100%)}
+  .z4 .cover-art{background:linear-gradient(160deg,#5A6247 0 55%,#3A4030 55% 100%)}
+  .z5 .cover-art{background:linear-gradient(160deg,#B8431A 0 50%,#1C1B18 50% 100%)}
+  .z6 .cover-art{background:linear-gradient(160deg,#4A4A52 0 55%,#1C1B18 55% 100%)}
+  .z7 .cover-art{background:linear-gradient(160deg,#1E3B2E 0 50%,#1C1B18 50% 100%)}
+  .z8 .cover-art{background:linear-gradient(160deg,#7A2340 0 55%,#1C1B18 55% 100%)}
+  .z9 .cover-art{background:linear-gradient(160deg,#8C1B1B 0 50%,#1C1B18 50% 100%)}
+  .z10 .cover-art{background:linear-gradient(160deg,#1C1B18 0 55%,#E85D26 55% 100%)}
+  .z11 .cover-art{background:linear-gradient(160deg,#A0522D 0 55%,#5A3A28 55% 100%)}
+  .albo-body::after{content:"";display:block;clear:both}
+  .scheda{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:14px 26px;margin-bottom:20px;
+    border-bottom:1px solid var(--filo);padding-bottom:18px;
+  }
+  .scheda dt{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;
+    text-transform:uppercase;letter-spacing:.12em;color:var(--arancio-scuro);
+  }
+  .scheda dd{font-size:15.5px;line-height:1.5}
+  .badge-row{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+  .badge{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12.5px;
+    text-transform:uppercase;letter-spacing:.1em;
+    padding:4px 10px;border:2px solid var(--china);background:var(--carta);
+    transform:rotate(-.5deg);
+  }
+  .badge.start{background:var(--arancio);color:var(--bianco)}
+  .badge.evento{background:var(--china);color:var(--bianco)}
+  .albo-body h3{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;
+    text-transform:uppercase;letter-spacing:.14em;color:var(--china);
+    margin:20px 0 6px;
+  }
+  .albo-body h3::before{content:"✎ ";color:var(--arancio)}
+  .albo-body p{margin-bottom:10px;font-size:16px}
+  .albo-body p:last-child{margin-bottom:0}
+  .screen{
+    margin-top:18px;background:var(--carta);border:2px dashed var(--china);
+    padding:14px 18px;font-size:15.5px;
+  }
+  .screen strong{color:var(--arancio-scuro)}
+ 
+  /* ---------- SEZIONI FINALI ---------- */
+  .panel{
+    background:var(--bianco);border:3px solid var(--china);
+    box-shadow:8px 8px 0 rgba(28,27,24,.15);
+    padding:30px 30px 26px;margin:26px 0;
+  }
+  .panel h2{
+    font-family:'Anton',sans-serif;text-transform:uppercase;color:var(--china);
+    font-size:clamp(22px,3.5vw,30px);margin-bottom:14px;letter-spacing:.02em;
+  }
+  .panel h2 em{font-style:normal;color:var(--arancio)}
+  .panel p{margin-bottom:12px;color:var(--china)}
+  .panel p:last-child{margin-bottom:0}
+  table{width:100%;border-collapse:collapse;margin-top:8px;font-size:15px}
+  th{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+    letter-spacing:.1em;font-size:12.5px;color:var(--arancio-scuro);
+    text-align:left;padding:8px 10px;border-bottom:3px solid var(--china);
+  }
+  td{padding:9px 10px;border-bottom:1px solid var(--filo);vertical-align:top}
+  td:first-child{font-weight:700}
+ 
+  footer{
+    padding:34px 0 46px;border-top:4px solid var(--china);margin-top:30px;
+    font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--fumo);text-align:center;
+  }
+  @media (max-width:640px){
+    .timeline::before{left:21px}
+    .stop{padding-left:62px}
+    .stop-dot{width:44px;height:44px}
+    .stop-dot .n{font-size:17px}.stop-dot .y{display:none}
+    .albo-body{padding:20px 18px 22px}
+  }
+  @media (max-width:560px){
+    .cover-slot{float:none;width:190px;margin:0 auto 18px}
+  }
+</style>
+</head>
+<body>
+ 
+<header>
+  <div class="wrap">
+    <div class="corner-box">
+      <span>Collezione di</span>
+      <span class="big">9+2</span>
+      <span>Pezzi</span>
+    </div>
+    <h1>La mia collezione<br><span class="rosso">Zerocalcare</span></h1>
+    <p class="hero-sub">Nove libri in rigoroso ordine di uscita: da Rebibbia al Rojava, dalle strisce del blog al graphic journalism nei tribunali d'Europa fino alla memoria collettiva di Genova, quindici anni di armadilli, sensi di colpa e reportage. Più due pezzi tridimensionali: le statuine di Zero e dell'Armadillo della Zerocalcare 3D Collection.</p>
+    <div class="hero-meta">
+      <span>BAO Publishing · Coconino Press</span>
+      <span>2011 → 2026</span>
+      <span>+ Zerocalcare 3D Collection</span>
+    </div>
+  </div>
+</header>
+ 
+<main class="wrap">
+  <div class="timeline">
+ 
+    <!-- 1 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">1</span><span class="y">2011</span></div>
+      <article class="albo arancio">
+        <div class="masthead"><h2>La profezia dell'armadillo</h2><span class="anno">2011 / ed. BAO 2012</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot z1">
+            <div class="cover-art">
+              <span class="strip">BAO Publishing</span>
+              <span class="logo">La profezia<br>dell'armadillo</span>
+              <span class="num">2011</span>
+            </div>
+            <img src="copertine/zerocalcare/01-profezia-armadillo.jpg" alt="Copertina La profezia dell'armadillo" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge start">★ L'esordio: qui nasce tutto</span>
+            <span class="badge">Nascita dell'Armadillo</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Editore</dt><dd>Prima edizione autoprodotta con Makkox (2011), poi BAO Publishing (edizione a colori, 2012)</dd></div>
+            <div><dt>Tipo</dt><dd>Graphic novel autobiografica</dd></div>
+            <div><dt>Ambientazione</dt><dd>Rebibbia, Roma — e i ricordi di Camille</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Il libro che ha cambiato il fumetto italiano: la notizia della morte di Camille, amica d'adolescenza mai dimenticata, costringe Zero a fare i conti con ciò che non si è detto, tra ricordi, precariato e la vita di quartiere. Al suo fianco, per la prima volta, l'Armadillo: la coscienza in corazza che da qui in poi commenterà ogni sua scelta. Nato quasi per caso da un progetto autoprodotto, diventò un fenomeno di passaparola che portò Rebibbia — mammut compreso — sulla mappa del fumetto.</p>
+          <h3>Cosa apre</h3>
+          <p>Tutto: il metodo Zerocalcare (autobiografia + citazioni pop + tragedia che si nasconde dietro la battuta), il cast fisso (Secco, l'Armadillo, il quartiere) e il tono che quindici anni dopo riconosce chiunque.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> ne è stato tratto il film La profezia dell'armadillo (2018), presentato a Venezia; e la voce definitiva dell'Armadillo — quella di Valerio Mastandrea — arriverà con le serie Netflix, che di questo libro sono figlie dirette.</div>
+        </div>
+      </article>
+    </section>
+ 
+    <!-- 2 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">2</span><span class="y">2012</span></div>
+      <article class="albo">
+        <div class="masthead"><h2>Un polpo alla gola</h2><span class="anno">2012</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot z2">
+            <div class="cover-art">
+              <span class="strip">BAO Publishing</span>
+              <span class="logo">Un polpo<br>alla gola</span>
+              <span class="num">2012</span>
+            </div>
+            <img src="copertine/zerocalcare/02-polpo-alla-gola.jpg" alt="Copertina Un polpo alla gola" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge">Il primo libro pensato come romanzo</span>
+            <span class="badge">Memoir scolastico in tre atti</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Editore</dt><dd>BAO Publishing</dd></div>
+            <div><dt>Tipo</dt><dd>Graphic novel autobiografica</dd></div>
+            <div><dt>Ambientazione</dt><dd>Elementari, medie e liceo: la Rebibbia dell'infanzia</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Il primo libro scritto da zero come storia unitaria (la Profezia era nata a episodi): un giallo dell'infanzia costruito su un segreto delle elementari — un'ingiustizia vista e taciuta — che riemerge come un polpo alla gola attraverso tre età della vita. Dentro c'è la mitologia scolastica di Zero al completo: la ferocia dei bambini, il codice d'onore dei banchi, la colpa che non prescrive mai.</p>
+          <h3>Il suo ruolo nella collezione</h3>
+          <p>È il tassello che dimostra che il fenomeno non era un caso: la conferma della voce, e il primo esperimento con una struttura narrativa complessa che culminerà anni dopo in opere come Macerie prime e Scheletri.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> l'immaginario scolastico di questo libro — i compagni feroci, le maestre, il tribunale morale dell'infanzia — è la matrice dei flashback d'infanzia che tornano in tutte le serie Netflix.</div>
+        </div>
+      </article>
+    </section>
+ 
+    <!-- 3 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">3</span><span class="y">2013</span></div>
+      <article class="albo">
+        <div class="masthead"><h2>Ogni maledetto lunedì su due</h2><span class="anno">2013</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot z3">
+            <div class="cover-art">
+              <span class="strip">BAO Publishing</span>
+              <span class="logo">Ogni maledetto<br>lunedì su due</span>
+              <span class="num">2013</span>
+            </div>
+            <img src="copertine/zerocalcare/03-ogni-maledetto-lunedi.jpg" alt="Copertina Ogni maledetto lunedì su due" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge start">★ Prima raccolta del blog</span>
+            <span class="badge">Le radici di tutto il resto</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Editore</dt><dd>BAO Publishing</dd></div>
+            <div><dt>Tipo</dt><dd>Raccolta delle storie del blog (2011–2013) più materiale inedito</dd></div>
+            <div><dt>Ambientazione</dt><dd>La quotidianità: supermercati, concerti, feste comandate, apocalissi domestiche</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Il blog zerocalcare.it, aperto a fine 2011, è il laboratorio dove il fenomeno è esploso una striscia alla volta — e questo volume ne raccoglie la prima stagione, col titolo che prende in giro il ritmo di aggiornamento promesso e mai rispettato. Dentro c'è lo Zerocalcare comico allo stato puro: le nevrosi quotidiane trasformate in epica, i cataloghi di mostri generazionali, le citazioni da Ken il Guerriero ai cartoni anni '80 usate come mitologia personale.</p>
+          <h3>Il suo ruolo nella collezione</h3>
+          <p>Apre il filone delle raccolte del blog che nella collezione prosegue con La scuola di pizze in faccia e Niente di nuovo sul fronte di Rebibbia: tre volumi che, letti in fila, sono il diario pubblico di quindici anni.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> molte delle situazioni e dei personaggi rodati sul blog — Secco e il gelato, la madre/Lady Cocca, l'amica Sarah — sono passati di peso nelle serie animate Netflix.</div>
+        </div>
+      </article>
+    </section>
+ 
+    <!-- 4: Dimentica il mio nome -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">4</span><span class="y">2014</span></div>
+      <article class="albo arancio">
+        <div class="masthead"><h2>Dimentica il mio nome</h2><span class="anno">2014</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot z8">
+            <div class="cover-art">
+              <span class="strip">BAO Publishing</span>
+              <span class="logo">Dimentica<br>il mio nome</span>
+              <span class="num">2014</span>
+            </div>
+            <img src="copertine/zerocalcare/04-dimentica-il-mio-nome.jpg" alt="Copertina Dimentica il mio nome" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge evento">Candidato al Premio Strega 2015</span>
+            <span class="badge start">★ Il primo grande romanzo familiare</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Editore</dt><dd>BAO Publishing</dd></div>
+            <div><dt>Tipo</dt><dd>Graphic novel autobiografica</dd></div>
+            <div><dt>Ambientazione</dt><dd>Tra Rebibbia e la Francia: la storia segreta della famiglia di Zero</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>La morte della nonna Huguette apre una voragine: dietro la donna elegante e severa che Zero credeva di conoscere emergono documenti che non tornano, identità che non combaciano e una storia familiare che attraversa il Novecento — e che l'autore ricostruisce mescolando indagine reale e immaginazione mitologica, fino a un finale che gioca apertamente col confine tra verità e leggenda. È il libro in cui Zerocalcare alza definitivamente l'asticella: dal diario di quartiere al romanzo generazionale sulle radici, il lutto e l'identità.</p>
+          <h3>Il suo ruolo nella collezione</h3>
+          <p>Inaugura il filone dei "romanzi" maturi (quello che prosegue con Macerie prime, Scheletri e Quando muori resta a me) e fu il libro della consacrazione culturale: la candidatura al Premio Strega 2015 portò per la prima volta un fumetto nel salotto buono della letteratura italiana, facendo discutere mezzo paese.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> il tema del rapporto con le figure familiari e con le proprie radici, inaugurato qui, è il cuore emotivo delle serie Netflix — e la madre di Zero, "Lady Cocca", diventa da questo libro in poi uno dei personaggi più amati del suo mondo.</div>
+        </div>
+      </article>
+    </section>
+ 
+    <!-- 4 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">5</span><span class="y">2016</span></div>
+      <article class="albo kaki">
+        <div class="masthead"><h2>Kobane Calling</h2><span class="anno">2016</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot z4">
+            <div class="cover-art">
+              <span class="strip">BAO Publishing</span>
+              <span class="logo">Kobane<br>Calling</span>
+              <span class="num">2016</span>
+            </div>
+            <img src="copertine/zerocalcare/04-kobane-calling.jpg" alt="Copertina Kobane Calling" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge start">★ Inizio del filone reportage</span>
+            <span class="badge evento">Il caso editoriale</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Editore</dt><dd>BAO Publishing (edizione ampliata "Kobane Calling: Oggi" nel 2020)</dd></div>
+            <div><dt>Tipo</dt><dd>Graphic journalism: reportage dai confini turco-siriani</dd></div>
+            <div><dt>Ambientazione</dt><dd>Il Rojava: i viaggi tra i curdi che combattono l'ISIS</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>La svolta: Zerocalcare parte con una carovana solidale verso il confine siriano e racconta la resistenza curda di Kobane e la rivoluzione del Rojava — il confederalismo democratico, le combattenti delle YPJ — con lo stesso sguardo autoironico delle strisce di quartiere, che rende comprensibile e vicino un conflitto lontanissimo. Nato dalle tavole pubblicate su Internazionale, è diventato il suo libro più tradotto e uno dei reportage a fumetti più letti d'Europa.</p>
+          <h3>Cosa apre</h3>
+          <p>Il secondo binario dell'opera di Zerocalcare, il graphic journalism militante, che nella collezione prosegue con Nel nido dei serpenti e con la memoria collettiva di Nessun rimorso reloaded — e che in mezzo passa per il ritorno in Medio Oriente di No Sleep Till Shengal.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> dal libro è nato un adattamento teatrale portato in tournée in tutta Italia, e il legame di Zerocalcare con la causa curda è diventato parte della sua figura pubblica tanto quanto l'Armadillo.</div>
+        </div>
+      </article>
+    </section>
+ 
+    <!-- 5 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">6</span><span class="y">2019</span></div>
+      <article class="albo">
+        <div class="masthead"><h2>La scuola di pizze in faccia del professor Calcare</h2><span class="anno">2019</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot z5">
+            <div class="cover-art">
+              <span class="strip">BAO Publishing</span>
+              <span class="logo">La scuola di<br>pizze in faccia</span>
+              <span class="num">2019</span>
+            </div>
+            <img src="copertine/zerocalcare/05-scuola-pizze-in-faccia.jpg" alt="Copertina La scuola di pizze in faccia del professor Calcare" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge">Seconda raccolta del blog</span>
+            <span class="badge">Gli anni della consacrazione</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Editore</dt><dd>BAO Publishing</dd></div>
+            <div><dt>Tipo</dt><dd>Raccolta delle storie brevi e del blog degli anni successivi alla prima antologia</dd></div>
+            <div><dt>Ambientazione</dt><dd>La quotidianità di un autore ormai famoso che finge di non esserlo</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Il secondo capitolo del diario pubblico: le storie brevi degli anni in cui Zerocalcare diventa un autore da classifica generalista — con tutte le nevrosi nuove che ne derivano — senza perdere il registro da bar di Rebibbia. Rispetto alla prima raccolta il tratto è maturo, i tempi comici più cinematografici, e tra le pagine si sente già l'autore che di lì a poco firmerà le serie animate.</p>
+          <h3>Il suo ruolo nella collezione</h3>
+          <p>Il ponte tra lo Zerocalcare "di culto" dei primi volumi e quello di massa dell'era Netflix: leggendolo dopo Ogni maledetto lunedì su due si vede a occhio nudo quanta strada ha fatto il tratto in sei anni.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> è il libro immediatamente precedente all'esplosione televisiva: due anni dopo arriva Strappare lungo i bordi (2021), la serie Netflix premiata e diventata fenomeno nazionale.</div>
+        </div>
+      </article>
+    </section>
+ 
+    <!-- 6 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">7</span><span class="y">2023</span></div>
+      <article class="albo">
+        <div class="masthead"><h2>Niente di nuovo sul fronte di Rebibbia</h2><span class="anno">2023</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot z6">
+            <div class="cover-art">
+              <span class="strip">BAO Publishing</span>
+              <span class="logo">Niente di nuovo<br>sul fronte<br>di Rebibbia</span>
+              <span class="num">2023</span>
+            </div>
+            <img src="copertine/zerocalcare/06-fronte-di-rebibbia.jpg" alt="Copertina Niente di nuovo sul fronte di Rebibbia" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge">Terza raccolta del blog</span>
+            <span class="badge">Gli anni della pandemia e di Netflix</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Editore</dt><dd>BAO Publishing</dd></div>
+            <div><dt>Tipo</dt><dd>Raccolta delle storie brevi degli anni recenti, con materiale inedito</dd></div>
+            <div><dt>Ambientazione</dt><dd>Rebibbia ai tempi del lockdown e della fama televisiva</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Il terzo capitolo del diario, con il titolo che scherza su Remarque: dentro ci sono gli anni più strani — la pandemia vista dal quartiere, il cortocircuito di essere diventato un personaggio televisivo nazionale, le battaglie sociali di sempre — raccontati con la consueta alternanza di comicità e mattoni sullo stomaco. È lo Zerocalcare che ormai parla a tutti, ma continua a scrivere come se parlasse ai suoi.</p>
+          <h3>Il suo ruolo nella collezione</h3>
+          <p>Chiude (per ora) la trilogia delle raccolte: con i volumi 3, 5 e 6 ho l'intero arco del blog dal 2011 a oggi, che è anche la spina dorsale autobiografica di tutta la collezione.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> esce tra le due serie Netflix (Questo mondo non mi renderà cattivo è del 2023) e mentre viene annunciata la terza, Due spicci — il diario cartaceo e quello animato ormai corrono in parallelo.</div>
+        </div>
+      </article>
+    </section>
+ 
+    <!-- 7 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">8</span><span class="y">2025</span></div>
+      <article class="albo kaki">
+        <div class="masthead"><h2>Nel nido dei serpenti</h2><span class="anno">2025</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot z7">
+            <div class="cover-art">
+              <span class="strip">BAO + Momo Edizioni</span>
+              <span class="logo">Nel nido<br>dei serpenti</span>
+              <span class="num">2025</span>
+            </div>
+            <img src="copertine/zerocalcare/07-nido-dei-serpenti.jpg" alt="Copertina Nel nido dei serpenti" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge evento">Il libro più recente</span>
+            <span class="badge">Graphic journalism</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Editore</dt><dd>BAO Publishing in collaborazione con Momo Edizioni (uscita: 5 dicembre 2025)</dd></div>
+            <div><dt>Tipo</dt><dd>Reportage: 200 pagine in bianco e nero, cartonato 17×24</dd></div>
+            <div><dt>Ambientazione</dt><dd>Tra Italia, Francia, Germania e Ungheria: il processo di Budapest</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Il ritorno al graphic journalism più militante: il libro raccoglie le storie realizzate per Internazionale sul processo ungherese agli antifascisti — quello che ha coinvolto anche Ilaria Salis — e vi aggiunge una lunga storia inedita di oltre cento pagine sul caso di Maja T., in isolamento in un carcere di Budapest. Un racconto sui rigurgiti di intolleranza in Europa e su chi paga il prezzo di opporvisi, con parte dei proventi devoluta al fondo per le spese legali degli imputati.</p>
+          <h3>Il suo ruolo nella collezione</h3>
+          <p>Risponde a Kobane Calling nove anni dopo: dal fronte siriano ai tribunali europei, il secondo binario dell'opera di Zerocalcare arriva al presente. E la vicenda che racconta è ancora in corso: un capitolo "caldo", come il volume che lo segue.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> le storie da cui nasce sono uscite a puntate su Internazionale seguendo la cronaca in tempo reale — un caso raro di fumetto che corre alla velocità del giornalismo.</div>
+        </div>
+      </article>
+    </section>
+ 
+    <!-- 9: Nessun rimorso reloaded -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">9</span><span class="y">2026</span></div>
+      <article class="albo">
+        <div class="masthead"><h2>Nessun rimorso reloaded</h2><span class="anno">2026</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot z9">
+            <div class="cover-art">
+              <span class="strip">Coconino Press</span>
+              <span class="logo">Nessun<br>rimorso<br>reloaded</span>
+              <span class="num">2026</span>
+            </div>
+            <img src="copertine/zerocalcare/09-nessun-rimorso-reloaded.jpg" alt="Copertina Nessun rimorso reloaded" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge evento">Antologia collettiva benefit</span>
+            <span class="badge">25 anni dal G8 di Genova</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Editore</dt><dd>Coconino Press (collana Coconino Cult), promosso da Supporto Legale — a cura di Sara D'Ippolito e Oscar Glioti (uscita: 14 luglio 2026)</dd></div>
+            <div><dt>Tipo</dt><dd>Antologia collettiva: 336 pagine a colori, brossurato 17×24, con copertina e oltre cinquanta pagine di Zerocalcare</dd></div>
+            <div><dt>Ambientazione</dt><dd>Genova, luglio 2001 — e le sue conseguenze fino a oggi</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Venticinque anni dopo il G8 di Genova, la nuova edizione ampliata dell'antologia benefit di Supporto Legale — la rete nata per sostenere le spese dei processi seguiti a quei giorni — rimette insieme i migliori autori italiani per raccontare le giornate del 2001 e ciò che ne è derivato: la violenza di piazza, la morte di Carlo Giuliani, la repressione del dissenso, il presente sempre più autoritario. Zerocalcare firma la copertina e il contributo più corposo, accanto a un testo di Erri De Luca, all'arte di Blu e a decine di autori tra cui Maicol&amp;Mirco, Davide Reviati, Daniel Cuello e Lorena Canottiere; rispetto all'edizione del 2021 ci sono nuove storie e nuove voci, e il volume sostiene la campagna europea FreeAllAntifas.</p>
+          <h3>Il suo ruolo nella collezione</h3>
+          <p>È l'anello che salda i due binari: memoria militante come i reportage, ma corale — l'unico libro della collezione in cui la voce di Zero è una tra molte. E dialoga direttamente con Nel nido dei serpenti: Genova 2001 come radice della stessa storia di repressione e solidarietà che il Nido racconta al presente.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> il volume viaggia con un tour di presentazioni militanti nei circoli e negli spazi sociali (Genova, Milano, Monza...) più che nelle librerie, fedele alla sua natura; e con l'acquisto sul sito Coconino, fino a esaurimento, è incluso un poster di Zerocalcare.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- +1: Zerocalcare 3D Collection - Zerocalcare -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">+1</span><span class="y">2020</span></div>
+      <article class="albo arancio">
+        <div class="masthead"><h2>Zerocalcare 3D Collection n. 1 — Zero</h2><span class="anno">Ottobre 2020</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot z10">
+            <div class="cover-art">
+              <span class="strip">Statuina + Fascicolo</span>
+              <span class="logo">3D<br>Collection</span>
+              <span class="num">1</span>
+            </div>
+            <img src="copertine/zerocalcare/10-3d-zerocalcare.jpg" alt="Statuina Zerocalcare — Zerocalcare 3D Collection n. 1" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge evento">Il primo pezzo tridimensionale</span>
+            <span class="badge">Zero in persona</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Cos'è</dt><dd>Statuina da collezione dipinta a mano + fascicolo con una tavola inedita, una puntata dell'intervista "Zero racconta Calcare" e la scheda biografica del personaggio</dd></div>
+            <div><dt>Produzione</dt><dd>Centauria con BAO Publishing, realizzata sui disegni originali sotto la supervisione dell'autore — collana da edicola lanciata il 31 ottobre 2020</dd></div>
+            <div><dt>Soggetto</dt><dd>L'uscita n. 1 non poteva che essere lui: Zero, maglietta nera col teschio e jeans, espressione di chi sta per subire un mattone esistenziale</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Il pezzo che porta la collezione fuori dalla carta: la collana che ha trasformato in tre dimensioni tutto il cast della Città Eterna versione Rebibbia — circa cinquanta uscite tra Secco, il Cinghiale, Panda, Lady Cocca, la combattente curda e compagnia — e che ovviamente doveva partire dall'autore-personaggio. La riproduzione è fedele al tratto dei libri, come se una vignetta si fosse alzata in piedi dal tavolo da disegno.</p>
+          <h3>Curiosità</h3>
+          <p>La collana è stata riproposta in edicola più volte (nuove edizioni nel 2022 e nel 2024, quest'ultima da 70 uscite settimanali) — segno che i pupazzetti di Rebibbia hanno funzionato quanto i libri. Nell'edizione 2024, curiosamente, l'ordine si inverte: la n. 1 diventa l'Armadillo e Zero slitta alla n. 2.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> letteralmente — è il primo pezzo della collezione che sta in piedi da solo. E arriva nell'anno cerniera: dopo Scheletri, un anno prima che Strappare lungo i bordi porti questi stessi personaggi in movimento su Netflix.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- +2: Zerocalcare 3D Collection - Armadillo -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">+2</span><span class="y">2020</span></div>
+      <article class="albo">
+        <div class="masthead"><h2>Zerocalcare 3D Collection n. 2 — L'Armadillo</h2><span class="anno">Novembre 2020</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot z11">
+            <div class="cover-art">
+              <span class="strip">Statuina + Fascicolo</span>
+              <span class="logo">L'Armadillo</span>
+              <span class="num">2</span>
+            </div>
+            <img src="copertine/zerocalcare/11-3d-armadillo.jpg" alt="Statuina Armadillo — Zerocalcare 3D Collection n. 2" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge start">★ La coscienza, finalmente in corazza vera</span>
+          </div>
+          <dl class="scheda">
+            <div><dt>Cos'è</dt><dd>Statuina da collezione dipinta a mano + fascicolo con tavola inedita, intervista a puntate e scheda biografica — la seconda uscita includeva anche il raccoglitore per le schede dei personaggi</dd></div>
+            <div><dt>Produzione</dt><dd>Centauria con BAO Publishing — seconda uscita della collana, in edicola circa due settimane dopo la prima</dd></div>
+            <div><dt>Soggetto</dt><dd>L'Armadillo: la coscienza di Zero, braccia conserte e sguardo di chi l'aveva detto</dd></div>
+          </dl>
+          <h3>Perché è importante</h3>
+          <p>Se Zero è la n. 1, la n. 2 spettava di diritto a lui: il personaggio più iconico dell'intero universo, la coscienza in corazza nata nella Profezia dell'armadillo che commenta, giudica e sabota ogni scelta del protagonista dal 2011. Avere in collezione la coppia Zero + Armadillo significa avere il nucleo irriducibile del mondo Zerocalcare: uno non esiste senza l'altro.</p>
+          <h3>Curiosità</h3>
+          <p>Nel corso delle varie edizioni della collana l'Armadillo è diventato il soggetto più declinato: oltre alla versione classica esistono Baby Armadillo, l'Armadillo "alla sera" in vestaglia e altre varianti — nessun altro personaggio ne ha avute così tante.</p>
+          <div class="screen"><strong>Oltre la carta:</strong> la statuina è muta, ma è impossibile guardarla senza sentire la voce di Valerio Mastandrea — che dell'Armadillo è diventato la voce ufficiale nelle serie Netflix, a partire da Strappare lungo i bordi (2021).</div>
+        </div>
+      </article>
+    </section>
+
+  </div>
+
+  <!-- RIEPILOGO -->
+  <section class="panel">
+    <h2>La mappa in <em>una tabella</em></h2>
+    <table>
+      <thead>
+        <tr><th>#</th><th>Libro</th><th>Anno</th><th>Editore</th><th>Tipo</th><th>Ruolo</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>La profezia dell'armadillo</td><td>2011 (BAO 2012)</td><td>Autoprod. / BAO</td><td>Graphic novel</td><td>L'esordio, nasce l'Armadillo</td></tr>
+        <tr><td>2</td><td>Un polpo alla gola</td><td>2012</td><td>BAO</td><td>Graphic novel</td><td>Il primo romanzo a fumetti</td></tr>
+        <tr><td>3</td><td>Ogni maledetto lunedì su due</td><td>2013</td><td>BAO</td><td>Raccolta blog</td><td>Prima antologia del blog</td></tr>
+        <tr><td>4</td><td>Dimentica il mio nome</td><td>2014</td><td>BAO</td><td>Graphic novel</td><td>Il romanzo familiare, candidato allo Strega</td></tr>
+        <tr><td>5</td><td>Kobane Calling</td><td>2016</td><td>BAO</td><td>Reportage</td><td>Inizio del graphic journalism</td></tr>
+        <tr><td>6</td><td>La scuola di pizze in faccia del professor Calcare</td><td>2019</td><td>BAO</td><td>Raccolta blog</td><td>Seconda antologia del blog</td></tr>
+        <tr><td>7</td><td>Niente di nuovo sul fronte di Rebibbia</td><td>2023</td><td>BAO</td><td>Raccolta blog</td><td>Terza antologia del blog</td></tr>
+        <tr><td>8</td><td>Nel nido dei serpenti</td><td>2025</td><td>BAO + Momo</td><td>Reportage</td><td>Il ritorno al giornalismo militante</td></tr>
+        <tr><td>9</td><td>Nessun rimorso reloaded</td><td>2026</td><td>Coconino / Supporto Legale</td><td>Antologia collettiva</td><td>La memoria di Genova, 25 anni dopo</td></tr>
+        <tr><td>+1</td><td>Zerocalcare 3D Collection n. 1 — Zero</td><td>2020</td><td>Centauria / BAO</td><td>Statuina + fascicolo</td><td>Il primo pezzo in 3D</td></tr>
+        <tr><td>+2</td><td>Zerocalcare 3D Collection n. 2 — L'Armadillo</td><td>2020</td><td>Centauria / BAO</td><td>Statuina + fascicolo</td><td>La coscienza in corazza, in 3D</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:14px;font-size:14.5px">La collezione corre su due binari che si alternano: l'autobiografia (volumi 1, 2, 3, 4, 6, 7 — con la trilogia completa delle raccolte del blog e il primo dei grandi romanzi familiari) e l'impegno militante (volumi 5, 8 e 9: dal Rojava ai tribunali d'Europa, fino alla memoria collettiva di Genova — quest'ultima l'unico volume corale, dove Zerocalcare è capofila di decine di autori). E poi c'è la terza dimensione: le statuine della Zerocalcare 3D Collection (Centauria con BAO Publishing, dal 2020), di cui possiedo la coppia fondativa, Zero e l'Armadillo — le uscite n. 1 e n. 2 della collana originale.</p>
+  </section>
+ 
+  <!-- PERCORSO -->
+  <section class="panel">
+    <h2>Cosa <em>manca</em></h2>
+    <p>Con Dimentica il mio nome in collezione, il filone dei "romanzi" maturi è aperto ma incompleto: mancano il dittico <strong>Macerie prime / Macerie prime – Sei mesi dopo</strong> (2017–18, il gruppo di amici davanti ai trent'anni), <strong>Scheletri</strong> (2020, il segreto degli anni dell'università) e <strong>Quando muori resta a me</strong> (2024, il viaggio col padre — il suo libro più venduto di sempre). Sul binario reportage, il tassello mancante tra Kobane e il Nido è <strong>No Sleep Till Shengal</strong> (2022, il ritorno in Iraq tra gli ezidi). Con questi cinque, la bibliografia maggiore sarebbe completa. E sul fronte statuine, la 3D Collection prosegue oltre la mia coppia fondativa con tutto il cast — Secco, il Cinghiale, Panda, Lady Cocca, la combattente curda e decine di altri: Zero e l'Armadillo sono solo l'inizio.</p>
+  </section>
+ 
+</main>
+ 
+<footer>
+  <div class="wrap">Dossier della collezione · Zerocalcare · Rebibbia → Rojava → Budapest</div>
+</footer>
+ 
+</body>
+</html>
+ 
