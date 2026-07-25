@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap");
-
 /*
 	Modern overlay theme.
 	Loaded after main.css. Two parts:
@@ -21,8 +19,9 @@
 	--accent-2: #4aa8ff;
 	--accent-3: #8b5cf6;
 	--gradient: linear-gradient(120deg, #2dd4a7, #4aa8ff 55%, #8b5cf6);
-	--font-head: "Sora", "Inter", -apple-system, sans-serif;
-	--font-body: "Inter", -apple-system, "Segoe UI", sans-serif;
+	/* Stessi font del tema chiaro (Strata) per resa e proporzioni identiche */
+	--font-head: "Source Sans Pro", Helvetica, sans-serif;
+	--font-body: "Source Sans Pro", Helvetica, sans-serif;
 }
 
 /* ======================================================================== */
@@ -50,7 +49,8 @@ html.has-reveal .rv.rv-in {
 /* Shared: tech badges on project cards (both themes)                       */
 /* ======================================================================== */
 
-.work-item .tags {
+.work-item .tags,
+.tl-item .tags {
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;
@@ -59,7 +59,8 @@ html.has-reveal .rv.rv-in {
 	margin: 0 0 0.55em 0;
 }
 
-.work-item .tags li {
+.work-item .tags li,
+.tl-item .tags li {
 	padding: 0.12em 0.7em;
 	margin: 0;
 	font-size: 0.62em;
@@ -73,10 +74,187 @@ html.has-reveal .rv.rv-in {
 	white-space: nowrap;
 }
 
-html.theme-dark .work-item .tags li {
+.work-item .tags li.year,
+.tl-item .tags li.year {
+	border-color: rgba(73, 191, 157, 0.55);
+	background: rgba(73, 191, 157, 0.12);
+	color: #2f9b7d;
+	font-weight: 700;
+}
+
+html.theme-dark .work-item .tags li,
+html.theme-dark .tl-item .tags li {
 	border-color: rgba(45, 212, 167, 0.35);
 	background: rgba(45, 212, 167, 0.07);
 	color: #7edcc0;
+}
+
+html.theme-dark .work-item .tags li.year,
+html.theme-dark .tl-item .tags li.year {
+	border-color: rgba(45, 212, 167, 0.55);
+	background: rgba(45, 212, 167, 0.16);
+	color: #9ff0d8;
+}
+
+/* ======================================================================== */
+/* Shared: bio "about" section — chapters, chips, callout (both themes)     */
+/* ======================================================================== */
+
+.about-chips,
+.event-chips {
+	list-style: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.45em;
+	padding: 0;
+	margin: 0 0 1.4em 0;
+}
+
+.about-chips li,
+.event-chips li {
+	padding: 0;
+	margin: 0;
+}
+
+.about-chips li {
+	padding: 0.3em 0.95em;
+	font-size: 0.68em;
+	font-weight: 700;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+	border-radius: 999px;
+	border: 1px solid #dcdcdc;
+	background: #f7f7f7;
+	color: #787878;
+	white-space: nowrap;
+}
+
+.about-chips li.hot {
+	border-color: rgba(73, 191, 157, 0.55);
+	background: rgba(73, 191, 157, 0.12);
+	color: #2f9b7d;
+}
+
+.about-h {
+	display: flex;
+	align-items: center;
+	gap: 0.6em;
+	margin: 2em 0 0.75em 0;
+	font-size: 0.85em;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+	color: #565656;
+}
+
+.about-h::before {
+	content: "";
+	flex: none;
+	width: 1.7em;
+	height: 3px;
+	border-radius: 999px;
+	background: #49bf9d;
+}
+
+.event-group {
+	margin: 0 0 1.1em 0;
+}
+
+.eg-label {
+	display: block;
+	margin: 0 0 0.45em 0;
+	font-size: 0.7em;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: #9a9a9a;
+}
+
+.event-chips {
+	margin-bottom: 0;
+}
+
+.event-chips li {
+	display: inline-flex;
+	align-items: baseline;
+	gap: 0.35em;
+	padding: 0.3em 0.9em;
+	font-size: 0.72em;
+	font-weight: 600;
+	letter-spacing: 0.04em;
+	border-radius: 999px;
+	border: 1px solid #dcdcdc;
+	background: #fbfbfb;
+	white-space: nowrap;
+	transition: border-color 0.2s ease;
+}
+
+.event-chips li:hover {
+	border-color: rgba(73, 191, 157, 0.65);
+}
+
+.event-chips a {
+	border-bottom: none;
+	color: #6d6d6d;
+	transition: color 0.2s ease;
+}
+
+.event-chips a:hover {
+	color: #2f9b7d;
+}
+
+.about-callout {
+	margin: 0 0 1.2em 0;
+	padding: 0.9em 1.2em;
+	border-left: 4px solid #49bf9d;
+	border-radius: 0 8px 8px 0;
+	background: rgba(73, 191, 157, 0.08);
+}
+
+html.theme-dark .about-chips li {
+	border-color: var(--card-border);
+	background: var(--card);
+	color: var(--text);
+}
+
+html.theme-dark .about-chips li.hot {
+	border-color: rgba(45, 212, 167, 0.4);
+	background: rgba(45, 212, 167, 0.08);
+	color: #7edcc0;
+}
+
+html.theme-dark .about-h {
+	color: var(--text-strong);
+}
+
+html.theme-dark .about-h::before {
+	background: var(--gradient);
+}
+
+html.theme-dark .eg-label {
+	color: var(--muted);
+}
+
+html.theme-dark .event-chips li {
+	border-color: var(--card-border);
+	background: var(--card);
+}
+
+html.theme-dark .event-chips li:hover {
+	border-color: rgba(45, 212, 167, 0.5);
+}
+
+html.theme-dark .event-chips a {
+	color: var(--text);
+}
+
+html.theme-dark .event-chips a:hover {
+	color: #7edcc0;
+}
+
+html.theme-dark .about-callout {
+	border-left-color: #2dd4a7;
+	background: rgba(45, 212, 167, 0.06);
 }
 
 /* ======================================================================== */
@@ -205,6 +383,333 @@ html.theme-dark .tl-item h5 {
 	color: var(--muted);
 }
 
+/* Sub-timeline for dated bullet points inside an experience (both themes) */
+.subtl {
+	list-style: none;
+	position: relative;
+	margin: 0 0 1.3em 0;
+	padding: 0.2em 0 0 0;
+}
+
+.subtl::before {
+	content: '';
+	position: absolute;
+	left: 0.34em;
+	top: 0.55em;
+	bottom: 0.45em;
+	width: 2px;
+	border-radius: 999px;
+	background: #e4e4e4;
+}
+
+.subtl li {
+	position: relative;
+	margin: 0;
+	padding: 0 0 1.05em 1.7em;
+}
+
+.subtl li:last-child {
+	padding-bottom: 0.15em;
+}
+
+.subtl li::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0.34em;
+	width: 0.8em;
+	height: 0.8em;
+	border-radius: 50%;
+	background: #ffffff;
+	border: 2px solid #49bf9d;
+}
+
+.subtl .st-date {
+	display: inline-block;
+	margin: 0 0 0.3em 0;
+	padding: 0.08em 0.75em;
+	font-size: 0.68em;
+	font-weight: 700;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	border-radius: 999px;
+	background: rgba(73, 191, 157, 0.13);
+	color: #2f9b7d;
+}
+
+.subtl .st-date.now {
+	background: #49bf9d;
+	color: #ffffff;
+}
+
+.subtl .st-tech {
+	display: inline-block;
+	margin: 0 0 0.3em 0.4em;
+	padding: 0.08em 0.75em;
+	font-size: 0.68em;
+	font-weight: 600;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	border-radius: 999px;
+	border: 1px solid #dcdcdc;
+	background: #f7f7f7;
+	color: #8a8a8a;
+}
+
+.tl-item .about-chips {
+	margin: 0 0 1.1em 0;
+}
+
+html.theme-dark .subtl::before {
+	background: rgba(45, 212, 167, 0.3);
+}
+
+html.theme-dark .subtl li::before {
+	background: var(--bg-raise);
+	border-color: #2dd4a7;
+}
+
+html.theme-dark .subtl .st-date {
+	background: rgba(45, 212, 167, 0.12);
+	color: #7edcc0;
+}
+
+html.theme-dark .subtl .st-date.now {
+	background: #2dd4a7;
+	color: #052e22;
+}
+
+html.theme-dark .subtl .st-tech {
+	border-color: rgba(45, 212, 167, 0.35);
+	background: rgba(45, 212, 167, 0.07);
+	color: #7edcc0;
+}
+
+/* Bio: sticky in-page nav (both themes) */
+#bionav {
+	position: sticky;
+	top: 0;
+	z-index: 60;
+	display: flex;
+	align-items: center;
+	gap: 0.2em;
+	overflow-x: auto;
+	margin: 0 0 2em 0;
+	padding: 0.6em 0.2em;
+	background: rgba(255, 255, 255, 0.92);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border-bottom: 1px solid #e4e4e4;
+}
+
+#bionav a {
+	border-bottom: none;
+	padding: 0.35em 0.8em;
+	border-radius: 999px;
+	font-size: 0.72em;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: #787878;
+	white-space: nowrap;
+	transition: color 0.2s ease, background 0.2s ease;
+}
+
+#bionav a:hover {
+	color: #2f9b7d;
+}
+
+#bionav a.active {
+	background: rgba(73, 191, 157, 0.13);
+	color: #2f9b7d;
+}
+
+#bionav .cv-btn {
+	margin-left: auto;
+	background: #49bf9d;
+	color: #ffffff;
+}
+
+#bionav .cv-btn:hover {
+	background: #3da98a;
+	color: #ffffff;
+}
+
+#one, #two, #twob, #experience, #projects, #education, #skills, #three {
+	scroll-margin-top: 4.2em;
+}
+
+/* The nav is #main's first child: restore the "first section" look on the section after it */
+#bionav + section {
+	border-top: 0 !important;
+	padding-top: 0 !important;
+}
+
+html.theme-dark #bionav {
+	background: rgba(7, 11, 22, 0.85);
+	border-bottom-color: var(--card-border);
+}
+
+html.theme-dark #bionav a {
+	color: var(--text);
+}
+
+html.theme-dark #bionav a:hover {
+	color: #7edcc0;
+}
+
+html.theme-dark #bionav a.active {
+	background: rgba(45, 212, 167, 0.12);
+	color: #7edcc0;
+}
+
+html.theme-dark #bionav .cv-btn {
+	background: #2dd4a7;
+	color: #052e22;
+}
+
+/* Bio: key-numbers strip (both themes) */
+.stat-strip {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.4em 2.6em;
+	margin: 0 0 1.6em 0;
+}
+
+.stat .stat-n {
+	display: block;
+	font-size: 1.7em;
+	font-weight: 800;
+	line-height: 1.15;
+	color: #49bf9d;
+}
+
+.stat .stat-l {
+	font-size: 0.7em;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: #9a9a9a;
+}
+
+html.theme-dark .stat .stat-n {
+	background: var(--gradient);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+html.theme-dark .stat .stat-l {
+	color: var(--muted);
+}
+
+/* Bio: callout with photo */
+.about-callout.with-photo {
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	gap: 1.1em;
+}
+
+.about-callout.with-photo > div {
+	flex: 1;
+	min-width: 0;
+}
+
+.callout-photo-link {
+	flex: none;
+	display: block;
+	border-bottom: none;
+	max-width: 38%;
+}
+
+.callout-photo {
+	display: block;
+	width: 150px;
+	max-width: 100%;
+	border-radius: 8px;
+}
+
+/* Bio: spoken-language levels (both themes) */
+.lang-skill {
+	list-style: none;
+	max-width: 430px;
+	margin: 0 auto 2em auto;
+	padding: 0;
+}
+
+.lang-skill li {
+	display: flex;
+	align-items: center;
+	gap: 1em;
+	margin: 0;
+	padding: 0.45em 0;
+}
+
+.lang-skill .ln {
+	flex: 1;
+	font-weight: 600;
+}
+
+.lang-skill .dots {
+	display: flex;
+	gap: 0.32em;
+}
+
+.lang-skill .dots i {
+	width: 0.62em;
+	height: 0.62em;
+	border-radius: 50%;
+	background: #e4e4e4;
+}
+
+.lang-skill .dots i.on {
+	background: #49bf9d;
+}
+
+.lang-skill .dots i.p35 {
+	background: linear-gradient(90deg, #49bf9d 35%, #e4e4e4 35%);
+}
+
+.lang-skill .flag {
+	margin-right: 0.45em;
+}
+
+.lang-skill .lvl {
+	width: 4.6em;
+	text-align: right;
+	font-size: 0.68em;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: #9a9a9a;
+}
+
+html.theme-dark .lang-skill .dots i {
+	background: rgba(255, 255, 255, 0.12);
+}
+
+html.theme-dark .lang-skill .dots i.on {
+	background: #2dd4a7;
+}
+
+html.theme-dark .lang-skill .dots i.p35 {
+	background: linear-gradient(90deg, #2dd4a7 35%, rgba(255, 255, 255, 0.12) 35%);
+}
+
+html.theme-dark .lang-skill .lvl {
+	color: var(--muted);
+}
+
+/* Bio: skill chip groups */
+.chips-center {
+	justify-content: center;
+}
+
+.skill-group {
+	margin: 0 0 1.3em 0;
+}
+
 /* ======================================================================== */
 /* Shared: Font Awesome 6 glyphs for the v4 classes used by the template.   */
 /* FA6 no longer ships :before content for bare v4 class names; the glyphs  */
@@ -328,7 +833,6 @@ html.theme-dark h5,
 html.theme-dark h6 {
 	color: var(--text-strong);
 	font-family: var(--font-head);
-	letter-spacing: -0.015em;
 }
 
 html.theme-dark strong,
@@ -398,18 +902,18 @@ html.theme-dark #header .image.avatar img {
 html.theme-dark #header h1 {
 	color: var(--muted);
 	font-family: var(--font-body);
-	font-size: 1.05em;
-	line-height: 1.8em;
+	font-size: 1.35em;
+	line-height: 1.75em;
 	font-weight: 450;
 }
 
 html.theme-dark #header h1 strong {
 	display: block;
 	font-family: var(--font-head);
-	font-size: 1.8em;
+	font-size: 1.2em;
 	font-weight: 700;
-	line-height: 1.25;
-	margin: 0 0 0.35em 0;
+	line-height: 1.3;
+	margin: 0 0 0.2em 0;
 	background: linear-gradient(115deg, #ffffff 30%, #9be8d2 60%, #9db8ff);
 	-webkit-background-clip: text;
 	background-clip: text;
@@ -435,8 +939,8 @@ html.theme-dark #header .icons a {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	width: 2.3em;
-	height: 2.3em;
+	width: 2em;
+	height: 2em;
 	border: 1px solid rgba(255, 255, 255, 0.14);
 	border-radius: 12px;
 	color: rgba(255, 255, 255, 0.6);
@@ -454,7 +958,7 @@ html.theme-dark #header .icons a:hover {
 
 html.theme-dark #header .icons a .icon:before,
 html.theme-dark #header .icons li .icon:before {
-	font-size: 1.15em;
+	font-size: 1em;
 }
 
 /* Main ------------------------------------------------------------------- */
@@ -469,7 +973,7 @@ html.theme-dark #main > section:first-child {
 
 html.theme-dark #main h2 {
 	position: relative;
-	font-size: 1.65em;
+	font-size: 1.5em;
 	font-weight: 700;
 	padding-bottom: 0.55em;
 	margin-bottom: 1.1em;
@@ -487,7 +991,7 @@ html.theme-dark #main h2::after {
 }
 
 html.theme-dark #main header.major h2 {
-	font-size: 1.9em;
+	font-size: 2em;
 }
 
 html.theme-dark #main p {
@@ -501,14 +1005,10 @@ html.theme-dark #main em {
 
 /* Work / passion cards --------------------------------------------------- */
 
-html.theme-dark .work-item {
-	margin-bottom: 1.5em;
-}
-
 html.theme-dark .work-item .image.thumb {
 	position: relative;
 	display: block;
-	margin: 0 0 1em 0;
+	margin: 0 0 1.5em 0;
 	border: 1px solid var(--card-border);
 	border-radius: 16px;
 	overflow: hidden;
@@ -535,10 +1035,10 @@ html.theme-dark .work-item:hover .image.thumb img {
 }
 
 html.theme-dark .work-item h3 {
-	font-size: 0.95em;
+	font-size: 1em;
 	font-weight: 600;
 	color: var(--text-strong);
-	margin-bottom: 0.3em;
+	margin-bottom: 0.5em;
 	transition: color 0.25s ease;
 }
 
@@ -593,13 +1093,22 @@ html.theme-dark #main img.thumb {
 html.theme-dark img[src*="thumbs/tech/"] {
 	background: #f6f8fb;
 	border-radius: 14px;
-	width: 88px !important;
-	height: 62px !important;
+	width: 76px !important;
+	height: 64px !important;
 	object-fit: contain;
 	margin: 0 auto !important;
 	padding: 9px 12px !important;
 	box-shadow: 0 8px 22px -10px rgba(0, 0, 0, 0.6);
 	border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* Come nel light: primo logo a filo sinistra, ultimo a filo destra */
+html.theme-dark img[src*="thumbs/tech/"]:first-child {
+	margin-left: 0 !important;
+}
+
+html.theme-dark img[src*="thumbs/tech/"]:last-child {
+	margin-right: 0 !important;
 }
 
 /* Buttons ---------------------------------------------------------------- */

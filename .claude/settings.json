@@ -42,7 +42,9 @@
       "Bash(curl -s https://salvatorematrisciano.com/bio)",
       "Bash(curl -s https://salvatorematrisciano.com/assets/css/modern.css)",
       "Bash(curl -sI https://salvatorematrisciano.com/assets/css/modern.css)",
-      "Bash(git rm *)"
+      "Bash(git rm *)",
+      "Bash(grep -n 'br\\\\|^\\\\$')",
+      "Bash(awk -F: '$1>300')"
     ]
   }
 }
