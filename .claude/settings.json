@@ -44,7 +44,8 @@
       "Bash(curl -sI https://salvatorematrisciano.com/assets/css/modern.css)",
       "Bash(git rm *)",
       "Bash(grep -n 'br\\\\|^\\\\$')",
-      "Bash(awk -F: '$1>300')"
+      "Bash(awk -F: '$1>300')",
+      "Bash(grep -i \"funko\\\\|nimbus\\\\|goku-\\\\|figure\\\\|:$\")"
     ]
   }
 }
