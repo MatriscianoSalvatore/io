@@ -35,7 +35,9 @@
       "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,2100 --virtual-time-budget=9000 --screenshot=v7_batman_en.png file:///Users/smatrisciano/io/__test_b_en.html)",
       "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,2100 --virtual-time-budget=9000 --screenshot=v7_batman_it.png file:///Users/smatrisciano/io/batman.html)",
       "Bash(rm /Users/smatrisciano/io/__test_b_en.html)",
-      "Bash(sips -c 700 1600 --cropOffset 1400 0 v7_batman_en.png --out v7_b_en_crop.png)"
+      "Bash(sips -c 700 1600 --cropOffset 1400 0 v7_batman_en.png --out v7_b_en_crop.png)",
+      "Bash(grep -o 'class=\"n\">[0-9]*' /Users/smatrisciano/io/spiderman.html | sed 's/.*>//' | tr '\\\\n' ' '; echo; grep -o 'class=\"n\">[0-9]*' /Users/smatrisciano/io/batman.html | sed 's/.*>//' | tr '\\\\n' ' '; echo; grep -c 'lang-it' /dev/null; true)",
+      "Read(//dev/**)"
     ]
   }
 }
