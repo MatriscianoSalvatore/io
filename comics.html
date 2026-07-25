@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Comics — Salvatore Matrisciano</title>
-<meta name="description" content="Le mie collezioni di fumetti: Batman, Rat-Man, Spider-Man, Wolverine e X-Men, Zerocalcare.">
+<meta name="description" content="Le mie collezioni di fumetti: Batman, Rat-Man, Spider-Man, Wolverine e X-Men, Dragon Ball, Zerocalcare, Pokémon.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
@@ -123,7 +123,8 @@
   }
   .collezione .didascalia em{font-style:italic}
   .collezione .leggi{
-    display:inline-block;margin-top:10px;
+    display:block;width:fit-content;margin-top:10px;
+    white-space:nowrap;
     font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;
     letter-spacing:.12em;text-transform:uppercase;
     color:var(--china);
@@ -136,6 +137,8 @@
   .spiderman{--accento:#D62828}
   .xmen{--accento:#3E7CB1}
   .zerocalcare{--accento:#E07A2F}
+  .dragonball{--accento:#3FA34D}
+  .pokemon{--accento:#FFCB05}
 
   /* ---------- FOOTER ---------- */
   footer{
@@ -155,21 +158,25 @@
     <h1 class="lang-en">My <span class="rosso">comics</span></h1>
     <p class="hero-sub lang-it">
       Le collezioni che ho raccolto e letto negli anni: il ragno di quartiere,
-      il cavaliere oscuro di Gotham, i mutanti più famosi del mondo,
-      un armadillo con l'accento romano e un ratto supereroe tutto italiano.
+      il cavaliere oscuro di Gotham, i mutanti più famosi del mondo, il Saiyan
+      cresciuto sulla Terra, un armadillo con l'accento romano, un ratto
+      supereroe tutto italiano e i mostriciattoli tascabili di Kanto.
     </p>
     <p class="hero-sub lang-en">
       The collections I have gathered and read over the years: the friendly
       neighborhood spider, the Dark Knight of Gotham, the world's most famous
-      mutants, an armadillo with a Roman accent and an all-Italian superhero rat.
+      mutants, the Saiyan raised on Earth, an armadillo with a Roman accent,
+      an all-Italian superhero rat and the pocket monsters of Kanto.
     </p>
     <div class="hero-meta">
-      <span><span class="lang-it">5 collezioni</span><span class="lang-en">5 collections</span></span>
+      <span><span class="lang-it">7 collezioni</span><span class="lang-en">7 collections</span></span>
       <span>Spider-Man</span>
       <span>Batman</span>
       <span>X-Men</span>
+      <span>Dragon Ball</span>
       <span>Zerocalcare</span>
       <span>Rat-Man</span>
+      <span>Pokémon</span>
     </div>
   </div>
 </header>
@@ -210,6 +217,16 @@
         </div>
       </a>
 
+      <a class="collezione dragonball" href="dragonball">
+        <div class="masthead"><h2>Dragon Ball</h2><span class="num">Akira Toriyama</span></div>
+        <div class="halftone"></div>
+        <div class="cover"><img src="copertine/dragonball/ue-01.jpg" alt="Copertina di Dragon Ball Ultimate Edition 1"></div>
+        <div class="didascalia">
+          <span class="lang-it">Tutta la <em>Ultimate Edition</em>, dal primo incontro con Bulma al vero finale — più i databook <em>Landmark</em> e <em>Forever</em>.</span><span class="lang-en">The whole <em>Ultimate Edition</em>, from the first meeting with Bulma to the true ending — plus the <em>Landmark</em> and <em>Forever</em> databooks.</span>
+          <span class="leggi"><span class="lang-it">Sfoglia la collezione</span><span class="lang-en">Browse the collection</span></span>
+        </div>
+      </a>
+
       <a class="collezione zerocalcare" href="zerocalcare">
         <div class="masthead"><h2>Zerocalcare</h2><span class="num">Rebibbia</span></div>
         <div class="halftone"></div>
@@ -228,6 +245,16 @@
         <div class="cover"><img src="copertine/ratman/01-color-special.jpg" alt="Copertina di Rat-Man Color Special 1"></div>
         <div class="didascalia">
           <span class="lang-it">I Color Special del supereroe più improbabile del fumetto italiano.</span><span class="lang-en">The Color Specials of Italian comics' most unlikely superhero.</span>
+          <span class="leggi"><span class="lang-it">Sfoglia la collezione</span><span class="lang-en">Browse the collection</span></span>
+        </div>
+      </a>
+
+      <a class="collezione pokemon" href="pokemon">
+        <div class="masthead"><h2>Pokémon</h2><span class="num">Kanto</span></div>
+        <div class="halftone"></div>
+        <div class="cover"><img src="copertine/pokemon/vol-01.jpg" alt="Copertina di Pokémon La Grande Avventura 1"></div>
+        <div class="didascalia">
+          <span class="lang-it">I primi tre volumi de <em>La Grande Avventura</em>: l'arco di Kanto del manga più fedele ai giochi.</span><span class="lang-en">The first three volumes of <em>La Grande Avventura</em>: the Kanto arc of the manga most faithful to the games.</span>
           <span class="leggi"><span class="lang-it">Sfoglia la collezione</span><span class="lang-en">Browse the collection</span></span>
         </div>
       </a>

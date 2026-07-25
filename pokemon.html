@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pokémon Manga - Salvatore Matrisciano</title>
+<meta name="description" content="La mia collezione Pokémon: i primi 3 volumi di Pokémon La Grande Avventura (J-Pop), l'arco di Kanto di Pocket Monsters SPECIAL.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/lang.css">
+<script src="assets/js/lang.js"></script>
+<link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
+<style>
+  :root{
+    --notte:#101A2E;        /* blu notte del logo, fondo pagina */
+    --pannello:#182540;     /* pannelli sul fondo scuro */
+    --carta:#F5F0E1;        /* carta d'albo */
+    --carta-2:#EAE2CC;
+    --rosso:#E3350D;        /* rosso Poké Ball */
+    --rosso-scuro:#B02508;
+    --blu:#2A75BB;          /* blu del logo */
+    --giallo:#FFCB05;       /* giallo Pikachu */
+    --cielo:#9FB3D1;        /* testo su fondo scuro */
+    --china:#1B1610;        /* inchiostro su carta */
+    --filo:#C4B9A0;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none !important;animation:none !important} }
+  body{
+    background:var(--notte);
+    color:var(--cielo);
+    font-family:'Spectral',Georgia,serif;
+    font-size:17px;
+    line-height:1.65;
+  }
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px}
+
+  /* ---------- HERO ---------- */
+  header{
+    padding:64px 0 40px;
+    background:
+      radial-gradient(circle at 85% -5%, rgba(255,203,5,.18), transparent 45%),
+      radial-gradient(circle at 8% 25%, rgba(227,53,13,.20), transparent 46%),
+      var(--notte);
+    border-bottom:4px solid var(--rosso);
+  }
+  .corner-box{
+    display:inline-flex;flex-direction:column;align-items:center;justify-content:center;
+    background:var(--carta);color:var(--china);
+    border:3px solid var(--china);
+    padding:8px 12px;margin-bottom:22px;
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;
+    text-transform:uppercase;letter-spacing:.06em;font-size:13px;line-height:1.25;
+    box-shadow:6px 6px 0 var(--rosso);
+  }
+  .corner-box .big{font-family:'Anton',sans-serif;font-size:30px;letter-spacing:.02em}
+  h1{
+    font-family:'Anton',sans-serif;
+    font-size:clamp(44px,8vw,86px);
+    line-height:.95;letter-spacing:.01em;
+    color:#fff;text-transform:uppercase;
+  }
+  h1 .giallo{color:var(--giallo)}
+  .hero-sub{margin-top:18px;max-width:660px;font-size:18px;color:var(--cielo)}
+  .hero-meta{
+    margin-top:26px;display:flex;flex-wrap:wrap;gap:10px;
+    font-family:'Barlow Condensed',sans-serif;font-weight:600;
+    text-transform:uppercase;letter-spacing:.1em;font-size:13px;
+  }
+  .hero-meta > span{border:1px solid rgba(159,179,209,.4);padding:5px 12px;color:var(--cielo)}
+
+  /* ---------- TIMELINE ---------- */
+  main{padding:56px 0 20px}
+  .timeline{position:relative}
+  .timeline::before{
+    content:"";position:absolute;left:29px;top:0;bottom:0;width:2px;
+    background:linear-gradient(to bottom, rgba(255,203,5,.55), rgba(227,53,13,.18));
+  }
+  .stop{position:relative;padding:0 0 52px 84px}
+  .stop:last-child{padding-bottom:24px}
+  .stop-dot{
+    position:absolute;left:0;top:6px;width:60px;height:60px;border-radius:50%;
+    background:var(--pannello);border:2px solid var(--rosso);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    font-family:'Barlow Condensed',sans-serif;color:#fff;text-align:center;
+  }
+  .stop-dot::after{
+    content:"";position:absolute;left:-2px;right:-2px;top:50%;height:0;
+    border-top:2px solid rgba(227,53,13,.35);
+  }
+  .stop-dot .n{font-family:'Anton',sans-serif;font-size:22px;line-height:1;color:var(--giallo)}
+  .stop-dot .y{font-size:11px;letter-spacing:.06em;color:var(--cielo);text-transform:uppercase}
+
+  /* ---------- CARD ALBO ---------- */
+  .albo{
+    background:var(--carta);color:var(--china);
+    border:3px solid var(--china);
+    box-shadow:10px 10px 0 rgba(0,0,0,.5);
+  }
+  .masthead{
+    background:var(--rosso);color:#fff;
+    padding:16px 22px 13px;
+    border-bottom:3px solid var(--china);
+    display:flex;justify-content:space-between;align-items:flex-end;gap:14px;flex-wrap:wrap;
+  }
+  .albo.blu .masthead{background:var(--blu)}
+  .albo.giallo .masthead{background:var(--giallo);color:var(--china)}
+  .masthead h2{
+    font-family:'Anton',sans-serif;text-transform:uppercase;
+    font-size:clamp(22px,3.6vw,30px);line-height:1;letter-spacing:.015em;
+  }
+  .masthead .anno{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;
+    letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;opacity:.9;
+  }
+  .halftone{
+    height:10px;border-bottom:3px solid var(--china);
+    background-image:radial-gradient(circle, rgba(27,22,16,.5) 1.3px, transparent 1.6px);
+    background-size:9px 9px;background-color:rgba(255,203,5,.32);
+  }
+  .albo-body{padding:24px 26px 26px}
+  .cover-slot{
+    float:left;width:210px;aspect-ratio:2/3;margin:4px 26px 14px 0;
+    border:3px solid var(--china);box-shadow:6px 6px 0 rgba(27,22,16,.25);
+    position:relative;overflow:hidden;background:var(--blu);
+  }
+  .cover-slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2}
+  .cover-art{
+    position:absolute;inset:0;display:flex;flex-direction:column;
+    justify-content:space-between;padding:10px;color:#fff;
+    font-family:'Barlow Condensed',sans-serif;text-transform:uppercase;
+  }
+  .cover-art .logo{font-family:'Anton',sans-serif;font-size:23px;line-height:1.05;letter-spacing:.01em;text-shadow:2px 2px 0 rgba(0,0,0,.4)}
+  .cover-art .num{
+    align-self:flex-end;background:var(--carta);color:var(--china);border:2px solid var(--china);
+    font-family:'Anton',sans-serif;font-size:22px;padding:2px 10px;
+  }
+  .cover-art .strip{font-weight:700;font-size:12px;letter-spacing:.13em;background:rgba(16,26,46,.6);padding:4px 9px;align-self:flex-start}
+  .cover-art::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(circle at 50% 118%, rgba(255,203,5,.30) 0 20%, transparent 45%),
+      radial-gradient(circle, rgba(0,0,0,.16) 1.2px, transparent 1.6px);
+    background-size:auto,8px 8px;
+  }
+  .p1 .cover-art{background:linear-gradient(160deg,#2A75BB 0 55%,#E3350D 55% 100%)}
+  .p2 .cover-art{background:linear-gradient(160deg,#E3350D 0 50%,#FFCB05 50% 100%)}
+  .p3 .cover-art{background:linear-gradient(160deg,#101A2E 0 55%,#5E2B70 55% 100%)}
+  .albo-body::after{content:"";display:block;clear:both}
+  @media (max-width:560px){
+    .cover-slot{float:none;width:190px;margin:0 auto 18px}
+  }
+  .scheda{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+    gap:14px 26px;margin-bottom:20px;
+    border-bottom:1px solid var(--filo);padding-bottom:18px;
+  }
+  .scheda dt{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;
+    text-transform:uppercase;letter-spacing:.12em;color:var(--rosso-scuro);
+  }
+  .albo.blu .scheda dt{color:var(--blu)}
+  .scheda dd{font-size:15.5px;line-height:1.5}
+  .badge-row{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+  .badge{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12.5px;
+    text-transform:uppercase;letter-spacing:.1em;
+    padding:4px 10px;border:2px solid var(--china);background:#fff;
+  }
+  .badge.start{background:var(--giallo)}
+  .badge.evento{background:var(--rosso);color:#fff}
+  .albo-body h3{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;
+    text-transform:uppercase;letter-spacing:.14em;color:var(--china);
+    margin:20px 0 6px;
+  }
+  .albo-body h3::before{content:"◓ ";color:var(--rosso)}
+  .albo-body p{margin-bottom:10px;font-size:16px}
+  .albo-body p:last-child{margin-bottom:0}
+  .screen{
+    margin-top:18px;background:var(--carta-2);border:1.5px dashed #8a7c5c;
+    padding:14px 18px;font-size:15.5px;
+  }
+  .screen strong{color:var(--rosso-scuro)}
+
+  /* ---------- SEZIONI FINALI ---------- */
+  .panel{
+    background:var(--pannello);border:1px solid rgba(159,179,209,.25);
+    padding:30px 30px 26px;margin:26px 0;
+  }
+  .panel h2{
+    font-family:'Anton',sans-serif;text-transform:uppercase;color:#fff;
+    font-size:clamp(22px,3.5vw,30px);margin-bottom:14px;letter-spacing:.02em;
+  }
+  .panel h2 em{font-style:normal;color:var(--giallo)}
+  .panel p{margin-bottom:12px;color:var(--cielo)}
+  .panel p:last-child{margin-bottom:0}
+  .panel strong{color:#fff}
+  table{width:100%;border-collapse:collapse;margin-top:8px;font-size:15px}
+  th{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;text-transform:uppercase;
+    letter-spacing:.1em;font-size:12.5px;color:var(--giallo);
+    text-align:left;padding:8px 10px;border-bottom:2px solid var(--rosso);
+  }
+  td{padding:9px 10px;border-bottom:1px solid rgba(159,179,209,.2);vertical-align:top;color:var(--cielo)}
+  td:first-child{color:#fff;font-weight:600}
+
+  footer{
+    padding:34px 0 46px;border-top:4px solid var(--rosso);margin-top:30px;
+    font-family:'Barlow Condensed',sans-serif;font-size:14px;letter-spacing:.08em;
+    text-transform:uppercase;color:var(--cielo);text-align:center;
+  }
+  @media (max-width:640px){
+    .timeline::before{left:21px}
+    .stop{padding-left:62px}
+    .stop-dot{width:44px;height:44px}
+    .stop-dot .n{font-size:17px}.stop-dot .y{display:none}
+    .albo-body{padding:20px 18px 22px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="corner-box">
+      <span class="lang-it">Collezione di</span><span class="lang-en">A collection of</span>
+      <span class="big">3</span>
+      <span class="lang-it">Volumi</span><span class="lang-en">Volumes</span>
+    </div>
+    <h1 class="lang-it">La mia collezione<br><span class="giallo">Pokémon</span></h1>
+    <h1 class="lang-en">My <span class="giallo">Pokémon</span><br>collection</h1>
+    <p class="hero-sub lang-it">I primi tre volumi di Pokémon La Grande Avventura, l'edizione italiana J-Pop di Pocket Monsters SPECIAL: l'arco completo di Kanto, il manga che Satoshi Tajiri — il creatore dei giochi — ha definito il più vicino al mondo che aveva immaginato. Rosso, Blu, le otto medaglie, il Team Rocket e Mewtwo: la prima generazione su carta.</p>
+    <p class="hero-sub lang-en">The first three volumes of Pokémon La Grande Avventura, the Italian J-Pop edition of Pocket Monsters SPECIAL: the complete Kanto arc, the manga that Satoshi Tajiri — creator of the games — called the closest to the world he had imagined. Red, Blue, the eight badges, Team Rocket and Mewtwo: the first generation on paper.</p>
+    <div class="hero-meta">
+      <span><span class="lang-it">Edizioni J-Pop Manga</span><span class="lang-en">J-Pop Manga editions</span> · Pocket Monsters SPECIAL</span>
+      <span>Kanto · 1997 → 1998</span>
+      <span class="lang-it">Arco di Kanto completo</span><span class="lang-en">Complete Kanto arc</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="timeline">
+
+    <!-- 1 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">1</span><span class="y">1997</span></div>
+      <article class="albo">
+        <div class="masthead"><h2><span class="lang-it">La Grande Avventura 1</span><span class="lang-en">La Grande Avventura 1</span></h2><span class="anno">JP 1997</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot p1">
+            <div class="cover-art">
+              <span class="strip">J-Pop</span>
+              <span class="logo">Pokémon<br>Vol. 1</span>
+              <span class="num">1</span>
+            </div>
+            <img src="copertine/pokemon/vol-01.jpg" alt="Copertina Pokémon La Grande Avventura 1" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge start lang-it">★ Inizio di tutto</span><span class="badge start lang-en">★ Where it all begins</span>
+            <span class="badge lang-it">Era Kusaka/Mato</span><span class="badge lang-en">The Kusaka/Mato era</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Edizione</dt><dt class="lang-en">Edition</dt><dd class="lang-it">Pokémon La Grande Avventura vol. 1 (J-Pop)</dd><dd class="lang-en">Pokémon La Grande Avventura vol. 1 (J-Pop)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Creators</dt><dd class="lang-it">Hidenori Kusaka (storia), Mato (disegni)</dd><dd class="lang-en">Hidenori Kusaka (story), Mato (art)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Contains</dt><dd class="lang-it">Il primo blocco dell'arco di Kanto (Pocket Monsters SPECIAL vol. 1)</dd><dd class="lang-en">The first block of the Kanto arc (Pocket Monsters SPECIAL vol. 1)</dd></div>
+          </dl>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Rosso, ragazzino di Biancavilla convinto di essere già il migliore, incontra il professor Oak (e il suo nipote-rivale Blu, che migliore lo è davvero) e parte con Saur, il Bulbasaur del laboratorio, e il fedele Poli. Non è l'anime: qui i Pokémon si feriscono, il Team Rocket fa paura sul serio e la caccia a Mew apre una trama che attraversa tutto l'arco. Il viaggio delle otto medaglie comincia con il tono da avventura vera che ha reso leggendario questo manga.</p>
+          <p class="lang-en">Red, a kid from Pallet Town convinced he is already the best, meets Professor Oak (and his grandson-rival Blue, who really is the best) and sets off with Saur, the lab's Bulbasaur, and his faithful Poli. This is not the anime: here Pokémon get hurt, Team Rocket is genuinely scary and the hunt for Mew opens a plot that runs through the whole arc. The eight-badge journey begins with the real-adventure tone that made this manga legendary.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> Pocket Monsters SPECIAL nasce nel 1997, un anno dopo i giochi per Game Boy: è la serie a fumetti Pokémon più longeva e fedele ai videogiochi — protagonisti chiamati come le versioni, squadre costruite come nei giochi, perfino le meccaniche di cattura.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> Pocket Monsters SPECIAL began in 1997, one year after the Game Boy games: it is the longest-running Pokémon comic series and the most faithful to the video games — protagonists named after the versions, teams built as in the games, even the capture mechanics.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 2 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">2</span><span class="y">1997</span></div>
+      <article class="albo blu">
+        <div class="masthead"><h2><span class="lang-it">La Grande Avventura 2</span><span class="lang-en">La Grande Avventura 2</span></h2><span class="anno">JP 1997</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot p2">
+            <div class="cover-art">
+              <span class="strip">J-Pop</span>
+              <span class="logo">Pokémon<br>Vol. 2</span>
+              <span class="num">2</span>
+            </div>
+            <img src="copertine/pokemon/vol-02.jpg" alt="Copertina Pokémon La Grande Avventura 2" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge lang-it">Esordio di Verde</span><span class="badge lang-en">Green's debut</span>
+            <span class="badge lang-it">Il Team Rocket allo scoperto</span><span class="badge lang-en">Team Rocket in the open</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Edizione</dt><dt class="lang-en">Edition</dt><dd class="lang-it">Pokémon La Grande Avventura vol. 2 (J-Pop)</dd><dd class="lang-en">Pokémon La Grande Avventura vol. 2 (J-Pop)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Creators</dt><dd class="lang-it">Hidenori Kusaka (storia), Mato (disegni)</dd><dd class="lang-en">Hidenori Kusaka (story), Mato (art)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Contains</dt><dd class="lang-it">Il blocco centrale dell'arco di Kanto (Pocket Monsters SPECIAL vol. 2)</dd><dd class="lang-en">The middle block of the Kanto arc (Pocket Monsters SPECIAL vol. 2)</dd></div>
+          </dl>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Entra in scena il terzo vertice del triangolo: Verde, la truffatrice che vende merce contraffatta e ha un conto in sospeso con un uccello leggendario. Intanto la vera natura del Team Rocket viene allo scoperto: capipalestra insospettabili tra le sue file, esperimenti sui Pokémon e la caccia alle bestie leggendarie. Tra la torre infestata di Lavandonia e gli scontri con i luogotenenti di Giovanni, il tono si fa più cupo e il "gioco" diventa una guerra.</p>
+          <p class="lang-en">The triangle's third vertex takes the stage: Green, the con artist selling counterfeit goods with an old score to settle with a legendary bird. Meanwhile Team Rocket's true nature comes into the open: unsuspected gym leaders among its ranks, experiments on Pokémon and the hunt for the legendary beasts. Between Lavender Town's haunted tower and the clashes with Giovanni's lieutenants, the tone darkens and the "game" becomes a war.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> l'idea più amata della serie — i capipalestra cattivi dentro il Team Rocket — è un'invenzione del manga che i giochi non hanno mai osato, e ha ispirato letture "dark" di Kanto in tutto il fandom.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the series' most beloved idea — villainous gym leaders inside Team Rocket — is a manga invention the games never dared, and it inspired "dark" readings of Kanto across the whole fandom.</div>
+        </div>
+      </article>
+    </section>
+
+    <!-- 3 -->
+    <section class="stop">
+      <div class="stop-dot"><span class="n">3</span><span class="y">1998</span></div>
+      <article class="albo giallo">
+        <div class="masthead"><h2><span class="lang-it">La Grande Avventura 3</span><span class="lang-en">La Grande Avventura 3</span></h2><span class="anno">JP 1998</span></div>
+        <div class="halftone"></div>
+        <div class="albo-body">
+          <div class="cover-slot p3">
+            <div class="cover-art">
+              <span class="strip">J-Pop</span>
+              <span class="logo">Pokémon<br>Vol. 3</span>
+              <span class="num">3</span>
+            </div>
+            <img src="copertine/pokemon/vol-03.jpg" alt="Copertina Pokémon La Grande Avventura 3" onerror="this.remove()">
+          </div>
+          <div class="badge-row">
+            <span class="badge evento lang-it">Mewtwo e la Lega Pokémon</span><span class="badge evento lang-en">Mewtwo and the Pokémon League</span>
+            <span class="badge start lang-it">★ Chiude l'arco di Kanto</span><span class="badge start lang-en">★ Closes the Kanto arc</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Edizione</dt><dt class="lang-en">Edition</dt><dd class="lang-it">Pokémon La Grande Avventura vol. 3 (J-Pop)</dd><dd class="lang-en">Pokémon La Grande Avventura vol. 3 (J-Pop)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Creators</dt><dd class="lang-it">Hidenori Kusaka (storia), Mato (disegni)</dd><dd class="lang-en">Hidenori Kusaka (story), Mato (art)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Contains</dt><dd class="lang-it">Il finale dell'arco di Kanto (Pocket Monsters SPECIAL vol. 3)</dd><dd class="lang-en">The finale of the Kanto arc (Pocket Monsters SPECIAL vol. 3)</dd></div>
+          </dl>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">La resa dei conti: Sabrina e gli ultimi capipalestra del Team Rocket, la creatura di laboratorio Mewtwo — qui affrontata e catturata da Rosso con l'aiuto di Blaine, il suo co-creatore — e il gran finale alla Lega Pokémon, dove il torneo si restringe fino all'unica sfida possibile: Rosso contro Blu, l'amicizia-rivalità che regge tutto l'arco. Il volume chiude la prima generazione su carta e consacra Rosso campione.</p>
+          <p class="lang-en">The reckoning: Sabrina and Team Rocket's last gym leaders, the lab-born Mewtwo — here fought and captured by Red with the help of Blaine, its co-creator — and the grand finale at the Pokémon League, where the tournament narrows to the only possible match: Red versus Blue, the friendship-rivalry that carries the whole arc. The volume closes the first generation on paper and crowns Red champion.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> da qui la serie prosegue in Giappone da quasi trent'anni, generazione dopo generazione, oltre i 60 volumi: l'arco successivo, quello di Giallo, è il candidato naturale per continuare la collezione.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> from here the series has continued in Japan for almost thirty years, generation after generation, past 60 volumes: the next arc, Yellow's, is the natural candidate for continuing the collection.</div>
+        </div>
+      </article>
+    </section>
+
+  </div>
+
+  <!-- RIEPILOGO -->
+  <section class="panel">
+    <h2 class="lang-it">La mappa in <em>una tabella</em></h2>
+    <h2 class="lang-en">The map in <em>one table</em></h2>
+    <table>
+      <thead>
+        <tr><th>#</th><th><span class="lang-it">In sintesi</span><span class="lang-en">At a glance</span></th><th><span class="lang-it">Anno JP</span><span class="lang-en">JP year</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td><span class="lang-it">Rosso, Saur e Poli: la partenza, Oak, il rivale Blu e la caccia a Mew</span><span class="lang-en">Red, Saur and Poli: the departure, Oak, rival Blue and the hunt for Mew</span></td><td>1997</td></tr>
+        <tr><td>2</td><td><span class="lang-it">Verde la truffatrice; il Team Rocket allo scoperto e i suoi capipalestra</span><span class="lang-en">Green the con artist; Team Rocket in the open, gym leaders included</span></td><td>1997</td></tr>
+        <tr><td>3</td><td><span class="lang-it">Mewtwo catturato; la Lega Pokémon e la finale Rosso–Blu</span><span class="lang-en">Mewtwo captured; the Pokémon League and the Red–Blue final</span></td><td>1998</td></tr>
+      </tbody>
+    </table>
+    <p class="lang-it" style="margin-top:14px;font-size:14.5px">I tre volumi J-Pop corrispondono ai primi tre tankobon giapponesi di Pocket Monsters SPECIAL e formano un arco narrativo completo e autoconclusivo: quello di Kanto, dai titoli di testa alla proclamazione del campione.</p>
+    <p class="lang-en" style="margin-top:14px;font-size:14.5px">The three J-Pop volumes match the first three Japanese Pocket Monsters SPECIAL tankobon and form a complete, self-contained narrative arc: Kanto's, from the opening titles to the crowning of the champion.</p>
+  </section>
+
+  <!-- LA SERIE -->
+  <section class="panel">
+    <h2 class="lang-it">Il manga <em>benedetto da Tajiri</em></h2>
+    <h2 class="lang-en">The manga <em>blessed by Tajiri</em></h2>
+    <p class="lang-it"><strong>La citazione famosa:</strong> Satoshi Tajiri, il creatore di Pokémon, ha scritto che questo è il fumetto che più si avvicina al mondo che aveva in testa quando ideò i giochi. A differenza dell'anime, qui i protagonisti sono i ragazzi delle versioni (Rosso, Blu, Verde, poi Giallo e tutti gli altri), le squadre evolvono come su Game Boy e la posta in gioco è reale.</p>
+    <p class="lang-en"><strong>The famous quote:</strong> Satoshi Tajiri, Pokémon's creator, wrote that this is the comic that comes closest to the world he had in mind when he devised the games. Unlike the anime, the protagonists here are the kids of the game versions (Red, Blue, Green, then Yellow and all the others), teams evolve as on the Game Boy and the stakes are real.</p>
+    <p class="lang-it"><strong>Dove può crescere la collezione:</strong> l'arco di Giallo (il seguito diretto, con il misterioso allenatore che impugna la Pikachu di Rosso) e poi Oro, Argento e Cristallo: la serie J-Pop prosegue esattamente da dove si ferma il mio terzo volume.</p>
+    <p class="lang-en"><strong>Where the collection can grow:</strong> the Yellow arc (the direct sequel, with the mysterious trainer wielding Red's Pikachu) and then Gold, Silver and Crystal: the J-Pop series continues exactly where my third volume stops.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap"><span class="lang-it">Dossier della collezione · Pokémon · Kanto</span><span class="lang-en">Collection dossier · Pokémon · Kanto</span></div>
+  <div class="wrap" style="margin-top:10px"><a href="https://salvatorematrisciano.com" style="color:inherit">&copy; Salvatore Matrisciano</a></div>
+</footer>
+
+</body>
+</html>
