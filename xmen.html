@@ -6,6 +6,8 @@
 <title>Fumetti Wolverine e X-Men</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/lang.css">
+<script src="assets/js/lang.js"></script>
 <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
 <link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
 <style>
@@ -77,7 +79,7 @@
     font-family:'Barlow Condensed',sans-serif;font-weight:600;
     text-transform:uppercase;letter-spacing:.1em;font-size:13px;
   }
-  .hero-meta span{
+  .hero-meta > span{
     border:1px solid rgba(179,167,143,.4);padding:5px 12px;color:var(--brina);
   }
 
@@ -245,16 +247,20 @@
 <header>
   <div class="wrap">
     <div class="corner-box">
-      <span>Collezione di</span>
+      <span class="lang-it">Collezione di</span>
+      <span class="lang-en">Collection of</span>
       <span class="big">12</span>
-      <span>Volumi</span>
+      <span class="lang-it">Volumi</span>
+      <span class="lang-en">Volumes</span>
     </div>
-    <h1>La mia collezione<br><span class="artiglio">Wolverine</span> &amp; X-Men</h1>
-    <p class="hero-sub">Dodici volumi che seguono la vita di Logan e la storia dei mutanti, ordinati secondo la cronologia interna delle storie: dall'infanzia nel Canada di fine Ottocento al futuro desolato di Vecchio Logan, passando per la nascita e le rivoluzioni degli X-Men.</p>
+    <h1 class="lang-it">La mia collezione<br><span class="artiglio">Wolverine</span> &amp; X-Men</h1>
+    <h1 class="lang-en">My <span class="artiglio">Wolverine</span> &amp; X-Men<br>collection</h1>
+    <p class="hero-sub lang-it">Dodici volumi che seguono la vita di Logan e la storia dei mutanti, ordinati secondo la cronologia interna delle storie: dall'infanzia nel Canada di fine Ottocento al futuro desolato di Vecchio Logan, passando per la nascita e le rivoluzioni degli X-Men.</p>
+    <p class="hero-sub lang-en">Twelve volumes that follow Logan's life and the history of the mutants, arranged by the internal chronology of the stories: from a childhood in late-nineteenth-century Canada to the desolate future of Old Man Logan, by way of the birth and the revolutions of the X-Men.</p>
     <div class="hero-meta">
-      <span>Edizioni Panini Comics · Marvel</span>
+      <span><span class="lang-it">Edizioni Panini Comics · Marvel</span><span class="lang-en">Panini Comics editions · Marvel</span></span>
       <span>Marvel Masterworks + Marvel Must Have</span>
-      <span>Ordine: cronologia narrativa</span>
+      <span><span class="lang-it">Ordine: cronologia narrativa</span><span class="lang-en">Order: narrative chronology</span></span>
     </div>
   </div>
 </header>
@@ -264,9 +270,9 @@
 
     <!-- 1 -->
     <section class="stop">
-      <div class="stop-dot"><span class="n">1</span><span class="y">Fine '800</span></div>
+      <div class="stop-dot"><span class="n">1</span><span class="y lang-it">Fine '800</span><span class="y lang-en">Late 1800s</span></div>
       <article class="albo">
-        <div class="masthead"><h2>Wolverine: Le origini</h2><span class="anno">USA 2001–2002</span></div>
+        <div class="masthead"><h2><span class="lang-it">Wolverine: Le origini</span><span class="lang-en">Wolverine: Origin</span></h2><span class="anno">USA 2001–2002</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot w1">
@@ -278,29 +284,36 @@
             <img src="copertine/xmen/01-origini.jpg" alt="Copertina Wolverine: Le origini" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ L'inizio della vita di Logan</span>
-            <span class="badge">Il segreto custodito per 27 anni</span>
+            <span class="badge start lang-it">★ L'inizio della vita di Logan</span>
+            <span class="badge start lang-en">★ The beginning of Logan's life</span>
+            <span class="badge lang-it">Il segreto custodito per 27 anni</span>
+            <span class="badge lang-en">The secret kept for 27 years</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Must Have (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Paul Jenkins (testi), Andy Kubert e Richard Isanove (disegni), da un soggetto di Bill Jemas e Joe Quesada</dd></div>
-            <div><dt>Contiene</dt><dd>Origin #1–6 (miniserie 2001–02)</dd></div>
-            <div><dt>Ambientazione</dt><dd>Canada, fine Ottocento: l'infanzia di James Howlett</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Must Have (cartonato)</dd><dd class="lang-en">Marvel Must Have (hardcover)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Authors</dt><dd class="lang-it">Paul Jenkins (testi), Andy Kubert e Richard Isanove (disegni), da un soggetto di Bill Jemas e Joe Quesada</dd><dd class="lang-en">Paul Jenkins (script), Andy Kubert and Richard Isanove (art), from a story by Bill Jemas and Joe Quesada</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Contains</dt><dd class="lang-it">Origin #1–6 (miniserie 2001–02)</dd><dd class="lang-en">Origin #1–6 (2001–02 miniseries)</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">Canada, fine Ottocento: l'infanzia di James Howlett</dd><dd class="lang-en">Canada, late nineteenth century: James Howlett's childhood</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>La storia che la Marvel giurò non sarebbe mai stata raccontata: la vera origine di Wolverine. In una tenuta dell'Alberta di fine Ottocento, il fragile James Howlett scopre nel sangue e nel lutto chi è davvero — gli artigli d'osso, il fattore rigenerante, il primo amore Rose e la fuga verso la natura selvaggia che lo trasformerà in "Logan". Un dramma vittoriano più vicino a Cime tempestose che a un fumetto di supereroi, dipinto dai colori pittorici di Isanove.</p>
-          <h3>Curiosità</h3>
-          <p>Fu pubblicata solo perché i film stavano arrivando: l'editore Bill Jemas convinse la Marvel che era meglio raccontare l'origine su carta prima che lo facesse Hollywood. Il primo albo è oggi uno dei più ricercati degli anni 2000.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> il prologo di X-Men le origini: Wolverine (2009) — il piccolo James, gli artigli d'osso, la fuga — è l'adattamento diretto di queste pagine.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">La storia che la Marvel giurò non sarebbe mai stata raccontata: la vera origine di Wolverine. In una tenuta dell'Alberta di fine Ottocento, il fragile James Howlett scopre nel sangue e nel lutto chi è davvero — gli artigli d'osso, il fattore rigenerante, il primo amore Rose e la fuga verso la natura selvaggia che lo trasformerà in "Logan". Un dramma vittoriano più vicino a Cime tempestose che a un fumetto di supereroi, dipinto dai colori pittorici di Isanove.</p>
+          <p class="lang-en">The story Marvel swore would never be told: Wolverine's true origin. On an Alberta estate at the close of the nineteenth century, frail James Howlett discovers in blood and mourning who he really is — the bone claws, the healing factor, his first love Rose, and the flight into the wilderness that will turn him into "Logan". A Victorian drama closer to Wuthering Heights than to a superhero comic, painted in Isanove's pictorial colors.</p>
+          <h3 class="lang-it">Curiosità</h3>
+          <h3 class="lang-en">Trivia</h3>
+          <p class="lang-it">Fu pubblicata solo perché i film stavano arrivando: l'editore Bill Jemas convinse la Marvel che era meglio raccontare l'origine su carta prima che lo facesse Hollywood. Il primo albo è oggi uno dei più ricercati degli anni 2000.</p>
+          <p class="lang-en">It was published only because the movies were on their way: publisher Bill Jemas convinced Marvel it was better to tell the origin on paper before Hollywood did. The first issue is now one of the most sought-after comics of the 2000s.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> il prologo di X-Men le origini: Wolverine (2009) — il piccolo James, gli artigli d'osso, la fuga — è l'adattamento diretto di queste pagine.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the prologue of X-Men Origins: Wolverine (2009) — young James, the bone claws, the escape — is a direct adaptation of these pages.</div>
         </div>
       </article>
     </section>
 
     <!-- 2 -->
     <section class="stop">
-      <div class="stop-dot"><span class="n">2</span><span class="y">'900</span></div>
+      <div class="stop-dot"><span class="n">2</span><span class="y lang-it">'900</span><span class="y lang-en">1900s</span></div>
       <article class="albo blux">
-        <div class="masthead"><h2>Arma X</h2><span class="anno">USA 1991</span></div>
+        <div class="masthead"><h2><span class="lang-it">Arma X</span><span class="lang-en">Weapon X</span></h2><span class="anno">USA 1991</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot w2">
@@ -312,20 +325,27 @@
             <img src="copertine/xmen/02-arma-x.jpg" alt="Copertina Wolverine: Arma X" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge evento">Capolavoro d'autore</span>
-            <span class="badge">La nascita dell'adamantio</span>
+            <span class="badge evento lang-it">Capolavoro d'autore</span>
+            <span class="badge evento lang-en">An auteur masterpiece</span>
+            <span class="badge lang-it">La nascita dell'adamantio</span>
+            <span class="badge lang-en">The birth of adamantium</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Must Have (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Barry Windsor-Smith (testi e disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Weapon X, da Marvel Comics Presents #72–84 (1991)</dd></div>
-            <div><dt>Ambientazione</dt><dd>Decenni prima degli X-Men: il programma segreto canadese</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Must Have (cartonato)</dd><dd class="lang-en">Marvel Must Have (hardcover)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Authors</dt><dd class="lang-it">Barry Windsor-Smith (testi e disegni)</dd><dd class="lang-en">Barry Windsor-Smith (script and art)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Contains</dt><dd class="lang-it">Weapon X, da Marvel Comics Presents #72–84 (1991)</dd><dd class="lang-en">Weapon X, from Marvel Comics Presents #72–84 (1991)</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">Decenni prima degli X-Men: il programma segreto canadese</dd><dd class="lang-en">Decades before the X-Men: the secret Canadian program</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il capitolo più atroce della vita di Logan: rapito dal programma Arma X, spogliato di nome e memoria, immerso nelle vasche dove l'adamantio viene fuso alle sue ossa e ridotto a bestia telecomandata dai tecnici Cornelius e Hines. Barry Windsor-Smith firma tutto — testi, disegni, colori — e trasforma un racconto di fantascienza crudele in una riflessione su cosa resta di un uomo quando gli tolgono tutto. Per molti, la miglior storia di Wolverine mai scritta.</p>
-          <h3>Il suo ruolo nella collezione</h3>
-          <p>È l'anello tra Le origini e il Logan che conosci: qui nasce l'arma, e qui nascono i buchi di memoria che tormenteranno il personaggio per decenni di storie.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> ogni versione cinematografica del laboratorio — i flashback di X2, la vasca di X-Men le origini, gli incubi di Logan (2017) — discende dall'immaginario di queste tavole.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il capitolo più atroce della vita di Logan: rapito dal programma Arma X, spogliato di nome e memoria, immerso nelle vasche dove l'adamantio viene fuso alle sue ossa e ridotto a bestia telecomandata dai tecnici Cornelius e Hines. Barry Windsor-Smith firma tutto — testi, disegni, colori — e trasforma un racconto di fantascienza crudele in una riflessione su cosa resta di un uomo quando gli tolgono tutto. Per molti, la miglior storia di Wolverine mai scritta.</p>
+          <p class="lang-en">The most harrowing chapter of Logan's life: abducted by the Weapon X program, stripped of name and memory, plunged into the tanks where adamantium is bonded to his bones and reduced to a beast remote-controlled by the technicians Cornelius and Hines. Barry Windsor-Smith does it all — script, art, colors — and turns a cruel science-fiction tale into a meditation on what remains of a man when everything is taken from him. For many, the best Wolverine story ever written.</p>
+          <h3 class="lang-it">Il suo ruolo nella collezione</h3>
+          <h3 class="lang-en">Its role in the collection</h3>
+          <p class="lang-it">È l'anello tra Le origini e il Logan che conosci: qui nasce l'arma, e qui nascono i buchi di memoria che tormenteranno il personaggio per decenni di storie.</p>
+          <p class="lang-en">It is the link between Origin and the Logan we all know: this is where the weapon is born, and where the memory gaps begin that will torment the character through decades of stories.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> ogni versione cinematografica del laboratorio — i flashback di X2, la vasca di X-Men le origini, gli incubi di Logan (2017) — discende dall'immaginario di queste tavole.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> every film version of the laboratory — the flashbacks in X2, the tank in X-Men Origins: Wolverine, the nightmares in Logan (2017) — descends from the imagery of these pages.</div>
         </div>
       </article>
     </section>
@@ -346,20 +366,27 @@
             <img src="copertine/xmen/03-masterworks-xmen.jpg" alt="Copertina Marvel Masterworks: X-Men 1" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ La nascita degli X-Men</span>
-            <span class="badge">Era Lee/Kirby</span>
+            <span class="badge start lang-it">★ La nascita degli X-Men</span>
+            <span class="badge start lang-en">★ The birth of the X-Men</span>
+            <span class="badge lang-it">Era Lee/Kirby</span>
+            <span class="badge lang-en">The Lee/Kirby era</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Masterworks (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Stan Lee (testi), Jack Kirby (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>X-Men (1963) #1–10</dd></div>
-            <div><dt>Ambientazione</dt><dd>L'anno zero dei mutanti: la scuola di Xavier apre le porte</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Masterworks (cartonato)</dd><dd class="lang-en">Marvel Masterworks (hardcover)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Authors</dt><dd class="lang-it">Stan Lee (testi), Jack Kirby (disegni)</dd><dd class="lang-en">Stan Lee (script), Jack Kirby (art)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Contains</dt><dd>X-Men (1963) #1–10</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">L'anno zero dei mutanti: la scuola di Xavier apre le porte</dd><dd class="lang-en">Mutant year zero: Xavier's school opens its doors</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il punto zero del mito mutante: X-Men #1 presenta in un colpo solo il Professor Xavier, la formazione originale — Ciclope, Marvel Girl, Bestia, Angelo e l'Uomo Ghiaccio — e Magneto, il nemico-specchio. Nei dieci numeri raccolti arrivano anche la Confraternita dei Mutanti Malvagi, Quicksilver e Scarlet, il Fenomeno e le Sentinelle in embrione. È qui che nasce l'idea che regge tutto: i mutanti come metafora del diverso, temuti dal mondo che proteggono.</p>
-          <h3>Il suo ruolo nella collezione</h3>
-          <p>Wolverine non c'è ancora — mancano undici anni al suo esordio — ma senza questa scuola e senza questo conflitto Xavier/Magneto niente di ciò che segue avrebbe senso.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> la formazione in divisa gialla e blu e il duello ideologico Xavier/Magneto sono il cuore di X-Men - L'inizio (2011) e la base di ogni incarnazione animata, fino a X-Men '97.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il punto zero del mito mutante: X-Men #1 presenta in un colpo solo il Professor Xavier, la formazione originale — Ciclope, Marvel Girl, Bestia, Angelo e l'Uomo Ghiaccio — e Magneto, il nemico-specchio. Nei dieci numeri raccolti arrivano anche la Confraternita dei Mutanti Malvagi, Quicksilver e Scarlet, il Fenomeno e le Sentinelle in embrione. È qui che nasce l'idea che regge tutto: i mutanti come metafora del diverso, temuti dal mondo che proteggono.</p>
+          <p class="lang-en">Ground zero of the mutant myth: X-Men #1 introduces in a single stroke Professor Xavier, the original lineup — Cyclops, Marvel Girl, Beast, Angel and Iceman — and Magneto, the mirror-image enemy. The ten issues collected here also bring the Brotherhood of Evil Mutants, Quicksilver and the Scarlet Witch, the Juggernaut and the Sentinels in embryo. This is where the idea that holds everything together is born: mutants as a metaphor for the outsider, feared by the very world they protect.</p>
+          <h3 class="lang-it">Il suo ruolo nella collezione</h3>
+          <h3 class="lang-en">Its role in the collection</h3>
+          <p class="lang-it">Wolverine non c'è ancora — mancano undici anni al suo esordio — ma senza questa scuola e senza questo conflitto Xavier/Magneto niente di ciò che segue avrebbe senso.</p>
+          <p class="lang-en">Wolverine isn't here yet — his debut is still eleven years away — but without this school and without this Xavier/Magneto conflict nothing that follows would make sense.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> la formazione in divisa gialla e blu e il duello ideologico Xavier/Magneto sono il cuore di X-Men - L'inizio (2011) e la base di ogni incarnazione animata, fino a X-Men '97.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the yellow-and-blue lineup and the Xavier/Magneto ideological duel are the heart of X-Men: First Class (2011) and the foundation of every animated incarnation, all the way to X-Men '97.</div>
         </div>
       </article>
     </section>
@@ -368,7 +395,7 @@
     <section class="stop">
       <div class="stop-dot"><span class="n">4</span><span class="y">1975</span></div>
       <article class="albo">
-        <div class="masthead"><h2>Masterworks: Gli Incredibili X-Men 1</h2><span class="anno">USA 1975–1976</span></div>
+        <div class="masthead"><h2><span class="lang-it">Masterworks: Gli Incredibili X-Men 1</span><span class="lang-en">Masterworks: The Uncanny X-Men 1</span></h2><span class="anno">USA 1975–1976</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot w4">
@@ -380,18 +407,23 @@
             <img src="copertine/xmen/04-masterworks-incredibili.jpg" alt="Copertina Marvel Masterworks: Gli Incredibili X-Men 1" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ Wolverine entra negli X-Men</span>
-            <span class="badge">Inizio dell'era Claremont</span>
+            <span class="badge start lang-it">★ Wolverine entra negli X-Men</span>
+            <span class="badge start lang-en">★ Wolverine joins the X-Men</span>
+            <span class="badge lang-it">Inizio dell'era Claremont</span>
+            <span class="badge lang-en">Start of the Claremont era</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Masterworks (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Len Wein e Chris Claremont (testi), Dave Cockrum (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Giant-Size X-Men #1 + X-Men #94–100 circa (1975–76)</dd></div>
-            <div><dt>Ambientazione</dt><dd>La Seconda Genesi: la nuova squadra internazionale</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Masterworks (cartonato)</dd><dd class="lang-en">Marvel Masterworks (hardcover)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Authors</dt><dd class="lang-it">Len Wein e Chris Claremont (testi), Dave Cockrum (disegni)</dd><dd class="lang-en">Len Wein and Chris Claremont (script), Dave Cockrum (art)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Contains</dt><dd class="lang-it">Giant-Size X-Men #1 + X-Men #94–100 circa (1975–76)</dd><dd class="lang-en">Giant-Size X-Men #1 + roughly X-Men #94–100 (1975–76)</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">La Seconda Genesi: la nuova squadra internazionale</dd><dd class="lang-en">The Second Genesis: the new international team</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>La rinascita che ha cambiato la storia del fumetto: con la squadra originale prigioniera dell'isola vivente Krakoa, Xavier recluta una nuova formazione internazionale — Tempesta, Colosso, Nightcrawler, Banshee e un certo Wolverine, strappato al governo canadese. Da Giant-Size X-Men #1 parte la gestione di Chris Claremont, che terrà la serie per sedici anni trasformandola nel fenomeno editoriale più grande d'America. Ed è qui che Logan smette di essere una comparsa e comincia la scalata a personaggio simbolo della Marvel.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> questa è "la" squadra dell'immaginario collettivo — quella della serie animata anni '90, di X-Men '97 e, in gran parte, dei film. Giant-Size X-Men #1 è tra gli albi più quotati dell'età del bronzo.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">La rinascita che ha cambiato la storia del fumetto: con la squadra originale prigioniera dell'isola vivente Krakoa, Xavier recluta una nuova formazione internazionale — Tempesta, Colosso, Nightcrawler, Banshee e un certo Wolverine, strappato al governo canadese. Da Giant-Size X-Men #1 parte la gestione di Chris Claremont, che terrà la serie per sedici anni trasformandola nel fenomeno editoriale più grande d'America. Ed è qui che Logan smette di essere una comparsa e comincia la scalata a personaggio simbolo della Marvel.</p>
+          <p class="lang-en">The rebirth that changed comics history: with the original team held captive by the living island Krakoa, Xavier recruits a new international lineup — Storm, Colossus, Nightcrawler, Banshee and a certain Wolverine, snatched away from the Canadian government. Giant-Size X-Men #1 kicks off Chris Claremont's run, which would hold the series for sixteen years and turn it into America's biggest publishing phenomenon. And this is where Logan stops being a bit player and begins his climb to become one of Marvel's signature characters.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> questa è "la" squadra dell'immaginario collettivo — quella della serie animata anni '90, di X-Men '97 e, in gran parte, dei film. Giant-Size X-Men #1 è tra gli albi più quotati dell'età del bronzo.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> this is "the" team of the collective imagination — the one from the '90s animated series, from X-Men '97 and, in large part, from the movies. Giant-Size X-Men #1 is among the most prized issues of the Bronze Age.</div>
         </div>
       </article>
     </section>
@@ -400,7 +432,7 @@
     <section class="stop">
       <div class="stop-dot"><span class="n">5</span><span class="y">1981</span></div>
       <article class="albo blux">
-        <div class="masthead"><h2>Giorni di un futuro passato</h2><span class="anno">USA 1981</span></div>
+        <div class="masthead"><h2><span class="lang-it">Giorni di un futuro passato</span><span class="lang-en">Days of Future Past</span></h2><span class="anno">USA 1981</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot w5">
@@ -412,20 +444,27 @@
             <img src="copertine/xmen/05-giorni-futuro-passato.jpg" alt="Copertina X-Men: Giorni di un futuro passato" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge evento">La saga simbolo dell'era Claremont/Byrne</span>
-            <span class="badge">Due linee temporali</span>
+            <span class="badge evento lang-it">La saga simbolo dell'era Claremont/Byrne</span>
+            <span class="badge evento lang-en">The signature saga of the Claremont/Byrne era</span>
+            <span class="badge lang-it">Due linee temporali</span>
+            <span class="badge lang-en">Two timelines</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Must Have (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Chris Claremont (testi), John Byrne (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Uncanny X-Men #141–142 (1981), con albi di contorno a seconda dell'edizione</dd></div>
-            <div><dt>Ambientazione</dt><dd>Doppia: il presente degli X-Men e il futuro distopico del 2013</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Must Have (cartonato)</dd><dd class="lang-en">Marvel Must Have (hardcover)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Authors</dt><dd class="lang-it">Chris Claremont (testi), John Byrne (disegni)</dd><dd class="lang-en">Chris Claremont (script), John Byrne (art)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Contains</dt><dd class="lang-it">Uncanny X-Men #141–142 (1981), con albi di contorno a seconda dell'edizione</dd><dd class="lang-en">Uncanny X-Men #141–142 (1981), with supporting issues depending on the edition</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">Doppia: il presente degli X-Men e il futuro distopico del 2013</dd><dd class="lang-en">Twofold: the X-Men's present and the dystopian future of 2013</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>In appena due albi, la distopia definitiva: in un futuro dominato dalle Sentinelle, con i mutanti sterminati o nei campi, la coscienza di un'anziana Kitty Pryde viene proiettata nel suo corpo del presente per impedire l'attentato che ha innescato tutto. È il modello di ogni "futuro oscuro" del fumetto americano e la consacrazione della coppia Claremont/Byrne, insieme all'esordio della nuova Confraternita di Mystica.</p>
-          <h3>Il suo ruolo nella collezione</h3>
-          <p>Rappresenta l'apice dell'era d'oro iniziata con la Seconda Genesi — e il Wolverine disintegrato dalla Sentinella è una delle immagini più iconiche mai stampate su una copertina Marvel.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> il film X-Men: Giorni di un futuro passato (2014) ne è l'adattamento diretto — con Wolverine al posto di Kitty come viaggiatore — ed è considerato il vertice della saga cinematografica; la storyline è ripresa anche in X-Men '97.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">In appena due albi, la distopia definitiva: in un futuro dominato dalle Sentinelle, con i mutanti sterminati o nei campi, la coscienza di un'anziana Kitty Pryde viene proiettata nel suo corpo del presente per impedire l'attentato che ha innescato tutto. È il modello di ogni "futuro oscuro" del fumetto americano e la consacrazione della coppia Claremont/Byrne, insieme all'esordio della nuova Confraternita di Mystica.</p>
+          <p class="lang-en">In just two issues, the definitive dystopia: in a future ruled by the Sentinels, with mutants exterminated or held in camps, the consciousness of an elderly Kitty Pryde is projected into her present-day body to prevent the assassination that set it all in motion. It is the template for every "dark future" in American comics and the consecration of the Claremont/Byrne team, along with the debut of Mystique's new Brotherhood.</p>
+          <h3 class="lang-it">Il suo ruolo nella collezione</h3>
+          <h3 class="lang-en">Its role in the collection</h3>
+          <p class="lang-it">Rappresenta l'apice dell'era d'oro iniziata con la Seconda Genesi — e il Wolverine disintegrato dalla Sentinella è una delle immagini più iconiche mai stampate su una copertina Marvel.</p>
+          <p class="lang-en">It represents the peak of the golden age that began with the Second Genesis — and the Wolverine disintegrated by the Sentinel is one of the most iconic images ever printed on a Marvel cover.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> il film X-Men: Giorni di un futuro passato (2014) ne è l'adattamento diretto — con Wolverine al posto di Kitty come viaggiatore — ed è considerato il vertice della saga cinematografica; la storyline è ripresa anche in X-Men '97.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the film X-Men: Days of Future Past (2014) is its direct adaptation — with Wolverine in Kitty's place as the time traveler — and is considered the high point of the film saga; the storyline is also revisited in X-Men '97.</div>
         </div>
       </article>
     </section>
@@ -434,7 +473,7 @@
     <section class="stop">
       <div class="stop-dot"><span class="n">6</span><span class="y">1982</span></div>
       <article class="albo ambra">
-        <div class="masthead"><h2>Wolverine di Claremont e Miller</h2><span class="anno">USA 1982</span></div>
+        <div class="masthead"><h2><span class="lang-it">Wolverine di Claremont e Miller</span><span class="lang-en">Wolverine by Claremont &amp; Miller</span></h2><span class="anno">USA 1982</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot w6">
@@ -446,20 +485,27 @@
             <img src="copertine/xmen/06-wolverine-claremont-miller.jpg" alt="Copertina Wolverine di Claremont e Miller" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ La prima serie solista di Logan</span>
-            <span class="badge">Giappone, onore e sangue</span>
+            <span class="badge start lang-it">★ La prima serie solista di Logan</span>
+            <span class="badge start lang-en">★ Logan's first solo series</span>
+            <span class="badge lang-it">Giappone, onore e sangue</span>
+            <span class="badge lang-en">Japan, honor and blood</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Must Have (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Chris Claremont (testi), Frank Miller (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Wolverine (1982) #1–4</dd></div>
-            <div><dt>Ambientazione</dt><dd>Il Giappone di Mariko: Logan lontano dagli X-Men</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Must Have (cartonato)</dd><dd class="lang-en">Marvel Must Have (hardcover)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Authors</dt><dd class="lang-it">Chris Claremont (testi), Frank Miller (disegni)</dd><dd class="lang-en">Chris Claremont (script), Frank Miller (art)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Contains</dt><dd>Wolverine (1982) #1–4</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">Il Giappone di Mariko: Logan lontano dagli X-Men</dd><dd class="lang-en">Mariko's Japan: Logan far from the X-Men</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>"Sono il migliore in quello che faccio. Ma quello che faccio non è piacevole": la frase-manifesto nasce qui, nella miniserie che ha inventato il Wolverine moderno. Volato in Giappone per amore di Mariko Yashida, Logan si scontra con il criminale Lord Shingen, con la letale Yukio e soprattutto con se stesso: samurai o bestia? Claremont e un Frank Miller in stato di grazia (fresco di Daredevil) trasformano un comprimario rissoso in un personaggio tragico da prima fila.</p>
-          <h3>Il suo ruolo nella collezione</h3>
-          <p>È il momento in cui Wolverine si stacca dal gruppo e diventa una star solista — la premessa di tutte le testate personali che seguiranno, dalla serie del 1988 in poi.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> Wolverine - L'immortale (2013), con Hugh Jackman a Tokyo tra Mariko, Yukio e Shingen, è l'adattamento dichiarato di questa miniserie.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">"Sono il migliore in quello che faccio. Ma quello che faccio non è piacevole": la frase-manifesto nasce qui, nella miniserie che ha inventato il Wolverine moderno. Volato in Giappone per amore di Mariko Yashida, Logan si scontra con il criminale Lord Shingen, con la letale Yukio e soprattutto con se stesso: samurai o bestia? Claremont e un Frank Miller in stato di grazia (fresco di Daredevil) trasformano un comprimario rissoso in un personaggio tragico da prima fila.</p>
+          <p class="lang-en">"I'm the best there is at what I do. But what I do best isn't very nice": the signature line is born here, in the miniseries that invented the modern Wolverine. Having flown to Japan for the love of Mariko Yashida, Logan clashes with the criminal Lord Shingen, with the lethal Yukio and above all with himself: samurai or beast? Claremont and a Frank Miller in a state of grace (fresh off Daredevil) turn a brawling supporting player into a front-rank tragic character.</p>
+          <h3 class="lang-it">Il suo ruolo nella collezione</h3>
+          <h3 class="lang-en">Its role in the collection</h3>
+          <p class="lang-it">È il momento in cui Wolverine si stacca dal gruppo e diventa una star solista — la premessa di tutte le testate personali che seguiranno, dalla serie del 1988 in poi.</p>
+          <p class="lang-en">This is the moment Wolverine breaks away from the group and becomes a solo star — the premise of all the solo series to come, from the 1988 ongoing onward.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> Wolverine - L'immortale (2013), con Hugh Jackman a Tokyo tra Mariko, Yukio e Shingen, è l'adattamento dichiarato di questa miniserie.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> The Wolverine (2013), with Hugh Jackman in Tokyo among Mariko, Yukio and Shingen, is the declared adaptation of this miniseries.</div>
         </div>
       </article>
     </section>
@@ -468,7 +514,7 @@
     <section class="stop">
       <div class="stop-dot"><span class="n">7</span><span class="y">2001</span></div>
       <article class="albo">
-        <div class="masthead"><h2>New X-Men: E come Estinzione</h2><span class="anno">USA 2001</span></div>
+        <div class="masthead"><h2><span class="lang-it">New X-Men: E come Estinzione</span><span class="lang-en">New X-Men: E Is for Extinction</span></h2><span class="anno">USA 2001</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot w7">
@@ -480,20 +526,27 @@
             <img src="copertine/xmen/07-e-come-estinzione.jpg" alt="Copertina New X-Men: E come Estinzione" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ Inizio run Grant Morrison (2001–2004)</span>
-            <span class="badge">La rivoluzione moderna</span>
+            <span class="badge start lang-it">★ Inizio run Grant Morrison (2001–2004)</span>
+            <span class="badge start lang-en">★ Start of the Grant Morrison run (2001–2004)</span>
+            <span class="badge lang-it">La rivoluzione moderna</span>
+            <span class="badge lang-en">The modern revolution</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Must Have (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Grant Morrison (testi), Frank Quitely (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>L'arco d'esordio E come Estinzione (New X-Men #114–116) e i capitoli immediatamente successivi</dd></div>
-            <div><dt>Ambientazione</dt><dd>Presente: la scuola di Xavier diventa un'istituzione pubblica</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Must Have (cartonato)</dd><dd class="lang-en">Marvel Must Have (hardcover)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Authors</dt><dd class="lang-it">Grant Morrison (testi), Frank Quitely (disegni)</dd><dd class="lang-en">Grant Morrison (script), Frank Quitely (art)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Contains</dt><dd class="lang-it">L'arco d'esordio E come Estinzione (New X-Men #114–116) e i capitoli immediatamente successivi</dd><dd class="lang-en">The opening arc E Is for Extinction (New X-Men #114–116) and the chapters immediately after</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">Presente: la scuola di Xavier diventa un'istituzione pubblica</dd><dd class="lang-en">Present day: Xavier's school becomes a public institution</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il grande rilancio del nuovo millennio: via le calzamaglie, dentro le divise di pelle nera; gli X-Men come specie in ascesa e non più solo minoranza perseguitata. E subito la tragedia fondativa dell'era moderna: Cassandra Nova, la gemella oscura di Xavier, scatena le Sentinelle su Genosha sterminando sedici milioni di mutanti. Con Morrison la serie torna a essere il posto dove succedono le cose più audaci della Marvel.</p>
-          <h3>Il suo ruolo nella collezione</h3>
-          <p>Il ponte tra l'era Claremont e il presente: tutto ciò che gli X-Men sono stati nel ventunesimo secolo — fino all'era Krakoa — parte da questa deflagrazione.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> le divise di pelle nascono in dialogo diretto con il primo film X-Men (2000), e Cassandra Nova è arrivata al cinema come villain principale di Deadpool &amp; Wolverine (2024), interpretata da Emma Corrin.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il grande rilancio del nuovo millennio: via le calzamaglie, dentro le divise di pelle nera; gli X-Men come specie in ascesa e non più solo minoranza perseguitata. E subito la tragedia fondativa dell'era moderna: Cassandra Nova, la gemella oscura di Xavier, scatena le Sentinelle su Genosha sterminando sedici milioni di mutanti. Con Morrison la serie torna a essere il posto dove succedono le cose più audaci della Marvel.</p>
+          <p class="lang-en">The great relaunch of the new millennium: out with the spandex, in with the black leather uniforms; the X-Men as a species on the rise, no longer just a persecuted minority. And right away, the founding tragedy of the modern era: Cassandra Nova, Xavier's dark twin, unleashes the Sentinels on Genosha, exterminating sixteen million mutants. With Morrison the series goes back to being the place where Marvel's boldest ideas happen.</p>
+          <h3 class="lang-it">Il suo ruolo nella collezione</h3>
+          <h3 class="lang-en">Its role in the collection</h3>
+          <p class="lang-it">Il ponte tra l'era Claremont e il presente: tutto ciò che gli X-Men sono stati nel ventunesimo secolo — fino all'era Krakoa — parte da questa deflagrazione.</p>
+          <p class="lang-en">The bridge between the Claremont era and the present: everything the X-Men have been in the twenty-first century — up to the Krakoa era — starts from this detonation.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> le divise di pelle nascono in dialogo diretto con il primo film X-Men (2000), e Cassandra Nova è arrivata al cinema come villain principale di Deadpool &amp; Wolverine (2024), interpretata da Emma Corrin.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the leather uniforms were born in direct dialogue with the first X-Men film (2000), and Cassandra Nova reached the big screen as the main villain of Deadpool &amp; Wolverine (2024), played by Emma Corrin.</div>
         </div>
       </article>
     </section>
@@ -502,7 +555,7 @@
     <section class="stop">
       <div class="stop-dot"><span class="n">8</span><span class="y">2004</span></div>
       <article class="albo blux">
-        <div class="masthead"><h2>Nemico pubblico</h2><span class="anno">USA 2004–2005</span></div>
+        <div class="masthead"><h2><span class="lang-it">Nemico pubblico</span><span class="lang-en">Enemy of the State</span></h2><span class="anno">USA 2004–2005</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot w8">
@@ -514,18 +567,22 @@
             <img src="copertine/xmen/08-nemico-pubblico.jpg" alt="Copertina Wolverine: Nemico pubblico" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge evento">Il blockbuster di Wolverine</span>
+            <span class="badge evento lang-it">Il blockbuster di Wolverine</span>
+            <span class="badge evento lang-en">Wolverine's blockbuster</span>
             <span class="badge">Millar &amp; Romita Jr.</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Must Have (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Mark Millar (testi), John Romita Jr. (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>La saga Nemico pubblico / Agente dello S.H.I.E.L.D., da Wolverine (2003) #20–32</dd></div>
-            <div><dt>Ambientazione</dt><dd>Presente: Logan contro tutto l'universo Marvel</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Must Have (cartonato)</dd><dd class="lang-en">Marvel Must Have (hardcover)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Authors</dt><dd class="lang-it">Mark Millar (testi), John Romita Jr. (disegni)</dd><dd class="lang-en">Mark Millar (script), John Romita Jr. (art)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Contains</dt><dd class="lang-it">La saga Nemico pubblico / Agente dello S.H.I.E.L.D., da Wolverine (2003) #20–32</dd><dd class="lang-en">The Enemy of the State / Agent of S.H.I.E.L.D. saga, from Wolverine (2003) #20–32</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">Presente: Logan contro tutto l'universo Marvel</dd><dd class="lang-en">Present day: Logan against the entire Marvel Universe</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>L'incubo diventato piano criminale: la Mano e l'Hydra uccidono Wolverine, lo resuscitano e lo trasformano nell'arma perfetta al loro servizio, scagliandolo contro eroi, basi S.H.I.E.L.D. e i suoi stessi X-Men. Poi il contrattacco: deprogrammato, Logan restituisce il favore con una campagna di vendetta che è puro cinema d'azione su carta. Millar e Romita Jr. firmano la storia di Wolverine più adrenalinica di sempre, con il debutto del misterioso Gorgon.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> il "Wolverine controllato che stermina tutto" è diventato un archetipo ripreso ovunque, dai videogiochi alle serie animate; la coppia Millar/McNiven-Romita di questi anni firmerà subito dopo Civil War e Vecchio Logan.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">L'incubo diventato piano criminale: la Mano e l'Hydra uccidono Wolverine, lo resuscitano e lo trasformano nell'arma perfetta al loro servizio, scagliandolo contro eroi, basi S.H.I.E.L.D. e i suoi stessi X-Men. Poi il contrattacco: deprogrammato, Logan restituisce il favore con una campagna di vendetta che è puro cinema d'azione su carta. Millar e Romita Jr. firmano la storia di Wolverine più adrenalinica di sempre, con il debutto del misterioso Gorgon.</p>
+          <p class="lang-en">The nightmare turned criminal master plan: the Hand and Hydra kill Wolverine, resurrect him and turn him into the perfect weapon in their service, hurling him against heroes, S.H.I.E.L.D. bases and his own X-Men. Then the counterattack: deprogrammed, Logan returns the favor with a campaign of revenge that is pure action cinema on paper. Millar and Romita Jr. deliver the most adrenaline-fueled Wolverine story ever, featuring the debut of the mysterious Gorgon.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> il "Wolverine controllato che stermina tutto" è diventato un archetipo ripreso ovunque, dai videogiochi alle serie animate; la coppia Millar/McNiven-Romita di questi anni firmerà subito dopo Civil War e Vecchio Logan.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the "mind-controlled Wolverine who destroys everything" has become an archetype picked up everywhere, from video games to animated series; the Millar/McNiven-Romita pairing of these years would go on to deliver Civil War and Old Man Logan right after.</div>
         </div>
       </article>
     </section>
@@ -534,7 +591,7 @@
     <section class="stop">
       <div class="stop-dot"><span class="n">9</span><span class="y">2011</span></div>
       <article class="albo ambra">
-        <div class="masthead"><h2>X-Men: Scisma</h2><span class="anno">USA 2011</span></div>
+        <div class="masthead"><h2><span class="lang-it">X-Men: Scisma</span><span class="lang-en">X-Men: Schism</span></h2><span class="anno">USA 2011</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot w9">
@@ -546,20 +603,27 @@
             <img src="copertine/xmen/09-scisma.jpg" alt="Copertina X-Men: Scisma" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge evento">La rottura Wolverine/Ciclope</span>
-            <span class="badge">Spartiacque dell'era moderna</span>
+            <span class="badge evento lang-it">La rottura Wolverine/Ciclope</span>
+            <span class="badge evento lang-en">The Wolverine/Cyclops split</span>
+            <span class="badge lang-it">Spartiacque dell'era moderna</span>
+            <span class="badge lang-en">Watershed of the modern era</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Must Have (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Jason Aaron (testi), Carlos Pacheco, Frank Cho, Alan Davis, Adam Kubert e Daniel Acuña (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>X-Men: Schism #1–5 (2011)</dd></div>
-            <div><dt>Ambientazione</dt><dd>Presente: i mutanti ridotti a poche centinaia, rifugiati su Utopia</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Must Have (cartonato)</dd><dd class="lang-en">Marvel Must Have (hardcover)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Authors</dt><dd class="lang-it">Jason Aaron (testi), Carlos Pacheco, Frank Cho, Alan Davis, Adam Kubert e Daniel Acuña (disegni)</dd><dd class="lang-en">Jason Aaron (script), Carlos Pacheco, Frank Cho, Alan Davis, Adam Kubert and Daniel Acuña (art)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Contains</dt><dd>X-Men: Schism #1–5 (2011)</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">Presente: i mutanti ridotti a poche centinaia, rifugiati su Utopia</dd><dd class="lang-en">Present day: mutants reduced to a few hundred, taking refuge on Utopia</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il divorzio che ha ridisegnato la mappa mutante: davanti a una nuova generazione di Sentinelle e a un dodicenne a capo del Club Infernale, Ciclope vuole trasformare i ragazzi in soldati, Wolverine vuole che restino ragazzi. Lo scontro — fisico e ideologico — spacca gli X-Men in due: chi resta su Utopia con Scott, chi segue Logan a Westchester a rifondare la scuola. Il paradosso è servito, ed è il cuore della storia: l'assassino diventa il preside, il primo allievo diventa il generale.</p>
-          <h3>Cosa apre</h3>
-          <p>Da qui nascono la serie Wolverine e gli X-Men (Logan preside della Jean Grey School) e la lunga marcia di Ciclope verso la rivoluzione — l'assetto che regge i mutanti fino all'era Krakoa.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> la Jean Grey School e il "Wolverine mentore dei giovani mutanti" nati qui hanno plasmato la serie animata Wolverine and the X-Men e l'immagine paterna del Logan cinematografico maturo.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il divorzio che ha ridisegnato la mappa mutante: davanti a una nuova generazione di Sentinelle e a un dodicenne a capo del Club Infernale, Ciclope vuole trasformare i ragazzi in soldati, Wolverine vuole che restino ragazzi. Lo scontro — fisico e ideologico — spacca gli X-Men in due: chi resta su Utopia con Scott, chi segue Logan a Westchester a rifondare la scuola. Il paradosso è servito, ed è il cuore della storia: l'assassino diventa il preside, il primo allievo diventa il generale.</p>
+          <p class="lang-en">The divorce that redrew the mutant map: faced with a new generation of Sentinels and a twelve-year-old at the head of the Hellfire Club, Cyclops wants to turn the kids into soldiers, Wolverine wants them to stay kids. The clash — physical and ideological — splits the X-Men in two: those who stay on Utopia with Scott, and those who follow Logan to Westchester to refound the school. The paradox is served, and it is the heart of the story: the killer becomes the headmaster, the first student becomes the general.</p>
+          <h3 class="lang-it">Cosa apre</h3>
+          <h3 class="lang-en">What it opens up</h3>
+          <p class="lang-it">Da qui nascono la serie Wolverine e gli X-Men (Logan preside della Jean Grey School) e la lunga marcia di Ciclope verso la rivoluzione — l'assetto che regge i mutanti fino all'era Krakoa.</p>
+          <p class="lang-en">From here spring the series Wolverine and the X-Men (Logan as headmaster of the Jean Grey School) and Cyclops's long march toward revolution — the setup that carries the mutants all the way to the Krakoa era.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> la Jean Grey School e il "Wolverine mentore dei giovani mutanti" nati qui hanno plasmato la serie animata Wolverine and the X-Men e l'immagine paterna del Logan cinematografico maturo.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the Jean Grey School and the "Wolverine as mentor to young mutants" born here shaped the animated series Wolverine and the X-Men and the paternal image of the mature big-screen Logan.</div>
         </div>
       </article>
     </section>
@@ -568,7 +632,7 @@
     <section class="stop">
       <div class="stop-dot"><span class="n">10</span><span class="y">2013</span></div>
       <article class="albo">
-        <div class="masthead"><h2>Wolverine selvaggio</h2><span class="anno">USA 2013</span></div>
+        <div class="masthead"><h2><span class="lang-it">Wolverine selvaggio</span><span class="lang-en">Savage Wolverine</span></h2><span class="anno">USA 2013</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot w10">
@@ -580,20 +644,27 @@
             <img src="copertine/xmen/10-selvaggio.jpg" alt="Copertina Wolverine selvaggio" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge">Avventura autoconclusiva</span>
-            <span class="badge">Terra Selvaggia</span>
+            <span class="badge lang-it">Avventura autoconclusiva</span>
+            <span class="badge lang-en">Self-contained adventure</span>
+            <span class="badge lang-it">Terra Selvaggia</span>
+            <span class="badge lang-en">The Savage Land</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Must Have (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Frank Cho (testi e disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Savage Wolverine #1–5 (2013)</dd></div>
-            <div><dt>Ambientazione</dt><dd>La Terra Selvaggia: dinosauri, uomini-scimmia e zero risposte</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Must Have (cartonato)</dd><dd class="lang-en">Marvel Must Have (hardcover)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Authors</dt><dd class="lang-it">Frank Cho (testi e disegni)</dd><dd class="lang-en">Frank Cho (script and art)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Contains</dt><dd>Savage Wolverine #1–5 (2013)</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">La Terra Selvaggia: dinosauri, uomini-scimmia e zero risposte</dd><dd class="lang-en">The Savage Land: dinosaurs, ape-men and zero answers</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>La boccata d'aria della collezione: Logan si risveglia nella Terra Selvaggia senza ricordare come ci sia arrivato, additato come nemico pubblico dalle tribù locali e con un mistero antico da risolvere. Al suo fianco Shanna la Diavolessa, contro tutto ciò che la giungla preistorica può scagliargli addosso. Frank Cho, autore completo, firma un'avventura pulp vecchio stampo — dinosauri, azione e ironia — che ricorda quanto Wolverine funzioni anche lontano da tragedie e cospirazioni.</p>
-          <h3>Il suo ruolo nella collezione</h3>
-          <p>L'ultima grande scorribanda "spensierata" di Logan prima del capitolo finale: si colloca negli anni della Jean Grey School, tra Scisma e la morte.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> la Terra Selvaggia è uno degli scenari Marvel più amati da videogiochi e serie animate — e il Wolverine tra i dinosauri resta un'immagine talmente irresistibile che ogni medium prima o poi la rifà.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">La boccata d'aria della collezione: Logan si risveglia nella Terra Selvaggia senza ricordare come ci sia arrivato, additato come nemico pubblico dalle tribù locali e con un mistero antico da risolvere. Al suo fianco Shanna la Diavolessa, contro tutto ciò che la giungla preistorica può scagliargli addosso. Frank Cho, autore completo, firma un'avventura pulp vecchio stampo — dinosauri, azione e ironia — che ricorda quanto Wolverine funzioni anche lontano da tragedie e cospirazioni.</p>
+          <p class="lang-en">The collection's breath of fresh air: Logan wakes up in the Savage Land with no memory of how he got there, branded a public enemy by the local tribes and with an ancient mystery to solve. At his side Shanna the She-Devil, against everything the prehistoric jungle can throw at him. Frank Cho, handling both script and art, delivers an old-school pulp adventure — dinosaurs, action and wit — that reminds us how well Wolverine works even far from tragedies and conspiracies.</p>
+          <h3 class="lang-it">Il suo ruolo nella collezione</h3>
+          <h3 class="lang-en">Its role in the collection</h3>
+          <p class="lang-it">L'ultima grande scorribanda "spensierata" di Logan prima del capitolo finale: si colloca negli anni della Jean Grey School, tra Scisma e la morte.</p>
+          <p class="lang-en">Logan's last great "carefree" romp before the final chapter: it sits in the Jean Grey School years, between Schism and the death.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> la Terra Selvaggia è uno degli scenari Marvel più amati da videogiochi e serie animate — e il Wolverine tra i dinosauri resta un'immagine talmente irresistibile che ogni medium prima o poi la rifà.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the Savage Land is one of the Marvel settings most beloved by video games and animated series — and Wolverine among the dinosaurs remains an image so irresistible that every medium redoes it sooner or later.</div>
         </div>
       </article>
     </section>
@@ -602,7 +673,7 @@
     <section class="stop">
       <div class="stop-dot"><span class="n">11</span><span class="y">2014</span></div>
       <article class="albo blux">
-        <div class="masthead"><h2>La morte di Wolverine</h2><span class="anno">USA 2014</span></div>
+        <div class="masthead"><h2><span class="lang-it">La morte di Wolverine</span><span class="lang-en">Death of Wolverine</span></h2><span class="anno">USA 2014</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot w11">
@@ -614,29 +685,36 @@
             <img src="copertine/xmen/11-morte-di-wolverine.jpg" alt="Copertina La morte di Wolverine" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge evento">Il capitolo finale</span>
-            <span class="badge">Evento mediatico mondiale</span>
+            <span class="badge evento lang-it">Il capitolo finale</span>
+            <span class="badge evento lang-en">The final chapter</span>
+            <span class="badge lang-it">Evento mediatico mondiale</span>
+            <span class="badge lang-en">A worldwide media event</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Must Have (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Charles Soule (testi), Steve McNiven (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Death of Wolverine #1–4 (2014)</dd></div>
-            <div><dt>Ambientazione</dt><dd>Presente: gli ultimi giorni di Logan, senza fattore rigenerante</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Must Have (cartonato)</dd><dd class="lang-en">Marvel Must Have (hardcover)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Authors</dt><dd class="lang-it">Charles Soule (testi), Steve McNiven (disegni)</dd><dd class="lang-en">Charles Soule (script), Steve McNiven (art)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Contains</dt><dd>Death of Wolverine #1–4 (2014)</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">Presente: gli ultimi giorni di Logan, senza fattore rigenerante</dd><dd class="lang-en">Present day: Logan's final days, without his healing factor</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il finale annunciato: privato del fattore rigenerante da un virus, con una taglia sulla testa e i fantasmi del passato in coda per riscuotere, Logan affronta il suo ultimo viaggio — che lo riporta, con perfetta circolarità, alle radici del programma Arma X. La morte arriva com'era giusto: non per mano di un nemico, ma per un ultimo atto di protezione, avvolto nell'adamantio che lo aveva reso un'arma. McNiven la disegna come un western crepuscolare.</p>
-          <h3>Il suo ruolo nella collezione</h3>
-          <p>Chiude il cerchio aperto da Le origini e Arma X: la vita di Logan, dall'infanzia alla fine, è tutta dentro questa collezione. (Nei fumetti tornerà anni dopo — ma questa resta la sua morte "vera".)</p>
-          <div class="screen"><strong>Oltre la carta:</strong> fu un evento mediatico globale, coperto dai telegiornali; e il clima da addio del personaggio preparò culturalmente il terreno a Logan (2017), il commiato cinematografico di Hugh Jackman.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il finale annunciato: privato del fattore rigenerante da un virus, con una taglia sulla testa e i fantasmi del passato in coda per riscuotere, Logan affronta il suo ultimo viaggio — che lo riporta, con perfetta circolarità, alle radici del programma Arma X. La morte arriva com'era giusto: non per mano di un nemico, ma per un ultimo atto di protezione, avvolto nell'adamantio che lo aveva reso un'arma. McNiven la disegna come un western crepuscolare.</p>
+          <p class="lang-en">The ending foretold: stripped of his healing factor by a virus, with a bounty on his head and the ghosts of his past lining up to collect, Logan faces his last journey — one that brings him, with perfect circularity, back to the roots of the Weapon X program. Death comes as it should: not at an enemy's hand, but through one final act of protection, encased in the adamantium that had made him a weapon. McNiven draws it like a twilight western.</p>
+          <h3 class="lang-it">Il suo ruolo nella collezione</h3>
+          <h3 class="lang-en">Its role in the collection</h3>
+          <p class="lang-it">Chiude il cerchio aperto da Le origini e Arma X: la vita di Logan, dall'infanzia alla fine, è tutta dentro questa collezione. (Nei fumetti tornerà anni dopo — ma questa resta la sua morte "vera".)</p>
+          <p class="lang-en">It closes the circle opened by Origin and Weapon X: Logan's life, from childhood to the end, is all inside this collection. (In the comics he would return years later — but this remains his "true" death.)</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> fu un evento mediatico globale, coperto dai telegiornali; e il clima da addio del personaggio preparò culturalmente il terreno a Logan (2017), il commiato cinematografico di Hugh Jackman.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> it was a global media event, covered by TV news; and the character's farewell mood culturally paved the way for Logan (2017), Hugh Jackman's cinematic goodbye.</div>
         </div>
       </article>
     </section>
 
     <!-- 12 -->
     <section class="stop">
-      <div class="stop-dot"><span class="n">12</span><span class="y">Futuro</span></div>
+      <div class="stop-dot"><span class="n">12</span><span class="y lang-it">Futuro</span><span class="y lang-en">Future</span></div>
       <article class="albo ambra">
-        <div class="masthead"><h2>Vecchio Logan</h2><span class="anno">USA 2008–2009</span></div>
+        <div class="masthead"><h2><span class="lang-it">Vecchio Logan</span><span class="lang-en">Old Man Logan</span></h2><span class="anno">USA 2008–2009</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot w12">
@@ -648,20 +726,27 @@
             <img src="copertine/xmen/12-vecchio-logan.jpg" alt="Copertina Wolverine: Vecchio Logan" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge evento">Il futuro del mito</span>
-            <span class="badge">Il western apocalittico</span>
+            <span class="badge evento lang-it">Il futuro del mito</span>
+            <span class="badge evento lang-en">The future of the myth</span>
+            <span class="badge lang-it">Il western apocalittico</span>
+            <span class="badge lang-en">The apocalyptic western</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Must Have (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Mark Millar (testi), Steve McNiven (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Wolverine (2003) #66–72 + Wolverine: Old Man Logan Giant-Size (2008–09)</dd></div>
-            <div><dt>Ambientazione</dt><dd>Cinquant'anni nel futuro: l'America dei supercriminali vincitori</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Must Have (cartonato)</dd><dd class="lang-en">Marvel Must Have (hardcover)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Authors</dt><dd class="lang-it">Mark Millar (testi), Steve McNiven (disegni)</dd><dd class="lang-en">Mark Millar (script), Steve McNiven (art)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Contains</dt><dd>Wolverine (2003) #66–72 + Wolverine: Old Man Logan Giant-Size (2008–09)</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">Cinquant'anni nel futuro: l'America dei supercriminali vincitori</dd><dd class="lang-en">Fifty years in the future: an America where the supervillains won</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il "Ritorno del Cavaliere Oscuro" della Marvel: in un futuro in cui i villain hanno vinto e spartito l'America, un Logan invecchiato e pacifista — che non estrae gli artigli da cinquant'anni per una colpa indicibile — attraversa il continente con un Occhio di Falco cieco per pagare l'affitto alla famiglia Banner. Il viaggio riapre la ferita e la resa dei conti è tra le pagine più brutali mai pubblicate dalla Marvel. Millar e McNiven chiudono idealmente la parabola: l'uomo che voleva smettere di essere un'arma, costretto un'ultima volta a ricordare cos'è.</p>
-          <h3>Il suo ruolo nella collezione</h3>
-          <p>Il gran finale della linea del tempo: è il futuro possibile che dà senso a tutto ciò che viene prima — da leggere per ultimo, dopo la morte "ufficiale".</p>
-          <div class="screen"><strong>Oltre la carta:</strong> è l'ispirazione dichiarata di Logan (2017), il film-testamento di Hugh Jackman candidato all'Oscar per la sceneggiatura; e proprio il Logan "vecchio" di questa storia è la versione che Jackman riporta in scena in Deadpool &amp; Wolverine (2024).</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il "Ritorno del Cavaliere Oscuro" della Marvel: in un futuro in cui i villain hanno vinto e spartito l'America, un Logan invecchiato e pacifista — che non estrae gli artigli da cinquant'anni per una colpa indicibile — attraversa il continente con un Occhio di Falco cieco per pagare l'affitto alla famiglia Banner. Il viaggio riapre la ferita e la resa dei conti è tra le pagine più brutali mai pubblicate dalla Marvel. Millar e McNiven chiudono idealmente la parabola: l'uomo che voleva smettere di essere un'arma, costretto un'ultima volta a ricordare cos'è.</p>
+          <p class="lang-en">Marvel's "Dark Knight Returns": in a future where the villains have won and carved up America, an aged, pacifist Logan — who hasn't popped his claws in fifty years because of an unspeakable guilt — crosses the continent with a blind Hawkeye to pay the rent owed to the Banner family. The journey reopens the wound, and the reckoning is among the most brutal pages Marvel has ever published. Millar and McNiven bring the arc full circle: the man who wanted to stop being a weapon, forced one last time to remember what he is.</p>
+          <h3 class="lang-it">Il suo ruolo nella collezione</h3>
+          <h3 class="lang-en">Its role in the collection</h3>
+          <p class="lang-it">Il gran finale della linea del tempo: è il futuro possibile che dà senso a tutto ciò che viene prima — da leggere per ultimo, dopo la morte "ufficiale".</p>
+          <p class="lang-en">The grand finale of the timeline: it is the possible future that gives meaning to everything that comes before — to be read last, after the "official" death.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> è l'ispirazione dichiarata di Logan (2017), il film-testamento di Hugh Jackman candidato all'Oscar per la sceneggiatura; e proprio il Logan "vecchio" di questa storia è la versione che Jackman riporta in scena in Deadpool &amp; Wolverine (2024).</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> it is the declared inspiration for Logan (2017), Hugh Jackman's testament film, Oscar-nominated for its screenplay; and the "old" Logan of this story is precisely the version Jackman brings back in Deadpool &amp; Wolverine (2024).</div>
         </div>
       </article>
     </section>
@@ -670,40 +755,46 @@
 
   <!-- RIEPILOGO -->
   <section class="panel">
-    <h2>La mappa in <em>una tabella</em></h2>
+    <h2 class="lang-it">La mappa in <em>una tabella</em></h2>
+    <h2 class="lang-en">The map in <em>a single table</em></h2>
     <table>
       <thead>
-        <tr><th>#</th><th>Volume</th><th>Collana</th><th>Albi USA</th><th>Ambientazione</th><th>Ruolo</th></tr>
+        <tr><th>#</th><th>Volume</th><th><span class="lang-it">Collana</span><span class="lang-en">Imprint</span></th><th><span class="lang-it">Albi USA</span><span class="lang-en">US issues</span></th><th><span class="lang-it">Ambientazione</span><span class="lang-en">Setting</span></th><th><span class="lang-it">Ruolo</span><span class="lang-en">Role</span></th></tr>
       </thead>
       <tbody>
-        <tr><td>1</td><td>Wolverine: Le origini</td><td>Marvel Must Have</td><td>Origin #1–6 (2001–02)</td><td>Fine '800</td><td>L'inizio della vita di Logan</td></tr>
-        <tr><td>2</td><td>Arma X</td><td>Marvel Must Have</td><td>Marvel Comics Presents #72–84 (1991)</td><td>'900, prima degli X-Men</td><td>La nascita dell'arma</td></tr>
-        <tr><td>3</td><td>Masterworks: X-Men 1</td><td>Marvel Masterworks</td><td>X-Men #1–10 (1963–65)</td><td>Anno zero mutante</td><td>Nascita degli X-Men</td></tr>
-        <tr><td>4</td><td>Masterworks: Gli Incredibili X-Men 1</td><td>Marvel Masterworks</td><td>Giant-Size X-Men #1 + #94–100 ca. (1975–76)</td><td>Seconda Genesi</td><td>Wolverine entra nel gruppo</td></tr>
-        <tr><td>5</td><td>Giorni di un futuro passato</td><td>Marvel Must Have</td><td>Uncanny X-Men #141–142 (1981)</td><td>Presente + futuro 2013</td><td>Apice era Claremont/Byrne</td></tr>
-        <tr><td>6</td><td>Wolverine di Claremont e Miller</td><td>Marvel Must Have</td><td>Wolverine (1982) #1–4</td><td>Giappone</td><td>Prima serie solista</td></tr>
-        <tr><td>7</td><td>New X-Men: E come Estinzione</td><td>Marvel Must Have</td><td>New X-Men #114–116 e segg. (2001)</td><td>Presente</td><td>Inizio run Morrison</td></tr>
-        <tr><td>8</td><td>Nemico pubblico</td><td>Marvel Must Have</td><td>Wolverine (2003) #20–32 (2004–05)</td><td>Presente</td><td>Il blockbuster di Logan</td></tr>
-        <tr><td>9</td><td>Scisma</td><td>Marvel Must Have</td><td>X-Men: Schism #1–5 (2011)</td><td>Presente</td><td>La rottura Wolverine/Ciclope</td></tr>
-        <tr><td>10</td><td>Wolverine selvaggio</td><td>Marvel Must Have</td><td>Savage Wolverine #1–5 (2013)</td><td>Terra Selvaggia</td><td>Avventura autoconclusiva</td></tr>
-        <tr><td>11</td><td>La morte di Wolverine</td><td>Marvel Must Have</td><td>Death of Wolverine #1–4 (2014)</td><td>Presente</td><td>Il capitolo finale</td></tr>
-        <tr><td>12</td><td>Vecchio Logan</td><td>Marvel Must Have</td><td>Wolverine (2003) #66–72 + Giant-Size (2008–09)</td><td>Futuro</td><td>Il western apocalittico</td></tr>
+        <tr><td>1</td><td><span class="lang-it">Wolverine: Le origini</span><span class="lang-en">Wolverine: Origin</span></td><td>Marvel Must Have</td><td>Origin #1–6 (2001–02)</td><td><span class="lang-it">Fine '800</span><span class="lang-en">Late 1800s</span></td><td><span class="lang-it">L'inizio della vita di Logan</span><span class="lang-en">The beginning of Logan's life</span></td></tr>
+        <tr><td>2</td><td><span class="lang-it">Arma X</span><span class="lang-en">Weapon X</span></td><td>Marvel Must Have</td><td>Marvel Comics Presents #72–84 (1991)</td><td><span class="lang-it">'900, prima degli X-Men</span><span class="lang-en">1900s, before the X-Men</span></td><td><span class="lang-it">La nascita dell'arma</span><span class="lang-en">The birth of the weapon</span></td></tr>
+        <tr><td>3</td><td>Masterworks: X-Men 1</td><td>Marvel Masterworks</td><td>X-Men #1–10 (1963–65)</td><td><span class="lang-it">Anno zero mutante</span><span class="lang-en">Mutant year zero</span></td><td><span class="lang-it">Nascita degli X-Men</span><span class="lang-en">Birth of the X-Men</span></td></tr>
+        <tr><td>4</td><td><span class="lang-it">Masterworks: Gli Incredibili X-Men 1</span><span class="lang-en">Masterworks: The Uncanny X-Men 1</span></td><td>Marvel Masterworks</td><td>Giant-Size X-Men #1 + #94–100 ca. (1975–76)</td><td><span class="lang-it">Seconda Genesi</span><span class="lang-en">Second Genesis</span></td><td><span class="lang-it">Wolverine entra nel gruppo</span><span class="lang-en">Wolverine joins the team</span></td></tr>
+        <tr><td>5</td><td><span class="lang-it">Giorni di un futuro passato</span><span class="lang-en">Days of Future Past</span></td><td>Marvel Must Have</td><td>Uncanny X-Men #141–142 (1981)</td><td><span class="lang-it">Presente + futuro 2013</span><span class="lang-en">Present + 2013 future</span></td><td><span class="lang-it">Apice era Claremont/Byrne</span><span class="lang-en">Peak of the Claremont/Byrne era</span></td></tr>
+        <tr><td>6</td><td><span class="lang-it">Wolverine di Claremont e Miller</span><span class="lang-en">Wolverine by Claremont &amp; Miller</span></td><td>Marvel Must Have</td><td>Wolverine (1982) #1–4</td><td><span class="lang-it">Giappone</span><span class="lang-en">Japan</span></td><td><span class="lang-it">Prima serie solista</span><span class="lang-en">First solo series</span></td></tr>
+        <tr><td>7</td><td><span class="lang-it">New X-Men: E come Estinzione</span><span class="lang-en">New X-Men: E Is for Extinction</span></td><td>Marvel Must Have</td><td><span class="lang-it">New X-Men #114–116 e segg. (2001)</span><span class="lang-en">New X-Men #114–116 and following (2001)</span></td><td><span class="lang-it">Presente</span><span class="lang-en">Present</span></td><td><span class="lang-it">Inizio run Morrison</span><span class="lang-en">Start of the Morrison run</span></td></tr>
+        <tr><td>8</td><td><span class="lang-it">Nemico pubblico</span><span class="lang-en">Enemy of the State</span></td><td>Marvel Must Have</td><td>Wolverine (2003) #20–32 (2004–05)</td><td><span class="lang-it">Presente</span><span class="lang-en">Present</span></td><td><span class="lang-it">Il blockbuster di Logan</span><span class="lang-en">Logan's blockbuster</span></td></tr>
+        <tr><td>9</td><td><span class="lang-it">Scisma</span><span class="lang-en">Schism</span></td><td>Marvel Must Have</td><td>X-Men: Schism #1–5 (2011)</td><td><span class="lang-it">Presente</span><span class="lang-en">Present</span></td><td><span class="lang-it">La rottura Wolverine/Ciclope</span><span class="lang-en">The Wolverine/Cyclops split</span></td></tr>
+        <tr><td>10</td><td><span class="lang-it">Wolverine selvaggio</span><span class="lang-en">Savage Wolverine</span></td><td>Marvel Must Have</td><td>Savage Wolverine #1–5 (2013)</td><td><span class="lang-it">Terra Selvaggia</span><span class="lang-en">Savage Land</span></td><td><span class="lang-it">Avventura autoconclusiva</span><span class="lang-en">Self-contained adventure</span></td></tr>
+        <tr><td>11</td><td><span class="lang-it">La morte di Wolverine</span><span class="lang-en">Death of Wolverine</span></td><td>Marvel Must Have</td><td>Death of Wolverine #1–4 (2014)</td><td><span class="lang-it">Presente</span><span class="lang-en">Present</span></td><td><span class="lang-it">Il capitolo finale</span><span class="lang-en">The final chapter</span></td></tr>
+        <tr><td>12</td><td><span class="lang-it">Vecchio Logan</span><span class="lang-en">Old Man Logan</span></td><td>Marvel Must Have</td><td>Wolverine (2003) #66–72 + Giant-Size (2008–09)</td><td><span class="lang-it">Futuro</span><span class="lang-en">Future</span></td><td><span class="lang-it">Il western apocalittico</span><span class="lang-en">The apocalyptic western</span></td></tr>
       </tbody>
     </table>
-    <p style="margin-top:14px;font-size:14.5px">L'ordine segue la cronologia interna delle storie e non quella di pubblicazione: Le origini è uscito nel 2001 ma racconta il primo capitolo della vita di Logan, Arma X (1991) precede narrativamente i Masterworks degli anni '60, e Vecchio Logan (2008) chiude la linea del tempo pur essendo uscito prima di metà collezione. Il risultato è un'unica biografia: la vita completa di Logan intrecciata alla storia dei mutanti.</p>
+    <p class="lang-it" style="margin-top:14px;font-size:14.5px">L'ordine segue la cronologia interna delle storie e non quella di pubblicazione: Le origini è uscito nel 2001 ma racconta il primo capitolo della vita di Logan, Arma X (1991) precede narrativamente i Masterworks degli anni '60, e Vecchio Logan (2008) chiude la linea del tempo pur essendo uscito prima di metà collezione. Il risultato è un'unica biografia: la vita completa di Logan intrecciata alla storia dei mutanti.</p>
+    <p class="lang-en" style="margin-top:14px;font-size:14.5px">The order follows the internal chronology of the stories rather than publication order: Origin came out in 2001 but tells the first chapter of Logan's life, Weapon X (1991) narratively precedes the 1960s Masterworks, and Old Man Logan (2008) closes the timeline despite coming out before half the collection. The result is a single biography: Logan's complete life interwoven with the history of the mutants.</p>
   </section>
 
   <!-- PERCORSO -->
   <section class="panel">
-    <h2>Come si <em>incastrano</em></h2>
-    <p><strong>Cinque blocchi narrativi:</strong> la vita segreta di Logan prima degli X-Men (volumi 1–2, pubblicati decenni dopo ma primi nella sua biografia); la nascita del mito mutante, dall'anno zero alla Seconda Genesi in cui Wolverine entra in squadra (volumi 3–4); l'età d'oro di Claremont, con la distopia definitiva e la consacrazione solista in Giappone (volumi 5–6); l'era moderna, tra la rivoluzione di Morrison, il blockbuster di Millar e il grande scisma (volumi 7–9); e il crepuscolo, dall'ultima scorribanda alla morte fino al futuro desolato di Vecchio Logan, che chiude la linea del tempo (volumi 10–12).</p>
-    <p><strong>Espansioni coerenti:</strong> il Must Have della Saga di Fenice Nera (l'altro vertice assoluto dell'era Claremont/Byrne, subito prima di Giorni di un futuro passato), Dio ama, l'uomo uccide (la graphic novel del 1982 che ha ispirato X2), gli omnibus degli Incredibili X-Men di Claremont per l'intera era d'oro, e House of X / Powers of X se un giorno vorrò il capitolo Krakoa che prosegue idealmente il filo di Scisma.</p>
+    <h2 class="lang-it">Come si <em>incastrano</em></h2>
+    <h2 class="lang-en">How they <em>fit together</em></h2>
+    <p class="lang-it"><strong>Cinque blocchi narrativi:</strong> la vita segreta di Logan prima degli X-Men (volumi 1–2, pubblicati decenni dopo ma primi nella sua biografia); la nascita del mito mutante, dall'anno zero alla Seconda Genesi in cui Wolverine entra in squadra (volumi 3–4); l'età d'oro di Claremont, con la distopia definitiva e la consacrazione solista in Giappone (volumi 5–6); l'era moderna, tra la rivoluzione di Morrison, il blockbuster di Millar e il grande scisma (volumi 7–9); e il crepuscolo, dall'ultima scorribanda alla morte fino al futuro desolato di Vecchio Logan, che chiude la linea del tempo (volumi 10–12).</p>
+    <p class="lang-en"><strong>Five narrative blocks:</strong> Logan's secret life before the X-Men (volumes 1–2, published decades later but first in his biography); the birth of the mutant myth, from year zero to the Second Genesis in which Wolverine joins the team (volumes 3–4); Claremont's golden age, with the definitive dystopia and the solo consecration in Japan (volumes 5–6); the modern era, spanning Morrison's revolution, Millar's blockbuster and the great schism (volumes 7–9); and the twilight, from the last romp through the death to the desolate future of Old Man Logan, which closes the timeline (volumes 10–12).</p>
+    <p class="lang-it"><strong>Espansioni coerenti:</strong> il Must Have della Saga di Fenice Nera (l'altro vertice assoluto dell'era Claremont/Byrne, subito prima di Giorni di un futuro passato), Dio ama, l'uomo uccide (la graphic novel del 1982 che ha ispirato X2), gli omnibus degli Incredibili X-Men di Claremont per l'intera era d'oro, e House of X / Powers of X se un giorno vorrò il capitolo Krakoa che prosegue idealmente il filo di Scisma.</p>
+    <p class="lang-en"><strong>Coherent expansions:</strong> the Must Have of The Dark Phoenix Saga (the other absolute peak of the Claremont/Byrne era, right before Days of Future Past), God Loves, Man Kills (the 1982 graphic novel that inspired X2), Claremont's Uncanny X-Men omnibuses for the entire golden age, and House of X / Powers of X if one day I want the Krakoa chapter that ideally carries on the thread of Schism.</p>
   </section>
 
 </main>
 
 <footer>
-  <div class="wrap">Dossier della collezione · Wolverine &amp; X-Men · Marvel</div>
+  <div class="wrap lang-it">Dossier della collezione · Wolverine &amp; X-Men · Marvel</div>
+  <div class="wrap lang-en">Collection dossier · Wolverine &amp; X-Men · Marvel</div>
 </footer>
 
 </body>

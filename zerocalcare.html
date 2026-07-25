@@ -6,6 +6,8 @@
 <title>Fumetti Zerocalcare</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/lang.css">
+<script src="assets/js/lang.js"></script>
 <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
 <link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
 <style>
@@ -67,7 +69,7 @@
     font-family:'Barlow Condensed',sans-serif;font-weight:600;
     text-transform:uppercase;letter-spacing:.1em;font-size:13px;
   }
-  .hero-meta span{
+  .hero-meta > span{
     border:2px solid var(--china);padding:5px 12px;color:var(--china);background:var(--bianco);
   }
  
@@ -231,12 +233,14 @@
 <header>
   <div class="wrap">
     <div class="corner-box">
-      <span>Collezione di</span>
+      <span class="lang-it">Collezione di</span><span class="lang-en">Collection of</span>
       <span class="big">9+2</span>
-      <span>Pezzi</span>
+      <span class="lang-it">Pezzi</span><span class="lang-en">Pieces</span>
     </div>
-    <h1>La mia collezione<br><span class="rosso">Zerocalcare</span></h1>
-    <p class="hero-sub">Nove libri in rigoroso ordine di uscita: da Rebibbia al Rojava, dalle strisce del blog al graphic journalism nei tribunali d'Europa fino alla memoria collettiva di Genova, quindici anni di armadilli, sensi di colpa e reportage. Più due pezzi tridimensionali: le statuine di Zero e dell'Armadillo della Zerocalcare 3D Collection.</p>
+    <h1 class="lang-it">La mia collezione<br><span class="rosso">Zerocalcare</span></h1>
+    <h1 class="lang-en">My <span class="rosso">Zerocalcare</span><br>collection</h1>
+    <p class="hero-sub lang-it">Nove libri in rigoroso ordine di uscita: da Rebibbia al Rojava, dalle strisce del blog al graphic journalism nei tribunali d'Europa fino alla memoria collettiva di Genova, quindici anni di armadilli, sensi di colpa e reportage. Più due pezzi tridimensionali: le statuine di Zero e dell'Armadillo della Zerocalcare 3D Collection.</p>
+    <p class="hero-sub lang-en">Nine books in strict order of release: from Rebibbia to Rojava, from the blog strips to graphic journalism in Europe's courtrooms and on to the collective memory of Genoa — fifteen years of armadillos, guilt trips and reportage. Plus two three-dimensional pieces: the Zero and Armadillo figurines from the Zerocalcare 3D Collection.</p>
     <div class="hero-meta">
       <span>BAO Publishing · Coconino Press</span>
       <span>2011 → 2026</span>
@@ -264,19 +268,24 @@
             <img src="copertine/zerocalcare/01-profezia-armadillo.jpg" alt="Copertina La profezia dell'armadillo" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ L'esordio: qui nasce tutto</span>
-            <span class="badge">Nascita dell'Armadillo</span>
+            <span class="badge start"><span class="lang-it">★ L'esordio: qui nasce tutto</span><span class="lang-en">★ The debut: it all starts here</span></span>
+            <span class="badge"><span class="lang-it">Nascita dell'Armadillo</span><span class="lang-en">Birth of the Armadillo</span></span>
           </div>
           <dl class="scheda">
-            <div><dt>Editore</dt><dd>Prima edizione autoprodotta con Makkox (2011), poi BAO Publishing (edizione a colori, 2012)</dd></div>
-            <div><dt>Tipo</dt><dd>Graphic novel autobiografica</dd></div>
-            <div><dt>Ambientazione</dt><dd>Rebibbia, Roma — e i ricordi di Camille</dd></div>
+            <div><dt class="lang-it">Editore</dt><dt class="lang-en">Publisher</dt><dd class="lang-it">Prima edizione autoprodotta con Makkox (2011), poi BAO Publishing (edizione a colori, 2012)</dd><dd class="lang-en">First self-published edition with Makkox (2011), then BAO Publishing (colour edition, 2012)</dd></div>
+            <div><dt class="lang-it">Tipo</dt><dt class="lang-en">Type</dt><dd class="lang-it">Graphic novel autobiografica</dd><dd class="lang-en">Autobiographical graphic novel</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">Rebibbia, Roma — e i ricordi di Camille</dd><dd class="lang-en">Rebibbia, Rome — and the memories of Camille</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il libro che ha cambiato il fumetto italiano: la notizia della morte di Camille, amica d'adolescenza mai dimenticata, costringe Zero a fare i conti con ciò che non si è detto, tra ricordi, precariato e la vita di quartiere. Al suo fianco, per la prima volta, l'Armadillo: la coscienza in corazza che da qui in poi commenterà ogni sua scelta. Nato quasi per caso da un progetto autoprodotto, diventò un fenomeno di passaparola che portò Rebibbia — mammut compreso — sulla mappa del fumetto.</p>
-          <h3>Cosa apre</h3>
-          <p>Tutto: il metodo Zerocalcare (autobiografia + citazioni pop + tragedia che si nasconde dietro la battuta), il cast fisso (Secco, l'Armadillo, il quartiere) e il tono che quindici anni dopo riconosce chiunque.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> ne è stato tratto il film La profezia dell'armadillo (2018), presentato a Venezia; e la voce definitiva dell'Armadillo — quella di Valerio Mastandrea — arriverà con le serie Netflix, che di questo libro sono figlie dirette.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il libro che ha cambiato il fumetto italiano: la notizia della morte di Camille, amica d'adolescenza mai dimenticata, costringe Zero a fare i conti con ciò che non si è detto, tra ricordi, precariato e la vita di quartiere. Al suo fianco, per la prima volta, l'Armadillo: la coscienza in corazza che da qui in poi commenterà ogni sua scelta. Nato quasi per caso da un progetto autoprodotto, diventò un fenomeno di passaparola che portò Rebibbia — mammut compreso — sulla mappa del fumetto.</p>
+          <p class="lang-en">The book that changed Italian comics: the news of the death of Camille, a never-forgotten teenage friend, forces Zero to reckon with everything that went unsaid, amid memories, precarious jobs and neighbourhood life. At his side, for the first time, the Armadillo: the armour-plated conscience that from here on will comment on his every choice. Born almost by accident as a self-published project, it became a word-of-mouth phenomenon that put Rebibbia — mammoth included — on the map of comics.</p>
+          <h3 class="lang-it">Cosa apre</h3>
+          <h3 class="lang-en">What it opens</h3>
+          <p class="lang-it">Tutto: il metodo Zerocalcare (autobiografia + citazioni pop + tragedia che si nasconde dietro la battuta), il cast fisso (Secco, l'Armadillo, il quartiere) e il tono che quindici anni dopo riconosce chiunque.</p>
+          <p class="lang-en">Everything: the Zerocalcare method (autobiography + pop-culture references + the tragedy hiding behind the punchline), the recurring cast (Secco, the Armadillo, the neighbourhood) and the voice that, fifteen years on, anyone can recognise.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> ne è stato tratto il film La profezia dell'armadillo (2018), presentato a Venezia; e la voce definitiva dell'Armadillo — quella di Valerio Mastandrea — arriverà con le serie Netflix, che di questo libro sono figlie dirette.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> it was adapted into the film La profezia dell'armadillo (2018), premiered in Venice; and the Armadillo's definitive voice — Valerio Mastandrea's — would arrive with the Netflix series, which are this book's direct descendants.</div>
         </div>
       </article>
     </section>
@@ -297,19 +306,24 @@
             <img src="copertine/zerocalcare/02-polpo-alla-gola.jpg" alt="Copertina Un polpo alla gola" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge">Il primo libro pensato come romanzo</span>
-            <span class="badge">Memoir scolastico in tre atti</span>
+            <span class="badge"><span class="lang-it">Il primo libro pensato come romanzo</span><span class="lang-en">The first book conceived as a novel</span></span>
+            <span class="badge"><span class="lang-it">Memoir scolastico in tre atti</span><span class="lang-en">A school memoir in three acts</span></span>
           </div>
           <dl class="scheda">
-            <div><dt>Editore</dt><dd>BAO Publishing</dd></div>
-            <div><dt>Tipo</dt><dd>Graphic novel autobiografica</dd></div>
-            <div><dt>Ambientazione</dt><dd>Elementari, medie e liceo: la Rebibbia dell'infanzia</dd></div>
+            <div><dt class="lang-it">Editore</dt><dt class="lang-en">Publisher</dt><dd>BAO Publishing</dd></div>
+            <div><dt class="lang-it">Tipo</dt><dt class="lang-en">Type</dt><dd class="lang-it">Graphic novel autobiografica</dd><dd class="lang-en">Autobiographical graphic novel</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">Elementari, medie e liceo: la Rebibbia dell'infanzia</dd><dd class="lang-en">Primary school, middle school and high school: the Rebibbia of childhood</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il primo libro scritto da zero come storia unitaria (la Profezia era nata a episodi): un giallo dell'infanzia costruito su un segreto delle elementari — un'ingiustizia vista e taciuta — che riemerge come un polpo alla gola attraverso tre età della vita. Dentro c'è la mitologia scolastica di Zero al completo: la ferocia dei bambini, il codice d'onore dei banchi, la colpa che non prescrive mai.</p>
-          <h3>Il suo ruolo nella collezione</h3>
-          <p>È il tassello che dimostra che il fenomeno non era un caso: la conferma della voce, e il primo esperimento con una struttura narrativa complessa che culminerà anni dopo in opere come Macerie prime e Scheletri.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> l'immaginario scolastico di questo libro — i compagni feroci, le maestre, il tribunale morale dell'infanzia — è la matrice dei flashback d'infanzia che tornano in tutte le serie Netflix.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il primo libro scritto da zero come storia unitaria (la Profezia era nata a episodi): un giallo dell'infanzia costruito su un segreto delle elementari — un'ingiustizia vista e taciuta — che riemerge come un polpo alla gola attraverso tre età della vita. Dentro c'è la mitologia scolastica di Zero al completo: la ferocia dei bambini, il codice d'onore dei banchi, la colpa che non prescrive mai.</p>
+          <p class="lang-en">The first book written from scratch as a single, unified story (the Profezia had been born in episodes): a childhood mystery built on a primary-school secret — an injustice witnessed and never spoken of — that resurfaces like an octopus at the throat across three ages of life. Inside is Zero's school mythology in full: the ferocity of children, the honour code of the classroom desks, the guilt that never expires.</p>
+          <h3 class="lang-it">Il suo ruolo nella collezione</h3>
+          <h3 class="lang-en">Its role in the collection</h3>
+          <p class="lang-it">È il tassello che dimostra che il fenomeno non era un caso: la conferma della voce, e il primo esperimento con una struttura narrativa complessa che culminerà anni dopo in opere come Macerie prime e Scheletri.</p>
+          <p class="lang-en">It is the piece that proves the phenomenon was no fluke: the confirmation of the voice, and the first experiment with a complex narrative structure that would culminate years later in works like Macerie prime and Scheletri.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> l'immaginario scolastico di questo libro — i compagni feroci, le maestre, il tribunale morale dell'infanzia — è la matrice dei flashback d'infanzia che tornano in tutte le serie Netflix.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> this book's school imagery — the ferocious classmates, the teachers, the moral tribunal of childhood — is the template for the childhood flashbacks that return in all the Netflix series.</div>
         </div>
       </article>
     </section>
@@ -330,19 +344,24 @@
             <img src="copertine/zerocalcare/03-ogni-maledetto-lunedi.jpg" alt="Copertina Ogni maledetto lunedì su due" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ Prima raccolta del blog</span>
-            <span class="badge">Le radici di tutto il resto</span>
+            <span class="badge start"><span class="lang-it">★ Prima raccolta del blog</span><span class="lang-en">★ First blog collection</span></span>
+            <span class="badge"><span class="lang-it">Le radici di tutto il resto</span><span class="lang-en">The roots of everything else</span></span>
           </div>
           <dl class="scheda">
-            <div><dt>Editore</dt><dd>BAO Publishing</dd></div>
-            <div><dt>Tipo</dt><dd>Raccolta delle storie del blog (2011–2013) più materiale inedito</dd></div>
-            <div><dt>Ambientazione</dt><dd>La quotidianità: supermercati, concerti, feste comandate, apocalissi domestiche</dd></div>
+            <div><dt class="lang-it">Editore</dt><dt class="lang-en">Publisher</dt><dd>BAO Publishing</dd></div>
+            <div><dt class="lang-it">Tipo</dt><dt class="lang-en">Type</dt><dd class="lang-it">Raccolta delle storie del blog (2011–2013) più materiale inedito</dd><dd class="lang-en">Collection of the blog stories (2011–2013) plus previously unpublished material</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">La quotidianità: supermercati, concerti, feste comandate, apocalissi domestiche</dd><dd class="lang-en">Everyday life: supermarkets, gigs, obligatory holidays, domestic apocalypses</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il blog zerocalcare.it, aperto a fine 2011, è il laboratorio dove il fenomeno è esploso una striscia alla volta — e questo volume ne raccoglie la prima stagione, col titolo che prende in giro il ritmo di aggiornamento promesso e mai rispettato. Dentro c'è lo Zerocalcare comico allo stato puro: le nevrosi quotidiane trasformate in epica, i cataloghi di mostri generazionali, le citazioni da Ken il Guerriero ai cartoni anni '80 usate come mitologia personale.</p>
-          <h3>Il suo ruolo nella collezione</h3>
-          <p>Apre il filone delle raccolte del blog che nella collezione prosegue con La scuola di pizze in faccia e Niente di nuovo sul fronte di Rebibbia: tre volumi che, letti in fila, sono il diario pubblico di quindici anni.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> molte delle situazioni e dei personaggi rodati sul blog — Secco e il gelato, la madre/Lady Cocca, l'amica Sarah — sono passati di peso nelle serie animate Netflix.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il blog zerocalcare.it, aperto a fine 2011, è il laboratorio dove il fenomeno è esploso una striscia alla volta — e questo volume ne raccoglie la prima stagione, col titolo che prende in giro il ritmo di aggiornamento promesso e mai rispettato. Dentro c'è lo Zerocalcare comico allo stato puro: le nevrosi quotidiane trasformate in epica, i cataloghi di mostri generazionali, le citazioni da Ken il Guerriero ai cartoni anni '80 usate come mitologia personale.</p>
+          <p class="lang-en">The blog zerocalcare.it, launched at the end of 2011, is the laboratory where the phenomenon exploded one strip at a time — and this volume collects its first season, with a title that mocks the update schedule he promised and never kept. Inside is Zerocalcare the comedian in his purest form: everyday neuroses turned into epic, catalogues of generational monsters, references from Fist of the North Star to 1980s cartoons wielded as personal mythology.</p>
+          <h3 class="lang-it">Il suo ruolo nella collezione</h3>
+          <h3 class="lang-en">Its role in the collection</h3>
+          <p class="lang-it">Apre il filone delle raccolte del blog che nella collezione prosegue con La scuola di pizze in faccia e Niente di nuovo sul fronte di Rebibbia: tre volumi che, letti in fila, sono il diario pubblico di quindici anni.</p>
+          <p class="lang-en">It opens the strand of blog collections that continues in my collection with La scuola di pizze in faccia and Niente di nuovo sul fronte di Rebibbia: three volumes that, read back to back, form the public diary of fifteen years.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> molte delle situazioni e dei personaggi rodati sul blog — Secco e il gelato, la madre/Lady Cocca, l'amica Sarah — sono passati di peso nelle serie animate Netflix.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> many of the situations and characters road-tested on the blog — Secco and his ice cream, the mother/Lady Cocca, his friend Sarah — were lifted wholesale into the Netflix animated series.</div>
         </div>
       </article>
     </section>
@@ -363,19 +382,24 @@
             <img src="copertine/zerocalcare/04-dimentica-il-mio-nome.jpg" alt="Copertina Dimentica il mio nome" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge evento">Candidato al Premio Strega 2015</span>
-            <span class="badge start">★ Il primo grande romanzo familiare</span>
+            <span class="badge evento"><span class="lang-it">Candidato al Premio Strega 2015</span><span class="lang-en">Nominated for the 2015 Premio Strega</span></span>
+            <span class="badge start"><span class="lang-it">★ Il primo grande romanzo familiare</span><span class="lang-en">★ The first great family novel</span></span>
           </div>
           <dl class="scheda">
-            <div><dt>Editore</dt><dd>BAO Publishing</dd></div>
-            <div><dt>Tipo</dt><dd>Graphic novel autobiografica</dd></div>
-            <div><dt>Ambientazione</dt><dd>Tra Rebibbia e la Francia: la storia segreta della famiglia di Zero</dd></div>
+            <div><dt class="lang-it">Editore</dt><dt class="lang-en">Publisher</dt><dd>BAO Publishing</dd></div>
+            <div><dt class="lang-it">Tipo</dt><dt class="lang-en">Type</dt><dd class="lang-it">Graphic novel autobiografica</dd><dd class="lang-en">Autobiographical graphic novel</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">Tra Rebibbia e la Francia: la storia segreta della famiglia di Zero</dd><dd class="lang-en">Between Rebibbia and France: the secret history of Zero's family</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>La morte della nonna Huguette apre una voragine: dietro la donna elegante e severa che Zero credeva di conoscere emergono documenti che non tornano, identità che non combaciano e una storia familiare che attraversa il Novecento — e che l'autore ricostruisce mescolando indagine reale e immaginazione mitologica, fino a un finale che gioca apertamente col confine tra verità e leggenda. È il libro in cui Zerocalcare alza definitivamente l'asticella: dal diario di quartiere al romanzo generazionale sulle radici, il lutto e l'identità.</p>
-          <h3>Il suo ruolo nella collezione</h3>
-          <p>Inaugura il filone dei "romanzi" maturi (quello che prosegue con Macerie prime, Scheletri e Quando muori resta a me) e fu il libro della consacrazione culturale: la candidatura al Premio Strega 2015 portò per la prima volta un fumetto nel salotto buono della letteratura italiana, facendo discutere mezzo paese.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> il tema del rapporto con le figure familiari e con le proprie radici, inaugurato qui, è il cuore emotivo delle serie Netflix — e la madre di Zero, "Lady Cocca", diventa da questo libro in poi uno dei personaggi più amati del suo mondo.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">La morte della nonna Huguette apre una voragine: dietro la donna elegante e severa che Zero credeva di conoscere emergono documenti che non tornano, identità che non combaciano e una storia familiare che attraversa il Novecento — e che l'autore ricostruisce mescolando indagine reale e immaginazione mitologica, fino a un finale che gioca apertamente col confine tra verità e leggenda. È il libro in cui Zerocalcare alza definitivamente l'asticella: dal diario di quartiere al romanzo generazionale sulle radici, il lutto e l'identità.</p>
+          <p class="lang-en">The death of his grandmother Huguette opens a chasm: behind the elegant, stern woman Zero thought he knew emerge documents that don't add up, identities that don't match, and a family history spanning the twentieth century — one the author reconstructs by blending real investigation with mythological imagination, up to an ending that openly plays with the line between truth and legend. This is the book where Zerocalcare definitively raises the bar: from neighbourhood diary to a generational novel about roots, grief and identity.</p>
+          <h3 class="lang-it">Il suo ruolo nella collezione</h3>
+          <h3 class="lang-en">Its role in the collection</h3>
+          <p class="lang-it">Inaugura il filone dei "romanzi" maturi (quello che prosegue con Macerie prime, Scheletri e Quando muori resta a me) e fu il libro della consacrazione culturale: la candidatura al Premio Strega 2015 portò per la prima volta un fumetto nel salotto buono della letteratura italiana, facendo discutere mezzo paese.</p>
+          <p class="lang-en">It inaugurates the strand of mature "novels" (the one that continues with Macerie prime, Scheletri and Quando muori resta a me) and it was the book of his cultural consecration: the 2015 Premio Strega nomination brought a comic into the drawing room of Italian literature for the first time, setting off a debate across half the country.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> il tema del rapporto con le figure familiari e con le proprie radici, inaugurato qui, è il cuore emotivo delle serie Netflix — e la madre di Zero, "Lady Cocca", diventa da questo libro in poi uno dei personaggi più amati del suo mondo.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the theme of family figures and one's own roots, inaugurated here, is the emotional heart of the Netflix series — and from this book on, Zero's mother, "Lady Cocca", becomes one of the best-loved characters in his world.</div>
         </div>
       </article>
     </section>
@@ -396,19 +420,24 @@
             <img src="copertine/zerocalcare/04-kobane-calling.jpg" alt="Copertina Kobane Calling" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ Inizio del filone reportage</span>
-            <span class="badge evento">Il caso editoriale</span>
+            <span class="badge start"><span class="lang-it">★ Inizio del filone reportage</span><span class="lang-en">★ Start of the reportage strand</span></span>
+            <span class="badge evento"><span class="lang-it">Il caso editoriale</span><span class="lang-en">The publishing sensation</span></span>
           </div>
           <dl class="scheda">
-            <div><dt>Editore</dt><dd>BAO Publishing (edizione ampliata "Kobane Calling: Oggi" nel 2020)</dd></div>
-            <div><dt>Tipo</dt><dd>Graphic journalism: reportage dai confini turco-siriani</dd></div>
-            <div><dt>Ambientazione</dt><dd>Il Rojava: i viaggi tra i curdi che combattono l'ISIS</dd></div>
+            <div><dt class="lang-it">Editore</dt><dt class="lang-en">Publisher</dt><dd class="lang-it">BAO Publishing (edizione ampliata "Kobane Calling: Oggi" nel 2020)</dd><dd class="lang-en">BAO Publishing (expanded edition "Kobane Calling: Oggi" in 2020)</dd></div>
+            <div><dt class="lang-it">Tipo</dt><dt class="lang-en">Type</dt><dd class="lang-it">Graphic journalism: reportage dai confini turco-siriani</dd><dd class="lang-en">Graphic journalism: reportage from the Turkish-Syrian border</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">Il Rojava: i viaggi tra i curdi che combattono l'ISIS</dd><dd class="lang-en">Rojava: the journeys among the Kurds fighting ISIS</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>La svolta: Zerocalcare parte con una carovana solidale verso il confine siriano e racconta la resistenza curda di Kobane e la rivoluzione del Rojava — il confederalismo democratico, le combattenti delle YPJ — con lo stesso sguardo autoironico delle strisce di quartiere, che rende comprensibile e vicino un conflitto lontanissimo. Nato dalle tavole pubblicate su Internazionale, è diventato il suo libro più tradotto e uno dei reportage a fumetti più letti d'Europa.</p>
-          <h3>Cosa apre</h3>
-          <p>Il secondo binario dell'opera di Zerocalcare, il graphic journalism militante, che nella collezione prosegue con Nel nido dei serpenti e con la memoria collettiva di Nessun rimorso reloaded — e che in mezzo passa per il ritorno in Medio Oriente di No Sleep Till Shengal.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> dal libro è nato un adattamento teatrale portato in tournée in tutta Italia, e il legame di Zerocalcare con la causa curda è diventato parte della sua figura pubblica tanto quanto l'Armadillo.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">La svolta: Zerocalcare parte con una carovana solidale verso il confine siriano e racconta la resistenza curda di Kobane e la rivoluzione del Rojava — il confederalismo democratico, le combattenti delle YPJ — con lo stesso sguardo autoironico delle strisce di quartiere, che rende comprensibile e vicino un conflitto lontanissimo. Nato dalle tavole pubblicate su Internazionale, è diventato il suo libro più tradotto e uno dei reportage a fumetti più letti d'Europa.</p>
+          <p class="lang-en">The turning point: Zerocalcare sets off with a solidarity convoy towards the Syrian border and tells the story of the Kurdish resistance of Kobane and the Rojava revolution — democratic confederalism, the YPJ women fighters — with the same self-deprecating gaze as his neighbourhood strips, making a faraway conflict feel understandable and close. Born from the pages published in Internazionale, it became his most translated book and one of the most widely read comics reportages in Europe.</p>
+          <h3 class="lang-it">Cosa apre</h3>
+          <h3 class="lang-en">What it opens</h3>
+          <p class="lang-it">Il secondo binario dell'opera di Zerocalcare, il graphic journalism militante, che nella collezione prosegue con Nel nido dei serpenti e con la memoria collettiva di Nessun rimorso reloaded — e che in mezzo passa per il ritorno in Medio Oriente di No Sleep Till Shengal.</p>
+          <p class="lang-en">The second track of Zerocalcare's work, militant graphic journalism, which continues in my collection with Nel nido dei serpenti and the collective memory of Nessun rimorso reloaded — passing in between through the return to the Middle East of No Sleep Till Shengal.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> dal libro è nato un adattamento teatrale portato in tournée in tutta Italia, e il legame di Zerocalcare con la causa curda è diventato parte della sua figura pubblica tanto quanto l'Armadillo.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the book spawned a stage adaptation that toured all over Italy, and Zerocalcare's bond with the Kurdish cause became as much a part of his public persona as the Armadillo.</div>
         </div>
       </article>
     </section>
@@ -429,19 +458,24 @@
             <img src="copertine/zerocalcare/05-scuola-pizze-in-faccia.jpg" alt="Copertina La scuola di pizze in faccia del professor Calcare" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge">Seconda raccolta del blog</span>
-            <span class="badge">Gli anni della consacrazione</span>
+            <span class="badge"><span class="lang-it">Seconda raccolta del blog</span><span class="lang-en">Second blog collection</span></span>
+            <span class="badge"><span class="lang-it">Gli anni della consacrazione</span><span class="lang-en">The years of consecration</span></span>
           </div>
           <dl class="scheda">
-            <div><dt>Editore</dt><dd>BAO Publishing</dd></div>
-            <div><dt>Tipo</dt><dd>Raccolta delle storie brevi e del blog degli anni successivi alla prima antologia</dd></div>
-            <div><dt>Ambientazione</dt><dd>La quotidianità di un autore ormai famoso che finge di non esserlo</dd></div>
+            <div><dt class="lang-it">Editore</dt><dt class="lang-en">Publisher</dt><dd>BAO Publishing</dd></div>
+            <div><dt class="lang-it">Tipo</dt><dt class="lang-en">Type</dt><dd class="lang-it">Raccolta delle storie brevi e del blog degli anni successivi alla prima antologia</dd><dd class="lang-en">Collection of the short stories and blog strips from the years after the first anthology</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">La quotidianità di un autore ormai famoso che finge di non esserlo</dd><dd class="lang-en">The everyday life of an author who is now famous and pretends not to be</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il secondo capitolo del diario pubblico: le storie brevi degli anni in cui Zerocalcare diventa un autore da classifica generalista — con tutte le nevrosi nuove che ne derivano — senza perdere il registro da bar di Rebibbia. Rispetto alla prima raccolta il tratto è maturo, i tempi comici più cinematografici, e tra le pagine si sente già l'autore che di lì a poco firmerà le serie animate.</p>
-          <h3>Il suo ruolo nella collezione</h3>
-          <p>Il ponte tra lo Zerocalcare "di culto" dei primi volumi e quello di massa dell'era Netflix: leggendolo dopo Ogni maledetto lunedì su due si vede a occhio nudo quanta strada ha fatto il tratto in sei anni.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> è il libro immediatamente precedente all'esplosione televisiva: due anni dopo arriva Strappare lungo i bordi (2021), la serie Netflix premiata e diventata fenomeno nazionale.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il secondo capitolo del diario pubblico: le storie brevi degli anni in cui Zerocalcare diventa un autore da classifica generalista — con tutte le nevrosi nuove che ne derivano — senza perdere il registro da bar di Rebibbia. Rispetto alla prima raccolta il tratto è maturo, i tempi comici più cinematografici, e tra le pagine si sente già l'autore che di lì a poco firmerà le serie animate.</p>
+          <p class="lang-en">The second chapter of the public diary: the short stories from the years in which Zerocalcare becomes a mainstream bestseller-list author — with all the brand-new neuroses that come with it — without losing the Rebibbia-bar register. Compared with the first collection the linework is mature, the comic timing more cinematic, and between the pages one can already sense the author who would soon sign the animated series.</p>
+          <h3 class="lang-it">Il suo ruolo nella collezione</h3>
+          <h3 class="lang-en">Its role in the collection</h3>
+          <p class="lang-it">Il ponte tra lo Zerocalcare "di culto" dei primi volumi e quello di massa dell'era Netflix: leggendolo dopo Ogni maledetto lunedì su due si vede a occhio nudo quanta strada ha fatto il tratto in sei anni.</p>
+          <p class="lang-en">The bridge between the "cult" Zerocalcare of the early volumes and the mass-audience one of the Netflix era: reading it after Ogni maledetto lunedì su due, it is plain to the naked eye how far his drawing came in six years.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> è il libro immediatamente precedente all'esplosione televisiva: due anni dopo arriva Strappare lungo i bordi (2021), la serie Netflix premiata e diventata fenomeno nazionale.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> this is the book immediately preceding the television explosion: two years later came Strappare lungo i bordi (2021), the award-winning Netflix series that became a national phenomenon.</div>
         </div>
       </article>
     </section>
@@ -462,19 +496,24 @@
             <img src="copertine/zerocalcare/06-fronte-di-rebibbia.jpg" alt="Copertina Niente di nuovo sul fronte di Rebibbia" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge">Terza raccolta del blog</span>
-            <span class="badge">Gli anni della pandemia e di Netflix</span>
+            <span class="badge"><span class="lang-it">Terza raccolta del blog</span><span class="lang-en">Third blog collection</span></span>
+            <span class="badge"><span class="lang-it">Gli anni della pandemia e di Netflix</span><span class="lang-en">The pandemic and Netflix years</span></span>
           </div>
           <dl class="scheda">
-            <div><dt>Editore</dt><dd>BAO Publishing</dd></div>
-            <div><dt>Tipo</dt><dd>Raccolta delle storie brevi degli anni recenti, con materiale inedito</dd></div>
-            <div><dt>Ambientazione</dt><dd>Rebibbia ai tempi del lockdown e della fama televisiva</dd></div>
+            <div><dt class="lang-it">Editore</dt><dt class="lang-en">Publisher</dt><dd>BAO Publishing</dd></div>
+            <div><dt class="lang-it">Tipo</dt><dt class="lang-en">Type</dt><dd class="lang-it">Raccolta delle storie brevi degli anni recenti, con materiale inedito</dd><dd class="lang-en">Collection of the short stories of recent years, with previously unpublished material</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">Rebibbia ai tempi del lockdown e della fama televisiva</dd><dd class="lang-en">Rebibbia in the days of lockdown and television fame</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il terzo capitolo del diario, con il titolo che scherza su Remarque: dentro ci sono gli anni più strani — la pandemia vista dal quartiere, il cortocircuito di essere diventato un personaggio televisivo nazionale, le battaglie sociali di sempre — raccontati con la consueta alternanza di comicità e mattoni sullo stomaco. È lo Zerocalcare che ormai parla a tutti, ma continua a scrivere come se parlasse ai suoi.</p>
-          <h3>Il suo ruolo nella collezione</h3>
-          <p>Chiude (per ora) la trilogia delle raccolte: con i volumi 3, 5 e 6 ho l'intero arco del blog dal 2011 a oggi, che è anche la spina dorsale autobiografica di tutta la collezione.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> esce tra le due serie Netflix (Questo mondo non mi renderà cattivo è del 2023) e mentre viene annunciata la terza, Due spicci — il diario cartaceo e quello animato ormai corrono in parallelo.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il terzo capitolo del diario, con il titolo che scherza su Remarque: dentro ci sono gli anni più strani — la pandemia vista dal quartiere, il cortocircuito di essere diventato un personaggio televisivo nazionale, le battaglie sociali di sempre — raccontati con la consueta alternanza di comicità e mattoni sullo stomaco. È lo Zerocalcare che ormai parla a tutti, ma continua a scrivere come se parlasse ai suoi.</p>
+          <p class="lang-en">The third chapter of the diary, with a title that riffs on Remarque: inside are the strangest years — the pandemic seen from the neighbourhood, the short circuit of having become a national television figure, the same social battles as ever — told with the usual alternation of comedy and gut punches. This is the Zerocalcare who by now speaks to everyone, but still writes as if he were talking to his own people.</p>
+          <h3 class="lang-it">Il suo ruolo nella collezione</h3>
+          <h3 class="lang-en">Its role in the collection</h3>
+          <p class="lang-it">Chiude (per ora) la trilogia delle raccolte: con i volumi 3, 5 e 6 ho l'intero arco del blog dal 2011 a oggi, che è anche la spina dorsale autobiografica di tutta la collezione.</p>
+          <p class="lang-en">It closes (for now) the trilogy of collections: with volumes 3, 5 and 6 I have the entire arc of the blog from 2011 to today, which is also the autobiographical backbone of my whole collection.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> esce tra le due serie Netflix (Questo mondo non mi renderà cattivo è del 2023) e mentre viene annunciata la terza, Due spicci — il diario cartaceo e quello animato ormai corrono in parallelo.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> it comes out between the two Netflix series (Questo mondo non mi renderà cattivo is from 2023) and just as the third, Due spicci, is announced — by now the paper diary and the animated one run in parallel.</div>
         </div>
       </article>
     </section>
@@ -495,19 +534,24 @@
             <img src="copertine/zerocalcare/07-nido-dei-serpenti.jpg" alt="Copertina Nel nido dei serpenti" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge evento">Il libro più recente</span>
+            <span class="badge evento"><span class="lang-it">Il libro più recente</span><span class="lang-en">The most recent book</span></span>
             <span class="badge">Graphic journalism</span>
           </div>
           <dl class="scheda">
-            <div><dt>Editore</dt><dd>BAO Publishing in collaborazione con Momo Edizioni (uscita: 5 dicembre 2025)</dd></div>
-            <div><dt>Tipo</dt><dd>Reportage: 200 pagine in bianco e nero, cartonato 17×24</dd></div>
-            <div><dt>Ambientazione</dt><dd>Tra Italia, Francia, Germania e Ungheria: il processo di Budapest</dd></div>
+            <div><dt class="lang-it">Editore</dt><dt class="lang-en">Publisher</dt><dd class="lang-it">BAO Publishing in collaborazione con Momo Edizioni (uscita: 5 dicembre 2025)</dd><dd class="lang-en">BAO Publishing in collaboration with Momo Edizioni (released 5 December 2025)</dd></div>
+            <div><dt class="lang-it">Tipo</dt><dt class="lang-en">Type</dt><dd class="lang-it">Reportage: 200 pagine in bianco e nero, cartonato 17×24</dd><dd class="lang-en">Reportage: 200 pages in black and white, 17×24 hardcover</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">Tra Italia, Francia, Germania e Ungheria: il processo di Budapest</dd><dd class="lang-en">Across Italy, France, Germany and Hungary: the Budapest trial</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il ritorno al graphic journalism più militante: il libro raccoglie le storie realizzate per Internazionale sul processo ungherese agli antifascisti — quello che ha coinvolto anche Ilaria Salis — e vi aggiunge una lunga storia inedita di oltre cento pagine sul caso di Maja T., in isolamento in un carcere di Budapest. Un racconto sui rigurgiti di intolleranza in Europa e su chi paga il prezzo di opporvisi, con parte dei proventi devoluta al fondo per le spese legali degli imputati.</p>
-          <h3>Il suo ruolo nella collezione</h3>
-          <p>Risponde a Kobane Calling nove anni dopo: dal fronte siriano ai tribunali europei, il secondo binario dell'opera di Zerocalcare arriva al presente. E la vicenda che racconta è ancora in corso: un capitolo "caldo", come il volume che lo segue.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> le storie da cui nasce sono uscite a puntate su Internazionale seguendo la cronaca in tempo reale — un caso raro di fumetto che corre alla velocità del giornalismo.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il ritorno al graphic journalism più militante: il libro raccoglie le storie realizzate per Internazionale sul processo ungherese agli antifascisti — quello che ha coinvolto anche Ilaria Salis — e vi aggiunge una lunga storia inedita di oltre cento pagine sul caso di Maja T., in isolamento in un carcere di Budapest. Un racconto sui rigurgiti di intolleranza in Europa e su chi paga il prezzo di opporvisi, con parte dei proventi devoluta al fondo per le spese legali degli imputati.</p>
+          <p class="lang-en">The return to graphic journalism at its most militant: the book collects the stories made for Internazionale on the Hungarian trial of antifascists — the one that also involved Ilaria Salis — and adds a long, previously unpublished story of over a hundred pages on the case of Maja T., held in solitary confinement in a Budapest prison. A tale about the resurgence of intolerance in Europe and about those who pay the price of standing up to it, with part of the proceeds going to the fund for the defendants' legal costs.</p>
+          <h3 class="lang-it">Il suo ruolo nella collezione</h3>
+          <h3 class="lang-en">Its role in the collection</h3>
+          <p class="lang-it">Risponde a Kobane Calling nove anni dopo: dal fronte siriano ai tribunali europei, il secondo binario dell'opera di Zerocalcare arriva al presente. E la vicenda che racconta è ancora in corso: un capitolo "caldo", come il volume che lo segue.</p>
+          <p class="lang-en">It answers Kobane Calling nine years on: from the Syrian front to Europe's courtrooms, the second track of Zerocalcare's work reaches the present. And the story it tells is still unfolding: a "hot" chapter, like the volume that follows it.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> le storie da cui nasce sono uscite a puntate su Internazionale seguendo la cronaca in tempo reale — un caso raro di fumetto che corre alla velocità del giornalismo.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the stories it grew from were serialised in Internazionale, tracking the news in real time — a rare case of a comic running at the speed of journalism.</div>
         </div>
       </article>
     </section>
@@ -528,19 +572,24 @@
             <img src="copertine/zerocalcare/09-nessun-rimorso-reloaded.jpg" alt="Copertina Nessun rimorso reloaded" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge evento">Antologia collettiva benefit</span>
-            <span class="badge">25 anni dal G8 di Genova</span>
+            <span class="badge evento"><span class="lang-it">Antologia collettiva benefit</span><span class="lang-en">Collective benefit anthology</span></span>
+            <span class="badge"><span class="lang-it">25 anni dal G8 di Genova</span><span class="lang-en">25 years since the Genoa G8</span></span>
           </div>
           <dl class="scheda">
-            <div><dt>Editore</dt><dd>Coconino Press (collana Coconino Cult), promosso da Supporto Legale — a cura di Sara D'Ippolito e Oscar Glioti (uscita: 14 luglio 2026)</dd></div>
-            <div><dt>Tipo</dt><dd>Antologia collettiva: 336 pagine a colori, brossurato 17×24, con copertina e oltre cinquanta pagine di Zerocalcare</dd></div>
-            <div><dt>Ambientazione</dt><dd>Genova, luglio 2001 — e le sue conseguenze fino a oggi</dd></div>
+            <div><dt class="lang-it">Editore</dt><dt class="lang-en">Publisher</dt><dd class="lang-it">Coconino Press (collana Coconino Cult), promosso da Supporto Legale — a cura di Sara D'Ippolito e Oscar Glioti (uscita: 14 luglio 2026)</dd><dd class="lang-en">Coconino Press (Coconino Cult imprint), promoted by Supporto Legale — edited by Sara D'Ippolito and Oscar Glioti (released 14 July 2026)</dd></div>
+            <div><dt class="lang-it">Tipo</dt><dt class="lang-en">Type</dt><dd class="lang-it">Antologia collettiva: 336 pagine a colori, brossurato 17×24, con copertina e oltre cinquanta pagine di Zerocalcare</dd><dd class="lang-en">Collective anthology: 336 colour pages, 17×24 paperback, with cover art and over fifty pages by Zerocalcare</dd></div>
+            <div><dt class="lang-it">Ambientazione</dt><dt class="lang-en">Setting</dt><dd class="lang-it">Genova, luglio 2001 — e le sue conseguenze fino a oggi</dd><dd class="lang-en">Genoa, July 2001 — and its consequences up to the present day</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Venticinque anni dopo il G8 di Genova, la nuova edizione ampliata dell'antologia benefit di Supporto Legale — la rete nata per sostenere le spese dei processi seguiti a quei giorni — rimette insieme i migliori autori italiani per raccontare le giornate del 2001 e ciò che ne è derivato: la violenza di piazza, la morte di Carlo Giuliani, la repressione del dissenso, il presente sempre più autoritario. Zerocalcare firma la copertina e il contributo più corposo, accanto a un testo di Erri De Luca, all'arte di Blu e a decine di autori tra cui Maicol&amp;Mirco, Davide Reviati, Daniel Cuello e Lorena Canottiere; rispetto all'edizione del 2021 ci sono nuove storie e nuove voci, e il volume sostiene la campagna europea FreeAllAntifas.</p>
-          <h3>Il suo ruolo nella collezione</h3>
-          <p>È l'anello che salda i due binari: memoria militante come i reportage, ma corale — l'unico libro della collezione in cui la voce di Zero è una tra molte. E dialoga direttamente con Nel nido dei serpenti: Genova 2001 come radice della stessa storia di repressione e solidarietà che il Nido racconta al presente.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> il volume viaggia con un tour di presentazioni militanti nei circoli e negli spazi sociali (Genova, Milano, Monza...) più che nelle librerie, fedele alla sua natura; e con l'acquisto sul sito Coconino, fino a esaurimento, è incluso un poster di Zerocalcare.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Venticinque anni dopo il G8 di Genova, la nuova edizione ampliata dell'antologia benefit di Supporto Legale — la rete nata per sostenere le spese dei processi seguiti a quei giorni — rimette insieme i migliori autori italiani per raccontare le giornate del 2001 e ciò che ne è derivato: la violenza di piazza, la morte di Carlo Giuliani, la repressione del dissenso, il presente sempre più autoritario. Zerocalcare firma la copertina e il contributo più corposo, accanto a un testo di Erri De Luca, all'arte di Blu e a decine di autori tra cui Maicol&amp;Mirco, Davide Reviati, Daniel Cuello e Lorena Canottiere; rispetto all'edizione del 2021 ci sono nuove storie e nuove voci, e il volume sostiene la campagna europea FreeAllAntifas.</p>
+          <p class="lang-en">Twenty-five years after the Genoa G8, the new expanded edition of the benefit anthology by Supporto Legale — the network born to cover the costs of the trials that followed those days — brings the best Italian authors back together to tell the story of the days of 2001 and what came of them: the violence in the streets, the death of Carlo Giuliani, the repression of dissent, an ever more authoritarian present. Zerocalcare signs the cover and the most substantial contribution, alongside a text by Erri De Luca, the art of Blu and dozens of authors including Maicol&amp;Mirco, Davide Reviati, Daniel Cuello and Lorena Canottiere; compared with the 2021 edition there are new stories and new voices, and the volume supports the European FreeAllAntifas campaign.</p>
+          <h3 class="lang-it">Il suo ruolo nella collezione</h3>
+          <h3 class="lang-en">Its role in the collection</h3>
+          <p class="lang-it">È l'anello che salda i due binari: memoria militante come i reportage, ma corale — l'unico libro della collezione in cui la voce di Zero è una tra molte. E dialoga direttamente con Nel nido dei serpenti: Genova 2001 come radice della stessa storia di repressione e solidarietà che il Nido racconta al presente.</p>
+          <p class="lang-en">It is the link that welds the two tracks together: militant memory like the reportages, but choral — the only book in my collection where Zero's voice is one among many. And it speaks directly to Nel nido dei serpenti: Genoa 2001 as the root of the same story of repression and solidarity that the Nido tells in the present.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> il volume viaggia con un tour di presentazioni militanti nei circoli e negli spazi sociali (Genova, Milano, Monza...) più che nelle librerie, fedele alla sua natura; e con l'acquisto sul sito Coconino, fino a esaurimento, è incluso un poster di Zerocalcare.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the volume travels with a tour of militant presentations in clubs and social centres (Genoa, Milan, Monza...) more than in bookshops, true to its nature; and purchases from the Coconino website include, while stocks last, a Zerocalcare poster.</div>
         </div>
       </article>
     </section>
@@ -549,31 +598,36 @@
     <section class="stop">
       <div class="stop-dot"><span class="n">+1</span><span class="y">2020</span></div>
       <article class="albo arancio">
-        <div class="masthead"><h2>Zerocalcare 3D Collection n. 1 — Zero</h2><span class="anno">Ottobre 2020</span></div>
+        <div class="masthead"><h2>Zerocalcare 3D Collection n. 1 — Zero</h2><span class="anno"><span class="lang-it">Ottobre 2020</span><span class="lang-en">October 2020</span></span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot z10">
             <div class="cover-art">
-              <span class="strip">Statuina + Fascicolo</span>
+              <span class="strip"><span class="lang-it">Statuina + Fascicolo</span><span class="lang-en">Figurine + Booklet</span></span>
               <span class="logo">3D<br>Collection</span>
               <span class="num">1</span>
             </div>
             <img src="copertine/zerocalcare/10-3d-zerocalcare.jpg" alt="Statuina Zerocalcare — Zerocalcare 3D Collection n. 1" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge evento">Il primo pezzo tridimensionale</span>
-            <span class="badge">Zero in persona</span>
+            <span class="badge evento"><span class="lang-it">Il primo pezzo tridimensionale</span><span class="lang-en">The first three-dimensional piece</span></span>
+            <span class="badge"><span class="lang-it">Zero in persona</span><span class="lang-en">Zero in person</span></span>
           </div>
           <dl class="scheda">
-            <div><dt>Cos'è</dt><dd>Statuina da collezione dipinta a mano + fascicolo con una tavola inedita, una puntata dell'intervista "Zero racconta Calcare" e la scheda biografica del personaggio</dd></div>
-            <div><dt>Produzione</dt><dd>Centauria con BAO Publishing, realizzata sui disegni originali sotto la supervisione dell'autore — collana da edicola lanciata il 31 ottobre 2020</dd></div>
-            <div><dt>Soggetto</dt><dd>L'uscita n. 1 non poteva che essere lui: Zero, maglietta nera col teschio e jeans, espressione di chi sta per subire un mattone esistenziale</dd></div>
+            <div><dt class="lang-it">Cos'è</dt><dt class="lang-en">What it is</dt><dd class="lang-it">Statuina da collezione dipinta a mano + fascicolo con una tavola inedita, una puntata dell'intervista "Zero racconta Calcare" e la scheda biografica del personaggio</dd><dd class="lang-en">Hand-painted collectible figurine + booklet with a previously unpublished page, an instalment of the interview "Zero racconta Calcare" and the character's biography card</dd></div>
+            <div><dt class="lang-it">Produzione</dt><dt class="lang-en">Production</dt><dd class="lang-it">Centauria con BAO Publishing, realizzata sui disegni originali sotto la supervisione dell'autore — collana da edicola lanciata il 31 ottobre 2020</dd><dd class="lang-en">Centauria with BAO Publishing, made from the original drawings under the author's supervision — a newsstand series launched on 31 October 2020</dd></div>
+            <div><dt class="lang-it">Soggetto</dt><dt class="lang-en">Subject</dt><dd class="lang-it">L'uscita n. 1 non poteva che essere lui: Zero, maglietta nera col teschio e jeans, espressione di chi sta per subire un mattone esistenziale</dd><dd class="lang-en">Issue no. 1 could only be him: Zero, black skull T-shirt and jeans, wearing the expression of someone about to take an existential brick to the chest</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il pezzo che porta la collezione fuori dalla carta: la collana che ha trasformato in tre dimensioni tutto il cast della Città Eterna versione Rebibbia — circa cinquanta uscite tra Secco, il Cinghiale, Panda, Lady Cocca, la combattente curda e compagnia — e che ovviamente doveva partire dall'autore-personaggio. La riproduzione è fedele al tratto dei libri, come se una vignetta si fosse alzata in piedi dal tavolo da disegno.</p>
-          <h3>Curiosità</h3>
-          <p>La collana è stata riproposta in edicola più volte (nuove edizioni nel 2022 e nel 2024, quest'ultima da 70 uscite settimanali) — segno che i pupazzetti di Rebibbia hanno funzionato quanto i libri. Nell'edizione 2024, curiosamente, l'ordine si inverte: la n. 1 diventa l'Armadillo e Zero slitta alla n. 2.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> letteralmente — è il primo pezzo della collezione che sta in piedi da solo. E arriva nell'anno cerniera: dopo Scheletri, un anno prima che Strappare lungo i bordi porti questi stessi personaggi in movimento su Netflix.</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il pezzo che porta la collezione fuori dalla carta: la collana che ha trasformato in tre dimensioni tutto il cast della Città Eterna versione Rebibbia — circa cinquanta uscite tra Secco, il Cinghiale, Panda, Lady Cocca, la combattente curda e compagnia — e che ovviamente doveva partire dall'autore-personaggio. La riproduzione è fedele al tratto dei libri, come se una vignetta si fosse alzata in piedi dal tavolo da disegno.</p>
+          <p class="lang-en">The piece that takes my collection beyond paper: the series that turned the entire cast of the Eternal City, Rebibbia edition, into three dimensions — around fifty issues including Secco, the Boar, Panda, Lady Cocca, the Kurdish fighter and company — and which obviously had to start with the author-as-character. The reproduction is faithful to the linework of the books, as if a comic panel had stood up and walked off the drawing table.</p>
+          <h3 class="lang-it">Curiosità</h3>
+          <h3 class="lang-en">Trivia</h3>
+          <p class="lang-it">La collana è stata riproposta in edicola più volte (nuove edizioni nel 2022 e nel 2024, quest'ultima da 70 uscite settimanali) — segno che i pupazzetti di Rebibbia hanno funzionato quanto i libri. Nell'edizione 2024, curiosamente, l'ordine si inverte: la n. 1 diventa l'Armadillo e Zero slitta alla n. 2.</p>
+          <p class="lang-en">The series returned to newsstands several times (new editions in 2022 and 2024, the latter with 70 weekly issues) — a sign that the little Rebibbia figures worked as well as the books. In the 2024 edition, curiously, the order flips: no. 1 becomes the Armadillo and Zero slips to no. 2.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> letteralmente — è il primo pezzo della collezione che sta in piedi da solo. E arriva nell'anno cerniera: dopo Scheletri, un anno prima che Strappare lungo i bordi porti questi stessi personaggi in movimento su Netflix.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> literally — it is the first piece in my collection that stands on its own two feet. And it arrives in the hinge year: after Scheletri, one year before Strappare lungo i bordi set these very characters in motion on Netflix.</div>
         </div>
       </article>
     </section>
@@ -582,30 +636,35 @@
     <section class="stop">
       <div class="stop-dot"><span class="n">+2</span><span class="y">2020</span></div>
       <article class="albo">
-        <div class="masthead"><h2>Zerocalcare 3D Collection n. 2 — L'Armadillo</h2><span class="anno">Novembre 2020</span></div>
+        <div class="masthead"><h2>Zerocalcare 3D Collection n. 2 — L'Armadillo</h2><span class="anno"><span class="lang-it">Novembre 2020</span><span class="lang-en">November 2020</span></span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot z11">
             <div class="cover-art">
-              <span class="strip">Statuina + Fascicolo</span>
+              <span class="strip"><span class="lang-it">Statuina + Fascicolo</span><span class="lang-en">Figurine + Booklet</span></span>
               <span class="logo">L'Armadillo</span>
               <span class="num">2</span>
             </div>
             <img src="copertine/zerocalcare/11-3d-armadillo.jpg" alt="Statuina Armadillo — Zerocalcare 3D Collection n. 2" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ La coscienza, finalmente in corazza vera</span>
+            <span class="badge start"><span class="lang-it">★ La coscienza, finalmente in corazza vera</span><span class="lang-en">★ The conscience, finally in real armour</span></span>
           </div>
           <dl class="scheda">
-            <div><dt>Cos'è</dt><dd>Statuina da collezione dipinta a mano + fascicolo con tavola inedita, intervista a puntate e scheda biografica — la seconda uscita includeva anche il raccoglitore per le schede dei personaggi</dd></div>
-            <div><dt>Produzione</dt><dd>Centauria con BAO Publishing — seconda uscita della collana, in edicola circa due settimane dopo la prima</dd></div>
-            <div><dt>Soggetto</dt><dd>L'Armadillo: la coscienza di Zero, braccia conserte e sguardo di chi l'aveva detto</dd></div>
+            <div><dt class="lang-it">Cos'è</dt><dt class="lang-en">What it is</dt><dd class="lang-it">Statuina da collezione dipinta a mano + fascicolo con tavola inedita, intervista a puntate e scheda biografica — la seconda uscita includeva anche il raccoglitore per le schede dei personaggi</dd><dd class="lang-en">Hand-painted collectible figurine + booklet with a previously unpublished page, a serialised interview and a biography card — the second issue also included the binder for the character cards</dd></div>
+            <div><dt class="lang-it">Produzione</dt><dt class="lang-en">Production</dt><dd class="lang-it">Centauria con BAO Publishing — seconda uscita della collana, in edicola circa due settimane dopo la prima</dd><dd class="lang-en">Centauria with BAO Publishing — second issue of the series, on newsstands about two weeks after the first</dd></div>
+            <div><dt class="lang-it">Soggetto</dt><dt class="lang-en">Subject</dt><dd class="lang-it">L'Armadillo: la coscienza di Zero, braccia conserte e sguardo di chi l'aveva detto</dd><dd class="lang-en">The Armadillo: Zero's conscience, arms folded, with the look of someone who told him so</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Se Zero è la n. 1, la n. 2 spettava di diritto a lui: il personaggio più iconico dell'intero universo, la coscienza in corazza nata nella Profezia dell'armadillo che commenta, giudica e sabota ogni scelta del protagonista dal 2011. Avere in collezione la coppia Zero + Armadillo significa avere il nucleo irriducibile del mondo Zerocalcare: uno non esiste senza l'altro.</p>
-          <h3>Curiosità</h3>
-          <p>Nel corso delle varie edizioni della collana l'Armadillo è diventato il soggetto più declinato: oltre alla versione classica esistono Baby Armadillo, l'Armadillo "alla sera" in vestaglia e altre varianti — nessun altro personaggio ne ha avute così tante.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> la statuina è muta, ma è impossibile guardarla senza sentire la voce di Valerio Mastandrea — che dell'Armadillo è diventato la voce ufficiale nelle serie Netflix, a partire da Strappare lungo i bordi (2021).</div>
+          <h3 class="lang-it">Perché è importante</h3>
+          <h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Se Zero è la n. 1, la n. 2 spettava di diritto a lui: il personaggio più iconico dell'intero universo, la coscienza in corazza nata nella Profezia dell'armadillo che commenta, giudica e sabota ogni scelta del protagonista dal 2011. Avere in collezione la coppia Zero + Armadillo significa avere il nucleo irriducibile del mondo Zerocalcare: uno non esiste senza l'altro.</p>
+          <p class="lang-en">If Zero is no. 1, no. 2 belonged to him by right: the most iconic character in the entire universe, the armour-plated conscience born in the Profezia dell'armadillo who has been commenting on, judging and sabotaging the protagonist's every choice since 2011. Having the Zero + Armadillo pair in my collection means owning the irreducible core of the Zerocalcare world: neither exists without the other.</p>
+          <h3 class="lang-it">Curiosità</h3>
+          <h3 class="lang-en">Trivia</h3>
+          <p class="lang-it">Nel corso delle varie edizioni della collana l'Armadillo è diventato il soggetto più declinato: oltre alla versione classica esistono Baby Armadillo, l'Armadillo "alla sera" in vestaglia e altre varianti — nessun altro personaggio ne ha avute così tante.</p>
+          <p class="lang-en">Across the various editions of the series the Armadillo became the most reinterpreted subject: besides the classic version there are Baby Armadillo, the "evening" Armadillo in a dressing gown and other variants — no other character has had so many.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> la statuina è muta, ma è impossibile guardarla senza sentire la voce di Valerio Mastandrea — che dell'Armadillo è diventato la voce ufficiale nelle serie Netflix, a partire da Strappare lungo i bordi (2021).</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the figurine is silent, yet it is impossible to look at it without hearing the voice of Valerio Mastandrea — who became the Armadillo's official voice in the Netflix series, starting with Strappare lungo i bordi (2021).</div>
         </div>
       </article>
     </section>
@@ -614,38 +673,42 @@
 
   <!-- RIEPILOGO -->
   <section class="panel">
-    <h2>La mappa in <em>una tabella</em></h2>
+    <h2 class="lang-it">La mappa in <em>una tabella</em></h2>
+    <h2 class="lang-en">The map in <em>one table</em></h2>
     <table>
       <thead>
-        <tr><th>#</th><th>Libro</th><th>Anno</th><th>Editore</th><th>Tipo</th><th>Ruolo</th></tr>
+        <tr><th>#</th><th><span class="lang-it">Libro</span><span class="lang-en">Book</span></th><th><span class="lang-it">Anno</span><span class="lang-en">Year</span></th><th><span class="lang-it">Editore</span><span class="lang-en">Publisher</span></th><th><span class="lang-it">Tipo</span><span class="lang-en">Type</span></th><th><span class="lang-it">Ruolo</span><span class="lang-en">Role</span></th></tr>
       </thead>
       <tbody>
-        <tr><td>1</td><td>La profezia dell'armadillo</td><td>2011 (BAO 2012)</td><td>Autoprod. / BAO</td><td>Graphic novel</td><td>L'esordio, nasce l'Armadillo</td></tr>
-        <tr><td>2</td><td>Un polpo alla gola</td><td>2012</td><td>BAO</td><td>Graphic novel</td><td>Il primo romanzo a fumetti</td></tr>
-        <tr><td>3</td><td>Ogni maledetto lunedì su due</td><td>2013</td><td>BAO</td><td>Raccolta blog</td><td>Prima antologia del blog</td></tr>
-        <tr><td>4</td><td>Dimentica il mio nome</td><td>2014</td><td>BAO</td><td>Graphic novel</td><td>Il romanzo familiare, candidato allo Strega</td></tr>
-        <tr><td>5</td><td>Kobane Calling</td><td>2016</td><td>BAO</td><td>Reportage</td><td>Inizio del graphic journalism</td></tr>
-        <tr><td>6</td><td>La scuola di pizze in faccia del professor Calcare</td><td>2019</td><td>BAO</td><td>Raccolta blog</td><td>Seconda antologia del blog</td></tr>
-        <tr><td>7</td><td>Niente di nuovo sul fronte di Rebibbia</td><td>2023</td><td>BAO</td><td>Raccolta blog</td><td>Terza antologia del blog</td></tr>
-        <tr><td>8</td><td>Nel nido dei serpenti</td><td>2025</td><td>BAO + Momo</td><td>Reportage</td><td>Il ritorno al giornalismo militante</td></tr>
-        <tr><td>9</td><td>Nessun rimorso reloaded</td><td>2026</td><td>Coconino / Supporto Legale</td><td>Antologia collettiva</td><td>La memoria di Genova, 25 anni dopo</td></tr>
-        <tr><td>+1</td><td>Zerocalcare 3D Collection n. 1 — Zero</td><td>2020</td><td>Centauria / BAO</td><td>Statuina + fascicolo</td><td>Il primo pezzo in 3D</td></tr>
-        <tr><td>+2</td><td>Zerocalcare 3D Collection n. 2 — L'Armadillo</td><td>2020</td><td>Centauria / BAO</td><td>Statuina + fascicolo</td><td>La coscienza in corazza, in 3D</td></tr>
+        <tr><td>1</td><td>La profezia dell'armadillo</td><td>2011 (BAO 2012)</td><td><span class="lang-it">Autoprod. / BAO</span><span class="lang-en">Self-pub. / BAO</span></td><td>Graphic novel</td><td><span class="lang-it">L'esordio, nasce l'Armadillo</span><span class="lang-en">The debut, the Armadillo is born</span></td></tr>
+        <tr><td>2</td><td>Un polpo alla gola</td><td>2012</td><td>BAO</td><td>Graphic novel</td><td><span class="lang-it">Il primo romanzo a fumetti</span><span class="lang-en">The first novel in comics form</span></td></tr>
+        <tr><td>3</td><td>Ogni maledetto lunedì su due</td><td>2013</td><td>BAO</td><td><span class="lang-it">Raccolta blog</span><span class="lang-en">Blog collection</span></td><td><span class="lang-it">Prima antologia del blog</span><span class="lang-en">First blog anthology</span></td></tr>
+        <tr><td>4</td><td>Dimentica il mio nome</td><td>2014</td><td>BAO</td><td>Graphic novel</td><td><span class="lang-it">Il romanzo familiare, candidato allo Strega</span><span class="lang-en">The family novel, Strega nominee</span></td></tr>
+        <tr><td>5</td><td>Kobane Calling</td><td>2016</td><td>BAO</td><td>Reportage</td><td><span class="lang-it">Inizio del graphic journalism</span><span class="lang-en">Start of the graphic journalism</span></td></tr>
+        <tr><td>6</td><td>La scuola di pizze in faccia del professor Calcare</td><td>2019</td><td>BAO</td><td><span class="lang-it">Raccolta blog</span><span class="lang-en">Blog collection</span></td><td><span class="lang-it">Seconda antologia del blog</span><span class="lang-en">Second blog anthology</span></td></tr>
+        <tr><td>7</td><td>Niente di nuovo sul fronte di Rebibbia</td><td>2023</td><td>BAO</td><td><span class="lang-it">Raccolta blog</span><span class="lang-en">Blog collection</span></td><td><span class="lang-it">Terza antologia del blog</span><span class="lang-en">Third blog anthology</span></td></tr>
+        <tr><td>8</td><td>Nel nido dei serpenti</td><td>2025</td><td>BAO + Momo</td><td>Reportage</td><td><span class="lang-it">Il ritorno al giornalismo militante</span><span class="lang-en">The return to militant journalism</span></td></tr>
+        <tr><td>9</td><td>Nessun rimorso reloaded</td><td>2026</td><td>Coconino / Supporto Legale</td><td><span class="lang-it">Antologia collettiva</span><span class="lang-en">Collective anthology</span></td><td><span class="lang-it">La memoria di Genova, 25 anni dopo</span><span class="lang-en">The memory of Genoa, 25 years on</span></td></tr>
+        <tr><td>+1</td><td>Zerocalcare 3D Collection n. 1 — Zero</td><td>2020</td><td>Centauria / BAO</td><td><span class="lang-it">Statuina + fascicolo</span><span class="lang-en">Figurine + booklet</span></td><td><span class="lang-it">Il primo pezzo in 3D</span><span class="lang-en">The first piece in 3D</span></td></tr>
+        <tr><td>+2</td><td>Zerocalcare 3D Collection n. 2 — L'Armadillo</td><td>2020</td><td>Centauria / BAO</td><td><span class="lang-it">Statuina + fascicolo</span><span class="lang-en">Figurine + booklet</span></td><td><span class="lang-it">La coscienza in corazza, in 3D</span><span class="lang-en">The armour-plated conscience, in 3D</span></td></tr>
       </tbody>
     </table>
-    <p style="margin-top:14px;font-size:14.5px">La collezione corre su due binari che si alternano: l'autobiografia (volumi 1, 2, 3, 4, 6, 7 — con la trilogia completa delle raccolte del blog e il primo dei grandi romanzi familiari) e l'impegno militante (volumi 5, 8 e 9: dal Rojava ai tribunali d'Europa, fino alla memoria collettiva di Genova — quest'ultima l'unico volume corale, dove Zerocalcare è capofila di decine di autori). E poi c'è la terza dimensione: le statuine della Zerocalcare 3D Collection (Centauria con BAO Publishing, dal 2020), di cui possiedo la coppia fondativa, Zero e l'Armadillo — le uscite n. 1 e n. 2 della collana originale.</p>
+    <p style="margin-top:14px;font-size:14.5px" class="lang-it">La collezione corre su due binari che si alternano: l'autobiografia (volumi 1, 2, 3, 4, 6, 7 — con la trilogia completa delle raccolte del blog e il primo dei grandi romanzi familiari) e l'impegno militante (volumi 5, 8 e 9: dal Rojava ai tribunali d'Europa, fino alla memoria collettiva di Genova — quest'ultima l'unico volume corale, dove Zerocalcare è capofila di decine di autori). E poi c'è la terza dimensione: le statuine della Zerocalcare 3D Collection (Centauria con BAO Publishing, dal 2020), di cui possiedo la coppia fondativa, Zero e l'Armadillo — le uscite n. 1 e n. 2 della collana originale.</p>
+    <p style="margin-top:14px;font-size:14.5px" class="lang-en">My collection runs on two alternating tracks: autobiography (volumes 1, 2, 3, 4, 6, 7 — with the complete trilogy of blog collections and the first of the great family novels) and militant engagement (volumes 5, 8 and 9: from Rojava to Europe's courtrooms, up to the collective memory of Genoa — the latter the only choral volume, where Zerocalcare leads dozens of authors). And then there is the third dimension: the figurines of the Zerocalcare 3D Collection (Centauria with BAO Publishing, since 2020), of which I own the founding pair, Zero and the Armadillo — issues no. 1 and no. 2 of the original series.</p>
   </section>
  
   <!-- PERCORSO -->
   <section class="panel">
-    <h2>Cosa <em>manca</em></h2>
-    <p>Con Dimentica il mio nome in collezione, il filone dei "romanzi" maturi è aperto ma incompleto: mancano il dittico <strong>Macerie prime / Macerie prime – Sei mesi dopo</strong> (2017–18, il gruppo di amici davanti ai trent'anni), <strong>Scheletri</strong> (2020, il segreto degli anni dell'università) e <strong>Quando muori resta a me</strong> (2024, il viaggio col padre — il suo libro più venduto di sempre). Sul binario reportage, il tassello mancante tra Kobane e il Nido è <strong>No Sleep Till Shengal</strong> (2022, il ritorno in Iraq tra gli ezidi). Con questi cinque, la bibliografia maggiore sarebbe completa. E sul fronte statuine, la 3D Collection prosegue oltre la mia coppia fondativa con tutto il cast — Secco, il Cinghiale, Panda, Lady Cocca, la combattente curda e decine di altri: Zero e l'Armadillo sono solo l'inizio.</p>
+    <h2 class="lang-it">Cosa <em>manca</em></h2>
+    <h2 class="lang-en">What's <em>missing</em></h2>
+    <p class="lang-it">Con Dimentica il mio nome in collezione, il filone dei "romanzi" maturi è aperto ma incompleto: mancano il dittico <strong>Macerie prime / Macerie prime – Sei mesi dopo</strong> (2017–18, il gruppo di amici davanti ai trent'anni), <strong>Scheletri</strong> (2020, il segreto degli anni dell'università) e <strong>Quando muori resta a me</strong> (2024, il viaggio col padre — il suo libro più venduto di sempre). Sul binario reportage, il tassello mancante tra Kobane e il Nido è <strong>No Sleep Till Shengal</strong> (2022, il ritorno in Iraq tra gli ezidi). Con questi cinque, la bibliografia maggiore sarebbe completa. E sul fronte statuine, la 3D Collection prosegue oltre la mia coppia fondativa con tutto il cast — Secco, il Cinghiale, Panda, Lady Cocca, la combattente curda e decine di altri: Zero e l'Armadillo sono solo l'inizio.</p>
+    <p class="lang-en">With Dimentica il mio nome in my collection, the strand of mature "novels" is open but incomplete: still missing are the diptych <strong>Macerie prime / Macerie prime – Sei mesi dopo</strong> (2017–18, the group of friends facing their thirties), <strong>Scheletri</strong> (2020, the secret of the university years) and <strong>Quando muori resta a me</strong> (2024, the journey with his father — his best-selling book ever). On the reportage track, the missing piece between Kobane and the Nido is <strong>No Sleep Till Shengal</strong> (2022, the return to Iraq among the Yazidis). With these five, the major bibliography would be complete. And on the figurine front, the 3D Collection continues beyond my founding pair with the whole cast — Secco, the Boar, Panda, Lady Cocca, the Kurdish fighter and dozens more: Zero and the Armadillo are only the beginning.</p>
   </section>
  
 </main>
  
 <footer>
-  <div class="wrap">Dossier della collezione · Zerocalcare · Rebibbia → Rojava → Budapest</div>
+  <div class="wrap"><span class="lang-it">Dossier della collezione</span><span class="lang-en">Collection dossier</span> · Zerocalcare · Rebibbia → Rojava → Budapest</div>
 </footer>
  
 </body>

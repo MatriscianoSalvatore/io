@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(sed 's|<script src=\"assets/js/theme-init.js\"></script>|<script>document.documentElement.classList.add\\(\"theme-dark\"\\)</script>|' index.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,1000 --virtual-time-budget=6000 --screenshot=dark_london.png file:///Users/smatrisciano/io/__test_dark.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,5400 --virtual-time-budget=8000 --screenshot=dark_full3.png file:///Users/smatrisciano/io/__test_dark.html)",
+      "Bash(rm /Users/smatrisciano/io/__test_dark.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,5400 --virtual-time-budget=8000 --screenshot=dark_gradient_full.png file:///Users/smatrisciano/io/__test_dark.html)",
+      "Bash(sed 's|<script src=\"assets/js/theme-init.js\"></script>|<script>document.documentElement.classList.add\\(\"theme-dark\"\\);window.addEventListener\\(\"load\",function\\(\\){document.getElementById\\(\"header\"\\).style.backgroundPosition=\"left -250px\"}\\)</script>|' index.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,900 --virtual-time-budget=6000 --screenshot=dark_p0.png file:///Users/smatrisciano/io/__test_dark.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,900 --virtual-time-budget=8000 --screenshot=dark_p250.png file:///Users/smatrisciano/io/__test_dark_scrolled.html)",
+      "Bash(rm /Users/smatrisciano/io/__test_dark.html /Users/smatrisciano/io/__test_dark_scrolled.html)",
+      "Bash(sed 's|<script src=\"assets/js/theme-init.js\"></script>|<script>document.documentElement.classList.add\\(\"theme-dark\"\\)</script><style>#header{background-position: left -400px !important}</style>|' index.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,900 --virtual-time-budget=8000 --screenshot=dark_p400.png file:///Users/smatrisciano/io/__test_dark_scrolled.html)",
+      "Bash(rm /Users/smatrisciano/io/__test_dark_scrolled.html)",
+      "Bash(curl -sL -o fa.zip \"https://github.com/FortAwesome/Font-Awesome/releases/download/6.7.2/fontawesome-free-6.7.2-web.zip\")",
+      "Bash(unzip -q -o fa.zip)",
+      "Bash(sed 's|<script src=\"assets/js/theme-init.js\"></script>|<script>document.documentElement.classList.add\\(\"theme-dark\"\\)</script>|' bio.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,3000 --virtual-time-budget=8000 --screenshot=v_index_light.png file:///Users/smatrisciano/io/index.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,3000 --virtual-time-budget=8000 --screenshot=v_index_dark.png file:///Users/smatrisciano/io/__test_dark.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,3200 --virtual-time-budget=8000 --screenshot=v_bio_dark.png file:///Users/smatrisciano/io/__test_bio_dark.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,1000 --virtual-time-budget=8000 --screenshot=v_icons_dark.png file:///Users/smatrisciano/io/__test_dark.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,1000 --virtual-time-budget=8000 --screenshot=v_icons_light.png file:///Users/smatrisciano/io/index.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,3200 --virtual-time-budget=8000 --screenshot=v_bio_light.png file:///Users/smatrisciano/io/bio.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,2400 --virtual-time-budget=8000 --screenshot=v2_comics.png file:///Users/smatrisciano/io/comics.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,1200 --virtual-time-budget=8000 --screenshot=v2_library.png file:///Users/smatrisciano/io/library.html)",
+      "Bash(sed 's|<html lang=\"it\">|<html lang=\"it\" data-lang=\"en\">|' comics.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,700 --virtual-time-budget=8000 --screenshot=v6_comics_it.png file:///Users/smatrisciano/io/comics.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,700 --virtual-time-budget=8000 --screenshot=v6_comics_en.png file:///Users/smatrisciano/io/__test_comics_en.html)",
+      "Bash(rm /Users/smatrisciano/io/__test_comics_en.html)",
+      "Bash(python3 -c ' *)",
+      "Bash(python3 /private/tmp/claude-501/-Users-smatrisciano-io/e96940e6-1173-4d4a-be76-77e34f5e767b/scratchpad/check_xmen.py)",
+      "Bash(python3 /private/tmp/claude-501/-Users-smatrisciano-io/e96940e6-1173-4d4a-be76-77e34f5e767b/scratchpad/verify_batman.py)",
+      "Bash(sed 's|<html lang=\"it\">|<html lang=\"it\" data-lang=\"en\">|' batman.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,2100 --virtual-time-budget=9000 --screenshot=v7_batman_en.png file:///Users/smatrisciano/io/__test_b_en.html)",
+      "Bash('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome' --headless --disable-gpu --hide-scrollbars --window-size=1600,2100 --virtual-time-budget=9000 --screenshot=v7_batman_it.png file:///Users/smatrisciano/io/batman.html)",
+      "Bash(rm /Users/smatrisciano/io/__test_b_en.html)",
+      "Bash(sips -c 700 1600 --cropOffset 1400 0 v7_batman_en.png --out v7_b_en_crop.png)"
+    ]
+  }
+}

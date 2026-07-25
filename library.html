@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La mia libreria — Salvatore Matrisciano</title>
+<meta name="description" content="La mia libreria: le collezioni di fumetti e, presto, i libri che ho letto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
+<link rel="stylesheet" href="assets/css/lang.css">
+<script src="assets/js/lang.js"></script>
+<style>
+  :root{
+    --notte:#0E0C0A;         /* dark wood of the bookcase */
+    --pannello:#1A1512;
+    --pietra:#F0EBDE;        /* paper */
+    --pietra-2:#E4DCC9;
+    --china:#16120C;
+    --nebbia:#B3A889;
+    --ottone:#C9972C;        /* brass of old libraries */
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} *{transition:none !important;animation:none !important} }
+  body{
+    background:var(--notte);
+    color:var(--nebbia);
+    font-family:'Spectral',Georgia,serif;
+    font-size:17px;
+    line-height:1.65;
+  }
+  .wrap{max-width:980px;margin:0 auto;padding:0 20px}
+
+  header{
+    padding:64px 0 40px;
+    background:
+      radial-gradient(ellipse 460px 300px at 80% -8%, rgba(201,151,44,.16), transparent 70%),
+      var(--notte);
+    border-bottom:4px solid var(--ottone);
+  }
+  .corner-box{
+    display:inline-flex;flex-direction:column;align-items:center;justify-content:center;
+    background:var(--pietra);color:var(--china);
+    border:3px solid var(--china);
+    padding:8px 12px;margin-bottom:22px;
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;
+    text-transform:uppercase;letter-spacing:.06em;font-size:13px;line-height:1.25;
+    box-shadow:6px 6px 0 var(--ottone);
+  }
+  .corner-box .big{font-family:'Anton',sans-serif;font-size:30px;letter-spacing:.02em}
+  h1{
+    font-family:'Anton',sans-serif;
+    font-size:clamp(44px,8vw,86px);
+    line-height:.95;letter-spacing:.01em;
+    color:#fff;text-transform:uppercase;
+  }
+  h1 .oro{color:var(--ottone)}
+  .hero-sub{margin-top:18px;max-width:660px;font-size:18px}
+
+  main{padding:56px 0 30px}
+  .scaffali{
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(300px, 1fr));
+    gap:34px;
+  }
+  .scaffale{
+    display:block;text-decoration:none;
+    background:var(--pietra);color:var(--china);
+    border:3px solid var(--china);
+    box-shadow:10px 10px 0 rgba(0,0,0,.5);
+    transition:transform .25s ease, box-shadow .25s ease;
+  }
+  a.scaffale:hover{
+    transform:translate(-4px,-4px);
+    box-shadow:16px 16px 0 rgba(0,0,0,.55), 0 0 0 3px var(--ottone);
+  }
+  .scaffale .masthead{
+    background:#171310;color:#fff;
+    padding:14px 18px 11px;
+    border-bottom:3px solid var(--china);
+    display:flex;justify-content:space-between;align-items:flex-end;gap:12px;
+  }
+  .scaffale .masthead h2{
+    font-family:'Anton',sans-serif;text-transform:uppercase;
+    font-size:clamp(22px,3vw,30px);line-height:1;
+  }
+  .scaffale .masthead .num{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;
+    letter-spacing:.12em;text-transform:uppercase;white-space:nowrap;
+    color:var(--ottone);
+  }
+  .halftone{
+    height:10px;border-bottom:3px solid var(--china);
+    background-image:radial-gradient(circle, rgba(22,18,12,.5) 1.3px, transparent 1.6px);
+    background-size:9px 9px;background-color:rgba(201,151,44,.22);
+  }
+  .anteprima{
+    aspect-ratio:16/10;position:relative;overflow:hidden;
+    border-bottom:3px solid var(--china);
+    background:var(--pannello);
+  }
+  .anteprima img{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    transition:transform .35s ease;
+  }
+  a.scaffale:hover .anteprima img{transform:scale(1.045)}
+  .anteprima .presto{
+    position:absolute;inset:0;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:8px;
+    color:var(--pietra-2);
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;
+    letter-spacing:.14em;text-transform:uppercase;font-size:15px;
+    background:
+      repeating-linear-gradient(-45deg, rgba(201,151,44,.09) 0 14px, transparent 14px 28px),
+      var(--pannello);
+  }
+  .anteprima .presto .grande{font-family:'Anton',sans-serif;font-size:34px;letter-spacing:.03em;color:var(--ottone)}
+  .scaffale .didascalia{padding:14px 18px 16px;font-size:15.5px;line-height:1.5}
+  .scaffale .leggi{
+    display:inline-block;margin-top:10px;
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:14px;
+    letter-spacing:.12em;text-transform:uppercase;
+    color:var(--china);border-bottom:3px solid var(--ottone);
+  }
+  .scaffale.muto{opacity:.92;cursor:default}
+
+  footer{
+    margin-top:40px;padding:26px 0 46px;
+    border-top:1px solid rgba(179,168,137,.3);
+    font-family:'Barlow Condensed',sans-serif;font-size:14px;
+    letter-spacing:.08em;text-transform:uppercase;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="corner-box"><span class="lang-it">La mia</span><span class="lang-en">My</span><span class="big lang-it">Libreria</span><span class="big lang-en">Library</span></div>
+    <h1 class="lang-it">Tra i miei <span class="oro">scaffali</span></h1>
+    <h1 class="lang-en">Among my <span class="oro">shelves</span></h1>
+    <p class="hero-sub lang-it">
+      Quello che leggo, raccolgo e rileggo: le mie collezioni di fumetti e,
+      prossimamente, anche i libri che mi sono rimasti addosso.
+    </p>
+    <p class="hero-sub lang-en">
+      What I read, collect and read again: my comic book collections and,
+      coming soon, the books that stayed with me.
+    </p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="scaffali">
+
+      <a class="scaffale" href="comics">
+        <div class="masthead"><h2><span class="lang-it">Fumetti</span><span class="lang-en">Comics</span></h2><span class="num"><span class="lang-it">5 collezioni</span><span class="lang-en">5 collections</span></span></div>
+        <div class="halftone"></div>
+        <div class="anteprima"><img src="copertine/spiderman/01-masterworks.jpg" alt="Spider-Man Masterworks cover"></div>
+        <div class="didascalia">
+          <span class="lang-it">Spider-Man, Batman, Wolverine &amp; X-Men, Zerocalcare e Rat-Man:
+          le mie collezioni, albo per albo.</span><span class="lang-en">Spider-Man, Batman, Wolverine &amp; X-Men, Zerocalcare and Rat-Man:
+          my collections, volume by volume.</span>
+          <span class="leggi"><span class="lang-it">Entra nello scaffale</span><span class="lang-en">Browse the shelf</span></span>
+        </div>
+      </a>
+
+      <div class="scaffale muto">
+        <div class="masthead"><h2><span class="lang-it">Libri</span><span class="lang-en">Books</span></h2><span class="num"><span class="lang-it">In arrivo</span><span class="lang-en">Coming soon</span></span></div>
+        <div class="halftone"></div>
+        <div class="anteprima">
+          <div class="presto">
+            <span class="grande lang-it">Prossimamente</span>
+            <span class="grande lang-en">Coming soon</span>
+            <span class="lang-it">Sto ancora sistemando lo scaffale</span>
+            <span class="lang-en">I'm still arranging this shelf</span>
+          </div>
+        </div>
+        <div class="didascalia">
+          <span class="lang-it">I romanzi e i saggi che ho letto e che consiglierei: ci sto lavorando.</span><span class="lang-en">The novels and essays I have read and would recommend: I'm working on it.</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">&copy; Salvatore Matrisciano</div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+/*
+	Italian/English language toggle for the library and comics pages.
+	Default is Italian: .lang-en content is hidden until html[data-lang="en"]
+	is set (by assets/js/lang.js, persisted in localStorage as 'sm-lang').
+	Without JavaScript the pages simply show the Italian text.
+*/
+
+html:not([data-lang="en"]) .lang-en { display: none !important; }
+html[data-lang="en"] .lang-it { display: none !important; }
+
+/* Slider: rounded pill with round ITA/UK flags, same family as the
+   light/dark theme toggle of the main site. */
+
+.lang-toggle {
+	position: absolute;
+	top: 14px;
+	right: 14px;
+	z-index: 1000;
+	width: 58px;
+	height: 29px;
+	padding: 0;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 999px;
+	background: rgba(16, 13, 10, 0.82);
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	transition: border-color 0.25s ease;
+}
+
+.lang-toggle:hover {
+	border-color: rgba(255, 255, 255, 0.55);
+}
+
+.lang-toggle:focus-visible {
+	outline: 2px solid rgba(255, 255, 255, 0.7);
+	outline-offset: 2px;
+}
+
+.lang-toggle .lt-flag {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 19px;
+	height: 19px;
+	border-radius: 50%;
+	background-size: cover;
+	background-position: center;
+	opacity: 0.4;
+	filter: saturate(0.55);
+	transition: opacity 0.25s ease, filter 0.25s ease;
+	pointer-events: none;
+	z-index: 2;
+}
+
+.lang-toggle .lt-it {
+	left: 6px;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 3 3'%3E%3Crect width='1' height='3' fill='%23009246'/%3E%3Crect x='1' width='1' height='3' fill='%23ffffff'/%3E%3Crect x='2' width='1' height='3' fill='%23ce2b37'/%3E%3C/svg%3E");
+}
+
+.lang-toggle .lt-en {
+	right: 6px;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' fill='%23012169'/%3E%3Cpath d='M0 0L60 60M60 0L0 60' stroke='%23ffffff' stroke-width='12'/%3E%3Cpath d='M0 0L60 60M60 0L0 60' stroke='%23C8102E' stroke-width='6'/%3E%3Cpath d='M30 0V60M0 30H60' stroke='%23ffffff' stroke-width='20'/%3E%3Cpath d='M30 0V60M0 30H60' stroke='%23C8102E' stroke-width='12'/%3E%3C/svg%3E");
+}
+
+html:not([data-lang="en"]) .lang-toggle .lt-it,
+html[data-lang="en"] .lang-toggle .lt-en {
+	opacity: 1;
+	filter: none;
+}
+
+/* Sliding ring around the active flag */
+.lang-toggle .lt-knob {
+	position: absolute;
+	top: 2px;
+	left: 4px;
+	width: 23px;
+	height: 23px;
+	border-radius: 50%;
+	border: 2px solid rgba(255, 255, 255, 0.9);
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+	transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+	pointer-events: none;
+	z-index: 3;
+}
+
+html[data-lang="en"] .lang-toggle .lt-knob {
+	transform: translateX(25px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.lang-toggle .lt-knob,
+	.lang-toggle .lt-flag { transition: none; }
+}

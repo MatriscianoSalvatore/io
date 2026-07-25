@@ -6,6 +6,8 @@
 <title>Fumetti Batman</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/lang.css">
+<script src="assets/js/lang.js"></script>
 <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
 <link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
 <style>
@@ -67,7 +69,7 @@
     font-family:'Barlow Condensed',sans-serif;font-weight:600;
     text-transform:uppercase;letter-spacing:.1em;font-size:13px;
   }
-  .hero-meta span{
+  .hero-meta > span{
     border:1px solid rgba(154,166,189,.4);padding:5px 12px;color:var(--nebbia);
   }
  
@@ -233,14 +235,18 @@
 <header>
   <div class="wrap">
     <div class="corner-box">
-      <span>Collezione di</span>
+      <span class="lang-it">Collezione di</span>
+      <span class="lang-en">A collection of</span>
       <span class="big">14</span>
-      <span>Volumi</span>
+      <span class="lang-it">Volumi</span>
+      <span class="lang-en">Volumes</span>
     </div>
-    <h1>La mia collezione<br><span class="giallo">Batman</span></h1>
-    <p class="hero-sub">Quattordici volumi che raccontano l'intera parabola del Cavaliere Oscuro: dalle origini del 1939 al futuro immaginato da Frank Miller, ordinati secondo la linea del tempo interna delle storie — dall'anno uno di Gotham al suo crepuscolo.</p>
+    <h1 class="lang-it">La mia collezione<br><span class="giallo">Batman</span></h1>
+    <h1 class="lang-en">My <span class="giallo">Batman</span><br>collection</h1>
+    <p class="hero-sub lang-it">Quattordici volumi che raccontano l'intera parabola del Cavaliere Oscuro: dalle origini del 1939 al futuro immaginato da Frank Miller, ordinati secondo la linea del tempo interna delle storie — dall'anno uno di Gotham al suo crepuscolo.</p>
+    <p class="hero-sub lang-en">Fourteen volumes tracing the Dark Knight's entire arc: from the 1939 origins to the future imagined by Frank Miller, arranged along the internal timeline of the stories — from Gotham's year one to its twilight.</p>
     <div class="hero-meta">
-      <span>Edizioni Panini Comics · DC</span>
+      <span><span class="lang-it">Edizioni Panini Comics</span><span class="lang-en">Panini Comics editions</span> · DC</span>
       <span>Gotham City</span>
       <span>1939 → 2018</span>
     </div>
@@ -266,29 +272,34 @@
             <img src="copertine/batman/01-golden-age.jpg" alt="Copertina DC Classic: Batman 1" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ Inizio di tutto</span>
-            <span class="badge">Era Kane/Finger</span>
+            <span class="badge start lang-it">★ Inizio di tutto</span>
+            <span class="badge start lang-en">★ Where it all began</span>
+            <span class="badge lang-it">Era Kane/Finger</span>
+            <span class="badge lang-en">The Kane/Finger era</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>DC Classic (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Bob Kane e Bill Finger, con Jerry Robinson</dd></div>
-            <div><dt>Contiene</dt><dd>Le prime storie da Detective Comics #27 in poi e Batman #1 (1939–40)</dd></div>
-            <div><dt>Ambientazione</dt><dd>L'anno zero del mito: la Gotham pulp delle origini</dd></div>
+            <div><dt><span class="lang-it">Collana</span><span class="lang-en">Imprint</span></dt><dd><span class="lang-it">DC Classic (cartonato)</span><span class="lang-en">DC Classic (hardcover)</span></dd></div>
+            <div><dt><span class="lang-it">Autori</span><span class="lang-en">Creators</span></dt><dd><span class="lang-it">Bob Kane e Bill Finger, con Jerry Robinson</span><span class="lang-en">Bob Kane and Bill Finger, with Jerry Robinson</span></dd></div>
+            <div><dt><span class="lang-it">Contiene</span><span class="lang-en">Contains</span></dt><dd><span class="lang-it">Le prime storie da Detective Comics #27 in poi e Batman #1 (1939–40)</span><span class="lang-en">The earliest stories from Detective Comics #27 onward, plus Batman #1 (1939–40)</span></dd></div>
+            <div><dt><span class="lang-it">Ambientazione</span><span class="lang-en">Setting</span></dt><dd><span class="lang-it">L'anno zero del mito: la Gotham pulp delle origini</span><span class="lang-en">Year zero of the myth: the pulp Gotham of the origins</span></dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il punto zero assoluto: Detective Comics #27 (maggio 1939) presenta al mondo il "Bat-Man", poche pagine dopo arriva l'origine — i genitori uccisi nel vicolo, il giuramento, il pipistrello dalla finestra — e in rapida successione esordiscono Robin (Detective #38) e, su Batman #1, Joker e Catwoman insieme nello stesso albo. Un Batman più cupo e spiccio di quello che verrà, che nelle primissime storie non esita nemmeno a usare la pistola.</p>
-          <h3>Curiosità da collezionista</h3>
-          <p>Detective Comics #27 contende ad Action Comics #1 il titolo di albo più prezioso della storia: una copia è stata battuta all'asta per oltre un milione e mezzo di dollari. E per decenni il solo Bob Kane fu accreditato come creatore: Bill Finger, che inventò quasi tutto (costume, Gotham, Bruce Wayne, Joker), è stato riconosciuto ufficialmente dalla DC solo nel 2015.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> da qui nasce tutto — il serial cinematografico del 1943, il telefilm pop di Adam West del 1966, e ogni incarnazione successiva. L'origine nel vicolo di queste pagine è stata rimessa in scena praticamente in ogni film, da Burton a Nolan a The Batman.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il punto zero assoluto: Detective Comics #27 (maggio 1939) presenta al mondo il "Bat-Man", poche pagine dopo arriva l'origine — i genitori uccisi nel vicolo, il giuramento, il pipistrello dalla finestra — e in rapida successione esordiscono Robin (Detective #38) e, su Batman #1, Joker e Catwoman insieme nello stesso albo. Un Batman più cupo e spiccio di quello che verrà, che nelle primissime storie non esita nemmeno a usare la pistola.</p>
+          <p class="lang-en">The absolute point zero: Detective Comics #27 (May 1939) introduces the "Bat-Man" to the world; the origin arrives just a few pages later — the parents gunned down in the alley, the vow, the bat at the window — and in rapid succession come the debuts of Robin (Detective #38) and, in Batman #1, the Joker and Catwoman together in the same issue. This is a darker, more ruthless Batman than the one to come, who in the very first stories doesn't even hesitate to use a gun.</p>
+          <h3 class="lang-it">Curiosità da collezionista</h3><h3 class="lang-en">Collector's trivia</h3>
+          <p class="lang-it">Detective Comics #27 contende ad Action Comics #1 il titolo di albo più prezioso della storia: una copia è stata battuta all'asta per oltre un milione e mezzo di dollari. E per decenni il solo Bob Kane fu accreditato come creatore: Bill Finger, che inventò quasi tutto (costume, Gotham, Bruce Wayne, Joker), è stato riconosciuto ufficialmente dalla DC solo nel 2015.</p>
+          <p class="lang-en">Detective Comics #27 vies with Action Comics #1 for the title of most valuable issue in history: one copy sold at auction for over a million and a half dollars. And for decades Bob Kane alone was credited as creator: Bill Finger, who invented nearly everything (the costume, Gotham, Bruce Wayne, the Joker), was only officially recognized by DC in 2015.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> da qui nasce tutto — il serial cinematografico del 1943, il telefilm pop di Adam West del 1966, e ogni incarnazione successiva. L'origine nel vicolo di queste pagine è stata rimessa in scena praticamente in ogni film, da Burton a Nolan a The Batman.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> everything starts here — the 1943 film serial, Adam West's pop TV show of 1966, and every incarnation since. The alley origin from these pages has been restaged in practically every film, from Burton to Nolan to The Batman.</div>
         </div>
       </article>
     </section>
  
     <!-- 2: Anno Uno -->
     <section class="stop">
-      <div class="stop-dot"><span class="n">2</span><span class="y">Anno 1</span></div>
+      <div class="stop-dot"><span class="n">2</span><span class="y"><span class="lang-it">Anno 1</span><span class="lang-en">Year 1</span></span></div>
       <article class="albo">
-        <div class="masthead"><h2>Anno Uno</h2><span class="anno">USA 1987</span></div>
+        <div class="masthead"><h2><span class="lang-it">Anno Uno</span><span class="lang-en">Year One</span></h2><span class="anno">USA 1987</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot b9">
@@ -300,29 +311,34 @@
             <img src="copertine/batman/02-anno-uno.jpg" alt="Copertina Batman: Anno Uno" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ L'origine moderna definitiva</span>
-            <span class="badge">Fondamento di tutta la Gotham noir</span>
+            <span class="badge start lang-it">★ L'origine moderna definitiva</span>
+            <span class="badge start lang-en">★ The definitive modern origin</span>
+            <span class="badge lang-it">Fondamento di tutta la Gotham noir</span>
+            <span class="badge lang-en">Foundation of all noir Gotham</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>DC Library (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Frank Miller (testi), David Mazzucchelli (disegni), colori di Richmond Lewis</dd></div>
-            <div><dt>Contiene</dt><dd>Batman #404–407 (1987)</dd></div>
-            <div><dt>Ambientazione</dt><dd>Il primo anno: Bruce Wayne e Jim Gordon arrivano a Gotham</dd></div>
+            <div><dt><span class="lang-it">Collana</span><span class="lang-en">Imprint</span></dt><dd><span class="lang-it">DC Library (cartonato)</span><span class="lang-en">DC Library (hardcover)</span></dd></div>
+            <div><dt><span class="lang-it">Autori</span><span class="lang-en">Creators</span></dt><dd><span class="lang-it">Frank Miller (testi), David Mazzucchelli (disegni), colori di Richmond Lewis</span><span class="lang-en">Frank Miller (script), David Mazzucchelli (art), colors by Richmond Lewis</span></dd></div>
+            <div><dt><span class="lang-it">Contiene</span><span class="lang-en">Contains</span></dt><dd>Batman #404–407 (1987)</dd></div>
+            <div><dt><span class="lang-it">Ambientazione</span><span class="lang-en">Setting</span></dt><dd><span class="lang-it">Il primo anno: Bruce Wayne e Jim Gordon arrivano a Gotham</span><span class="lang-en">The first year: Bruce Wayne and Jim Gordon arrive in Gotham</span></dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>La riscrittura definitiva delle origini, raccontata in parallelo attraverso due uomini che sbarcano nella città più corrotta d'America: Bruce Wayne, tornato dopo dodici anni per iniziare la sua guerra tra errori e ferite, e il tenente Jim Gordon, poliziotto onesto in un dipartimento marcio. Qui nascono il pipistrello dalla finestra riletto in chiave adulta, la Selina Kyle di strada, il patto Batman/Gordon e la Gotham dominata dai Falcone. È il fumetto che ha fissato per sempre il tono realistico del personaggio.</p>
-          <h3>Cosa apre</h3>
-          <p>Tutto il filone noir della collezione: Il lungo Halloween è il suo seguito dichiarato — stessa Gotham, stessi Falcone, stesso Gordon — e l'intera trilogia di Loeb e Sale ne è la prosecuzione diretta. È anche l'altra metà del "canone Miller" insieme al Ritorno del Cavaliere Oscuro: l'inizio e la fine dello stesso uomo.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> Batman Begins di Nolan ne adatta interi passaggi (l'ascesa di Gordon, la corruzione di Gotham, perfino singole inquadrature), The Batman (2022) ne eredita il taglio investigativo, e nel 2011 ne è stato tratto un film animato fedelissimo. Ogni versione "realistica" di Gotham parte da qui.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">La riscrittura definitiva delle origini, raccontata in parallelo attraverso due uomini che sbarcano nella città più corrotta d'America: Bruce Wayne, tornato dopo dodici anni per iniziare la sua guerra tra errori e ferite, e il tenente Jim Gordon, poliziotto onesto in un dipartimento marcio. Qui nascono il pipistrello dalla finestra riletto in chiave adulta, la Selina Kyle di strada, il patto Batman/Gordon e la Gotham dominata dai Falcone. È il fumetto che ha fissato per sempre il tono realistico del personaggio.</p>
+          <p class="lang-en">The definitive rewrite of the origins, told in parallel through two men landing in the most corrupt city in America: Bruce Wayne, back after twelve years to begin his war amid mistakes and wounds, and Lieutenant Jim Gordon, an honest cop in a rotten department. This is where the bat at the window gets its adult retelling, where street-level Selina Kyle, the Batman/Gordon pact and a Gotham ruled by the Falcones are born. It's the comic that fixed the character's realistic tone forever.</p>
+          <h3 class="lang-it">Cosa apre</h3><h3 class="lang-en">What it opens up</h3>
+          <p class="lang-it">Tutto il filone noir della collezione: Il lungo Halloween è il suo seguito dichiarato — stessa Gotham, stessi Falcone, stesso Gordon — e l'intera trilogia di Loeb e Sale ne è la prosecuzione diretta. È anche l'altra metà del "canone Miller" insieme al Ritorno del Cavaliere Oscuro: l'inizio e la fine dello stesso uomo.</p>
+          <p class="lang-en">The collection's entire noir strand: The Long Halloween is its declared sequel — same Gotham, same Falcones, same Gordon — and the whole Loeb and Sale trilogy is its direct continuation. It's also the other half of the "Miller canon" alongside The Dark Knight Returns: the beginning and the end of the same man.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> Batman Begins di Nolan ne adatta interi passaggi (l'ascesa di Gordon, la corruzione di Gotham, perfino singole inquadrature), The Batman (2022) ne eredita il taglio investigativo, e nel 2011 ne è stato tratto un film animato fedelissimo. Ogni versione "realistica" di Gotham parte da qui.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> Nolan's Batman Begins adapts entire passages (Gordon's rise, Gotham's corruption, even individual shots), The Batman (2022) inherits its investigative slant, and a remarkably faithful animated film was made from it in 2011. Every "realistic" version of Gotham starts here.</div>
         </div>
       </article>
     </section>
  
     <!-- 3: L'uomo che ride -->
     <section class="stop">
-      <div class="stop-dot"><span class="n">3</span><span class="y">Anno 1</span></div>
+      <div class="stop-dot"><span class="n">3</span><span class="y"><span class="lang-it">Anno 1</span><span class="lang-en">Year 1</span></span></div>
       <article class="albo ardesia">
-        <div class="masthead"><h2>L'uomo che ride</h2><span class="anno">USA 2005</span></div>
+        <div class="masthead"><h2><span class="lang-it">L'uomo che ride</span><span class="lang-en">The Man Who Laughs</span></h2><span class="anno">USA 2005</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot b10">
@@ -334,29 +350,34 @@
             <img src="copertine/batman/03-uomo-che-ride.jpg" alt="Copertina Batman: L'uomo che ride" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ Il primo scontro col Joker</span>
-            <span class="badge">Seguito diretto di Anno Uno</span>
+            <span class="badge start lang-it">★ Il primo scontro col Joker</span>
+            <span class="badge start lang-en">★ The first clash with the Joker</span>
+            <span class="badge lang-it">Seguito diretto di Anno Uno</span>
+            <span class="badge lang-en">Direct sequel to Year One</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>DC Library (cartonato) </dd></div>
-            <div><dt>Autori</dt><dd>Ed Brubaker (testi), Doug Mahnke (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Batman: The Man Who Laughs (graphic novel, 2005)</dd></div>
-            <div><dt>Ambientazione</dt><dd>Fine del primo anno: riprende esattamente dove finisce Anno Uno</dd></div>
+            <div><dt><span class="lang-it">Collana</span><span class="lang-en">Imprint</span></dt><dd><span class="lang-it">DC Library (cartonato)</span><span class="lang-en">DC Library (hardcover)</span> </dd></div>
+            <div><dt><span class="lang-it">Autori</span><span class="lang-en">Creators</span></dt><dd><span class="lang-it">Ed Brubaker (testi), Doug Mahnke (disegni)</span><span class="lang-en">Ed Brubaker (script), Doug Mahnke (art)</span></dd></div>
+            <div><dt><span class="lang-it">Contiene</span><span class="lang-en">Contains</span></dt><dd>Batman: The Man Who Laughs (graphic novel, 2005)</dd></div>
+            <div><dt><span class="lang-it">Ambientazione</span><span class="lang-en">Setting</span></dt><dd><span class="lang-it">Fine del primo anno: riprende esattamente dove finisce Anno Uno</span><span class="lang-en">End of the first year: picks up exactly where Year One leaves off</span></dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il tassello che salda le origini al resto: Anno Uno si chiude con Gordon che annuncia a Batman l'arrivo di un criminale chiamato Joker, e questa storia racconta proprio quel primo incontro. Brubaker riscrive in chiave noir moderna il debutto del clown di Batman #1 del 1940 — le vittime col sorriso, le minacce annunciate in diretta, l'avvelenamento del bacino idrico — mostrando il momento in cui Gotham e il suo protettore scoprono che i gangster non sono più il problema peggiore.</p>
-          <h3>Il suo ruolo nella collezione</h3>
-          <p>È il ponte perfetto tra il volume 2 e il volume 4: da un lato prosegue Anno Uno, dall'altro è la rilettura moderna proprio di quel Batman #1 che possiedo nel volume della Golden Age — la stessa storia, a sessantacinque anni di distanza.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> il Joker "annunciatore di morti in diretta" di questa storia è un modello riconoscibile per le versioni cinematografiche più mediatiche del personaggio, e la sua impostazione da poliziesco è la stessa che The Batman (2022) ha portato al cinema.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il tassello che salda le origini al resto: Anno Uno si chiude con Gordon che annuncia a Batman l'arrivo di un criminale chiamato Joker, e questa storia racconta proprio quel primo incontro. Brubaker riscrive in chiave noir moderna il debutto del clown di Batman #1 del 1940 — le vittime col sorriso, le minacce annunciate in diretta, l'avvelenamento del bacino idrico — mostrando il momento in cui Gotham e il suo protettore scoprono che i gangster non sono più il problema peggiore.</p>
+          <p class="lang-en">The piece that welds the origins to everything else: Year One closes with Gordon telling Batman about the arrival of a criminal called the Joker, and this story recounts precisely that first encounter. Brubaker rewrites the clown's debut from 1940's Batman #1 in a modern noir key — the grinning victims, threats announced on live broadcast, the poisoning of the reservoir — showing the moment Gotham and its protector discover that gangsters are no longer the worst of their problems.</p>
+          <h3 class="lang-it">Il suo ruolo nella collezione</h3><h3 class="lang-en">Its role in the collection</h3>
+          <p class="lang-it">È il ponte perfetto tra il volume 2 e il volume 4: da un lato prosegue Anno Uno, dall'altro è la rilettura moderna proprio di quel Batman #1 che possiedo nel volume della Golden Age — la stessa storia, a sessantacinque anni di distanza.</p>
+          <p class="lang-en">It's the perfect bridge between volume 2 and volume 4: on one side it continues Year One, on the other it's the modern retelling of that very Batman #1 I own in the Golden Age volume — the same story, sixty-five years apart.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> il Joker "annunciatore di morti in diretta" di questa storia è un modello riconoscibile per le versioni cinematografiche più mediatiche del personaggio, e la sua impostazione da poliziesco è la stessa che The Batman (2022) ha portato al cinema.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> this story's Joker, announcing his murders on live broadcast, is a recognizable model for the character's most media-driven film versions, and its police-procedural framework is the same one The Batman (2022) brought to the screen.</div>
         </div>
       </article>
     </section>
  
     <!-- 4 -->
     <section class="stop">
-      <div class="stop-dot"><span class="n">4</span><span class="y">Anno 2</span></div>
+      <div class="stop-dot"><span class="n">4</span><span class="y"><span class="lang-it">Anno 2</span><span class="lang-en">Year 2</span></span></div>
       <article class="albo ardesia">
-        <div class="masthead"><h2>Il lungo Halloween</h2><span class="anno">USA 1996–1997</span></div>
+        <div class="masthead"><h2><span class="lang-it">Il lungo Halloween</span><span class="lang-en">The Long Halloween</span></h2><span class="anno">USA 1996–1997</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot b2">
@@ -368,29 +389,34 @@
             <img src="copertine/batman/02-lungo-halloween.jpg" alt="Copertina Batman: Il lungo Halloween" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ Inizio trilogia Loeb/Sale</span>
-            <span class="badge">Giallo in 13 capitoli</span>
+            <span class="badge start lang-it">★ Inizio trilogia Loeb/Sale</span>
+            <span class="badge start lang-en">★ Start of the Loeb/Sale trilogy</span>
+            <span class="badge lang-it">Giallo in 13 capitoli</span>
+            <span class="badge lang-en">A mystery in 13 chapters</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>DC Library (cartonato) </dd></div>
-            <div><dt>Autori</dt><dd>Jeph Loeb (testi), Tim Sale (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Batman: The Long Halloween #1–13 (maxiserie 1996–97)</dd></div>
-            <div><dt>Ambientazione</dt><dd>Secondo anno di carriera, subito dopo Anno Uno di Miller</dd></div>
+            <div><dt><span class="lang-it">Collana</span><span class="lang-en">Imprint</span></dt><dd><span class="lang-it">DC Library (cartonato)</span><span class="lang-en">DC Library (hardcover)</span> </dd></div>
+            <div><dt><span class="lang-it">Autori</span><span class="lang-en">Creators</span></dt><dd><span class="lang-it">Jeph Loeb (testi), Tim Sale (disegni)</span><span class="lang-en">Jeph Loeb (script), Tim Sale (art)</span></dd></div>
+            <div><dt><span class="lang-it">Contiene</span><span class="lang-en">Contains</span></dt><dd><span class="lang-it">Batman: The Long Halloween #1–13 (maxiserie 1996–97)</span><span class="lang-en">Batman: The Long Halloween #1–13 (1996–97 maxiseries)</span></dd></div>
+            <div><dt><span class="lang-it">Ambientazione</span><span class="lang-en">Setting</span></dt><dd><span class="lang-it">Secondo anno di carriera, subito dopo Anno Uno di Miller</span><span class="lang-en">Second year of the career, right after Miller's Year One</span></dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il grande giallo di Gotham: per un anno intero, a ogni festività, il killer Holiday elimina un membro della famiglia mafiosa Falcone, mentre Batman, il capitano Gordon e il procuratore Harvey Dent stringono un patto per abbattere il crimine organizzato. È la storia della caduta di Dent e della nascita di Due Facce, e il racconto del passaggio di Gotham dall'era dei gangster a quella dei "mostri". Considerato uno dei tre-quattro Batman fondamentali di sempre.</p>
-          <h3>Cosa apre</h3>
-          <p>È il primo capitolo della trilogia di Loeb e Sale su Gotham (con Vittoria oscura e Vacanze romane) e il ponte narrativo ideale tra le origini e il Batman maturo.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> è il fumetto che più ha plasmato il Batman cinematografico moderno — Il cavaliere oscuro di Nolan ne riprende il triangolo Batman/Gordon/Dent e la parabola di Due Facce, The Batman (2022) la struttura da giallo seriale. Adattato ufficialmente nel film animato in due parti del 2021.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il grande giallo di Gotham: per un anno intero, a ogni festività, il killer Holiday elimina un membro della famiglia mafiosa Falcone, mentre Batman, il capitano Gordon e il procuratore Harvey Dent stringono un patto per abbattere il crimine organizzato. È la storia della caduta di Dent e della nascita di Due Facce, e il racconto del passaggio di Gotham dall'era dei gangster a quella dei "mostri". Considerato uno dei tre-quattro Batman fondamentali di sempre.</p>
+          <p class="lang-en">Gotham's great whodunit: for a full year, on every holiday, the killer Holiday eliminates a member of the Falcone crime family, while Batman, Captain Gordon and District Attorney Harvey Dent forge a pact to bring down organized crime. It's the story of Dent's fall and the birth of Two-Face, and the tale of Gotham's passage from the era of gangsters to that of the "freaks". Considered one of the three or four essential Batman stories of all time.</p>
+          <h3 class="lang-it">Cosa apre</h3><h3 class="lang-en">What it opens up</h3>
+          <p class="lang-it">È il primo capitolo della trilogia di Loeb e Sale su Gotham (con Vittoria oscura e Vacanze romane) e il ponte narrativo ideale tra le origini e il Batman maturo.</p>
+          <p class="lang-en">It's the first chapter of Loeb and Sale's Gotham trilogy (with Dark Victory and When in Rome) and the ideal narrative bridge between the origins and the mature Batman.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> è il fumetto che più ha plasmato il Batman cinematografico moderno — Il cavaliere oscuro di Nolan ne riprende il triangolo Batman/Gordon/Dent e la parabola di Due Facce, The Batman (2022) la struttura da giallo seriale. Adattato ufficialmente nel film animato in due parti del 2021.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> it's the comic that most shaped the modern cinematic Batman — Nolan's The Dark Knight borrows its Batman/Gordon/Dent triangle and Two-Face's arc, The Batman (2022) its serial-mystery structure. Officially adapted as the two-part animated film of 2021.</div>
         </div>
       </article>
     </section>
  
     <!-- 5 -->
     <section class="stop">
-      <div class="stop-dot"><span class="n">5</span><span class="y">Anno 3</span></div>
+      <div class="stop-dot"><span class="n">5</span><span class="y"><span class="lang-it">Anno 3</span><span class="lang-en">Year 3</span></span></div>
       <article class="albo ardesia">
-        <div class="masthead"><h2>Vittoria oscura</h2><span class="anno">USA 1999–2000</span></div>
+        <div class="masthead"><h2><span class="lang-it">Vittoria oscura</span><span class="lang-en">Dark Victory</span></h2><span class="anno">USA 1999–2000</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot b3">
@@ -402,27 +428,31 @@
             <img src="copertine/batman/03-vittoria-oscura.jpg" alt="Copertina Batman: Vittoria oscura" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge">Seguito diretto del Lungo Halloween</span>
-            <span class="badge start">★ Origine di Robin</span>
+            <span class="badge lang-it">Seguito diretto del Lungo Halloween</span>
+            <span class="badge lang-en">Direct sequel to The Long Halloween</span>
+            <span class="badge start lang-it">★ Origine di Robin</span>
+            <span class="badge start lang-en">★ Robin's origin</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>DC Library (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Jeph Loeb (testi), Tim Sale (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Batman: Dark Victory #0–13 (maxiserie 1999–2000)</dd></div>
-            <div><dt>Ambientazione</dt><dd>Terzo anno: le conseguenze della caduta di Harvey Dent</dd></div>
+            <div><dt><span class="lang-it">Collana</span><span class="lang-en">Imprint</span></dt><dd><span class="lang-it">DC Library (cartonato)</span><span class="lang-en">DC Library (hardcover)</span></dd></div>
+            <div><dt><span class="lang-it">Autori</span><span class="lang-en">Creators</span></dt><dd><span class="lang-it">Jeph Loeb (testi), Tim Sale (disegni)</span><span class="lang-en">Jeph Loeb (script), Tim Sale (art)</span></dd></div>
+            <div><dt><span class="lang-it">Contiene</span><span class="lang-en">Contains</span></dt><dd><span class="lang-it">Batman: Dark Victory #0–13 (maxiserie 1999–2000)</span><span class="lang-en">Batman: Dark Victory #0–13 (1999–2000 maxiseries)</span></dd></div>
+            <div><dt><span class="lang-it">Ambientazione</span><span class="lang-en">Setting</span></dt><dd><span class="lang-it">Terzo anno: le conseguenze della caduta di Harvey Dent</span><span class="lang-en">Third year: the aftermath of Harvey Dent's fall</span></dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Stessa struttura a festività, nuovo mistero: il killer del Boia impicca uno dopo l'altro i poliziotti legati al vecchio regime corrotto, mentre Due Facce guida i mostri alla conquista definitiva di ciò che resta dell'impero Falcone. Ma soprattutto è la storia in cui Bruce, adottando un piccolo acrobata rimasto orfano per mano della mafia, capisce di non poter combattere da solo: è la migliore origine mai scritta di Dick Grayson, il primo Robin — lo specchio esatto del lutto di Bruce.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> la Gotham mafiosa di questo dittico (i Falcone, i Maroni) è il modello dichiarato della famiglia Falcone di The Batman (2022) e del Carmine Falcone della serie TV Il Pinguino (2024).</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Stessa struttura a festività, nuovo mistero: il killer del Boia impicca uno dopo l'altro i poliziotti legati al vecchio regime corrotto, mentre Due Facce guida i mostri alla conquista definitiva di ciò che resta dell'impero Falcone. Ma soprattutto è la storia in cui Bruce, adottando un piccolo acrobata rimasto orfano per mano della mafia, capisce di non poter combattere da solo: è la migliore origine mai scritta di Dick Grayson, il primo Robin — lo specchio esatto del lutto di Bruce.</p>
+          <p class="lang-en">Same holiday structure, new mystery: the Hangman killer strings up, one after another, the cops tied to the old corrupt regime, while Two-Face leads the freaks in the final conquest of what remains of the Falcone empire. Above all, though, it's the story in which Bruce, by adopting a young acrobat orphaned at the mob's hands, realizes he cannot fight alone: it's the best origin ever written for Dick Grayson, the first Robin — the exact mirror of Bruce's own grief.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> la Gotham mafiosa di questo dittico (i Falcone, i Maroni) è il modello dichiarato della famiglia Falcone di The Batman (2022) e del Carmine Falcone della serie TV Il Pinguino (2024).</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the mob-run Gotham of this two-parter (the Falcones, the Maronis) is the declared model for the Falcone family in The Batman (2022) and for Carmine Falcone in the TV series The Penguin (2024).</div>
         </div>
       </article>
     </section>
  
     <!-- 6 -->
     <section class="stop">
-      <div class="stop-dot"><span class="n">6</span><span class="y">Anno 3</span></div>
+      <div class="stop-dot"><span class="n">6</span><span class="y"><span class="lang-it">Anno 3</span><span class="lang-en">Year 3</span></span></div>
       <article class="albo giallo">
-        <div class="masthead"><h2>Vacanze romane</h2><span class="anno">USA 2004–2005</span></div>
+        <div class="masthead"><h2><span class="lang-it">Vacanze romane</span><span class="lang-en">When in Rome</span></h2><span class="anno">USA 2004–2005</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot b4">
@@ -434,25 +464,29 @@
             <img src="copertine/batman/04-vacanze-romane.jpg" alt="Copertina Catwoman: Vacanze romane" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge">Chiude la trilogia Loeb/Sale</span>
-            <span class="badge">Protagonista: Catwoman</span>
+            <span class="badge lang-it">Chiude la trilogia Loeb/Sale</span>
+            <span class="badge lang-en">Closes the Loeb/Sale trilogy</span>
+            <span class="badge lang-it">Protagonista: Catwoman</span>
+            <span class="badge lang-en">Starring: Catwoman</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>DC Library (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Jeph Loeb (testi), Tim Sale (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Catwoman: When in Rome #1–6 (miniserie 2004–05)</dd></div>
-            <div><dt>Ambientazione</dt><dd>Parallela a Vittoria oscura: il viaggio italiano di Selina</dd></div>
+            <div><dt><span class="lang-it">Collana</span><span class="lang-en">Imprint</span></dt><dd><span class="lang-it">DC Library (cartonato)</span><span class="lang-en">DC Library (hardcover)</span></dd></div>
+            <div><dt><span class="lang-it">Autori</span><span class="lang-en">Creators</span></dt><dd><span class="lang-it">Jeph Loeb (testi), Tim Sale (disegni)</span><span class="lang-en">Jeph Loeb (script), Tim Sale (art)</span></dd></div>
+            <div><dt><span class="lang-it">Contiene</span><span class="lang-en">Contains</span></dt><dd><span class="lang-it">Catwoman: When in Rome #1–6 (miniserie 2004–05)</span><span class="lang-en">Catwoman: When in Rome #1–6 (2004–05 miniseries)</span></dd></div>
+            <div><dt><span class="lang-it">Ambientazione</span><span class="lang-en">Setting</span></dt><dd><span class="lang-it">Parallela a Vittoria oscura: il viaggio italiano di Selina</span><span class="lang-en">Parallel to Dark Victory: Selina's Italian journey</span></dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il tassello mancante del dittico: mentre a Gotham infuria il Boia, Selina Kyle vola in Italia con l'Enigmista al seguito per rispondere alla domanda che Il lungo Halloween aveva lasciato sospesa — è davvero la figlia illegittima di Carmine Falcone? Tra Roma, il Vaticano e la costiera, Loeb e Sale giocano col noir all'italiana e con la Dolce Vita, senza mai concedere una risposta definitiva. Più leggero dei capitoli gotici, ma indispensabile per chiudere i conti con la saga dei Falcone.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> la Selina "figlia di Falcone" è passata direttamente in The Batman (2022), dove Zoë Kravitz interpreta esattamente questa versione del personaggio. Ed è l'ultimo capitolo gotico della leggendaria coppia Loeb/Sale, prima della scomparsa di Tim Sale nel 2022.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il tassello mancante del dittico: mentre a Gotham infuria il Boia, Selina Kyle vola in Italia con l'Enigmista al seguito per rispondere alla domanda che Il lungo Halloween aveva lasciato sospesa — è davvero la figlia illegittima di Carmine Falcone? Tra Roma, il Vaticano e la costiera, Loeb e Sale giocano col noir all'italiana e con la Dolce Vita, senza mai concedere una risposta definitiva. Più leggero dei capitoli gotici, ma indispensabile per chiudere i conti con la saga dei Falcone.</p>
+          <p class="lang-en">The missing piece of the two-parter: while the Hangman rages in Gotham, Selina Kyle flies to Italy with the Riddler in tow to answer the question The Long Halloween had left hanging — is she really Carmine Falcone's illegitimate daughter? Between Rome, the Vatican and the coast, Loeb and Sale play with Italian-style noir and the Dolce Vita, never granting a definitive answer. Lighter than the gothic chapters, but indispensable for settling accounts with the Falcone saga.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> la Selina "figlia di Falcone" è passata direttamente in The Batman (2022), dove Zoë Kravitz interpreta esattamente questa versione del personaggio. Ed è l'ultimo capitolo gotico della leggendaria coppia Loeb/Sale, prima della scomparsa di Tim Sale nel 2022.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the "Falcone's daughter" Selina passed straight into The Batman (2022), where Zoë Kravitz plays exactly this version of the character. And it's the last Gotham chapter by the legendary Loeb/Sale duo, before Tim Sale's passing in 2022.</div>
         </div>
       </article>
     </section>
  
     <!-- 7 -->
     <section class="stop">
-      <div class="stop-dot"><span class="n">7</span><span class="y">Carriera</span></div>
+      <div class="stop-dot"><span class="n">7</span><span class="y"><span class="lang-it">Carriera</span><span class="lang-en">Career</span></span></div>
       <article class="albo">
         <div class="masthead"><h2>The Killing Joke</h2><span class="anno">USA 1988</span></div>
         <div class="halftone"></div>
@@ -466,27 +500,32 @@
             <img src="copertine/batman/05-killing-joke.jpg" alt="Copertina Batman: The Killing Joke" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge evento">Capolavoro autoconclusivo</span>
-            <span class="badge">La storia definitiva del Joker</span>
+            <span class="badge evento lang-it">Capolavoro autoconclusivo</span>
+            <span class="badge evento lang-en">Self-contained masterpiece</span>
+            <span class="badge lang-it">La storia definitiva del Joker</span>
+            <span class="badge lang-en">The definitive Joker story</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>DC Library (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Alan Moore (testi), Brian Bolland (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Batman: The Killing Joke (graphic novel, 1988)</dd></div>
-            <div><dt>Ambientazione</dt><dd>Piena maturità: Batman e Joker si fronteggiano da anni</dd></div>
+            <div><dt><span class="lang-it">Collana</span><span class="lang-en">Imprint</span></dt><dd><span class="lang-it">DC Library (cartonato)</span><span class="lang-en">DC Library (hardcover)</span></dd></div>
+            <div><dt><span class="lang-it">Autori</span><span class="lang-en">Creators</span></dt><dd><span class="lang-it">Alan Moore (testi), Brian Bolland (disegni)</span><span class="lang-en">Alan Moore (script), Brian Bolland (art)</span></dd></div>
+            <div><dt><span class="lang-it">Contiene</span><span class="lang-en">Contains</span></dt><dd>Batman: The Killing Joke (graphic novel, 1988)</dd></div>
+            <div><dt><span class="lang-it">Ambientazione</span><span class="lang-en">Setting</span></dt><dd><span class="lang-it">Piena maturità: Batman e Joker si fronteggiano da anni</span><span class="lang-en">Full maturity: Batman and the Joker have faced each other for years</span></dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il duello psicologico definitivo tra Batman e il Joker, costruito sulla tesi del clown: "basta una brutta giornata" per far impazzire chiunque. Per dimostrarlo, il Joker spara a Barbara Gordon riducendola alla paralisi e sottopone il commissario a un incubo studiato per spezzarlo. In parallelo, i flashback raccontano una possibile origine del Joker — il comico fallito, la Cappa Rossa, la vasca chimica — che lui stesso relativizza con la battuta più citata del fumetto americano: del proprio passato preferisce ricordare "una versione a scelta multipla".</p>
-          <h3>Curiosità</h3>
-          <p>Dalla tragedia di Barbara nascerà anni dopo Oracolo, la mente informatica dell'universo DC. E Alan Moore, col tempo, ha ripudiato l'opera giudicandola troppo crudele — il che non le ha impedito di vincere l'Eisner e di restare il metro di paragone di ogni storia sul Joker.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> è la fonte primaria del Joker cinematografico moderno — il "passato a scelta multipla" è il cuore del Joker di Heath Ledger e l'intero film Joker (2019) con Joaquin Phoenix ne sviluppa la premessa del comico fallito. Adattato in film animato nel 2016, con Mark Hamill e Kevin Conroy.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il duello psicologico definitivo tra Batman e il Joker, costruito sulla tesi del clown: "basta una brutta giornata" per far impazzire chiunque. Per dimostrarlo, il Joker spara a Barbara Gordon riducendola alla paralisi e sottopone il commissario a un incubo studiato per spezzarlo. In parallelo, i flashback raccontano una possibile origine del Joker — il comico fallito, la Cappa Rossa, la vasca chimica — che lui stesso relativizza con la battuta più citata del fumetto americano: del proprio passato preferisce ricordare "una versione a scelta multipla".</p>
+          <p class="lang-en">The definitive psychological duel between Batman and the Joker, built on the clown's thesis: "one bad day" is all it takes to drive anyone mad. To prove it, the Joker shoots Barbara Gordon, leaving her paralyzed, and subjects the commissioner to a nightmare engineered to break him. In parallel, flashbacks recount one possible origin of the Joker — the failed comedian, the Red Hood, the chemical vat — which he himself undercuts with the most quoted line in American comics: when it comes to his past, he prefers to remember it "multiple choice".</p>
+          <h3 class="lang-it">Curiosità</h3><h3 class="lang-en">Trivia</h3>
+          <p class="lang-it">Dalla tragedia di Barbara nascerà anni dopo Oracolo, la mente informatica dell'universo DC. E Alan Moore, col tempo, ha ripudiato l'opera giudicandola troppo crudele — il che non le ha impedito di vincere l'Eisner e di restare il metro di paragone di ogni storia sul Joker.</p>
+          <p class="lang-en">Barbara's tragedy would give rise, years later, to Oracle, the computer mastermind of the DC universe. And Alan Moore eventually disowned the work, judging it too cruel — which didn't stop it from winning the Eisner and remaining the benchmark for every Joker story.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> è la fonte primaria del Joker cinematografico moderno — il "passato a scelta multipla" è il cuore del Joker di Heath Ledger e l'intero film Joker (2019) con Joaquin Phoenix ne sviluppa la premessa del comico fallito. Adattato in film animato nel 2016, con Mark Hamill e Kevin Conroy.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> it's the primary source of the modern cinematic Joker — the "multiple choice past" is the heart of Heath Ledger's Joker, and the entire film Joker (2019) with Joaquin Phoenix builds on its failed-comedian premise. Adapted as an animated film in 2016, with Mark Hamill and Kevin Conroy.</div>
         </div>
       </article>
     </section>
  
     <!-- 8: Arkham Asylum -->
     <section class="stop">
-      <div class="stop-dot"><span class="n">8</span><span class="y">Carriera</span></div>
+      <div class="stop-dot"><span class="n">8</span><span class="y"><span class="lang-it">Carriera</span><span class="lang-en">Career</span></span></div>
       <article class="albo">
         <div class="masthead"><h2>Arkham Asylum</h2><span class="anno">USA 1989</span></div>
         <div class="halftone"></div>
@@ -500,27 +539,32 @@
             <img src="copertine/batman/08-arkham-asylum.jpg" alt="Copertina Batman: Arkham Asylum" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge evento">Capolavoro autoconclusivo</span>
-            <span class="badge">La graphic novel DC più venduta di sempre</span>
+            <span class="badge evento lang-it">Capolavoro autoconclusivo</span>
+            <span class="badge evento lang-en">Self-contained masterpiece</span>
+            <span class="badge lang-it">La graphic novel DC più venduta di sempre</span>
+            <span class="badge lang-en">DC's best-selling graphic novel ever</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>DC Library (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Grant Morrison (testi), Dave McKean (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Arkham Asylum: A Serious House on Serious Earth (graphic novel, 1989)</dd></div>
-            <div><dt>Ambientazione</dt><dd>Carriera matura: una lunga notte dentro il manicomio</dd></div>
+            <div><dt><span class="lang-it">Collana</span><span class="lang-en">Imprint</span></dt><dd><span class="lang-it">DC Library (cartonato)</span><span class="lang-en">DC Library (hardcover)</span></dd></div>
+            <div><dt><span class="lang-it">Autori</span><span class="lang-en">Creators</span></dt><dd><span class="lang-it">Grant Morrison (testi), Dave McKean (disegni)</span><span class="lang-en">Grant Morrison (script), Dave McKean (art)</span></dd></div>
+            <div><dt><span class="lang-it">Contiene</span><span class="lang-en">Contains</span></dt><dd>Arkham Asylum: A Serious House on Serious Earth (graphic novel, 1989)</dd></div>
+            <div><dt><span class="lang-it">Ambientazione</span><span class="lang-en">Setting</span></dt><dd><span class="lang-it">Carriera matura: una lunga notte dentro il manicomio</span><span class="lang-en">Mature career: one long night inside the asylum</span></dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il primo d'aprile i detenuti di Arkham prendono il controllo del manicomio e il Joker pone una sola condizione: che Batman entri e giochi con loro. Ne esce una discesa psicanalitica in cui ogni villain è uno specchio della psiche di Bruce, intrecciata al diario di Amadeus Arkham, il fondatore consumato dalla casa stessa. Le tavole pittoriche di Dave McKean — collage, fotografia, pittura — non assomigliano a nient'altro nella mia collezione: è il Batman più vicino all'arte contemporanea mai stampato.</p>
-          <h3>Il suo ruolo nella collezione</h3>
-          <p>Completa il trittico autoriale di fine anni Ottanta insieme a The Killing Joke e al Ritorno del Cavaliere Oscuro: tre modi radicalmente diversi — psicologico, filosofico, politico — di prendere sul serio lo stesso personaggio nello stesso momento storico. Ed è il primo Batman di Grant Morrison, vent'anni prima della sua run.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> è la fonte d'ispirazione dichiarata del videogioco Batman: Arkham Asylum (2009) e dell'intera saga Arkham che ne è seguita, oltre che di innumerevoli versioni "gotiche" del manicomio in film e serie TV.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il primo d'aprile i detenuti di Arkham prendono il controllo del manicomio e il Joker pone una sola condizione: che Batman entri e giochi con loro. Ne esce una discesa psicanalitica in cui ogni villain è uno specchio della psiche di Bruce, intrecciata al diario di Amadeus Arkham, il fondatore consumato dalla casa stessa. Le tavole pittoriche di Dave McKean — collage, fotografia, pittura — non assomigliano a nient'altro nella mia collezione: è il Batman più vicino all'arte contemporanea mai stampato.</p>
+          <p class="lang-en">On April Fools' Day the inmates of Arkham take over the asylum and the Joker sets a single condition: that Batman come inside and play with them. What follows is a psychoanalytic descent in which every villain mirrors Bruce's psyche, interwoven with the diary of Amadeus Arkham, the founder consumed by the house itself. Dave McKean's painted pages — collage, photography, painting — look like nothing else in my collection: it's the closest Batman has ever come to contemporary art in print.</p>
+          <h3 class="lang-it">Il suo ruolo nella collezione</h3><h3 class="lang-en">Its role in the collection</h3>
+          <p class="lang-it">Completa il trittico autoriale di fine anni Ottanta insieme a The Killing Joke e al Ritorno del Cavaliere Oscuro: tre modi radicalmente diversi — psicologico, filosofico, politico — di prendere sul serio lo stesso personaggio nello stesso momento storico. Ed è il primo Batman di Grant Morrison, vent'anni prima della sua run.</p>
+          <p class="lang-en">It completes the late-eighties auteur triptych alongside The Killing Joke and The Dark Knight Returns: three radically different ways — psychological, philosophical, political — of taking the same character seriously at the same historical moment. And it's Grant Morrison's first Batman, twenty years before his run.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> è la fonte d'ispirazione dichiarata del videogioco Batman: Arkham Asylum (2009) e dell'intera saga Arkham che ne è seguita, oltre che di innumerevoli versioni "gotiche" del manicomio in film e serie TV.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> it's the declared inspiration for the video game Batman: Arkham Asylum (2009) and the entire Arkham saga that followed, as well as countless "gothic" versions of the asylum in film and TV.</div>
         </div>
       </article>
     </section>
  
     <!-- 9 -->
     <section class="stop">
-      <div class="stop-dot"><span class="n">9</span><span class="y">Presente</span></div>
+      <div class="stop-dot"><span class="n">9</span><span class="y"><span class="lang-it">Presente</span><span class="lang-en">Present</span></span></div>
       <article class="albo ardesia">
         <div class="masthead"><h2>Hush</h2><span class="anno">USA 2002–2003</span></div>
         <div class="halftone"></div>
@@ -534,27 +578,32 @@
             <img src="copertine/batman/06-hush.jpg" alt="Copertina Batman: Hush" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge evento">Grande evento</span>
-            <span class="badge start">★ Esordio di Silenzio</span>
+            <span class="badge evento lang-it">Grande evento</span>
+            <span class="badge evento lang-en">Blockbuster event</span>
+            <span class="badge start lang-it">★ Esordio di Silenzio</span>
+            <span class="badge start lang-en">★ Hush's debut</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>DC Library (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Jeph Loeb (testi), Jim Lee (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Batman #608–619 (2002–03)</dd></div>
-            <div><dt>Ambientazione</dt><dd>Continuity del presente: tutto il mondo di Batman al completo</dd></div>
+            <div><dt><span class="lang-it">Collana</span><span class="lang-en">Imprint</span></dt><dd><span class="lang-it">DC Library (cartonato)</span><span class="lang-en">DC Library (hardcover)</span></dd></div>
+            <div><dt><span class="lang-it">Autori</span><span class="lang-en">Creators</span></dt><dd><span class="lang-it">Jeph Loeb (testi), Jim Lee (disegni)</span><span class="lang-en">Jeph Loeb (script), Jim Lee (art)</span></dd></div>
+            <div><dt><span class="lang-it">Contiene</span><span class="lang-en">Contains</span></dt><dd>Batman #608–619 (2002–03)</dd></div>
+            <div><dt><span class="lang-it">Ambientazione</span><span class="lang-en">Setting</span></dt><dd><span class="lang-it">Continuity del presente: tutto il mondo di Batman al completo</span><span class="lang-en">Present-day continuity: Batman's entire world in full</span></dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il blockbuster per eccellenza: un misterioso burattinaio bendato, Silenzio, orchestra contro Batman una cospirazione che coinvolge l'intera galleria dei nemici — Catwoman, Poison Ivy, Joker, Ra's al Ghul, Scarecrow, perfino un Superman soggiogato — mentre ogni indizio punta a qualcuno che conosce Bruce Wayne da sempre. È anche la storia in cui Bruce compie il passo mai osato: rivela la propria identità a Selina, trasformando il gioco del gatto e del pipistrello in una vera relazione.</p>
-          <h3>Cosa apre</h3>
-          <p>Il rilancio commerciale del Batman anni 2000 (fu il caso editoriale del suo tempo, con Jim Lee al vertice) e la lunga storia d'amore Batman/Catwoman che la DC porterà fino alla proposta di matrimonio quindici anni dopo.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> adattato nel film animato Batman: Hush (2019); Silenzio è diventato uno dei villain chiave del videogioco Batman: Arkham City e del suo seguito. Le tavole di Jim Lee hanno definito l'immagine "ufficiale" di Batman per un ventennio, fino ai loghi e ai poster.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il blockbuster per eccellenza: un misterioso burattinaio bendato, Silenzio, orchestra contro Batman una cospirazione che coinvolge l'intera galleria dei nemici — Catwoman, Poison Ivy, Joker, Ra's al Ghul, Scarecrow, perfino un Superman soggiogato — mentre ogni indizio punta a qualcuno che conosce Bruce Wayne da sempre. È anche la storia in cui Bruce compie il passo mai osato: rivela la propria identità a Selina, trasformando il gioco del gatto e del pipistrello in una vera relazione.</p>
+          <p class="lang-en">The blockbuster par excellence: a mysterious bandaged puppet-master, Hush, orchestrates a conspiracy against Batman involving the entire rogues' gallery — Catwoman, Poison Ivy, the Joker, Ra's al Ghul, Scarecrow, even a mind-controlled Superman — while every clue points to someone who has known Bruce Wayne all his life. It's also the story in which Bruce takes the step he never dared: revealing his identity to Selina, turning the game of cat and bat into a real relationship.</p>
+          <h3 class="lang-it">Cosa apre</h3><h3 class="lang-en">What it opens up</h3>
+          <p class="lang-it">Il rilancio commerciale del Batman anni 2000 (fu il caso editoriale del suo tempo, con Jim Lee al vertice) e la lunga storia d'amore Batman/Catwoman che la DC porterà fino alla proposta di matrimonio quindici anni dopo.</p>
+          <p class="lang-en">The commercial relaunch of Batman in the 2000s (it was the publishing sensation of its day, with Jim Lee at the top of his game) and the long Batman/Catwoman love story that DC would carry all the way to the marriage proposal fifteen years later.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> adattato nel film animato Batman: Hush (2019); Silenzio è diventato uno dei villain chiave del videogioco Batman: Arkham City e del suo seguito. Le tavole di Jim Lee hanno definito l'immagine "ufficiale" di Batman per un ventennio, fino ai loghi e ai poster.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> adapted as the animated film Batman: Hush (2019); Hush became one of the key villains of the video game Batman: Arkham City and its sequel. Jim Lee's art defined Batman's "official" image for two decades, right down to logos and posters.</div>
         </div>
       </article>
     </section>
  
     <!-- 10: Batman di Grant Morrison 1 -->
     <section class="stop">
-      <div class="stop-dot"><span class="n">10</span><span class="y">Presente</span></div>
+      <div class="stop-dot"><span class="n">10</span><span class="y"><span class="lang-it">Presente</span><span class="lang-en">Present</span></span></div>
       <article class="albo ardesia">
         <div class="masthead"><h2>Batman di Grant Morrison 1</h2><span class="anno">USA 2006–2008</span></div>
         <div class="halftone"></div>
@@ -568,29 +617,34 @@
             <img src="copertine/batman/10-morrison-1.jpg" alt="Copertina Batman di Grant Morrison vol. 1" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ Inizio run Morrison (2006–2013)</span>
-            <span class="badge">Esordio di Damian Wayne</span>
+            <span class="badge start lang-it">★ Inizio run Morrison (2006–2013)</span>
+            <span class="badge start lang-en">★ Start of the Morrison run (2006–2013)</span>
+            <span class="badge lang-it">Esordio di Damian Wayne</span>
+            <span class="badge lang-en">Damian Wayne's debut</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Omnibus Batman di Grant Morrison (cartonato Panini DC, primo di tre tomi antologici)</dd></div>
-            <div><dt>Autori</dt><dd>Grant Morrison (testi), Andy Kubert, J.H. Williams III e altri (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Il primo blocco della run: Batman e figlio e Il Guanto Nero (da Batman #655 in poi)</dd></div>
-            <div><dt>Ambientazione</dt><dd>Presente, pochi anni dopo Hush</dd></div>
+            <div><dt><span class="lang-it">Collana</span><span class="lang-en">Imprint</span></dt><dd><span class="lang-it">Omnibus Batman di Grant Morrison (cartonato Panini DC, primo di tre tomi antologici)</span><span class="lang-en">Batman di Grant Morrison omnibus (Panini DC hardcover, first of three anthology tomes)</span></dd></div>
+            <div><dt><span class="lang-it">Autori</span><span class="lang-en">Creators</span></dt><dd><span class="lang-it">Grant Morrison (testi), Andy Kubert, J.H. Williams III e altri (disegni)</span><span class="lang-en">Grant Morrison (script), Andy Kubert, J.H. Williams III and others (art)</span></dd></div>
+            <div><dt><span class="lang-it">Contiene</span><span class="lang-en">Contains</span></dt><dd><span class="lang-it">Il primo blocco della run: Batman e figlio e Il Guanto Nero (da Batman #655 in poi)</span><span class="lang-en">The first block of the run: Batman and Son and The Black Glove (from Batman #655 onward)</span></dd></div>
+            <div><dt><span class="lang-it">Ambientazione</span><span class="lang-en">Setting</span></dt><dd><span class="lang-it">Presente, pochi anni dopo Hush</span><span class="lang-en">Present day, a few years after Hush</span></dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>L'inizio dei sette anni di Morrison, la gestione più ambiziosa mai dedicata al personaggio, fondata su un'idea geniale: è successo tutto davvero — le storie cupe alla Miller ma anche quelle assurde degli anni Cinquanta — e sono tutte memorie di un unico uomo. Il volume apre con la bomba: Talia al Ghul presenta a Bruce il figlio che non sapeva di avere, Damian, un bambino addestrato dalla Lega degli Assassini che oggi è uno dei personaggi più importanti della DC. Segue il mistero del Guanto Nero e del Club degli Eroi, l'innesco della cospirazione che culminerà in Batman R.I.P.</p>
-          <h3>Cosa apre</h3>
-          <p>Una mega-storia unica che prosegue nei tomi 2 e 3 (R.I.P., la "morte" di Bruce, la serie Batman e Robin con Dick Grayson nel mantello, Il ritorno di Bruce Wayne, Batman Incorporated). La lettura più impegnativa della collezione — e quella che ripaga di più alla rilettura.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> Damian Wayne è diventato il Robin dei film animati DC (la linea da Son of Batman a Battle of the Super Sons) ed è atteso come Robin del nuovo universo cinematografico DC di James Gunn, in The Brave and the Bold.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">L'inizio dei sette anni di Morrison, la gestione più ambiziosa mai dedicata al personaggio, fondata su un'idea geniale: è successo tutto davvero — le storie cupe alla Miller ma anche quelle assurde degli anni Cinquanta — e sono tutte memorie di un unico uomo. Il volume apre con la bomba: Talia al Ghul presenta a Bruce il figlio che non sapeva di avere, Damian, un bambino addestrato dalla Lega degli Assassini che oggi è uno dei personaggi più importanti della DC. Segue il mistero del Guanto Nero e del Club degli Eroi, l'innesco della cospirazione che culminerà in Batman R.I.P.</p>
+          <p class="lang-en">The start of Morrison's seven years, the most ambitious tenure ever devoted to the character, built on a brilliant idea: it all really happened — the grim Miller-style stories but also the absurd ones from the fifties — and they are all memories of a single man. The volume opens with the bombshell: Talia al Ghul introduces Bruce to the son he never knew he had, Damian, a child trained by the League of Assassins who is now one of DC's most important characters. Then comes the mystery of the Black Glove and the Club of Heroes, the trigger of the conspiracy that will culminate in Batman R.I.P.</p>
+          <h3 class="lang-it">Cosa apre</h3><h3 class="lang-en">What it opens up</h3>
+          <p class="lang-it">Una mega-storia unica che prosegue nei tomi 2 e 3 (R.I.P., la "morte" di Bruce, la serie Batman e Robin con Dick Grayson nel mantello, Il ritorno di Bruce Wayne, Batman Incorporated). La lettura più impegnativa della collezione — e quella che ripaga di più alla rilettura.</p>
+          <p class="lang-en">One single mega-story continuing in tomes 2 and 3 (R.I.P., Bruce's "death", the Batman and Robin series with Dick Grayson in the cape, The Return of Bruce Wayne, Batman Incorporated). The most demanding read in the collection — and the one that rewards rereading the most.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> Damian Wayne è diventato il Robin dei film animati DC (la linea da Son of Batman a Battle of the Super Sons) ed è atteso come Robin del nuovo universo cinematografico DC di James Gunn, in The Brave and the Bold.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> Damian Wayne became the Robin of the DC animated films (the line from Son of Batman to Battle of the Super Sons) and is expected as the Robin of James Gunn's new DC cinematic universe, in The Brave and the Bold.</div>
         </div>
       </article>
     </section>
  
     <!-- 11: La corte dei gufi -->
     <section class="stop">
-      <div class="stop-dot"><span class="n">11</span><span class="y">Presente</span></div>
+      <div class="stop-dot"><span class="n">11</span><span class="y"><span class="lang-it">Presente</span><span class="lang-en">Present</span></span></div>
       <article class="albo">
-        <div class="masthead"><h2>La corte dei gufi</h2><span class="anno">USA 2011–2012</span></div>
+        <div class="masthead"><h2><span class="lang-it">La corte dei gufi</span><span class="lang-en">The Court of Owls</span></h2><span class="anno">USA 2011–2012</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot b13">
@@ -602,29 +656,34 @@
             <img src="copertine/batman/11-corte-dei-gufi.jpg" alt="Copertina Batman: La corte dei gufi" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ Inizio run Snyder/Capullo (2011–2016)</span>
-            <span class="badge">Il classico moderno</span>
+            <span class="badge start lang-it">★ Inizio run Snyder/Capullo (2011–2016)</span>
+            <span class="badge start lang-en">★ Start of the Snyder/Capullo run (2011–2016)</span>
+            <span class="badge lang-it">Il classico moderno</span>
+            <span class="badge lang-en">The modern classic</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>DC Author Library</dd></div>
-            <div><dt>Autori</dt><dd>Scott Snyder (testi), Greg Capullo (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Batman (2011) #1–7, il primo arco del rilancio New 52</dd></div>
-            <div><dt>Ambientazione</dt><dd>Presente: il Batman contemporaneo</dd></div>
+            <div><dt><span class="lang-it">Collana</span><span class="lang-en">Imprint</span></dt><dd>DC Author Library</dd></div>
+            <div><dt><span class="lang-it">Autori</span><span class="lang-en">Creators</span></dt><dd><span class="lang-it">Scott Snyder (testi), Greg Capullo (disegni)</span><span class="lang-en">Scott Snyder (script), Greg Capullo (art)</span></dd></div>
+            <div><dt><span class="lang-it">Contiene</span><span class="lang-en">Contains</span></dt><dd><span class="lang-it">Batman (2011) #1–7, il primo arco del rilancio New 52</span><span class="lang-en">Batman (2011) #1–7, the first arc of the New 52 relaunch</span></dd></div>
+            <div><dt><span class="lang-it">Ambientazione</span><span class="lang-en">Setting</span></dt><dd><span class="lang-it">Presente: il Batman contemporaneo</span><span class="lang-en">Present day: the contemporary Batman</span></dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il Batman definitivo degli anni Dieci: Bruce scopre che la filastrocca sulla Corte dei Gufi — la società segreta che governerebbe Gotham dall'ombra da secoli — non è una leggenda, e che la città che credeva di conoscere meglio di chiunque gli ha sempre mentito. Il capitolo nel labirinto, con la pagina che ruota fino a capovolgersi insieme alla mente di Batman, è già nei manuali di narrazione a fumetti. È l'inizio della run di Snyder e Capullo, proseguita con Morte della famiglia e Anno Zero.</p>
-          <h3>Il suo ruolo nella collezione</h3>
-          <p>Chiude il blocco del presente in continuity: dopo il mistero intimo di Hush e l'epica familiare di Morrison, la Corte aggiunge l'ultimo tassello — il mito urbano — prima dell'incubo fuori continuity di Dannato e del salto nel futuro di Miller.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> la Corte dei Gufi è entrata di prepotenza nell'immaginario: è al centro del videogioco Gotham Knights (2022), del film animato Batman vs. Robin e viene regolarmente indicata tra le ispirazioni delle prossime incarnazioni cinematografiche di Gotham.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il Batman definitivo degli anni Dieci: Bruce scopre che la filastrocca sulla Corte dei Gufi — la società segreta che governerebbe Gotham dall'ombra da secoli — non è una leggenda, e che la città che credeva di conoscere meglio di chiunque gli ha sempre mentito. Il capitolo nel labirinto, con la pagina che ruota fino a capovolgersi insieme alla mente di Batman, è già nei manuali di narrazione a fumetti. È l'inizio della run di Snyder e Capullo, proseguita con Morte della famiglia e Anno Zero.</p>
+          <p class="lang-en">The definitive Batman of the 2010s: Bruce discovers that the nursery rhyme about the Court of Owls — the secret society said to have ruled Gotham from the shadows for centuries — is no legend, and that the city he thought he knew better than anyone has always lied to him. The labyrinth chapter, with the page rotating until it turns upside down along with Batman's mind, is already in the comics-storytelling handbooks. It's the beginning of the Snyder and Capullo run, continued with Death of the Family and Zero Year.</p>
+          <h3 class="lang-it">Il suo ruolo nella collezione</h3><h3 class="lang-en">Its role in the collection</h3>
+          <p class="lang-it">Chiude il blocco del presente in continuity: dopo il mistero intimo di Hush e l'epica familiare di Morrison, la Corte aggiunge l'ultimo tassello — il mito urbano — prima dell'incubo fuori continuity di Dannato e del salto nel futuro di Miller.</p>
+          <p class="lang-en">It closes the in-continuity present-day block: after the intimate mystery of Hush and Morrison's family epic, the Court adds the final piece — the urban myth — before the out-of-continuity nightmare of Damned and Miller's leap into the future.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> la Corte dei Gufi è entrata di prepotenza nell'immaginario: è al centro del videogioco Gotham Knights (2022), del film animato Batman vs. Robin e viene regolarmente indicata tra le ispirazioni delle prossime incarnazioni cinematografiche di Gotham.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the Court of Owls has stormed into the popular imagination: it's at the center of the video game Gotham Knights (2022) and the animated film Batman vs. Robin, and is regularly cited among the inspirations for Gotham's upcoming screen incarnations.</div>
         </div>
       </article>
     </section>
  
     <!-- 12: Batman Dannato -->
     <section class="stop">
-      <div class="stop-dot"><span class="n">12</span><span class="y">Presente</span></div>
+      <div class="stop-dot"><span class="n">12</span><span class="y"><span class="lang-it">Presente</span><span class="lang-en">Present</span></span></div>
       <article class="albo giallo">
-        <div class="masthead"><h2>Dannato</h2><span class="anno">USA 2018–2019</span></div>
+        <div class="masthead"><h2><span class="lang-it">Dannato</span><span class="lang-en">Damned</span></h2><span class="anno">USA 2018–2019</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot b14">
@@ -636,29 +695,34 @@
             <img src="copertine/batman/12-dannato.jpg" alt="Copertina Batman: Dannato" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge evento">Il primo libro DC Black Label</span>
-            <span class="badge">Horror soprannaturale per adulti</span>
+            <span class="badge evento lang-it">Il primo libro DC Black Label</span>
+            <span class="badge evento lang-en">The first DC Black Label book</span>
+            <span class="badge lang-it">Horror soprannaturale per adulti</span>
+            <span class="badge lang-en">Supernatural horror for adults</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>DC Black Label Complete Collection</dd></div>
-            <div><dt>Autori</dt><dd>Brian Azzarello (testi), Lee Bermejo (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Batman: Damned #1–3 (2018–19)</dd></div>
-            <div><dt>Ambientazione</dt><dd>Un presente fuori continuity: il Joker è morto, e Batman non ricorda</dd></div>
+            <div><dt><span class="lang-it">Collana</span><span class="lang-en">Imprint</span></dt><dd>DC Black Label Complete Collection</dd></div>
+            <div><dt><span class="lang-it">Autori</span><span class="lang-en">Creators</span></dt><dd><span class="lang-it">Brian Azzarello (testi), Lee Bermejo (disegni)</span><span class="lang-en">Brian Azzarello (script), Lee Bermejo (art)</span></dd></div>
+            <div><dt><span class="lang-it">Contiene</span><span class="lang-en">Contains</span></dt><dd>Batman: Damned #1–3 (2018–19)</dd></div>
+            <div><dt><span class="lang-it">Ambientazione</span><span class="lang-en">Setting</span></dt><dd><span class="lang-it">Un presente fuori continuity: il Joker è morto, e Batman non ricorda</span><span class="lang-en">An out-of-continuity present: the Joker is dead, and Batman can't remember</span></dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il cadavere del Joker viene ripescato sotto un ponte di Gotham, e Batman — ferito, con la memoria a pezzi — potrebbe essere l'assassino. A guidarlo nella discesa c'è John Constantine, narratore inaffidabile di un tour infernale tra Enchantress, Deadman e Zatanna, dentro una Gotham soprannaturale dove il vero mistero è l'anima di Bruce Wayne. Le tavole dipinte di Lee Bermejo sono tra le più spettacolari mai dedicate al personaggio: un incubo fotorealistico che sta al Batman contemporaneo come Arkham Asylum stava a quello degli anni Ottanta.</p>
-          <h3>Curiosità</h3>
-          <p>Fu il libro inaugurale dell'etichetta DC Black Label, la linea per adulti fuori continuity — e fece scandalo immediato: il primo albo conteneva una fugace nudità integrale di Bruce Wayne che la DC censurò in tutte le ristampe, trasformando la prima stampa americana in un oggetto da collezione conteso.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> il successo di Dannato aprì la strada a tutta la linea Black Label (da Joker di Azzarello/Bermejo a Batman: Creature della notte in poi), l'etichetta che ha ridato al fumetto DC per adulti la dignità dell'era Miller/Moore. E l'estetica infernale di Bermejo è un riferimento costante per la Gotham dei videogiochi.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il cadavere del Joker viene ripescato sotto un ponte di Gotham, e Batman — ferito, con la memoria a pezzi — potrebbe essere l'assassino. A guidarlo nella discesa c'è John Constantine, narratore inaffidabile di un tour infernale tra Enchantress, Deadman e Zatanna, dentro una Gotham soprannaturale dove il vero mistero è l'anima di Bruce Wayne. Le tavole dipinte di Lee Bermejo sono tra le più spettacolari mai dedicate al personaggio: un incubo fotorealistico che sta al Batman contemporaneo come Arkham Asylum stava a quello degli anni Ottanta.</p>
+          <p class="lang-en">The Joker's corpse is fished out from under a Gotham bridge, and Batman — wounded, his memory in pieces — might be the killer. Guiding him on the descent is John Constantine, unreliable narrator of an infernal tour among Enchantress, Deadman and Zatanna, through a supernatural Gotham where the real mystery is Bruce Wayne's soul. Lee Bermejo's painted pages are among the most spectacular ever devoted to the character: a photorealistic nightmare that is to the contemporary Batman what Arkham Asylum was to the eighties one.</p>
+          <h3 class="lang-it">Curiosità</h3><h3 class="lang-en">Trivia</h3>
+          <p class="lang-it">Fu il libro inaugurale dell'etichetta DC Black Label, la linea per adulti fuori continuity — e fece scandalo immediato: il primo albo conteneva una fugace nudità integrale di Bruce Wayne che la DC censurò in tutte le ristampe, trasformando la prima stampa americana in un oggetto da collezione conteso.</p>
+          <p class="lang-en">It was the inaugural book of the DC Black Label imprint, the out-of-continuity line for adults — and it caused an immediate scandal: the first issue contained a fleeting full-frontal nude of Bruce Wayne that DC censored in every reprint, turning the American first printing into a hotly contested collector's item.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> il successo di Dannato aprì la strada a tutta la linea Black Label (da Joker di Azzarello/Bermejo a Batman: Creature della notte in poi), l'etichetta che ha ridato al fumetto DC per adulti la dignità dell'era Miller/Moore. E l'estetica infernale di Bermejo è un riferimento costante per la Gotham dei videogiochi.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the success of Damned paved the way for the entire Black Label line (from Azzarello/Bermejo's Joker to Batman: Creature of the Night and beyond), the imprint that gave adult DC comics back the dignity of the Miller/Moore era. And Bermejo's infernal aesthetic is a constant reference point for the Gotham of video games.</div>
         </div>
       </article>
     </section>
  
     <!-- 13 -->
     <section class="stop">
-      <div class="stop-dot"><span class="n">13</span><span class="y">Futuro</span></div>
+      <div class="stop-dot"><span class="n">13</span><span class="y"><span class="lang-it">Futuro</span><span class="lang-en">Future</span></span></div>
       <article class="albo giallo">
-        <div class="masthead"><h2>Il ritorno del Cavaliere Oscuro</h2><span class="anno">USA 1986</span></div>
+        <div class="masthead"><h2><span class="lang-it">Il ritorno del Cavaliere Oscuro</span><span class="lang-en">The Dark Knight Returns</span></h2><span class="anno">USA 1986</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot b7">
@@ -670,29 +734,34 @@
             <img src="copertine/batman/07-ritorno-cavaliere-oscuro.jpg" alt="Copertina Batman: Il ritorno del Cavaliere Oscuro" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge evento">Il fumetto che cambiò Batman</span>
-            <span class="badge start">★ Inizio del dittico di Miller</span>
+            <span class="badge evento lang-it">Il fumetto che cambiò Batman</span>
+            <span class="badge evento lang-en">The comic that changed Batman</span>
+            <span class="badge start lang-it">★ Inizio del dittico di Miller</span>
+            <span class="badge start lang-en">★ Start of Miller's diptych</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>DC Library (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Frank Miller (testi e disegni), con Klaus Janson e Lynn Varley</dd></div>
-            <div><dt>Contiene</dt><dd>Batman: The Dark Knight Returns #1–4 (1986)</dd></div>
-            <div><dt>Ambientazione</dt><dd>Futuro possibile: Bruce Wayne ha 55 anni, ritirato da dieci</dd></div>
+            <div><dt><span class="lang-it">Collana</span><span class="lang-en">Imprint</span></dt><dd><span class="lang-it">DC Library (cartonato)</span><span class="lang-en">DC Library (hardcover)</span></dd></div>
+            <div><dt><span class="lang-it">Autori</span><span class="lang-en">Creators</span></dt><dd><span class="lang-it">Frank Miller (testi e disegni), con Klaus Janson e Lynn Varley</span><span class="lang-en">Frank Miller (script and art), with Klaus Janson and Lynn Varley</span></dd></div>
+            <div><dt><span class="lang-it">Contiene</span><span class="lang-en">Contains</span></dt><dd>Batman: The Dark Knight Returns #1–4 (1986)</dd></div>
+            <div><dt><span class="lang-it">Ambientazione</span><span class="lang-en">Setting</span></dt><dd><span class="lang-it">Futuro possibile: Bruce Wayne ha 55 anni, ritirato da dieci</span><span class="lang-en">A possible future: Bruce Wayne is 55, retired for ten years</span></dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Semplicemente il fumetto che ha reinventato Batman: in una Gotham allo sbando e in un'America da guerra fredda, un Bruce Wayne invecchiato e tormentato rindossa il mantello contro i Mutanti, un Due Facce irrecuperabile e un Joker in gran finale, fino alla resa dei conti con un Superman ridotto ad arma del governo. Uscito nel 1986 in coppia ideale con Watchmen, ha trasformato il "fumetto di supereroi" in letteratura adulta e ha cancellato per sempre l'ombra del Batman ingenuo televisivo.</p>
-          <h3>Curiosità</h3>
-          <p>La nuova Robin è una ragazzina, Carrie Kelley — una rivoluzione all'epoca. E la sequenza dello scontro finale con Superman è probabilmente la scena più imitata della storia del fumetto americano.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> Batman v Superman (2016) ne adatta dichiaratamente l'armatura e lo scontro finale, il finale di Il cavaliere oscuro - Il ritorno di Nolan ne riprende l'epilogo, e l'adattamento animato in due parti (2012–13) è tra i più fedeli mai realizzati. Ogni Batman "vecchio e brutale", videogiochi inclusi, discende da qui.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Semplicemente il fumetto che ha reinventato Batman: in una Gotham allo sbando e in un'America da guerra fredda, un Bruce Wayne invecchiato e tormentato rindossa il mantello contro i Mutanti, un Due Facce irrecuperabile e un Joker in gran finale, fino alla resa dei conti con un Superman ridotto ad arma del governo. Uscito nel 1986 in coppia ideale con Watchmen, ha trasformato il "fumetto di supereroi" in letteratura adulta e ha cancellato per sempre l'ombra del Batman ingenuo televisivo.</p>
+          <p class="lang-en">Quite simply the comic that reinvented Batman: in a Gotham in freefall and a Cold War America, an aged, tormented Bruce Wayne dons the cape again against the Mutants, a Two-Face beyond saving and a Joker taking his grand finale, all the way to the reckoning with a Superman reduced to a government weapon. Released in 1986 as the ideal companion to Watchmen, it turned the "superhero comic" into adult literature and erased forever the shadow of the campy TV Batman.</p>
+          <h3 class="lang-it">Curiosità</h3><h3 class="lang-en">Trivia</h3>
+          <p class="lang-it">La nuova Robin è una ragazzina, Carrie Kelley — una rivoluzione all'epoca. E la sequenza dello scontro finale con Superman è probabilmente la scena più imitata della storia del fumetto americano.</p>
+          <p class="lang-en">The new Robin is a young girl, Carrie Kelley — a revolution at the time. And the final showdown with Superman is probably the most imitated scene in the history of American comics.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> Batman v Superman (2016) ne adatta dichiaratamente l'armatura e lo scontro finale, il finale di Il cavaliere oscuro - Il ritorno di Nolan ne riprende l'epilogo, e l'adattamento animato in due parti (2012–13) è tra i più fedeli mai realizzati. Ogni Batman "vecchio e brutale", videogiochi inclusi, discende da qui.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> Batman v Superman (2016) openly adapts its armor and final battle, the ending of Nolan's The Dark Knight Rises echoes its epilogue, and the two-part animated adaptation (2012–13) is among the most faithful ever made. Every "old and brutal" Batman, video games included, descends from here.</div>
         </div>
       </article>
     </section>
  
     <!-- 14 -->
     <section class="stop">
-      <div class="stop-dot"><span class="n">14</span><span class="y">Futuro +3</span></div>
+      <div class="stop-dot"><span class="n">14</span><span class="y"><span class="lang-it">Futuro +3</span><span class="lang-en">Future +3</span></span></div>
       <article class="albo">
-        <div class="masthead"><h2>Il Cavaliere Oscuro colpisce ancora</h2><span class="anno">USA 2001–2002</span></div>
+        <div class="masthead"><h2><span class="lang-it">Il Cavaliere Oscuro colpisce ancora</span><span class="lang-en">The Dark Knight Strikes Again</span></h2><span class="anno">USA 2001–2002</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot b8">
@@ -704,18 +773,22 @@
             <img src="copertine/batman/08-colpisce-ancora.jpg" alt="Copertina Batman: Il Cavaliere Oscuro colpisce ancora" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge">Seguito diretto del Ritorno</span>
-            <span class="badge">Il più divisivo della collezione</span>
+            <span class="badge lang-it">Seguito diretto del Ritorno</span>
+            <span class="badge lang-en">Direct sequel to The Dark Knight Returns</span>
+            <span class="badge lang-it">Il più divisivo della collezione</span>
+            <span class="badge lang-en">The most divisive in the collection</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>DC Library (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Frank Miller (testi e disegni), colori di Lynn Varley</dd></div>
-            <div><dt>Contiene</dt><dd>Batman: The Dark Knight Strikes Again #1–3 (2001–02)</dd></div>
-            <div><dt>Ambientazione</dt><dd>Tre anni dopo il Ritorno: la distopia al suo culmine</dd></div>
+            <div><dt><span class="lang-it">Collana</span><span class="lang-en">Imprint</span></dt><dd><span class="lang-it">DC Library (cartonato)</span><span class="lang-en">DC Library (hardcover)</span></dd></div>
+            <div><dt><span class="lang-it">Autori</span><span class="lang-en">Creators</span></dt><dd><span class="lang-it">Frank Miller (testi e disegni), colori di Lynn Varley</span><span class="lang-en">Frank Miller (script and art), colors by Lynn Varley</span></dd></div>
+            <div><dt><span class="lang-it">Contiene</span><span class="lang-en">Contains</span></dt><dd>Batman: The Dark Knight Strikes Again #1–3 (2001–02)</dd></div>
+            <div><dt><span class="lang-it">Ambientazione</span><span class="lang-en">Setting</span></dt><dd><span class="lang-it">Tre anni dopo il Ritorno: la distopia al suo culmine</span><span class="lang-en">Three years after The Dark Knight Returns: the dystopia at its peak</span></dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il seguito che nessuno si aspettava così: tre anni dopo la falsa morte di Bruce, l'America è una dittatura mediatica governata nell'ombra da Lex Luthor e Brainiac, i supereroi sono prigionieri o collaborazionisti, e Batman guida la rivoluzione con Carrie Kelley (ora Catgirl) e un esercito di ex eroi da liberare. Miller abbandona il realismo cupo del primo capitolo per una satira pop deliberatamente sguaiata, dai colori digitali acidi di Lynn Varley. All'uscita fu accolto con freddezza; col tempo è stato in parte rivalutato come profezia sull'era dei media e della politica-spettacolo.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> chiude (insieme al successivo Ultimo Crociato e al terzo capitolo DK III) l'universo narrativo del "Dark Knight" di Miller, il futuro alternativo più influente della DC. La sua estetica satirico-distopica riecheggia in tante Gotham del futuro viste poi in serie animate e videogiochi.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il seguito che nessuno si aspettava così: tre anni dopo la falsa morte di Bruce, l'America è una dittatura mediatica governata nell'ombra da Lex Luthor e Brainiac, i supereroi sono prigionieri o collaborazionisti, e Batman guida la rivoluzione con Carrie Kelley (ora Catgirl) e un esercito di ex eroi da liberare. Miller abbandona il realismo cupo del primo capitolo per una satira pop deliberatamente sguaiata, dai colori digitali acidi di Lynn Varley. All'uscita fu accolto con freddezza; col tempo è stato in parte rivalutato come profezia sull'era dei media e della politica-spettacolo.</p>
+          <p class="lang-en">The sequel nobody expected to be like this: three years after Bruce's faked death, America is a media dictatorship ruled from the shadows by Lex Luthor and Brainiac, superheroes are prisoners or collaborators, and Batman leads the revolution with Carrie Kelley (now Catgirl) and an army of former heroes to set free. Miller abandons the grim realism of the first chapter for a deliberately brash pop satire, in Lynn Varley's acid digital colors. It was received coldly on release; over time it has been partly reappraised as a prophecy of the era of media and politics-as-spectacle.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> chiude (insieme al successivo Ultimo Crociato e al terzo capitolo DK III) l'universo narrativo del "Dark Knight" di Miller, il futuro alternativo più influente della DC. La sua estetica satirico-distopica riecheggia in tante Gotham del futuro viste poi in serie animate e videogiochi.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> together with the later Last Crusade and the third chapter DK III, it closes Miller's "Dark Knight" narrative universe, DC's most influential alternate future. Its satirical-dystopian aesthetic echoes through the many future Gothams later seen in animated series and video games.</div>
         </div>
       </article>
     </section>
@@ -724,42 +797,61 @@
  
   <!-- RIEPILOGO -->
   <section class="panel">
-    <h2>La mappa in <em>una tabella</em></h2>
+    <h2 class="lang-it">La mappa in <em>una tabella</em></h2>
+    <h2 class="lang-en">The map in <em>one table</em></h2>
     <table>
       <thead>
-        <tr><th>#</th><th>Volume</th><th>Autori</th><th>Albi USA</th><th>Ambientazione</th><th>Ruolo</th></tr>
+        <tr><th>#</th><th>Volume</th><th><span class="lang-it">Autori</span><span class="lang-en">Creators</span></th><th><span class="lang-it">Albi USA</span><span class="lang-en">US issues</span></th><th><span class="lang-it">Ambientazione</span><span class="lang-en">Setting</span></th><th><span class="lang-it">Ruolo</span><span class="lang-en">Role</span></th></tr>
       </thead>
       <tbody>
-        <tr><td>1</td><td>DC Classic: Batman 1</td><td>Kane, Finger</td><td>Detective Comics #27 e segg. + Batman #1 (1939–40)</td><td>Anno zero</td><td>Origine di tutto</td></tr>
-        <tr><td>2</td><td>Anno Uno</td><td>Miller, Mazzucchelli</td><td>Batman #404–407 (1987)</td><td>Anno 1</td><td>Origine moderna</td></tr>
-        <tr><td>3</td><td>L’uomo che ride</td><td>Brubaker, Mahnke</td><td>The Man Who Laughs (2005)</td><td>Anno 1</td><td>Primo scontro col Joker</td></tr>
-        <tr><td>4</td><td>Il lungo Halloween</td><td>Loeb, Sale</td><td>The Long Halloween #1–13 (1996–97)</td><td>Anno 2</td><td>Inizio trilogia Loeb/Sale</td></tr>
-        <tr><td>5</td><td>Vittoria oscura</td><td>Loeb, Sale</td><td>Dark Victory #0–13 (1999–2000)</td><td>Anno 3</td><td>Seguito + origine di Robin</td></tr>
-        <tr><td>6</td><td>Vacanze romane</td><td>Loeb, Sale</td><td>Catwoman: When in Rome #1–6 (2004–05)</td><td>Parallela a Vittoria oscura</td><td>Chiusura trilogia</td></tr>
-        <tr><td>7</td><td>The Killing Joke</td><td>Moore, Bolland</td><td>Graphic novel (1988)</td><td>Carriera matura</td><td>Capolavoro autoconclusivo</td></tr>
-        <tr><td>8</td><td>Arkham Asylum</td><td>Morrison, McKean</td><td>Graphic novel (1989)</td><td>Carriera matura</td><td>Capolavoro autoconclusivo</td></tr>
-        <tr><td>9</td><td>Hush</td><td>Loeb, Jim Lee</td><td>Batman #608–619 (2002–03)</td><td>Presente</td><td>Grande evento</td></tr>
-        <tr><td>10</td><td>Batman di Grant Morrison 1</td><td>Morrison, Kubert</td><td>Batman #655 e segg. (2006–08)</td><td>Presente</td><td>Inizio run Morrison</td></tr>
-        <tr><td>11</td><td>La corte dei gufi</td><td>Snyder, Capullo</td><td>Batman (2011) #1–7</td><td>Presente</td><td>Inizio run Snyder/Capullo</td></tr>
-        <tr><td>12</td><td>Dannato</td><td>Azzarello, Bermejo</td><td>Batman: Damned #1–3 (2018–19)</td><td>Presente fuori continuity</td><td>L'incubo Black Label</td></tr>
-        <tr><td>13</td><td>Il ritorno del Cavaliere Oscuro</td><td>Miller</td><td>The Dark Knight Returns #1–4 (1986)</td><td>Futuro: Bruce 55enne</td><td>Inizio dittico di Miller</td></tr>
-        <tr><td>14</td><td>Il Cavaliere Oscuro colpisce ancora</td><td>Miller</td><td>The Dark Knight Strikes Again #1–3 (2001–02)</td><td>Futuro, tre anni dopo</td><td>Chiusura del dittico</td></tr>
+        <tr class="lang-it"><td>1</td><td>DC Classic: Batman 1</td><td>Kane, Finger</td><td>Detective Comics #27 e segg. + Batman #1 (1939–40)</td><td>Anno zero</td><td>Origine di tutto</td></tr>
+        <tr class="lang-en"><td>1</td><td>DC Classic: Batman 1</td><td>Kane, Finger</td><td>Detective Comics #27 onward + Batman #1 (1939–40)</td><td>Year zero</td><td>Origin of everything</td></tr>
+        <tr class="lang-it"><td>2</td><td>Anno Uno</td><td>Miller, Mazzucchelli</td><td>Batman #404–407 (1987)</td><td>Anno 1</td><td>Origine moderna</td></tr>
+        <tr class="lang-en"><td>2</td><td>Year One</td><td>Miller, Mazzucchelli</td><td>Batman #404–407 (1987)</td><td>Year 1</td><td>Modern origin</td></tr>
+        <tr class="lang-it"><td>3</td><td>L’uomo che ride</td><td>Brubaker, Mahnke</td><td>The Man Who Laughs (2005)</td><td>Anno 1</td><td>Primo scontro col Joker</td></tr>
+        <tr class="lang-en"><td>3</td><td>The Man Who Laughs</td><td>Brubaker, Mahnke</td><td>The Man Who Laughs (2005)</td><td>Year 1</td><td>First clash with the Joker</td></tr>
+        <tr class="lang-it"><td>4</td><td>Il lungo Halloween</td><td>Loeb, Sale</td><td>The Long Halloween #1–13 (1996–97)</td><td>Anno 2</td><td>Inizio trilogia Loeb/Sale</td></tr>
+        <tr class="lang-en"><td>4</td><td>The Long Halloween</td><td>Loeb, Sale</td><td>The Long Halloween #1–13 (1996–97)</td><td>Year 2</td><td>Start of the Loeb/Sale trilogy</td></tr>
+        <tr class="lang-it"><td>5</td><td>Vittoria oscura</td><td>Loeb, Sale</td><td>Dark Victory #0–13 (1999–2000)</td><td>Anno 3</td><td>Seguito + origine di Robin</td></tr>
+        <tr class="lang-en"><td>5</td><td>Dark Victory</td><td>Loeb, Sale</td><td>Dark Victory #0–13 (1999–2000)</td><td>Year 3</td><td>Sequel + Robin's origin</td></tr>
+        <tr class="lang-it"><td>6</td><td>Vacanze romane</td><td>Loeb, Sale</td><td>Catwoman: When in Rome #1–6 (2004–05)</td><td>Parallela a Vittoria oscura</td><td>Chiusura trilogia</td></tr>
+        <tr class="lang-en"><td>6</td><td>When in Rome</td><td>Loeb, Sale</td><td>Catwoman: When in Rome #1–6 (2004–05)</td><td>Parallel to Dark Victory</td><td>Closes the trilogy</td></tr>
+        <tr class="lang-it"><td>7</td><td>The Killing Joke</td><td>Moore, Bolland</td><td>Graphic novel (1988)</td><td>Carriera matura</td><td>Capolavoro autoconclusivo</td></tr>
+        <tr class="lang-en"><td>7</td><td>The Killing Joke</td><td>Moore, Bolland</td><td>Graphic novel (1988)</td><td>Mature career</td><td>Self-contained masterpiece</td></tr>
+        <tr class="lang-it"><td>8</td><td>Arkham Asylum</td><td>Morrison, McKean</td><td>Graphic novel (1989)</td><td>Carriera matura</td><td>Capolavoro autoconclusivo</td></tr>
+        <tr class="lang-en"><td>8</td><td>Arkham Asylum</td><td>Morrison, McKean</td><td>Graphic novel (1989)</td><td>Mature career</td><td>Self-contained masterpiece</td></tr>
+        <tr class="lang-it"><td>9</td><td>Hush</td><td>Loeb, Jim Lee</td><td>Batman #608–619 (2002–03)</td><td>Presente</td><td>Grande evento</td></tr>
+        <tr class="lang-en"><td>9</td><td>Hush</td><td>Loeb, Jim Lee</td><td>Batman #608–619 (2002–03)</td><td>Present</td><td>Blockbuster event</td></tr>
+        <tr class="lang-it"><td>10</td><td>Batman di Grant Morrison 1</td><td>Morrison, Kubert</td><td>Batman #655 e segg. (2006–08)</td><td>Presente</td><td>Inizio run Morrison</td></tr>
+        <tr class="lang-en"><td>10</td><td>Batman di Grant Morrison 1</td><td>Morrison, Kubert</td><td>Batman #655 onward (2006–08)</td><td>Present</td><td>Start of the Morrison run</td></tr>
+        <tr class="lang-it"><td>11</td><td>La corte dei gufi</td><td>Snyder, Capullo</td><td>Batman (2011) #1–7</td><td>Presente</td><td>Inizio run Snyder/Capullo</td></tr>
+        <tr class="lang-en"><td>11</td><td>The Court of Owls</td><td>Snyder, Capullo</td><td>Batman (2011) #1–7</td><td>Present</td><td>Start of the Snyder/Capullo run</td></tr>
+        <tr class="lang-it"><td>12</td><td>Dannato</td><td>Azzarello, Bermejo</td><td>Batman: Damned #1–3 (2018–19)</td><td>Presente fuori continuity</td><td>L'incubo Black Label</td></tr>
+        <tr class="lang-en"><td>12</td><td>Damned</td><td>Azzarello, Bermejo</td><td>Batman: Damned #1–3 (2018–19)</td><td>Present, out of continuity</td><td>The Black Label nightmare</td></tr>
+        <tr class="lang-it"><td>13</td><td>Il ritorno del Cavaliere Oscuro</td><td>Miller</td><td>The Dark Knight Returns #1–4 (1986)</td><td>Futuro: Bruce 55enne</td><td>Inizio dittico di Miller</td></tr>
+        <tr class="lang-en"><td>13</td><td>The Dark Knight Returns</td><td>Miller</td><td>The Dark Knight Returns #1–4 (1986)</td><td>Future: Bruce at 55</td><td>Start of Miller's diptych</td></tr>
+        <tr class="lang-it"><td>14</td><td>Il Cavaliere Oscuro colpisce ancora</td><td>Miller</td><td>The Dark Knight Strikes Again #1–3 (2001–02)</td><td>Futuro, tre anni dopo</td><td>Chiusura del dittico</td></tr>
+        <tr class="lang-en"><td>14</td><td>The Dark Knight Strikes Again</td><td>Miller</td><td>The Dark Knight Strikes Again #1–3 (2001–02)</td><td>Future, three years later</td><td>Closes the diptych</td></tr>
       </tbody>
     </table>
-    <p style="margin-top:14px;font-size:14.5px">L'ordine della collezione segue la cronologia interna delle storie, non quella di pubblicazione: The Killing Joke (1988) e Il ritorno del Cavaliere Oscuro (1986) sono usciti prima della trilogia di Loeb e Sale, ma raccontano un Batman più avanti negli anni. Dannato, essendo fuori continuity, è collocato per affinità: un presente alternativo che fa da anticamera ai futuri possibili di Miller. Nota che, a differenza di Spider-Man, queste sono in gran parte storie autonome: ognuna si legge da sola, e l'ordine serve a costruire la parabola completa del personaggio.</p>
+    <p class="lang-it" style="margin-top:14px;font-size:14.5px">L'ordine della collezione segue la cronologia interna delle storie, non quella di pubblicazione: The Killing Joke (1988) e Il ritorno del Cavaliere Oscuro (1986) sono usciti prima della trilogia di Loeb e Sale, ma raccontano un Batman più avanti negli anni. Dannato, essendo fuori continuity, è collocato per affinità: un presente alternativo che fa da anticamera ai futuri possibili di Miller. Nota che, a differenza di Spider-Man, queste sono in gran parte storie autonome: ognuna si legge da sola, e l'ordine serve a costruire la parabola completa del personaggio.</p>
+    <p class="lang-en" style="margin-top:14px;font-size:14.5px">The collection's order follows the internal chronology of the stories, not publication order: The Killing Joke (1988) and The Dark Knight Returns (1986) came out before the Loeb and Sale trilogy, but depict a Batman further along in years. Damned, being out of continuity, is placed by affinity: an alternate present serving as an antechamber to Miller's possible futures. Note that, unlike Spider-Man, these are largely standalone stories: each one reads on its own, and the order serves to build the character's complete arc.</p>
   </section>
  
   <!-- PERCORSO -->
   <section class="panel">
-    <h2>Come si <em>incastrano</em></h2>
-    <p><strong>Sei blocchi narrativi:</strong> le origini del mito, antiche e moderne, con L'uomo che ride a saldare Anno Uno al debutto del Joker (volumi 1–3); la Gotham noir della trilogia Loeb/Sale, prosecuzione diretta di Anno Uno e saga in tre atti sulla caduta dei Falcone (volumi 4–6); il trittico autoriale di fine anni Ottanta — Moore e Morrison, due discese nella psiche pubblicate a un anno di distanza (volumi 7–8); il presente in tre movimenti: il mistero di Hush, l'epica familiare di Morrison, il mito urbano della Corte (volumi 9–11); l'incubo fuori continuity di Dannato, erede diretto di Arkham Asylum trent'anni dopo (volume 12); e il futuro apocalittico di Miller, dittico da leggere in sequenza (volumi 13–14). Con Anno Uno in collezione, Miller apre e chiude la parabola: il primo anno e l'ultimo.</p>
-    <p><strong>Espansioni coerenti:</strong> Morte in famiglia (1988) per il trauma di Jason Todd accanto a Killing Joke; i tomi 2 e 3 della run di Morrison e i seguiti di Snyder (Morte della famiglia, Anno Zero) per completare i due filoni del presente; Joker di Azzarello e Bermejo, il gemello di Dannato; DK III: Razza suprema per trasformare il dittico di Miller in trilogia; Batman: Ego di Darwyn Cooke per il versante psicologico e Gotham Central di Brubaker e Rucka per la Gotham vista con gli occhi dei poliziotti.</p>
+    <h2 class="lang-it">Come si <em>incastrano</em></h2>
+    <h2 class="lang-en">How they <em>fit together</em></h2>
+    <p class="lang-it"><strong>Sei blocchi narrativi:</strong> le origini del mito, antiche e moderne, con L'uomo che ride a saldare Anno Uno al debutto del Joker (volumi 1–3); la Gotham noir della trilogia Loeb/Sale, prosecuzione diretta di Anno Uno e saga in tre atti sulla caduta dei Falcone (volumi 4–6); il trittico autoriale di fine anni Ottanta — Moore e Morrison, due discese nella psiche pubblicate a un anno di distanza (volumi 7–8); il presente in tre movimenti: il mistero di Hush, l'epica familiare di Morrison, il mito urbano della Corte (volumi 9–11); l'incubo fuori continuity di Dannato, erede diretto di Arkham Asylum trent'anni dopo (volume 12); e il futuro apocalittico di Miller, dittico da leggere in sequenza (volumi 13–14). Con Anno Uno in collezione, Miller apre e chiude la parabola: il primo anno e l'ultimo.</p>
+    <p class="lang-en"><strong>Six narrative blocks:</strong> the origins of the myth, ancient and modern, with The Man Who Laughs welding Year One to the Joker's debut (volumes 1–3); the noir Gotham of the Loeb/Sale trilogy, direct continuation of Year One and a three-act saga on the fall of the Falcones (volumes 4–6); the late-eighties auteur triptych — Moore and Morrison, two descents into the psyche published a year apart (volumes 7–8); the present in three movements: the mystery of Hush, Morrison's family epic, the urban myth of the Court (volumes 9–11); the out-of-continuity nightmare of Damned, direct heir to Arkham Asylum thirty years on (volume 12); and Miller's apocalyptic future, a diptych to be read in sequence (volumes 13–14). With Year One in the collection, Miller opens and closes the arc: the first year and the last.</p>
+    <p class="lang-it"><strong>Espansioni coerenti:</strong> Morte in famiglia (1988) per il trauma di Jason Todd accanto a Killing Joke; i tomi 2 e 3 della run di Morrison e i seguiti di Snyder (Morte della famiglia, Anno Zero) per completare i due filoni del presente; Joker di Azzarello e Bermejo, il gemello di Dannato; DK III: Razza suprema per trasformare il dittico di Miller in trilogia; Batman: Ego di Darwyn Cooke per il versante psicologico e Gotham Central di Brubaker e Rucka per la Gotham vista con gli occhi dei poliziotti.</p>
+    <p class="lang-en"><strong>Coherent expansions:</strong> A Death in the Family (1988) for Jason Todd's trauma alongside Killing Joke; tomes 2 and 3 of Morrison's run and Snyder's follow-ups (Death of the Family, Zero Year) to complete the two present-day strands; Azzarello and Bermejo's Joker, the twin of Damned; DK III: The Master Race to turn Miller's diptych into a trilogy; Darwyn Cooke's Batman: Ego for the psychological side and Brubaker and Rucka's Gotham Central for Gotham seen through the eyes of its cops.</p>
   </section>
  
 </main>
  
 <footer>
-  <div class="wrap">Dossier della collezione · Batman · Gotham City</div>
+  <div class="wrap"><span class="lang-it">Dossier della collezione</span><span class="lang-en">Collection dossier</span> · Batman · Gotham City</div>
 </footer>
  
 </body>

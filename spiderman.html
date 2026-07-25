@@ -6,6 +6,8 @@
 <title>Fumetti Spider-Man</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/lang.css">
+<script src="assets/js/lang.js"></script>
 <link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
 <link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
 <style>
@@ -68,7 +70,7 @@
     font-family:'Barlow Condensed',sans-serif;font-weight:600;
     text-transform:uppercase;letter-spacing:.1em;font-size:13px;
   }
-  .hero-meta span{
+  .hero-meta > span{
     border:1px solid rgba(147,163,191,.4);padding:5px 12px;color:var(--web);
   }
 
@@ -233,15 +235,17 @@
 <header>
   <div class="wrap">
     <div class="corner-box">
-      <span>Collezione di</span>
+      <span class="lang-it">Collezione di</span><span class="lang-en">Collection of</span>
       <span class="big">10</span>
-      <span>Volumi</span>
+      <span class="lang-it">Volumi</span><span class="lang-en">Volumes</span>
     </div>
-    <h1>La mia collezione<br><span class="rosso">Spider-Man</span></h1>
-    <p class="hero-sub">Dieci volumi che attraversano la storia di Amazing Spider-Man, dal 1962 al 2025: un dossier con epoche, autori, albi originali USA, spillati italiani corrispondenti e tutto quello che questi volumi hanno generato fuori dalla carta.</p>
+    <h1 class="lang-it">La mia collezione<br><span class="rosso">Spider-Man</span></h1>
+    <h1 class="lang-en">My <span class="rosso">Spider-Man</span><br>collection</h1>
+    <p class="hero-sub lang-it">Dieci volumi che attraversano la storia di Amazing Spider-Man, dal 1962 al 2025: un dossier con epoche, autori, albi originali USA, spillati italiani corrispondenti e tutto quello che questi volumi hanno generato fuori dalla carta.</p>
+    <p class="hero-sub lang-en">Ten volumes spanning the history of Amazing Spider-Man, from 1962 to 2025: a dossier with eras, creators, original US issues, the matching Italian newsstand comics and everything these volumes have generated beyond the page.</p>
     <div class="hero-meta">
-      <span>Edizioni Panini Comics · Marvel</span>
-      <span>Universo principale · Terra-616</span>
+      <span class="lang-it">Edizioni Panini Comics · Marvel</span><span class="lang-en">Panini Comics editions · Marvel</span>
+      <span class="lang-it">Universo principale · Terra-616</span><span class="lang-en">Main universe · Earth-616</span>
       <span>1962 → 2025</span>
     </div>
   </div>
@@ -266,20 +270,23 @@
             <img src="copertine/spiderman/01-masterworks.jpg" alt="Copertina Marvel Masterworks: Spider-Man 1" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ Inizio di tutto</span>
-            <span class="badge">Era Lee/Ditko</span>
+            <span class="badge start lang-it">★ Inizio di tutto</span><span class="badge start lang-en">★ The start of it all</span>
+            <span class="badge lang-it">Era Lee/Ditko</span><span class="badge lang-en">Lee/Ditko era</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Masterworks (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Stan Lee (testi), Steve Ditko (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Amazing Fantasy #15 + Amazing Spider-Man #1–10</dd></div>
-            <div><dt>Spillato ITA</dt><dd>L'Uomo Ragno (Editoriale Corno) nn. 1–13 circa, dal 1970 — la prima edizione italiana in assoluto</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Masterworks (cartonato)</dd><dd class="lang-en">Marvel Masterworks (hardcover)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Creators</dt><dd class="lang-it">Stan Lee (testi), Steve Ditko (disegni)</dd><dd class="lang-en">Stan Lee (writer), Steve Ditko (artist)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Collects</dt><dd>Amazing Fantasy #15 + Amazing Spider-Man #1–10</dd></div>
+            <div><dt class="lang-it">Spillato ITA</dt><dt class="lang-en">ITA newsstand</dt><dd class="lang-it">L'Uomo Ragno (Editoriale Corno) nn. 1–13 circa, dal 1970 — la prima edizione italiana in assoluto</dd><dd class="lang-en">L'Uomo Ragno (Editoriale Corno) nos. 1–13 approx., from 1970 — the very first Italian edition</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>È il punto zero: Amazing Fantasy #15 racconta l'origine del personaggio — il morso del ragno, zio Ben, "da grandi poteri derivano grandi responsabilità". I primi dieci numeri della serie regolare introducono quasi tutta la galleria storica dei nemici: Camaleonte, Avvoltoio, Dottor Octopus, Sandman, Lizard, Electro. Qui nasce anche il "metodo Marvel": il supereroe con i problemi quotidiani di un adolescente vero.</p>
-          <h3>Curiosità da collezionista</h3>
-          <p>Amazing Fantasy #15 è oggi tra gli albi più preziosi dell'età d'argento: una copia in condizioni eccellenti è stata battuta all'asta per oltre 3 milioni di dollari, record per un fumetto Marvel.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> l'origine di questo volume è stata adattata sul grande schermo tre volte (Spider-Man di Sam Raimi, 2002; The Amazing Spider-Man, 2012; e in forma implicita nel ciclo MCU). I villain che esordiscono qui hanno dominato i film: Doc Ock in Spider-Man 2, Sandman in Spider-Man 3, Lizard in The Amazing Spider-Man, Electro in TASM 2, l'Avvoltoio in Homecoming, Mysterio in Far From Home — e quasi tutti tornano insieme in No Way Home.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">È il punto zero: Amazing Fantasy #15 racconta l'origine del personaggio — il morso del ragno, zio Ben, "da grandi poteri derivano grandi responsabilità". I primi dieci numeri della serie regolare introducono quasi tutta la galleria storica dei nemici: Camaleonte, Avvoltoio, Dottor Octopus, Sandman, Lizard, Electro. Qui nasce anche il "metodo Marvel": il supereroe con i problemi quotidiani di un adolescente vero.</p>
+          <p class="lang-en">This is ground zero: Amazing Fantasy #15 tells the character's origin — the spider bite, Uncle Ben, "with great power there must also come great responsibility". The first ten issues of the ongoing series introduce nearly the entire classic rogues' gallery: Chameleon, Vulture, Doctor Octopus, Sandman, Lizard, Electro. This is also where the "Marvel method" is born: a superhero with the everyday problems of a real teenager.</p>
+          <h3 class="lang-it">Curiosità da collezionista</h3><h3 class="lang-en">Collector's trivia</h3>
+          <p class="lang-it">Amazing Fantasy #15 è oggi tra gli albi più preziosi dell'età d'argento: una copia in condizioni eccellenti è stata battuta all'asta per oltre 3 milioni di dollari, record per un fumetto Marvel.</p>
+          <p class="lang-en">Amazing Fantasy #15 is now among the most valuable issues of the Silver Age: a copy in excellent condition sold at auction for over 3 million dollars, a record for a Marvel comic.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> l'origine di questo volume è stata adattata sul grande schermo tre volte (Spider-Man di Sam Raimi, 2002; The Amazing Spider-Man, 2012; e in forma implicita nel ciclo MCU). I villain che esordiscono qui hanno dominato i film: Doc Ock in Spider-Man 2, Sandman in Spider-Man 3, Lizard in The Amazing Spider-Man, Electro in TASM 2, l'Avvoltoio in Homecoming, Mysterio in Far From Home — e quasi tutti tornano insieme in No Way Home.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the origin told in this volume has been adapted for the big screen three times (Sam Raimi's Spider-Man, 2002; The Amazing Spider-Man, 2012; and implicitly in the MCU cycle). The villains who debut here went on to dominate the movies: Doc Ock in Spider-Man 2, Sandman in Spider-Man 3, Lizard in The Amazing Spider-Man, Electro in TASM 2, the Vulture in Homecoming, Mysterio in Far From Home — and almost all of them return together in No Way Home.</div>
         </div>
       </article>
     </section>
@@ -288,7 +295,7 @@
     <section class="stop">
       <div class="stop-dot"><span class="n">2</span><span class="y">2001</span></div>
       <article class="albo blu">
-        <div class="masthead"><h2>Tornando a casa</h2><span class="anno">USA 2001</span></div>
+        <div class="masthead"><h2><span class="lang-it">Tornando a casa</span><span class="lang-en">Coming Home</span></h2><span class="anno">USA 2001</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot c2">
@@ -300,20 +307,23 @@
             <img src="copertine/spiderman/02-tornando-a-casa.jpg" alt="Copertina Spider-Man: Tornando a casa" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ Inizio run Straczynski (2001–2007)</span>
+            <span class="badge start lang-it">★ Inizio run Straczynski (2001–2007)</span><span class="badge start lang-en">★ Start of the Straczynski run (2001–2007)</span>
             <span class="badge">Eisner Award</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Must Have (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>J. Michael Straczynski (testi), John Romita Jr. (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Amazing Spider-Man (1999) #30–35</dd></div>
-            <div><dt>Spillato ITA</dt><dd>L'Uomo Ragno: le storie di JMS iniziarono in Italia dal n. 335 (63 di nuova numerazione); indicativamente nn. 335–344 (2002)</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Must Have (cartonato)</dd><dd class="lang-en">Marvel Must Have (hardcover)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Creators</dt><dd class="lang-it">J. Michael Straczynski (testi), John Romita Jr. (disegni)</dd><dd class="lang-en">J. Michael Straczynski (writer), John Romita Jr. (artist)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Collects</dt><dd>Amazing Spider-Man (1999) #30–35</dd></div>
+            <div><dt class="lang-it">Spillato ITA</dt><dt class="lang-en">ITA newsstand</dt><dd class="lang-it">L'Uomo Ragno: le storie di JMS iniziarono in Italia dal n. 335 (63 di nuova numerazione); indicativamente nn. 335–344 (2002)</dd><dd class="lang-en">L'Uomo Ragno: the JMS stories began in Italy with no. 335 (63 in the new numbering); roughly nos. 335–344 (2002)</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>La run più importante degli anni 2000. Straczynski (già creatore di Babylon 5) rilancia un personaggio in crisi creativa introducendo la mitologia dei totem: il misterioso Ezekiel pone la domanda che cambia tutto — "il ragno ti ha scelto, o è stato un caso?" — ed esordisce Morlun, il divoratore di totem. È anche l'inizio della celebre coppia con John Romita Jr. e la saga premiata con l'Eisner Award.</p>
-          <h3>Cosa semina</h3>
-          <p>L'intera idea di Spider-Verse discende da queste pagine: Morlun, gli Eredi e il concetto di ragno-totem nascono qui, tredici anni prima dell'evento. Subito dopo questo arco arriva il celebre smascheramento davanti a zia May ("La conversazione", ASM #37–38).</p>
-          <div class="screen"><strong>Oltre la carta:</strong> la mitologia dei totem è la spina dorsale concettuale dei film animati Spider-Verse. E il comprimario Ezekiel Sims è arrivato in live action come antagonista del film Madame Web (2024). La run è proseguita fino a Civil War, Back in Black e One More Day (2007).</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">La run più importante degli anni 2000. Straczynski (già creatore di Babylon 5) rilancia un personaggio in crisi creativa introducendo la mitologia dei totem: il misterioso Ezekiel pone la domanda che cambia tutto — "il ragno ti ha scelto, o è stato un caso?" — ed esordisce Morlun, il divoratore di totem. È anche l'inizio della celebre coppia con John Romita Jr. e la saga premiata con l'Eisner Award.</p>
+          <p class="lang-en">The most important run of the 2000s. Straczynski (already the creator of Babylon 5) relaunches a creatively stalled character by introducing the totem mythology: the mysterious Ezekiel asks the question that changes everything — "did the spider choose you, or was it just chance?" — and Morlun, the devourer of totems, makes his debut. It is also the beginning of the celebrated pairing with John Romita Jr. and the storyline that won the Eisner Award.</p>
+          <h3 class="lang-it">Cosa semina</h3><h3 class="lang-en">What it plants</h3>
+          <p class="lang-it">L'intera idea di Spider-Verse discende da queste pagine: Morlun, gli Eredi e il concetto di ragno-totem nascono qui, tredici anni prima dell'evento. Subito dopo questo arco arriva il celebre smascheramento davanti a zia May ("La conversazione", ASM #37–38).</p>
+          <p class="lang-en">The entire idea of Spider-Verse descends from these pages: Morlun, the Inheritors and the spider-totem concept are born here, thirteen years before the event. Right after this arc comes the famous unmasking in front of Aunt May ("The Conversation", ASM #37–38).</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> la mitologia dei totem è la spina dorsale concettuale dei film animati Spider-Verse. E il comprimario Ezekiel Sims è arrivato in live action come antagonista del film Madame Web (2024). La run è proseguita fino a Civil War, Back in Black e One More Day (2007).</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the totem mythology is the conceptual backbone of the animated Spider-Verse films. And supporting character Ezekiel Sims made it to live action as the antagonist of Madame Web (2024). The run went on through Civil War, Back in Black and One More Day (2007).</div>
         </div>
       </article>
     </section>
@@ -322,7 +332,7 @@
     <section class="stop">
       <div class="stop-dot"><span class="n">3</span><span class="y">2007</span></div>
       <article class="albo">
-        <div class="masthead"><h2>Soltanto un altro giorno / Un momento nel tempo</h2><span class="anno">USA 2007 + 2010</span></div>
+        <div class="masthead"><h2><span class="lang-it">Soltanto un altro giorno / Un momento nel tempo</span><span class="lang-en">One More Day / One Moment in Time</span></h2><span class="anno">USA 2007 + 2010</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot c10">
@@ -334,20 +344,23 @@
             <img src="copertine/spiderman/02b-soltanto-un-altro-giorno.jpg" alt="Copertina Marvel Premiere Edition: Soltanto un altro giorno / Un momento nel tempo" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ Fine run Straczynski — cerniera verso Brand New Day</span>
-            <span class="badge">Edizione di pregio</span>
+            <span class="badge start lang-it">★ Fine run Straczynski — cerniera verso Brand New Day</span><span class="badge start lang-en">★ End of the Straczynski run — hinge into Brand New Day</span>
+            <span class="badge lang-it">Edizione di pregio</span><span class="badge lang-en">Deluxe edition</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Premiere Edition (cartonato di pregio)</dd></div>
-            <div><dt>Autori</dt><dd>J. Michael Straczynski e Joe Quesada; Un momento nel tempo di Quesada con Paolo Rivera e Paul Ryan</dd></div>
-            <div><dt>Contiene</dt><dd>Amazing Spider-Man #544–545 e #638–641, Friendly Neighborhood Spider-Man #24, Sensational Spider-Man #41, One More Day Sketchbook</dd></div>
-            <div><dt>Spillato ITA</dt><dd>One More Day: L'Uomo Ragno nn. 487–488 (giugno 2008), gli ultimi due numeri con il titolo storico prima del cambio in Spider-Man; Un momento nel tempo: Spider-Man, 2010–11</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Premiere Edition (cartonato di pregio)</dd><dd class="lang-en">Marvel Premiere Edition (deluxe hardcover)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Creators</dt><dd class="lang-it">J. Michael Straczynski e Joe Quesada; Un momento nel tempo di Quesada con Paolo Rivera e Paul Ryan</dd><dd class="lang-en">J. Michael Straczynski and Joe Quesada; One Moment in Time by Quesada with Paolo Rivera and Paul Ryan</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Collects</dt><dd class="lang-it">Amazing Spider-Man #544–545 e #638–641, Friendly Neighborhood Spider-Man #24, Sensational Spider-Man #41, One More Day Sketchbook</dd><dd class="lang-en">Amazing Spider-Man #544–545 and #638–641, Friendly Neighborhood Spider-Man #24, Sensational Spider-Man #41, One More Day Sketchbook</dd></div>
+            <div><dt class="lang-it">Spillato ITA</dt><dt class="lang-en">ITA newsstand</dt><dd class="lang-it">One More Day: L'Uomo Ragno nn. 487–488 (giugno 2008), gli ultimi due numeri con il titolo storico prima del cambio in Spider-Man; Un momento nel tempo: Spider-Man, 2010–11</dd><dd class="lang-en">One More Day: L'Uomo Ragno nos. 487–488 (June 2008), the last two issues under the historic title before the change to Spider-Man; One Moment in Time: Spider-Man, 2010–11</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il canto del cigno di Straczynski e una delle storie più controverse di sempre: zia May morente, e l'unico modo per salvarla è un patto con Mefisto che cancella dalla realtà il matrimonio di Peter e Mary Jane e fa dimenticare al mondo l'identità di Spider-Man. È l'evento-cerniera dell'intera collezione: chiude l'era aperta da Tornando a casa e genera direttamente Un nuovo giorno, che senza questa premessa risulta criptico. Il volume include anche Un momento nel tempo (2010), il complemento che rivela cosa accadde davvero il giorno del matrimonio-mai-avvenuto e come funzionò l'oblio collettivo.</p>
-          <h3>Curiosità</h3>
-          <p>La storia fu così divisiva che Straczynski chiese di togliere la firma da metà dei capitoli, in disaccordo con la soluzione voluta dall'editor-in-chief Quesada (che la disegnò personalmente). Questa edizione esce in coppia orchestrata con il Must Have di Un nuovo giorno: causa ed effetto pubblicati nello stesso mese.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> il meccanismo del "tutti dimenticano chi è Spider-Man" è stato ripreso, in chiave riabilitata e commossa, dal finale di Spider-Man: No Way Home (2021) — l'incantesimo di Doctor Strange che chiude il film è il discendente diretto del patto di queste pagine.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il canto del cigno di Straczynski e una delle storie più controverse di sempre: zia May morente, e l'unico modo per salvarla è un patto con Mefisto che cancella dalla realtà il matrimonio di Peter e Mary Jane e fa dimenticare al mondo l'identità di Spider-Man. È l'evento-cerniera dell'intera collezione: chiude l'era aperta da Tornando a casa e genera direttamente Un nuovo giorno, che senza questa premessa risulta criptico. Il volume include anche Un momento nel tempo (2010), il complemento che rivela cosa accadde davvero il giorno del matrimonio-mai-avvenuto e come funzionò l'oblio collettivo.</p>
+          <p class="lang-en">Straczynski's swan song and one of the most controversial stories ever: Aunt May is dying, and the only way to save her is a pact with Mephisto that erases Peter and Mary Jane's marriage from reality and makes the world forget Spider-Man's identity. It is the hinge event of the entire collection: it closes the era opened by Coming Home and directly generates Brand New Day, which is cryptic without this premise. The volume also includes One Moment in Time (2010), the companion piece that reveals what really happened on the day of the wedding-that-never-was and how the collective amnesia worked.</p>
+          <h3 class="lang-it">Curiosità</h3><h3 class="lang-en">Trivia</h3>
+          <p class="lang-it">La storia fu così divisiva che Straczynski chiese di togliere la firma da metà dei capitoli, in disaccordo con la soluzione voluta dall'editor-in-chief Quesada (che la disegnò personalmente). Questa edizione esce in coppia orchestrata con il Must Have di Un nuovo giorno: causa ed effetto pubblicati nello stesso mese.</p>
+          <p class="lang-en">The story was so divisive that Straczynski asked to have his name taken off half the chapters, disagreeing with the solution wanted by editor-in-chief Quesada (who drew it personally). This edition came out as an orchestrated pair with the Brand New Day Must Have: cause and effect published in the same month.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> il meccanismo del "tutti dimenticano chi è Spider-Man" è stato ripreso, in chiave riabilitata e commossa, dal finale di Spider-Man: No Way Home (2021) — l'incantesimo di Doctor Strange che chiude il film è il discendente diretto del patto di queste pagine.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the "everyone forgets who Spider-Man is" device was picked up, in a redeemed and moving key, by the ending of Spider-Man: No Way Home (2021) — the Doctor Strange spell that closes the film is the direct descendant of the pact made in these pages.</div>
         </div>
       </article>
     </section>
@@ -356,7 +369,7 @@
     <section class="stop">
       <div class="stop-dot"><span class="n">4</span><span class="y">2008</span></div>
       <article class="albo">
-        <div class="masthead"><h2>Un nuovo giorno</h2><span class="anno">USA 2008</span></div>
+        <div class="masthead"><h2><span class="lang-it">Un nuovo giorno</span><span class="lang-en">Brand New Day</span></h2><span class="anno">USA 2008</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot c3">
@@ -368,20 +381,23 @@
             <img src="copertine/spiderman/03-un-nuovo-giorno.jpg" alt="Copertina Spider-Man: Un nuovo giorno" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ Inizio era Brand New Day / gestione Slott</span>
-            <span class="badge">Punto d'ingresso</span>
+            <span class="badge start lang-it">★ Inizio era Brand New Day / gestione Slott</span><span class="badge start lang-en">★ Start of the Brand New Day era / Slott tenure</span>
+            <span class="badge lang-it">Punto d'ingresso</span><span class="badge lang-en">Entry point</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Must Have (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Dan Slott (testi), Steve McNiven (disegni); prologo Swing Shift di Slott e Phil Jimenez</dd></div>
-            <div><dt>Contiene</dt><dd>Amazing Spider-Man #546–551 + Spider-Man: Swing Shift</dd></div>
-            <div><dt>Spillato ITA</dt><dd>Dal n. 489 la testata cambia titolo da L'Uomo Ragno a Spider-Man proprio con questa saga: nn. 489–492 circa (2008)</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Must Have (cartonato)</dd><dd class="lang-en">Marvel Must Have (hardcover)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Creators</dt><dd class="lang-it">Dan Slott (testi), Steve McNiven (disegni); prologo Swing Shift di Slott e Phil Jimenez</dd><dd class="lang-en">Dan Slott (writer), Steve McNiven (artist); Swing Shift prologue by Slott and Phil Jimenez</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Collects</dt><dd>Amazing Spider-Man #546–551 + Spider-Man: Swing Shift</dd></div>
+            <div><dt class="lang-it">Spillato ITA</dt><dt class="lang-en">ITA newsstand</dt><dd class="lang-it">Dal n. 489 la testata cambia titolo da L'Uomo Ragno a Spider-Man proprio con questa saga: nn. 489–492 circa (2008)</dd><dd class="lang-en">With this very arc, from no. 489 the series changed its title from L'Uomo Ragno to Spider-Man: nos. 489–492 approx. (2008)</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il più grande "anno zero" moderno della serie. Dopo il patto di One More Day, il matrimonio con Mary Jane non è mai esistito, nessuno ricorda l'identità segreta e Harry Osborn è vivo: tutto riparte da capo, con la serie che esce tre volte al mese e nuovi villain come Mister Negativo, Jackpot e Minaccia. È anche, di fatto, l'inizio della gestione Dan Slott che durerà dieci anni.</p>
-          <h3>Nota per la collezione</h3>
-          <p>Nel catalogo cartonato italiano attuale il seguito diretto di quest'era (Big Time, 2010) è scoperto: uscì in un cartonato Marvel Collection intorno al 2012 oggi fuori catalogo, mentre la ristampa in corso (Marvel Masterseries, dal 2026) è in brossura economica.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> Mister Negativo, esordio assoluto di questo volume, è diventato uno dei villain principali del videogioco Marvel's Spider-Man (PS4, 2018), tra i giochi più venduti di sempre su console PlayStation.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il più grande "anno zero" moderno della serie. Dopo il patto di One More Day, il matrimonio con Mary Jane non è mai esistito, nessuno ricorda l'identità segreta e Harry Osborn è vivo: tutto riparte da capo, con la serie che esce tre volte al mese e nuovi villain come Mister Negativo, Jackpot e Minaccia. È anche, di fatto, l'inizio della gestione Dan Slott che durerà dieci anni.</p>
+          <p class="lang-en">The biggest modern "year zero" of the series. After the One More Day pact, the marriage to Mary Jane never happened, nobody remembers the secret identity and Harry Osborn is alive: everything restarts from scratch, with the series shipping three times a month and new villains such as Mister Negative, Jackpot and Menace. It is also, in effect, the beginning of the Dan Slott tenure that would last ten years.</p>
+          <h3 class="lang-it">Nota per la collezione</h3><h3 class="lang-en">A note for the collection</h3>
+          <p class="lang-it">Nel catalogo cartonato italiano attuale il seguito diretto di quest'era (Big Time, 2010) è scoperto: uscì in un cartonato Marvel Collection intorno al 2012 oggi fuori catalogo, mentre la ristampa in corso (Marvel Masterseries, dal 2026) è in brossura economica.</p>
+          <p class="lang-en">In the current Italian hardcover catalogue the direct follow-up to this era (Big Time, 2010) is uncovered: it came out in a Marvel Collection hardcover around 2012, now out of print, while the reprint under way (Marvel Masterseries, from 2026) is an economy paperback.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> Mister Negativo, esordio assoluto di questo volume, è diventato uno dei villain principali del videogioco Marvel's Spider-Man (PS4, 2018), tra i giochi più venduti di sempre su console PlayStation.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> Mister Negative, who makes his very first appearance in this volume, became one of the main villains of the video game Marvel's Spider-Man (PS4, 2018), among the best-selling games ever on PlayStation consoles.</div>
         </div>
       </article>
     </section>
@@ -390,7 +406,7 @@
     <section class="stop">
       <div class="stop-dot"><span class="n">5</span><span class="y">2014</span></div>
       <article class="albo blu">
-        <div class="masthead"><h2>La fortuna dei Parker</h2><span class="anno">USA 2014</span></div>
+        <div class="masthead"><h2><span class="lang-it">La fortuna dei Parker</span><span class="lang-en">The Parker Luck</span></h2><span class="anno">USA 2014</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot c4">
@@ -402,20 +418,23 @@
             <img src="copertine/spiderman/04-fortuna-dei-parker.jpg" alt="Copertina Spider-Man: La fortuna dei Parker" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ Inizio Amazing Spider-Man vol. 3</span>
-            <span class="badge">Ponte verso Spider-Verse</span>
+            <span class="badge start lang-it">★ Inizio Amazing Spider-Man vol. 3</span><span class="badge start lang-en">★ Start of Amazing Spider-Man vol. 3</span>
+            <span class="badge lang-it">Ponte verso Spider-Verse</span><span class="badge lang-en">Bridge to Spider-Verse</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Must Have (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Dan Slott (testi), Humberto Ramos (disegni), con Giuseppe Camuncoli</dd></div>
-            <div><dt>Contiene</dt><dd>Amazing Spider-Man (2014) #1–6</dd></div>
-            <div><dt>Spillato ITA</dt><dd>Con questo rilancio la testata da edicola diventa Amazing Spider-Man proseguendo la numerazione storica: nn. 619–624 circa (2014)</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Must Have (cartonato)</dd><dd class="lang-en">Marvel Must Have (hardcover)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Creators</dt><dd class="lang-it">Dan Slott (testi), Humberto Ramos (disegni), con Giuseppe Camuncoli</dd><dd class="lang-en">Dan Slott (writer), Humberto Ramos (artist), with Giuseppe Camuncoli</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Collects</dt><dd>Amazing Spider-Man (2014) #1–6</dd></div>
+            <div><dt class="lang-it">Spillato ITA</dt><dt class="lang-en">ITA newsstand</dt><dd class="lang-it">Con questo rilancio la testata da edicola diventa Amazing Spider-Man proseguendo la numerazione storica: nn. 619–624 circa (2014)</dd><dd class="lang-en">With this relaunch the newsstand series became Amazing Spider-Man, continuing the historic numbering: nos. 619–624 approx. (2014)</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il grande ritorno: Peter riprende possesso del proprio corpo dopo l'anno e mezzo in cui il Dottor Octopus lo ha occupato (Superior Spider-Man) e deve ricostruirsi una vita mentre tutti ricordano quanto "Spider-Ock" fosse più efficiente di lui. Due esordi pesanti: Silk (Cindy Moon, morsa dallo stesso ragno di Peter) e Anna Maria Marconi.</p>
-          <h3>Il suo ruolo nella collezione</h3>
-          <p>Non è un inizio epocale come gli altri: è il trampolino diretto di Spider-Verse, perché qui si riattiva la minaccia degli Eredi. Indispensabile per capire il volume successivo.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> Silk, nata in queste pagine, è al centro di un progetto televisivo live action in sviluppo presso Sony (Silk: Spider Society). L'albo #4 con il suo esordio è tra i più ricercati dell'era moderna dagli speculatori.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il grande ritorno: Peter riprende possesso del proprio corpo dopo l'anno e mezzo in cui il Dottor Octopus lo ha occupato (Superior Spider-Man) e deve ricostruirsi una vita mentre tutti ricordano quanto "Spider-Ock" fosse più efficiente di lui. Due esordi pesanti: Silk (Cindy Moon, morsa dallo stesso ragno di Peter) e Anna Maria Marconi.</p>
+          <p class="lang-en">The big comeback: Peter regains possession of his own body after the year and a half in which Doctor Octopus occupied it (Superior Spider-Man) and has to rebuild a life while everyone remembers how much more efficient "Spider-Ock" was. Two heavyweight debuts: Silk (Cindy Moon, bitten by the same spider as Peter) and Anna Maria Marconi.</p>
+          <h3 class="lang-it">Il suo ruolo nella collezione</h3><h3 class="lang-en">Its role in the collection</h3>
+          <p class="lang-it">Non è un inizio epocale come gli altri: è il trampolino diretto di Spider-Verse, perché qui si riattiva la minaccia degli Eredi. Indispensabile per capire il volume successivo.</p>
+          <p class="lang-en">It is not an epoch-making beginning like the others: it is the direct springboard into Spider-Verse, because this is where the threat of the Inheritors is reactivated. Essential for understanding the next volume.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> Silk, nata in queste pagine, è al centro di un progetto televisivo live action in sviluppo presso Sony (Silk: Spider Society). L'albo #4 con il suo esordio è tra i più ricercati dell'era moderna dagli speculatori.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> Silk, born in these pages, is at the centre of a live-action TV project in development at Sony (Silk: Spider Society). Issue #4, with her debut, is among the modern-era books most hunted by speculators.</div>
         </div>
       </article>
     </section>
@@ -436,20 +455,23 @@
             <img src="copertine/spiderman/05-spider-verse.jpg" alt="Copertina Spider-Man: Spider-Verse" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge evento">Grande evento</span>
-            <span class="badge">Chiude il cerchio aperto da JMS</span>
+            <span class="badge evento lang-it">Grande evento</span><span class="badge evento lang-en">Major event</span>
+            <span class="badge lang-it">Chiude il cerchio aperto da JMS</span><span class="badge lang-en">Closes the circle JMS opened</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Must Have (cartonato)</dd></div>
-            <div><dt>Autori</dt><dd>Dan Slott (testi), Olivier Coipel e Giuseppe Camuncoli (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Amazing Spider-Man (2014) #9–15</dd></div>
-            <div><dt>Spillato ITA</dt><dd>Amazing Spider-Man nn. 627–633 circa (2015), con tie-in su albi paralleli</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Must Have (cartonato)</dd><dd class="lang-en">Marvel Must Have (hardcover)</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Creators</dt><dd class="lang-it">Dan Slott (testi), Olivier Coipel e Giuseppe Camuncoli (disegni)</dd><dd class="lang-en">Dan Slott (writer), Olivier Coipel and Giuseppe Camuncoli (artists)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Collects</dt><dd>Amazing Spider-Man (2014) #9–15</dd></div>
+            <div><dt class="lang-it">Spillato ITA</dt><dt class="lang-en">ITA newsstand</dt><dd class="lang-it">Amazing Spider-Man nn. 627–633 circa (2015), con tie-in su albi paralleli</dd><dd class="lang-en">Amazing Spider-Man nos. 627–633 approx. (2015), with tie-ins in the sister titles</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>L'evento-saga per eccellenza degli anni 2010: tutti gli Spider-Man di ogni universo — Spider-Gwen, Spider-Man Noir, Miles Morales, Spider-Ham, il Peter dell'era Superior — uniti contro Morlun e la famiglia degli Eredi. Chiude il cerchio della mitologia dei totem aperto da Straczynski tredici anni prima.</p>
-          <h3>Curiosità</h3>
-          <p>Spider-Gwen esordisce nel preludio Edge of Spider-Verse #2 ed è diventata immediatamente uno dei personaggi Marvel più popolari del decennio. Il filone prosegue con Spider-Geddon (2018) ed End of the Spider-Verse (2022–23).</p>
-          <div class="screen"><strong>Oltre la carta:</strong> è la base diretta dei film animati Spider-Man: Un nuovo universo (2018, premio Oscar come miglior film d'animazione), Across the Spider-Verse (2023) e del capitolo conclusivo Beyond the Spider-Verse. Il concetto di ragni del multiverso ha ispirato anche il live action No Way Home (2021), tra i maggiori incassi della storia del cinema.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">L'evento-saga per eccellenza degli anni 2010: tutti gli Spider-Man di ogni universo — Spider-Gwen, Spider-Man Noir, Miles Morales, Spider-Ham, il Peter dell'era Superior — uniti contro Morlun e la famiglia degli Eredi. Chiude il cerchio della mitologia dei totem aperto da Straczynski tredici anni prima.</p>
+          <p class="lang-en">The definitive event saga of the 2010s: every Spider-Man from every universe — Spider-Gwen, Spider-Man Noir, Miles Morales, Spider-Ham, the Peter of the Superior era — united against Morlun and the family of the Inheritors. It closes the circle of the totem mythology Straczynski had opened thirteen years earlier.</p>
+          <h3 class="lang-it">Curiosità</h3><h3 class="lang-en">Trivia</h3>
+          <p class="lang-it">Spider-Gwen esordisce nel preludio Edge of Spider-Verse #2 ed è diventata immediatamente uno dei personaggi Marvel più popolari del decennio. Il filone prosegue con Spider-Geddon (2018) ed End of the Spider-Verse (2022–23).</p>
+          <p class="lang-en">Spider-Gwen debuts in the prelude Edge of Spider-Verse #2 and instantly became one of the most popular Marvel characters of the decade. The thread continues with Spider-Geddon (2018) and End of the Spider-Verse (2022–23).</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> è la base diretta dei film animati Spider-Man: Un nuovo universo (2018, premio Oscar come miglior film d'animazione), Across the Spider-Verse (2023) e del capitolo conclusivo Beyond the Spider-Verse. Il concetto di ragni del multiverso ha ispirato anche il live action No Way Home (2021), tra i maggiori incassi della storia del cinema.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> it is the direct basis of the animated films Spider-Man: Into the Spider-Verse (2018, Academy Award for Best Animated Feature), Across the Spider-Verse (2023) and the concluding chapter Beyond the Spider-Verse. The multiverse-spiders concept also inspired the live-action No Way Home (2021), among the highest-grossing films in cinema history.</div>
         </div>
       </article>
     </section>
@@ -458,7 +480,7 @@
     <section class="stop">
       <div class="stop-dot"><span class="n">7</span><span class="y">2015</span></div>
       <article class="albo">
-        <div class="masthead"><h2>Mondiale</h2><span class="anno">USA 2015–2016</span></div>
+        <div class="masthead"><h2><span class="lang-it">Mondiale</span><span class="lang-en">Worldwide</span></h2><span class="anno">USA 2015–2016</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot c8">
@@ -470,20 +492,23 @@
             <img src="copertine/spiderman/06-mondiale.jpg" alt="Copertina Amazing Spider-Man vol. 1: Mondiale" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ Inizio Amazing Spider-Man vol. 4 / era Parker Industries</span>
-            <span class="badge">Fuori catalogo — caccia all'usato</span>
+            <span class="badge start lang-it">★ Inizio Amazing Spider-Man vol. 4 / era Parker Industries</span><span class="badge start lang-en">★ Start of Amazing Spider-Man vol. 4 / Parker Industries era</span>
+            <span class="badge lang-it">Fuori catalogo — caccia all'usato</span><span class="badge lang-en">Out of print — second-hand hunt</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Collection (cartonato) — Amazing Spider-Man vol. 1</dd></div>
-            <div><dt>Autori</dt><dd>Dan Slott e Christos Gage (testi), Giuseppe Camuncoli (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Amazing Spider-Man (2015) #1–5</dd></div>
-            <div><dt>Spillato ITA</dt><dd>Amazing Spider-Man, indicativamente attorno ai nn. 648–653 della numerazione storica (2016)</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Collection (cartonato) — Amazing Spider-Man vol. 1</dd><dd class="lang-en">Marvel Collection (hardcover) — Amazing Spider-Man vol. 1</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Creators</dt><dd class="lang-it">Dan Slott e Christos Gage (testi), Giuseppe Camuncoli (disegni)</dd><dd class="lang-en">Dan Slott and Christos Gage (writers), Giuseppe Camuncoli (artist)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Collects</dt><dd>Amazing Spider-Man (2015) #1–5</dd></div>
+            <div><dt class="lang-it">Spillato ITA</dt><dt class="lang-en">ITA newsstand</dt><dd class="lang-it">Amazing Spider-Man, indicativamente attorno ai nn. 648–653 della numerazione storica (2016)</dd><dd class="lang-en">Amazing Spider-Man, roughly around nos. 648–653 of the historic numbering (2016)</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>L'inizio dell'era Parker Industries, il rilancio post-Secret Wars: otto mesi dopo Spider-Verse, Peter è amministratore delegato di un colosso tecnologico globale con uffici a Shanghai, Londra e San Francisco, quartier generale nel vecchio Baxter Building e Spider-Man ufficialmente sua "guardia del corpo". Il Peter più simile a Tony Stark mai visto, con lo Zodiaco come prima grande minaccia.</p>
-          <h3>Cosa apre</h3>
-          <p>L'ultima fase della gestione Slott (2015–2018): da qui la serie corre verso la Cospirazione dei Cloni, L'identità di Osborn, il crollo delle Parker Industries e il finale con il Goblin Rosso sui numeri #789–801. Nella collezione è il ponte tra Spider-Verse e Ritorno alle origini.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> il "Peter imprenditore globale" di quest'era ha influenzato l'immaginario dello Spider-Man tecnologico dei film MCU del periodo (le tute hi-tech di Homecoming e Far From Home) e del videogioco PS4, dove Peter è ricercatore-inventore.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">L'inizio dell'era Parker Industries, il rilancio post-Secret Wars: otto mesi dopo Spider-Verse, Peter è amministratore delegato di un colosso tecnologico globale con uffici a Shanghai, Londra e San Francisco, quartier generale nel vecchio Baxter Building e Spider-Man ufficialmente sua "guardia del corpo". Il Peter più simile a Tony Stark mai visto, con lo Zodiaco come prima grande minaccia.</p>
+          <p class="lang-en">The start of the Parker Industries era, the post-Secret Wars relaunch: eight months after Spider-Verse, Peter is the CEO of a global tech giant with offices in Shanghai, London and San Francisco, headquarters in the old Baxter Building and Spider-Man officially serving as his "bodyguard". The most Tony Stark-like Peter ever seen, with the Zodiac as the first major threat.</p>
+          <h3 class="lang-it">Cosa apre</h3><h3 class="lang-en">What it opens</h3>
+          <p class="lang-it">L'ultima fase della gestione Slott (2015–2018): da qui la serie corre verso la Cospirazione dei Cloni, L'identità di Osborn, il crollo delle Parker Industries e il finale con il Goblin Rosso sui numeri #789–801. Nella collezione è il ponte tra Spider-Verse e Ritorno alle origini.</p>
+          <p class="lang-en">The final phase of the Slott tenure (2015–2018): from here the series races toward the Clone Conspiracy, the Osborn Identity, the collapse of Parker Industries and the finale with the Red Goblin in issues #789–801. Within the collection it is the bridge between Spider-Verse and Back to Basics.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> il "Peter imprenditore globale" di quest'era ha influenzato l'immaginario dello Spider-Man tecnologico dei film MCU del periodo (le tute hi-tech di Homecoming e Far From Home) e del videogioco PS4, dove Peter è ricercatore-inventore.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the "global entrepreneur Peter" of this era influenced the tech-driven Spider-Man imagery of the period's MCU films (the hi-tech suits of Homecoming and Far From Home) and of the PS4 video game, where Peter is a researcher-inventor.</div>
         </div>
       </article>
     </section>
@@ -492,7 +517,7 @@
     <section class="stop">
       <div class="stop-dot"><span class="n">8</span><span class="y">2018</span></div>
       <article class="albo">
-        <div class="masthead"><h2>Ritorno alle origini</h2><span class="anno">USA 2018</span></div>
+        <div class="masthead"><h2><span class="lang-it">Ritorno alle origini</span><span class="lang-en">Back to Basics</span></h2><span class="anno">USA 2018</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot c6">
@@ -504,20 +529,23 @@
             <img src="copertine/spiderman/07-ritorno-alle-origini.jpg" alt="Copertina Amazing Spider-Man vol. 1: Ritorno alle origini" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ Inizio run Nick Spencer (2018–2021)</span>
+            <span class="badge start lang-it">★ Inizio run Nick Spencer (2018–2021)</span><span class="badge start lang-en">★ Start of the Nick Spencer run (2018–2021)</span>
             <span class="badge">Fresh Start</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Collection (cartonato) — Amazing Spider-Man vol. 1</dd></div>
-            <div><dt>Autori</dt><dd>Nick Spencer (testi), Ryan Ottley (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Amazing Spider-Man (2018) #1–5</dd></div>
-            <div><dt>Spillato ITA</dt><dd>Rilancio da edicola con doppia numerazione: Amazing Spider-Man nn. 1–5, ovvero 710–714 della numerazione storica (fine 2018)</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Collection (cartonato) — Amazing Spider-Man vol. 1</dd><dd class="lang-en">Marvel Collection (hardcover) — Amazing Spider-Man vol. 1</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Creators</dt><dd class="lang-it">Nick Spencer (testi), Ryan Ottley (disegni)</dd><dd class="lang-en">Nick Spencer (writer), Ryan Ottley (artist)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Collects</dt><dd>Amazing Spider-Man (2018) #1–5</dd></div>
+            <div><dt class="lang-it">Spillato ITA</dt><dt class="lang-en">ITA newsstand</dt><dd class="lang-it">Rilancio da edicola con doppia numerazione: Amazing Spider-Man nn. 1–5, ovvero 710–714 della numerazione storica (fine 2018)</dd><dd class="lang-en">Newsstand relaunch with double numbering: Amazing Spider-Man nos. 1–5, i.e. 710–714 of the historic numbering (late 2018)</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Dopo dieci anni di Dan Slott, il "Fresh Start" di Nick Spencer riporta Spider-Man all'essenziale: guai economici, senso di colpa, quotidianità. Soprattutto, ricostruisce la coppia Peter/Mary Jane smontando pezzo per pezzo l'eredità di One More Day — per molti lettori, la riparazione attesa da un decennio.</p>
-          <h3>Cosa apre</h3>
-          <p>È l'inizio della lunga trama del Kindred, il misterioso villain legato al passato di Peter che attraversa tutti i 74 numeri della run, fino a Sinister War e al finale del 2021. Come punto d'ingresso è il migliore dell'era recente.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> il tono "ritorno al quartiere" di questa run è in sintonia con l'immagine cinematografica del periodo (l'amichevole Spider-Man di quartiere dell'MCU) e con la coppia Peter/MJ tornata centrale anche al cinema.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Dopo dieci anni di Dan Slott, il "Fresh Start" di Nick Spencer riporta Spider-Man all'essenziale: guai economici, senso di colpa, quotidianità. Soprattutto, ricostruisce la coppia Peter/Mary Jane smontando pezzo per pezzo l'eredità di One More Day — per molti lettori, la riparazione attesa da un decennio.</p>
+          <p class="lang-en">After ten years of Dan Slott, Nick Spencer's "Fresh Start" brings Spider-Man back to basics: money troubles, guilt, everyday life. Above all, it rebuilds the Peter/Mary Jane couple by dismantling the legacy of One More Day piece by piece — for many readers, the repair they had been waiting a decade for.</p>
+          <h3 class="lang-it">Cosa apre</h3><h3 class="lang-en">What it opens</h3>
+          <p class="lang-it">È l'inizio della lunga trama del Kindred, il misterioso villain legato al passato di Peter che attraversa tutti i 74 numeri della run, fino a Sinister War e al finale del 2021. Come punto d'ingresso è il migliore dell'era recente.</p>
+          <p class="lang-en">It is the beginning of the long Kindred storyline, the mysterious villain tied to Peter's past who runs through all 74 issues of the run, up to Sinister War and the 2021 finale. As an entry point it is the best of the recent era.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> il tono "ritorno al quartiere" di questa run è in sintonia con l'immagine cinematografica del periodo (l'amichevole Spider-Man di quartiere dell'MCU) e con la coppia Peter/MJ tornata centrale anche al cinema.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the "back to the neighbourhood" tone of this run is in tune with the film image of the period (the MCU's friendly neighborhood Spider-Man) and with the Peter/MJ couple back at the centre on the big screen too.</div>
         </div>
       </article>
     </section>
@@ -526,7 +554,7 @@
     <section class="stop">
       <div class="stop-dot"><span class="n">9</span><span class="y">2022</span></div>
       <article class="albo blu">
-        <div class="masthead"><h2>Un mondo senza amore</h2><span class="anno">USA 2022</span></div>
+        <div class="masthead"><h2><span class="lang-it">Un mondo senza amore</span><span class="lang-en">World Without Love</span></h2><span class="anno">USA 2022</span></div>
         <div class="halftone"></div>
         <div class="albo-body">
           <div class="cover-slot c7">
@@ -538,20 +566,23 @@
             <img src="copertine/spiderman/08-un-mondo-senza-amore.jpg" alt="Copertina Amazing Spider-Man vol. 1: Un mondo senza amore" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ Inizio run Zeb Wells (2022–2024)</span>
-            <span class="badge">Verso il n. 900</span>
+            <span class="badge start lang-it">★ Inizio run Zeb Wells (2022–2024)</span><span class="badge start lang-en">★ Start of the Zeb Wells run (2022–2024)</span>
+            <span class="badge lang-it">Verso il n. 900</span><span class="badge lang-en">Toward issue 900</span>
           </div>
           <dl class="scheda">
-            <div><dt>Collana</dt><dd>Marvel Collection (cartonato) — Amazing Spider-Man vol. 1</dd></div>
-            <div><dt>Autori</dt><dd>Zeb Wells (testi), John Romita Jr. (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Amazing Spider-Man (2022) #1–5</dd></div>
-            <div><dt>Spillato ITA</dt><dd>Nuovo rilancio con doppia numerazione: Amazing Spider-Man nn. 1–5, ovvero 801–805 della numerazione storica (2022–23)</dd></div>
+            <div><dt class="lang-it">Collana</dt><dt class="lang-en">Imprint</dt><dd class="lang-it">Marvel Collection (cartonato) — Amazing Spider-Man vol. 1</dd><dd class="lang-en">Marvel Collection (hardcover) — Amazing Spider-Man vol. 1</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Creators</dt><dd class="lang-it">Zeb Wells (testi), John Romita Jr. (disegni)</dd><dd class="lang-en">Zeb Wells (writer), John Romita Jr. (artist)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Collects</dt><dd>Amazing Spider-Man (2022) #1–5</dd></div>
+            <div><dt class="lang-it">Spillato ITA</dt><dt class="lang-en">ITA newsstand</dt><dd class="lang-it">Nuovo rilancio con doppia numerazione: Amazing Spider-Man nn. 1–5, ovvero 801–805 della numerazione storica (2022–23)</dd><dd class="lang-en">Another relaunch with double numbering: Amazing Spider-Man nos. 1–5, i.e. 801–805 of the historic numbering (2022–23)</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>L'ultimo grande "anno zero" della serie prima del rilancio 2024. Parte da un mistero: sono passati sei mesi, Peter è in rotta con Avengers, Fantastici Quattro e zia May, ha chiuso con MJ (che ora ha una nuova famiglia) e nessuno spiega perché. Ai disegni torna John Romita Jr., lo stesso artista di Tornando a casa, vent'anni dopo: la collezione si apre e si chiude idealmente con lui.</p>
-          <h3>Cosa apre</h3>
-          <p>Il countdown verso lo storico numero 900 della numerazione originale, il ritorno prepotente di un Norman Osborn "redento" (Gold Goblin) e, più avanti nella run, la trasformazione di Kamala Khan e la guerra tra bande di Gang War.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> run uscita in piena era No Way Home, con la serie ai vertici delle classifiche di vendita USA. Gli eventi di questa gestione (in particolare quelli legati a Kamala Khan/Ms. Marvel) hanno avuto eco diretta nelle scelte editoriali e mediatiche Marvel del periodo.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">L'ultimo grande "anno zero" della serie prima del rilancio 2024. Parte da un mistero: sono passati sei mesi, Peter è in rotta con Avengers, Fantastici Quattro e zia May, ha chiuso con MJ (che ora ha una nuova famiglia) e nessuno spiega perché. Ai disegni torna John Romita Jr., lo stesso artista di Tornando a casa, vent'anni dopo: la collezione si apre e si chiude idealmente con lui.</p>
+          <p class="lang-en">The series' last great "year zero" before the 2024 relaunch. It starts from a mystery: six months have passed, Peter has fallen out with the Avengers, the Fantastic Four and Aunt May, he has broken up with MJ (who now has a new family) and nobody explains why. John Romita Jr. returns on art — the same artist as Coming Home, twenty years later: the collection ideally opens and closes with him.</p>
+          <h3 class="lang-it">Cosa apre</h3><h3 class="lang-en">What it opens</h3>
+          <p class="lang-it">Il countdown verso lo storico numero 900 della numerazione originale, il ritorno prepotente di un Norman Osborn "redento" (Gold Goblin) e, più avanti nella run, la trasformazione di Kamala Khan e la guerra tra bande di Gang War.</p>
+          <p class="lang-en">The countdown to the historic issue 900 of the original numbering, the forceful return of a "redeemed" Norman Osborn (Gold Goblin) and, later in the run, Kamala Khan's transformation and the gang warfare of Gang War.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> run uscita in piena era No Way Home, con la serie ai vertici delle classifiche di vendita USA. Gli eventi di questa gestione (in particolare quelli legati a Kamala Khan/Ms. Marvel) hanno avuto eco diretta nelle scelte editoriali e mediatiche Marvel del periodo.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> a run published at the height of the No Way Home era, with the series topping the US sales charts. The events of this tenure (especially those involving Kamala Khan/Ms. Marvel) had a direct echo in Marvel's editorial and media choices of the period.</div>
         </div>
       </article>
     </section>
@@ -565,27 +596,30 @@
         <div class="albo-body">
           <div class="cover-slot c9">
             <div class="cover-art">
-              <span class="strip">Spillato da edicola</span>
+              <span class="strip lang-it">Spillato da edicola</span><span class="strip lang-en">Newsstand issue</span>
               <span class="logo">Punto<br>e a capo</span>
               <span class="num">2025</span>
             </div>
             <img src="copertine/spiderman/09-punto-e-a-capo.jpg" alt="Copertina Amazing Spider-Man: Punto e a capo" onerror="this.remove()">
           </div>
           <div class="badge-row">
-            <span class="badge start">★ Inizio run Joe Kelly / Amazing Spider-Man vol. 7</span>
-            <span class="badge">In collezione: solo il n. 1 — saga completa nei nn. 1–3</span>
+            <span class="badge start lang-it">★ Inizio run Joe Kelly / Amazing Spider-Man vol. 7</span><span class="badge start lang-en">★ Start of the Joe Kelly run / Amazing Spider-Man vol. 7</span>
+            <span class="badge lang-it">In collezione: solo il n. 1 — saga completa nei nn. 1–3</span><span class="badge lang-en">In the collection: no. 1 only — full arc in nos. 1–3</span>
           </div>
           <dl class="scheda">
-            <div><dt>Formato</dt><dd>Spillato da edicola (17×26) — per ora unica edizione italiana; nessun cartonato Panini ancora pubblicato</dd></div>
-            <div><dt>Autori</dt><dd>Joe Kelly (testi), Pepe Larraz e John Romita Jr. (disegni)</dd></div>
-            <div><dt>Contiene</dt><dd>Amazing Spider-Man (2025, vol. 7) #1 con le storie di apertura del nuovo corso — primo capitolo della saga Punto e a capo, che prosegue negli albi USA #2–5</dd></div>
-            <div><dt>Spillato ITA</dt><dd>Amazing Spider-Man n. 1, ovvero 874 della numerazione storica (settembre 2025); la saga si completa con i nn. 2–3 (875–876)</dd></div>
+            <div><dt class="lang-it">Formato</dt><dt class="lang-en">Format</dt><dd class="lang-it">Spillato da edicola (17×26) — per ora unica edizione italiana; nessun cartonato Panini ancora pubblicato</dd><dd class="lang-en">Newsstand stapled issue (17×26) — the only Italian edition so far; no Panini hardcover published yet</dd></div>
+            <div><dt class="lang-it">Autori</dt><dt class="lang-en">Creators</dt><dd class="lang-it">Joe Kelly (testi), Pepe Larraz e John Romita Jr. (disegni)</dd><dd class="lang-en">Joe Kelly (writer), Pepe Larraz and John Romita Jr. (artists)</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Collects</dt><dd class="lang-it">Amazing Spider-Man (2025, vol. 7) #1 con le storie di apertura del nuovo corso — primo capitolo della saga Punto e a capo, che prosegue negli albi USA #2–5</dd><dd class="lang-en">Amazing Spider-Man (2025, vol. 7) #1 with the opening stories of the new direction — first chapter of the Punto e a capo arc, which continues in US issues #2–5</dd></div>
+            <div><dt class="lang-it">Spillato ITA</dt><dt class="lang-en">ITA newsstand</dt><dd class="lang-it">Amazing Spider-Man n. 1, ovvero 874 della numerazione storica (settembre 2025); la saga si completa con i nn. 2–3 (875–876)</dd><dd class="lang-en">Amazing Spider-Man no. 1, i.e. 874 of the historic numbering (September 2025); the arc is completed by nos. 2–3 (875–876)</dd></div>
           </dl>
-          <h3>Perché è importante</h3>
-          <p>Il numero 1 più recente della testata, l'ottava vita editoriale di Amazing Spider-Man: dopo la chiusura della run Wells e l'evento Le otto morti di Spider-Man, Joe Kelly riparte da un Peter disoccupato e in cerca di lavoro, con un Rhino scatenato come punta di un iceberg criminale, un misterioso burattinaio che arma i ragno-villain e un Norman Osborn "senza Goblin" tutto da decifrare. La saga d'apertura culmina nel ritorno dell'Hobgoblin originale, Roderick Kingsley, che prende di mira i cari di Peter.</p>
-          <h3>Cosa apre</h3>
-          <p>La gestione attualmente in corso della serie: per completare la sola saga d'apertura bastano gli spillati nn. 2 e 3 (875–876), poi la run prosegue mese per mese fino al crossover del 2026 Death Spiral con Venom e Carnage. È l'unico capitolo della collezione ancora "vivo" — e il candidato naturale a un upgrade quando Panini raccoglierà il ciclo in cartonato.</p>
-          <div class="screen"><strong>Oltre la carta:</strong> run partita nel 2025 e promossa da Marvel come nuovo grande punto d'ingresso della testata. Joe Kelly è anche co-creatore della serie animata Ben 10 e la sua firma ragnesca più celebre resta l'acclamato ciclo di Spider-Man/Deadpool, oltre alle storie corali dell'era Brand New Day.</div>
+          <h3 class="lang-it">Perché è importante</h3><h3 class="lang-en">Why it matters</h3>
+          <p class="lang-it">Il numero 1 più recente della testata, l'ottava vita editoriale di Amazing Spider-Man: dopo la chiusura della run Wells e l'evento Le otto morti di Spider-Man, Joe Kelly riparte da un Peter disoccupato e in cerca di lavoro, con un Rhino scatenato come punta di un iceberg criminale, un misterioso burattinaio che arma i ragno-villain e un Norman Osborn "senza Goblin" tutto da decifrare. La saga d'apertura culmina nel ritorno dell'Hobgoblin originale, Roderick Kingsley, che prende di mira i cari di Peter.</p>
+          <p class="lang-en">The series' most recent number 1, the eighth editorial life of Amazing Spider-Man: after the end of the Wells run and the 8 Deaths of Spider-Man event, Joe Kelly starts over with an unemployed, job-hunting Peter, a rampaging Rhino as the tip of a criminal iceberg, a mysterious puppet master arming the spider-villains, and a Goblin-less Norman Osborn still to be figured out. The opening arc culminates in the return of the original Hobgoblin, Roderick Kingsley, who targets Peter's loved ones.</p>
+          <h3 class="lang-it">Cosa apre</h3><h3 class="lang-en">What it opens</h3>
+          <p class="lang-it">La gestione attualmente in corso della serie: per completare la sola saga d'apertura bastano gli spillati nn. 2 e 3 (875–876), poi la run prosegue mese per mese fino al crossover del 2026 Death Spiral con Venom e Carnage. È l'unico capitolo della collezione ancora "vivo" — e il candidato naturale a un upgrade quando Panini raccoglierà il ciclo in cartonato.</p>
+          <p class="lang-en">The tenure currently under way on the series: to complete just the opening arc, newsstand issues nos. 2 and 3 (875–876) are enough, then the run continues month by month up to the 2026 crossover Death Spiral with Venom and Carnage. It is the only chapter of the collection still "alive" — and the natural candidate for an upgrade once Panini collects the cycle in hardcover.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> run partita nel 2025 e promossa da Marvel come nuovo grande punto d'ingresso della testata. Joe Kelly è anche co-creatore della serie animata Ben 10 e la sua firma ragnesca più celebre resta l'acclamato ciclo di Spider-Man/Deadpool, oltre alle storie corali dell'era Brand New Day.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> a run launched in 2025 and promoted by Marvel as the series' new great entry point. Joe Kelly is also the co-creator of the animated series Ben 10, and his most celebrated web-slinging credit remains the acclaimed Spider-Man/Deadpool cycle, alongside the ensemble stories of the Brand New Day era.</div>
         </div>
       </article>
     </section>
@@ -594,39 +628,45 @@
 
   <!-- RIEPILOGO -->
   <section class="panel">
-    <h2>La mappa in <em>una tabella</em></h2>
+    <h2 class="lang-it">La mappa in <em>una tabella</em></h2>
+    <h2 class="lang-en">The map in <em>one table</em></h2>
     <table>
       <thead>
-        <tr><th>#</th><th>Volume</th><th>Collana</th><th>Albi USA</th><th>Spillato ITA</th><th>Ruolo</th></tr>
+        <tr><th>#</th><th>Volume</th><th><span class="lang-it">Collana</span><span class="lang-en">Imprint</span></th><th><span class="lang-it">Albi USA</span><span class="lang-en">US issues</span></th><th><span class="lang-it">Spillato ITA</span><span class="lang-en">ITA newsstand</span></th><th><span class="lang-it">Ruolo</span><span class="lang-en">Role</span></th></tr>
       </thead>
       <tbody>
-        <tr><td>1</td><td>Masterworks: Spider-Man 1</td><td>Marvel Masterworks</td><td>AF #15 + ASM #1–10 (1962–64)</td><td>Corno nn. 1–13 ca.</td><td>Origine di tutto</td></tr>
-        <tr><td>2</td><td>Tornando a casa</td><td>Marvel Must Have</td><td>ASM (1999) #30–35 (2001)</td><td>UR nn. 335–344 ca.</td><td>Inizio run JMS</td></tr>
-        <tr><td>3</td><td>Soltanto un altro giorno / Un momento nel tempo</td><td>Marvel Premiere Edition</td><td>ASM #544–545, 638–641 + FNSM #24 + Sensational #41</td><td>UR nn. 487–488</td><td>Fine run JMS / cerniera verso Brand New Day</td></tr>
-        <tr><td>4</td><td>Un nuovo giorno</td><td>Marvel Must Have</td><td>ASM #546–551 + Swing Shift (2008)</td><td>SM nn. 489–492 ca.</td><td>Inizio Brand New Day</td></tr>
-        <tr><td>5</td><td>La fortuna dei Parker</td><td>Marvel Must Have</td><td>ASM (2014) #1–6</td><td>ASM ITA nn. 619–624 ca.</td><td>Inizio vol. 3 / ponte</td></tr>
-        <tr><td>6</td><td>Spider-Verse</td><td>Marvel Must Have</td><td>ASM (2014) #9–15</td><td>ASM ITA nn. 627–633 ca.</td><td>Grande evento</td></tr>
-        <tr><td>7</td><td>Mondiale</td><td>Marvel Collection</td><td>ASM (2015) #1–5</td><td>ASM ITA nn. 648–653 ca.</td><td>Inizio era Parker Industries</td></tr>
-        <tr><td>8</td><td>Ritorno alle origini</td><td>Marvel Collection</td><td>ASM (2018) #1–5</td><td>ASM ITA nn. 1–5 (710–714)</td><td>Inizio run Spencer</td></tr>
-        <tr><td>9</td><td>Un mondo senza amore</td><td>Marvel Collection</td><td>ASM (2022) #1–5</td><td>ASM ITA nn. 1–5 (801–805)</td><td>Inizio run Wells</td></tr>
-        <tr><td>10</td><td>Punto e a capo (n. 1)</td><td>Spillato da edicola</td><td>ASM (2025) #1</td><td>ASM ITA n. 1 (874)</td><td>Inizio run Kelly (in corso)</td></tr>
+        <tr><td>1</td><td>Masterworks: Spider-Man 1</td><td>Marvel Masterworks</td><td>AF #15 + ASM #1–10 (1962–64)</td><td><span class="lang-it">Corno nn. 1–13 ca.</span><span class="lang-en">Corno nos. 1–13 approx.</span></td><td><span class="lang-it">Origine di tutto</span><span class="lang-en">Origin of everything</span></td></tr>
+        <tr><td>2</td><td><span class="lang-it">Tornando a casa</span><span class="lang-en">Coming Home</span></td><td>Marvel Must Have</td><td>ASM (1999) #30–35 (2001)</td><td><span class="lang-it">UR nn. 335–344 ca.</span><span class="lang-en">UR nos. 335–344 approx.</span></td><td><span class="lang-it">Inizio run JMS</span><span class="lang-en">JMS run begins</span></td></tr>
+        <tr><td>3</td><td><span class="lang-it">Soltanto un altro giorno / Un momento nel tempo</span><span class="lang-en">One More Day / One Moment in Time</span></td><td>Marvel Premiere Edition</td><td>ASM #544–545, 638–641 + FNSM #24 + Sensational #41</td><td><span class="lang-it">UR nn. 487–488</span><span class="lang-en">UR nos. 487–488</span></td><td><span class="lang-it">Fine run JMS / cerniera verso Brand New Day</span><span class="lang-en">JMS run ends / hinge into Brand New Day</span></td></tr>
+        <tr><td>4</td><td><span class="lang-it">Un nuovo giorno</span><span class="lang-en">Brand New Day</span></td><td>Marvel Must Have</td><td>ASM #546–551 + Swing Shift (2008)</td><td><span class="lang-it">SM nn. 489–492 ca.</span><span class="lang-en">SM nos. 489–492 approx.</span></td><td><span class="lang-it">Inizio Brand New Day</span><span class="lang-en">Brand New Day begins</span></td></tr>
+        <tr><td>5</td><td><span class="lang-it">La fortuna dei Parker</span><span class="lang-en">The Parker Luck</span></td><td>Marvel Must Have</td><td>ASM (2014) #1–6</td><td><span class="lang-it">ASM ITA nn. 619–624 ca.</span><span class="lang-en">ASM ITA nos. 619–624 approx.</span></td><td><span class="lang-it">Inizio vol. 3 / ponte</span><span class="lang-en">Vol. 3 begins / bridge</span></td></tr>
+        <tr><td>6</td><td>Spider-Verse</td><td>Marvel Must Have</td><td>ASM (2014) #9–15</td><td><span class="lang-it">ASM ITA nn. 627–633 ca.</span><span class="lang-en">ASM ITA nos. 627–633 approx.</span></td><td><span class="lang-it">Grande evento</span><span class="lang-en">Major event</span></td></tr>
+        <tr><td>7</td><td><span class="lang-it">Mondiale</span><span class="lang-en">Worldwide</span></td><td>Marvel Collection</td><td>ASM (2015) #1–5</td><td><span class="lang-it">ASM ITA nn. 648–653 ca.</span><span class="lang-en">ASM ITA nos. 648–653 approx.</span></td><td><span class="lang-it">Inizio era Parker Industries</span><span class="lang-en">Parker Industries era begins</span></td></tr>
+        <tr><td>8</td><td><span class="lang-it">Ritorno alle origini</span><span class="lang-en">Back to Basics</span></td><td>Marvel Collection</td><td>ASM (2018) #1–5</td><td><span class="lang-it">ASM ITA nn. 1–5 (710–714)</span><span class="lang-en">ASM ITA nos. 1–5 (710–714)</span></td><td><span class="lang-it">Inizio run Spencer</span><span class="lang-en">Spencer run begins</span></td></tr>
+        <tr><td>9</td><td><span class="lang-it">Un mondo senza amore</span><span class="lang-en">World Without Love</span></td><td>Marvel Collection</td><td>ASM (2022) #1–5</td><td><span class="lang-it">ASM ITA nn. 1–5 (801–805)</span><span class="lang-en">ASM ITA nos. 1–5 (801–805)</span></td><td><span class="lang-it">Inizio run Wells</span><span class="lang-en">Wells run begins</span></td></tr>
+        <tr><td>10</td><td><span class="lang-it">Punto e a capo (n. 1)</span><span class="lang-en">Punto e a capo (no. 1)</span></td><td><span class="lang-it">Spillato da edicola</span><span class="lang-en">Newsstand issue</span></td><td>ASM (2025) #1</td><td><span class="lang-it">ASM ITA n. 1 (874)</span><span class="lang-en">ASM ITA no. 1 (874)</span></td><td><span class="lang-it">Inizio run Kelly (in corso)</span><span class="lang-en">Kelly run begins (ongoing)</span></td></tr>
       </tbody>
     </table>
-    <p style="margin-top:14px;font-size:14.5px">Le corrispondenze con gli spillati sono indicative sull'arco di numeri: gli albetti da edicola italiani erano antologici e contenevano anche le serie sorelle. La numerazione storica italiana è un'unica catena ininterrotta dal 1987 (Star Comics → Marvel Italia → Panini): questa collezione la attraversa dal n. 335 all'876, più la preistoria Corno del 1970. Curiosità: la collezione contiene sei dei sette "numeri 1" della testata americana — mancano all'appello solo il vol. 2 del 1999 (era Mackie/Byrne, mai riproposta in cartonato italiano).</p>
+    <p class="lang-it" style="margin-top:14px;font-size:14.5px">Le corrispondenze con gli spillati sono indicative sull'arco di numeri: gli albetti da edicola italiani erano antologici e contenevano anche le serie sorelle. La numerazione storica italiana è un'unica catena ininterrotta dal 1987 (Star Comics → Marvel Italia → Panini): questa collezione la attraversa dal n. 335 all'876, più la preistoria Corno del 1970. Curiosità: la collezione contiene sei dei sette "numeri 1" della testata americana — mancano all'appello solo il vol. 2 del 1999 (era Mackie/Byrne, mai riproposta in cartonato italiano).</p>
+    <p class="lang-en" style="margin-top:14px;font-size:14.5px">The newsstand correspondences are indicative across the issue range: the little Italian newsstand comics were anthologies and also carried the sister series. The historic Italian numbering is a single unbroken chain since 1987 (Star Comics → Marvel Italia → Panini): this collection crosses it from no. 335 to 876, plus the Corno prehistory of 1970. Trivia: the collection contains six of the seven "number ones" of the American series — the only one missing is vol. 2 from 1999 (the Mackie/Byrne era, never reissued in an Italian hardcover).</p>
   </section>
 
   <!-- BUCHI E UPGRADE -->
   <section class="panel">
-    <h2>I buchi e la via degli <em>omnibus</em></h2>
-    <p><strong>Salti temporali della collezione:</strong> 1964→2001 (quarant'anni di classici), il tratto centrale della run Straczynski tra Tornando a casa e Soltanto un altro giorno (ASM #36–543, 2002–2007: totem, smascheramento, Civil War e Back in Black), 2008→2014 (era Slott centrale: Big Time, Spider-Island, L'ultimo desiderio, Superior Spider-Man), il resto dell'era Parker Industries dopo Mondiale (i volumi successivi della stessa serie Marvel Collection, fino al #801), gli interni delle run Spencer e Wells dopo i rispettivi volumi 1, e il tratto Beyond tra le due.</p>
-    <p><strong>Upgrade omnibus possibili (Panini, in italiano):</strong> Amazing Spider-Man Classic vol. 1–2 al posto del Masterworks; i due omnibus della run Straczynski al posto di Tornando a casa; l'omnibus Superior Spider-Man per colmare il ponte 2013–2014; l'omnibus Spider-Verse/Spider-Geddon al posto del Must Have, con tutti i tie-in e il sequel inclusi.</p>
-    <p><strong>Dove l'omnibus italiano non esiste:</strong> Brand New Day/era Slott 2008–2018 (Superior e Spider-Verse esclusi), run Spencer e run Wells: per questi periodi i cartonati Must Have e Marvel Collection restano l'edizione massima disponibile in italiano.</p>
+    <h2 class="lang-it">I buchi e la via degli <em>omnibus</em></h2>
+    <h2 class="lang-en">The gaps and the <em>omnibus</em> route</h2>
+    <p class="lang-it"><strong>Salti temporali della collezione:</strong> 1964→2001 (quarant'anni di classici), il tratto centrale della run Straczynski tra Tornando a casa e Soltanto un altro giorno (ASM #36–543, 2002–2007: totem, smascheramento, Civil War e Back in Black), 2008→2014 (era Slott centrale: Big Time, Spider-Island, L'ultimo desiderio, Superior Spider-Man), il resto dell'era Parker Industries dopo Mondiale (i volumi successivi della stessa serie Marvel Collection, fino al #801), gli interni delle run Spencer e Wells dopo i rispettivi volumi 1, e il tratto Beyond tra le due.</p>
+    <p class="lang-en"><strong>Time gaps in the collection:</strong> 1964→2001 (forty years of classics), the central stretch of the Straczynski run between Coming Home and One More Day (ASM #36–543, 2002–2007: totems, the unmasking, Civil War and Back in Black), 2008→2014 (the central Slott era: Big Time, Spider-Island, Dying Wish, Superior Spider-Man), the rest of the Parker Industries era after Worldwide (the later volumes of the same Marvel Collection series, up to #801), the interiors of the Spencer and Wells runs after their respective volume 1s, and the Beyond stretch between the two.</p>
+    <p class="lang-it"><strong>Upgrade omnibus possibili (Panini, in italiano):</strong> Amazing Spider-Man Classic vol. 1–2 al posto del Masterworks; i due omnibus della run Straczynski al posto di Tornando a casa; l'omnibus Superior Spider-Man per colmare il ponte 2013–2014; l'omnibus Spider-Verse/Spider-Geddon al posto del Must Have, con tutti i tie-in e il sequel inclusi.</p>
+    <p class="lang-en"><strong>Possible omnibus upgrades (Panini, in Italian):</strong> Amazing Spider-Man Classic vol. 1–2 in place of the Masterworks; the two Straczynski-run omnibuses in place of Coming Home; the Superior Spider-Man omnibus to fill the 2013–2014 bridge; the Spider-Verse/Spider-Geddon omnibus in place of the Must Have, with all the tie-ins and the sequel included.</p>
+    <p class="lang-it"><strong>Dove l'omnibus italiano non esiste:</strong> Brand New Day/era Slott 2008–2018 (Superior e Spider-Verse esclusi), run Spencer e run Wells: per questi periodi i cartonati Must Have e Marvel Collection restano l'edizione massima disponibile in italiano.</p>
+    <p class="lang-en"><strong>Where no Italian omnibus exists:</strong> Brand New Day/Slott era 2008–2018 (Superior and Spider-Verse aside), the Spencer run and the Wells run: for those periods the Must Have and Marvel Collection hardcovers remain the top edition available in Italian.</p>
   </section>
 
 </main>
 
 <footer>
-  <div class="wrap">Dossier della collezione · Amazing Spider-Man · Terra-616</div>
+  <div class="wrap"><span class="lang-it">Dossier della collezione · Amazing Spider-Man · Terra-616</span><span class="lang-en">Collection dossier · Amazing Spider-Man · Earth-616</span></div>
 </footer>
 
 </body>
