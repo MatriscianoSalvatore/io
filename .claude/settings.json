@@ -38,7 +38,11 @@
       "Bash(sips -c 700 1600 --cropOffset 1400 0 v7_batman_en.png --out v7_b_en_crop.png)",
       "Bash(grep -o 'class=\"n\">[0-9]*' /Users/smatrisciano/io/spiderman.html | sed 's/.*>//' | tr '\\\\n' ' '; echo; grep -o 'class=\"n\">[0-9]*' /Users/smatrisciano/io/batman.html | sed 's/.*>//' | tr '\\\\n' ' '; echo; grep -c 'lang-it' /dev/null; true)",
       "Read(//dev/**)",
-      "Bash(git -C /Users/smatrisciano/io diff comics.html)"
+      "Bash(git -C /Users/smatrisciano/io diff comics.html)",
+      "Bash(curl -s https://salvatorematrisciano.com/bio)",
+      "Bash(curl -s https://salvatorematrisciano.com/assets/css/modern.css)",
+      "Bash(curl -sI https://salvatorematrisciano.com/assets/css/modern.css)",
+      "Bash(git rm *)"
     ]
   }
 }

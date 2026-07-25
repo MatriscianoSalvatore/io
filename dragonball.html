@@ -156,12 +156,30 @@
   @media (max-width:560px){
     .cover-slot{float:none;width:150px;margin:0 auto 16px}
   }
-  .saga-tag{
-    display:inline-block;margin:0 0 12px;
+  .badge-row{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+  .badge{
     font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:12.5px;
     text-transform:uppercase;letter-spacing:.1em;
-    padding:3px 10px;border:2px solid var(--china);background:var(--stella);
+    padding:4px 10px;border:2px solid var(--china);background:#fff;
   }
+  .badge.start{background:var(--stella)}
+  .badge.evento{background:var(--arancio);color:#fff}
+  .scheda{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:12px 24px;margin-bottom:16px;
+    border-bottom:1px solid var(--filo);padding-bottom:14px;
+  }
+  .scheda dt{
+    font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;
+    text-transform:uppercase;letter-spacing:.12em;color:var(--arancio-scuro);
+  }
+  .albo.blu .scheda dt{color:var(--blu)}
+  .scheda dd{font-size:15.5px;line-height:1.5}
+  .screen{
+    margin-top:14px;background:var(--carta-2);border:1.5px dashed #8a7a5c;
+    padding:12px 16px;font-size:15px;
+  }
+  .screen strong{color:var(--arancio-scuro)}
   .albo-body p{margin-bottom:10px;font-size:16px}
   .albo-body p:last-child{margin-bottom:0}
 
@@ -242,8 +260,19 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">1</span></div>
             <img src="copertine/dragonball/ue-01.jpg" alt="Copertina Dragon Ball Ultimate Edition 1" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge start lang-it">★ Inizio di tutto</span><span class="badge start lang-en">★ Where it all begins</span>
+            <span class="badge lang-it">Era della commedia</span><span class="badge lang-en">The comedy era</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd>Pilaf</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Goku, Bulma, Olong, Yamcha e il Maestro Muten; la prima Kamehameha</dd><dd class="lang-en">Goku, Bulma, Oolong, Yamcha and Master Roshi; the first Kamehameha</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1984–85</dd></div>
+          </dl>
           <p class="lang-it">Una ragazza di città investe un bambino con la coda che vive solo tra le montagne: Bulma e Son Goku partono a caccia delle sette sfere del drago. La nuvola Kinton, il maiale mutaforma Olong, il bandito Yamcha e il deserto: comincia tutto qui, in punta di gag, con il tratto più pulito e felice di Toriyama.</p>
           <p class="lang-en">A city girl runs over a boy with a tail who lives alone in the mountains: Bulma and Son Goku set off hunting the seven dragon balls. The Flying Nimbus, the shapeshifting pig Oolong, the bandit Yamcha and the desert: it all starts here, gag after gag, with Toriyama's cleanest, happiest linework.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> questi capitoli sono la base della prima serie animata (1986) e dell'immaginario del franchise: la Kamehameha, mostrata qui per la prima volta da Muten, diventerà la mossa più famosa della storia dei manga.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> these chapters are the basis of the first animated series (1986) and of the franchise's imagery: the Kamehameha, first shown here by Roshi, would become the most famous move in manga history.</div>
         </div>
       </article>
     </section>
@@ -259,6 +288,15 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">2</span></div>
             <img src="copertine/dragonball/ue-02.jpg" alt="Copertina Dragon Ball Ultimate Edition 2" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge lang-it">Prima evocazione di Shenron</span><span class="badge lang-en">Shenron's first summoning</span>
+            <span class="badge lang-it">Il primo Oozaru</span><span class="badge lang-en">The first Great Ape</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">Pilaf → addestramento da Muten</dd><dd class="lang-en">Pilaf → training under Roshi</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Shenron, l'imperatore Pilaf con Shu e Mai, Crilin e Lunch</dd><dd class="lang-en">Shenron, Emperor Pilaf with Shu and Mai, Krillin and Launch</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1985</dd></div>
+          </dl>
           <p class="lang-it">Il castello dell'imperatore Pilaf, il desiderio rubato da Olong (un paio di mutandine!) e la prima luna piena: Goku si trasforma in Oozaru e il segreto della coda entra in scena. Poi l'inizio dell'addestramento da Muten con Crilin: consegne del latte all'alba, gusci di tartaruga sulla schiena e i fondamenti della Scuola della Tartaruga.</p>
           <p class="lang-en">Emperor Pilaf's castle, the wish stolen by Oolong (a pair of panties!) and the first full moon: Goku turns into the Great Ape and the secret of the tail takes the stage. Then training begins under Master Roshi with Krillin: milk deliveries at dawn, turtle shells on their backs and the fundamentals of the Turtle School.</p>
         </div>
@@ -276,6 +314,14 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">3</span></div>
             <img src="copertine/dragonball/ue-03.jpg" alt="Copertina Dragon Ball Ultimate Edition 3" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge start lang-it">★ Il primo Torneo Tenkaichi</span><span class="badge start lang-en">★ The first Tenkaichi Tournament</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">21° Torneo Tenkaichi</dd><dd class="lang-en">21st Tenkaichi Tournament</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Jackie Chun, Nam, Giran; la formula-torneo della serie</dd><dd class="lang-en">Jackie Chun, Nam, Giran; the series' tournament formula</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1985</dd></div>
+          </dl>
           <p class="lang-it">Il primo Torneo Tenkaichi della serie: Goku e Crilin, irriconoscibili dopo l'allenamento, sbaragliano le eliminatorie. Sul quadrato passano Nam col suo colpo dal cielo, il gigante Giran e la profumata Lanfan, mentre un misterioso vecchietto di nome Jackie Chun vince un po' troppo facilmente. La formula-torneo che farà scuola nasce in questo volume.</p>
           <p class="lang-en">The series' first Tenkaichi Tournament: Goku and Krillin, unrecognizable after their training, storm through the preliminaries. Across the ring come Nam with his strike from the sky, the giant Giran and the perfumed Ranfan, while a mysterious old man named Jackie Chun wins a little too easily. The tournament formula that would set the standard is born in this volume.</p>
         </div>
@@ -293,6 +339,15 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">4</span></div>
             <img src="copertine/dragonball/ue-04.jpg" alt="Copertina Dragon Ball Ultimate Edition 4" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge evento lang-it">Esordio del Red Ribbon</span><span class="badge evento lang-en">The Red Ribbon debuts</span>
+            <span class="badge lang-it">La finale con Jackie Chun</span><span class="badge lang-en">The Jackie Chun final</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">21° Torneo → Red Ribbon</dd><dd class="lang-en">21st Tournament → Red Ribbon</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">L'esercito del Red Ribbon e C-8, il primo "androide" della serie — antenato dei C-16 a venire</dd><dd class="lang-en">The Red Ribbon Army and Eighter, the series' first "android" — ancestor of the 16s to come</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1986</dd></div>
+          </dl>
           <p class="lang-it">La finale col misterioso Jackie Chun — che ovviamente è Muten sotto mentite spoglie, deciso a insegnare ai suoi allievi che c'è sempre una vetta più alta — chiude il 21° Torneo al fotofinish. Poi la nuova caccia alle sfere si scontra con un esercito intero: il Red Ribbon, la Torre Muscle innevata e il gigantesco, gentilissimo androide C-8.</p>
           <p class="lang-en">The final against the mysterious Jackie Chun — who of course is Roshi in disguise, determined to teach his pupils there is always a higher peak — closes the 21st Tournament by a photo finish. Then the new hunt for the balls collides with an entire army: the Red Ribbon, the snowbound Muscle Tower and the gigantic, gentle android Eighter.</p>
         </div>
@@ -310,6 +365,14 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">5</span></div>
             <img src="copertine/dragonball/ue-05.jpg" alt="Copertina Dragon Ball Ultimate Edition 5" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge lang-it">La grotta dei pirati</span><span class="badge lang-en">The pirate cave</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd>Red Ribbon</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Il generale Blue e i suoi poteri psichici; il robot pirata</dd><dd class="lang-en">General Blue and his psychic powers; the pirate robot</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1986</dd></div>
+          </dl>
           <p class="lang-it">Il generale Blue, l'ufficiale più forte (e più vanitoso) del Red Ribbon, dà la caccia a Goku, Crilin e Bulma fino alla grotta sottomarina dei pirati: trappole, un robot guardiano e un tesoro che non è quello che cercavano. L'avventura pura alla Indiana Jones, nel momento in cui la serie sa ancora essere una commedia con i pugni.</p>
           <p class="lang-en">General Blue, the Red Ribbon's strongest (and vainest) officer, hunts Goku, Krillin and Bulma all the way to the pirates' underwater cave: traps, a guardian robot and a treasure that isn't the one they were after. Pure Indiana Jones adventure, at the moment when the series still knows how to be a comedy with punches.</p>
         </div>
@@ -327,6 +390,15 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">6</span></div>
             <img src="copertine/dragonball/ue-06.jpg" alt="Copertina Dragon Ball Ultimate Edition 6" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge evento lang-it">Crossover con Dr. Slump</span><span class="badge evento lang-en">Dr. Slump crossover</span>
+            <span class="badge lang-it">La prima sconfitta di Goku</span><span class="badge lang-en">Goku's first defeat</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd>Red Ribbon</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Tao Bai Bai, Karin e la sua Torre, Bora e Upa; Arale in cameo</dd><dd class="lang-en">Tao Pai Pai, Korin and his Tower, Bora and Upa; Arale's cameo</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1986</dd></div>
+          </dl>
           <p class="lang-it">La deviazione più assurda della serie: Blue insegue Goku fino a Villa Pinguino, il paese di Arale e del Dr. Slump, per il crossover che Toriyama si regala tra i suoi due capolavori. Poi si fa sul serio: il sicario Tao Bai Bai uccide con un dito, e Goku, sconfitto per la prima volta, scala la Torre di Karin in cerca dell'acqua sacra.</p>
           <p class="lang-en">The series' most absurd detour: Blue chases Goku into Penguin Village, home of Arale and Dr. Slump, for the crossover Toriyama gifts himself between his two masterpieces. Then things get serious: the assassin Tao Pai Pai kills with one finger, and Goku, defeated for the first time, climbs Korin Tower in search of the sacred water.</p>
         </div>
@@ -344,6 +416,14 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">7</span></div>
             <img src="copertine/dragonball/ue-07.jpg" alt="Copertina Dragon Ball Ultimate Edition 7" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge lang-it">Goku da solo contro un esercito</span><span class="badge lang-en">Goku alone against an army</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">Red Ribbon → Baba</dd><dd class="lang-en">Red Ribbon → Baba</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">La veggente Baba e il suo torneo di mostri; la caduta del Red Ribbon</dd><dd class="lang-en">Fortuneteller Baba and her tournament of monsters; the fall of the Red Ribbon</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1987</dd></div>
+          </dl>
           <p class="lang-it">Disceso dalla Torre, Goku salda i conti: la rivincita su Tao Bai Bai e poi, da solo, l'assalto al quartier generale del Red Ribbon — un bambino contro un esercito, e l'esercito perde. Per l'ultima sfera serve la veggente Baba: il suo torneo di mostri (Dracula Man, l'Uomo Invisibile, la Mummia, Akkuman) apre la porta al momento più dolce del volume.</p>
           <p class="lang-en">Down from the Tower, Goku settles his accounts: payback against Tao Pai Pai and then, alone, the assault on Red Ribbon headquarters — one child against an army, and the army loses. Finding the last ball takes Fortuneteller Baba: her tournament of monsters (Dracula Man, the Invisible Man, the Mummy, Devilman) opens the door to the volume's sweetest moment.</p>
         </div>
@@ -361,6 +441,14 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">8</span></div>
             <img src="copertine/dragonball/ue-08.jpg" alt="Copertina Dragon Ball Ultimate Edition 8" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge start lang-it">★ Il combattimento col nonno</span><span class="badge start lang-en">★ The bout with Grandpa</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">Baba → 22° Torneo</dd><dd class="lang-en">Baba → 22nd Tournament</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Il ritorno di Son Gohan per un giorno; tre anni di viaggio e le eliminatorie del 22°</dd><dd class="lang-en">Grandpa Gohan's one-day return; three years of travel and the 22nd's preliminaries</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1987</dd></div>
+          </dl>
           <p class="lang-it">L'ultimo sfidante del torneo di Baba è un piccolo lottatore mascherato che conosce troppo bene le mosse di Goku: è il nonno Son Gohan, tornato dall'aldilà per un giorno, e il loro combattimento è una delle pagine più commoventi del manga. Poi tre anni di viaggio e allenamento, e le eliminatorie del 22° Torneo Tenkaichi.</p>
           <p class="lang-en">The last challenger in Baba's tournament is a small masked fighter who knows Goku's moves far too well: it is Grandpa Gohan, back from the afterlife for one day, and their bout is one of the manga's most moving passages. Then three years of travel and training, and the preliminaries of the 22nd Tenkaichi Tournament.</p>
         </div>
@@ -378,6 +466,15 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">9</span></div>
             <img src="copertine/dragonball/ue-09.jpg" alt="Copertina Dragon Ball Ultimate Edition 9" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge lang-it">Esordio di Tenshinhan e Jiaozi</span><span class="badge lang-en">Tien and Chiaotzu debut</span>
+            <span class="badge evento lang-it">La morte di Crilin</span><span class="badge evento lang-en">Krillin's death</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">22° Torneo Tenkaichi</dd><dd class="lang-en">22nd Tenkaichi Tournament</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Tenshinhan, Jiaozi e l'Eremita della Gru; la finale al fotofinish</dd><dd class="lang-en">Tien, Chiaotzu and the Crane Hermit; the photo-finish final</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1987</dd></div>
+          </dl>
           <p class="lang-it">Il torneo delle rivalità: la Scuola della Gru contro la Scuola della Tartaruga, Tenshinhan e Jiaozi contro Goku e Crilin, e in mezzo un Yamcha spezzato senza pietà. Duelli splendidi fino alla finale Goku–Tenshinhan decisa letteralmente al centimetro. Poi, a torneo appena concluso, la tragedia che cambia il tono della serie per sempre: Crilin viene trovato morto.</p>
           <p class="lang-en">The tournament of rivalries: the Crane School against the Turtle School, Tien and Chiaotzu against Goku and Krillin, and in between a Yamcha mercilessly broken. Splendid duels up to a Goku–Tien final decided literally by inches. Then, with the tournament barely over, the tragedy that changes the series' tone forever: Krillin is found dead.</p>
         </div>
@@ -395,6 +492,15 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">10</span></div>
             <img src="copertine/dragonball/ue-10.jpg" alt="Copertina Dragon Ball Ultimate Edition 10" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge evento lang-it">Il primo grande villain</span><span class="badge evento lang-en">The first great villain</span>
+            <span class="badge lang-it">La morte di Muten</span><span class="badge lang-en">Roshi's death</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">Grande Mago Piccolo</dd><dd class="lang-en">King Piccolo</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Il Grande Mago Piccolo, Tamburello e i suoi demoni; Yajirobei; l'onda Mafuba</dd><dd class="lang-en">King Piccolo, Tambourine and his demons; Yajirobe; the Evil Containment Wave</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1988</dd></div>
+          </dl>
           <p class="lang-it">Il primo vero cattivo di Dragon Ball dilaga: il Grande Mago Piccolo, il demone sigillato da Mutaito, elimina i maestri e i lottatori a uno a uno. Muten gioca la sua ultima carta — l'onda Mafuba — e la paga con la vita; Goku, sconfitto e furioso, risale da Karin in cerca dell'acqua degli dei. Il volume più cupo della prima metà del manga.</p>
           <p class="lang-en">Dragon Ball's first true villain runs rampant: King Piccolo, the demon sealed away by Mutaito, eliminates the masters and fighters one by one. Roshi plays his final card — the Mafuba, the Evil Containment Wave — and pays for it with his life; Goku, beaten and furious, climbs back up to Korin seeking the Ultra Divine Water. The darkest volume of the manga's first half.</p>
         </div>
@@ -412,6 +518,15 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">11</span></div>
             <img src="copertine/dragonball/ue-11.jpg" alt="Copertina Dragon Ball Ultimate Edition 11" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge start lang-it">★ La vittoria su Piccolo</span><span class="badge start lang-en">★ Victory over Piccolo</span>
+            <span class="badge lang-it">Esordio di Dio</span><span class="badge lang-en">Kami's debut</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">Piccolo → 23° Torneo</dd><dd class="lang-en">Piccolo → 23rd Tournament</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Dio, Mister Popo e il Tempio sopra le nuvole; l'uovo di Piccolo Jr.</dd><dd class="lang-en">Kami, Mr. Popo and the Lookout above the clouds; Piccolo Jr.'s egg</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1988</dd></div>
+          </dl>
           <p class="lang-it">La resa dei conti: Goku trapassa il Grande Mago Piccolo con un pugno, ma il demone affida a un ultimo uovo la propria reincarnazione. Al tempio sopra le nuvole Goku scopre Dio — l'altra metà di Piccolo — e si ferma tre anni ad allenarsi: il volume si chiude con l'apertura del 23° Torneo Tenkaichi, quello dei conti in sospeso.</p>
           <p class="lang-en">The reckoning: Goku drives a fist through King Piccolo, but the demon entrusts his reincarnation to one last egg. At the temple above the clouds Goku discovers Kami — Piccolo's other half — and stays three years to train: the volume closes as the 23rd Tenkaichi Tournament, the tournament of unfinished business, begins.</p>
         </div>
@@ -429,6 +544,14 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">12</span></div>
             <img src="copertine/dragonball/ue-12.jpg" alt="Copertina Dragon Ball Ultimate Edition 12" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge lang-it">Il matrimonio promesso</span><span class="badge lang-en">The promised wedding</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">23° Torneo Tenkaichi</dd><dd class="lang-en">23rd Tenkaichi Tournament</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Chichi adulta; Tao Bai Bai cyborg; Dio nel corpo di Shen</dd><dd class="lang-en">Adult Chi-Chi; cyborg Tao Pai Pai; Kami in Shen's body</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1988</dd></div>
+          </dl>
           <p class="lang-it">Il torneo dei grandi: Goku adulto affronta una ragazza misteriosa che ce l'ha a morte con lui — è Chichi, che gli ricorda una promessa di matrimonio fatta da bambino, e Goku la mantiene seduta stante. Intorno, duelli pesantissimi: Tenshinhan contro un Tao Bai Bai tornato cyborg, e Dio nel corpo di un umano contro la reincarnazione di Piccolo.</p>
           <p class="lang-en">The grown-ups' tournament: an adult Goku faces a mysterious girl with a deadly grudge against him — it is Chi-Chi, reminding him of a marriage promise made as a child, and Goku keeps it on the spot. All around, heavyweight duels: Tien against a Tao Pai Pai returned as a cyborg, and Kami in a human body against Piccolo's reincarnation.</p>
         </div>
@@ -446,8 +569,19 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">13</span></div>
             <img src="copertine/dragonball/ue-13.jpg" alt="Copertina Dragon Ball Ultimate Edition 13" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge start lang-it">★ Da Dragon Ball a "Z"</span><span class="badge start lang-en">★ From Dragon Ball to "Z"</span>
+            <span class="badge evento lang-it">La prima morte di Goku</span><span class="badge evento lang-en">Goku's first death</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">23° Torneo → I Saiyan</dd><dd class="lang-en">23rd Tournament → The Saiyans</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Raditz, Gohan e la parola "Saiyan"; il Makankosappo di Piccolo</dd><dd class="lang-en">Raditz, Gohan and the word "Saiyan"; Piccolo's Special Beam Cannon</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1988–89</dd></div>
+          </dl>
           <p class="lang-it">La finale che chiude il "primo" Dragon Ball: Goku contro Piccolo Jr., un duello totale che rade al suolo l'arena e si decide sull'ultimo colpo. Poi il salto: cinque anni dopo, Goku presenta agli amici il piccolo Gohan — e dal cielo scende Raditz, che rivela a Goku di essere un Saiyan. Per fermarlo, Goku muore per la prima volta, insieme al fratello, tenuto da Piccolo sotto il Makankosappo.</p>
           <p class="lang-en">The final that closes the "first" Dragon Ball: Goku versus Piccolo Jr., an all-out duel that levels the arena and is decided on the very last blow. Then the leap: five years later, Goku introduces little Gohan to his friends — and Raditz descends from the sky, revealing that Goku is a Saiyan. To stop him, Goku dies for the first time, together with his brother, held in place under Piccolo's Special Beam Cannon.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> è il punto esatto in cui in TV finisce Dragon Ball e comincia Dragon Ball Z — la cesura più famosa dell'animazione giapponese, che nel manga semplicemente non esiste: la Ultimate Edition lo mostra bene, è un'unica storia continua.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> this is the exact point where, on TV, Dragon Ball ends and Dragon Ball Z begins — the most famous dividing line in Japanese animation, which in the manga simply does not exist: the Ultimate Edition shows it well, it is one continuous story.</div>
         </div>
       </article>
     </section>
@@ -463,6 +597,14 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">14</span></div>
             <img src="copertine/dragonball/ue-14.jpg" alt="Copertina Dragon Ball Ultimate Edition 14" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge lang-it">Nascita di Kaioken e Genkidama</span><span class="badge lang-en">Kaioken and Spirit Bomb are born</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">I Saiyan</dd><dd class="lang-en">The Saiyans</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Re Kaio, Bubbles e Gregory; l'anno di addestramento di Gohan con Piccolo</dd><dd class="lang-en">King Kai, Bubbles and Gregory; Gohan's year of training with Piccolo</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1989</dd></div>
+          </dl>
           <p class="lang-it">Un anno per prepararsi ai due Saiyan in arrivo: Gohan abbandonato nel deserto a sopravvivere sotto l'occhio (quasi tenero) di Piccolo, Goku lungo il milione di chilometri del Serpentone fino al pianeta di Re Kaio — gravità decupla, la scimmia Bubbles da acchiappare, il grillo Gregory e le due tecniche che cambieranno tutto: Kaioken e Genkidama.</p>
           <p class="lang-en">One year to prepare for the two incoming Saiyans: Gohan left in the wilderness to survive under Piccolo's (almost tender) watch, Goku along the million-kilometre Snake Way to King Kai's planet — tenfold gravity, the monkey Bubbles to catch, the cricket Gregory, and the two techniques that will change everything: the Kaioken and the Spirit Bomb.</p>
         </div>
@@ -480,6 +622,14 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">15</span></div>
             <img src="copertine/dragonball/ue-15.jpg" alt="Copertina Dragon Ball Ultimate Edition 15" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge evento lang-it">La battaglia più costosa</span><span class="badge evento lang-en">The costliest battle</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">I Saiyan</dd><dd class="lang-en">The Saiyans</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Vegeta e Nappa sul campo; i Saibaimen; le morti di Yamcha, Jiaozi, Tenshinhan e Piccolo</dd><dd class="lang-en">Vegeta and Nappa on the field; the Saibamen; the deaths of Yamcha, Chiaotzu, Tien and Piccolo</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1989</dd></div>
+          </dl>
           <p class="lang-it">Vegeta e Nappa atterrano, e la battaglia dei Saibaimen presenta il conto più salato della serie fino a quel momento: l'autodistruzione che porta via Jiaozi, il sacrificio inutile, la morte di Yamcha e di Tenshinhan, e Piccolo che si getta a scudo di Gohan — portandosi via, con sé, anche Dio e le sfere del drago. Gohan e Crilin restano soli davanti a Nappa.</p>
           <p class="lang-en">Vegeta and Nappa touch down, and the Saibamen battle presents the steepest bill in the series so far: the self-destruction that takes Chiaotzu, the futile sacrifice, the deaths of Yamcha and Tien, and Piccolo throwing himself in front of Gohan — taking Kami, and the dragon balls, with him. Gohan and Krillin are left alone before Nappa.</p>
         </div>
@@ -497,8 +647,18 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">16</span></div>
             <img src="copertine/dragonball/ue-16.jpg" alt="Copertina Dragon Ball Ultimate Edition 16" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge start lang-it">★ Goku contro Vegeta</span><span class="badge start lang-en">★ Goku versus Vegeta</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">I Saiyan</dd><dd class="lang-en">The Saiyans</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Kaioken contro Gyarick; l'Oozaru di Vegeta; la Genkidama passata di mano in mano</dd><dd class="lang-en">Kaioken versus Galick Gun; Vegeta's Great Ape; the Spirit Bomb passed hand to hand</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1989–90</dd></div>
+          </dl>
           <p class="lang-it">Goku arriva sul campo di battaglia e non è più lo stesso: Nappa spazzato via, poi il duello col principe. Kaioken contro Gyarick, l'Oozaru di Vegeta, la Genkidama passata di mano in mano, Gohan e la coda ricresciuta al momento giusto: la prima grande battaglia "alla Z" del manga si chiude con Vegeta strisciante verso la navicella — e con Goku che chiede di lasciarlo andare.</p>
           <p class="lang-en">Goku reaches the battlefield and is no longer the same: Nappa swept aside, then the duel with the prince. Kaioken against Galick Gun, Vegeta's Great Ape, the Spirit Bomb passed from hand to hand, Gohan's tail regrown at just the right moment: the manga's first great "Z-style" battle closes with Vegeta crawling to his pod — and Goku asking that he be allowed to leave.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> lo scontro Goku–Vegeta è tra le battaglie più citate della cultura pop, e la lettura del potenziale di Goku sugli scouter ("oltre 8000!", 9000 nel doppiaggio inglese) è uno dei meme più longevi di internet.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the Goku–Vegeta clash is among the most quoted battles in pop culture, and the scouter reading of Goku's power ("it's over 8000!", 9000 in the English dub) is one of the internet's longest-lived memes.</div>
         </div>
       </article>
     </section>
@@ -514,6 +674,14 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">17</span></div>
             <img src="copertine/dragonball/ue-17.jpg" alt="Copertina Dragon Ball Ultimate Edition 17" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge lang-it">Verso lo spazio</span><span class="badge lang-en">Into space</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">Namecc</dd><dd class="lang-en">Namek</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Il pianeta Namecc e i Namecciani; Freezer e i suoi scagnozzi; le sfere giganti di Polunga</dd><dd class="lang-en">Planet Namek and the Namekians; Frieza and his henchmen; Porunga's giant dragon balls</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1990</dd></div>
+          </dl>
           <p class="lang-it">Per riportare in vita i caduti servono le sfere del pianeta di Piccolo: Bulma, Crilin e Gohan partono sull'astronave di Dio verso Namecc. Il pianeta verde dai tre soli nasconde però i due ospiti peggiori possibili: Vegeta, venuto a prendersi l'immortalità, e Freezer, il tiranno galattico di cui i Saiyan erano soldati. La caccia alle sfere diventa una partita a tre.</p>
           <p class="lang-en">Bringing the fallen back requires the dragon balls of Piccolo's home planet: Bulma, Krillin and Gohan set out on Kami's spaceship for Namek. But the green planet of three suns hides the two worst possible guests: Vegeta, come to claim immortality, and Frieza, the galactic tyrant the Saiyans once soldiered for. The hunt for the balls becomes a three-way game.</p>
         </div>
@@ -531,6 +699,14 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">18</span></div>
             <img src="copertine/dragonball/ue-18.jpg" alt="Copertina Dragon Ball Ultimate Edition 18" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge lang-it">La ribellione di Vegeta</span><span class="badge lang-en">Vegeta's rebellion</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">Namecc</dd><dd class="lang-en">Namek</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Il Grande Capo, Nail e Dende; il potenziale nascosto di Gohan e Crilin</dd><dd class="lang-en">The Grand Elder, Nail and Dende; Gohan and Krillin's hidden potential</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1990</dd></div>
+          </dl>
           <p class="lang-it">Vegeta si ribella all'impero: Dodoria e Zarbon cadono uno dopo l'altro mentre i villaggi Namecciani pagano il prezzo della caccia di Freezer. Gohan e Crilin trovano il Grande Capo, che risveglia il loro potenziale nascosto, e Goku vola verso Namecc allenandosi a gravità sempre più folli. Freezer, spazientito, chiama i cinque migliori mercenari della galassia.</p>
           <p class="lang-en">Vegeta rebels against the empire: Dodoria and Zarbon fall one after the other while the Namekian villages pay the price of Frieza's hunt. Gohan and Krillin find the Grand Elder, who awakens their hidden potential, and Goku flies toward Namek training under ever more insane gravity. Frieza, out of patience, summons the galaxy's five finest mercenaries.</p>
         </div>
@@ -548,6 +724,15 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">19</span></div>
             <img src="copertine/dragonball/ue-19.jpg" alt="Copertina Dragon Ball Ultimate Edition 19" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge evento lang-it">Le cinque pose</span><span class="badge evento lang-en">The five poses</span>
+            <span class="badge lang-it">Il ritorno di Goku</span><span class="badge lang-en">Goku's return</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">Squadra Ginew</dd><dd class="lang-en">Ginyu Force</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Ginew, Recoome, Burter, Jeeth e Ghurd; lo stop temporale di Ghurd</dd><dd class="lang-en">Ginyu, Recoome, Burter, Jeice and Guldo; Guldo's time-freeze</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1990–91</dd></div>
+          </dl>
           <p class="lang-it">Le pose plastiche più famose del manga: la squadra Ginew entra in scena e ruba le sfere in un pomeriggio. Ghurd ferma il tempo, Recoome demolisce Vegeta, Gohan e Crilin sono a un passo dalla fine — e poi la navicella atterra: Goku, trasformato dal viaggio a gravità cento, spazza via Recoome e Burter con colpi che nessuno riesce nemmeno a vedere.</p>
           <p class="lang-en">The most famous poses in manga: the Ginyu Force takes the stage and steals the balls in an afternoon. Guldo stops time, Recoome demolishes Vegeta, Gohan and Krillin are a step from the end — and then the capsule lands: Goku, transformed by the journey at hundredfold gravity, sweeps Recoome and Burter aside with blows nobody can even see.</p>
         </div>
@@ -565,6 +750,15 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">20</span></div>
             <img src="copertine/dragonball/ue-20.jpg" alt="Copertina Dragon Ball Ultimate Edition 20" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge lang-it">Il cambio di corpo</span><span class="badge lang-en">The body swap</span>
+            <span class="badge lang-it">Entra Freezer</span><span class="badge lang-en">Enter Frieza</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">Ginew → Freezer</dd><dd class="lang-en">Ginyu → Frieza</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Polunga, il drago di Namecc; il ritorno in vita di Piccolo; Freezer in prima persona</dd><dd class="lang-en">Porunga, Namek's dragon; Piccolo's return to life; Frieza in person</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1991</dd></div>
+          </dl>
           <p class="lang-it">Il capitano Ginew gioca la sua carta impossibile: il cambio di corpo, e per qualche capitolo "Goku" è il nemico. Risolto l'inganno (con l'aiuto involontario di una rana), le sfere vengono evocate di nascosto: Piccolo torna in vita e su Namecc, Dende esprime i desideri in namecciano — e sul campo, finalmente in prima persona, arriva lui: Freezer.</p>
           <p class="lang-en">Captain Ginyu plays his impossible card: the body swap, and for a few chapters "Goku" is the enemy. With the trick undone (thanks to the involuntary help of a frog), the balls are summoned in secret: Piccolo returns to life and to Namek, Dende speaks the wishes in Namekian — and onto the field, at last in person, comes Frieza himself.</p>
         </div>
@@ -582,8 +776,19 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">21</span></div>
             <img src="copertine/dragonball/ue-21.jpg" alt="Copertina Dragon Ball Ultimate Edition 21" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge start lang-it">★ Il Super Saiyan</span><span class="badge start lang-en">★ The Super Saiyan</span>
+            <span class="badge evento lang-it">La morte di Vegeta</span><span class="badge evento lang-en">Vegeta's death</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">Freezer</dd><dd class="lang-en">Frieza</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Le forme di Freezer; Piccolo unito a Nail; la morte di Crilin e la trasformazione leggendaria</dd><dd class="lang-en">Frieza's forms; Piccolo merged with Nail; Krillin's death and the legendary transformation</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1991</dd></div>
+          </dl>
           <p class="lang-it">Le trasformazioni del tiranno, una più mostruosa dell'altra; Piccolo unito a Nail che tiene testa alla seconda forma; la morte di Vegeta, in lacrime, che consegna a Goku l'orgoglio di un popolo intero. Poi il duello: Goku al Kaioken ventuplo, la Genkidama che sembra chiudere i giochi — e Freezer che si rialza. Crilin esplode in cielo, e la rabbia partorisce la leggenda: il Super Saiyan.</p>
           <p class="lang-en">The tyrant's transformations, each more monstrous than the last; Piccolo merged with Nail holding his own against the second form; Vegeta's death, in tears, handing Goku the pride of an entire people. Then the duel: Goku at twentyfold Kaioken, the Spirit Bomb that seems to end it — and Frieza rising again. Krillin bursts in the sky, and rage delivers the legend: the Super Saiyan.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> i capelli dorati di Goku sono probabilmente l'immagine più riconoscibile della storia del manga — e Toriyama ha raccontato che la scelta nacque anche per risparmiare inchiostro nelle tavole settimanali.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> Goku's golden hair is probably the most recognizable image in manga history — and Toriyama once said the choice was also made to save ink on the weekly pages.</div>
         </div>
       </article>
     </section>
@@ -599,6 +804,15 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">22</span></div>
             <img src="copertine/dragonball/ue-22.jpg" alt="Copertina Dragon Ball Ultimate Edition 22" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge evento lang-it">L'esplosione di Namecc</span><span class="badge evento lang-en">Namek explodes</span>
+            <span class="badge start lang-it">★ Esordio di Trunks</span><span class="badge start lang-en">★ Trunks' debut</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">Freezer → Trunks</dd><dd class="lang-en">Frieza → Trunks</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Il ragazzo del futuro; Freezer meccanico e Re Cold; l'annuncio degli androidi</dd><dd class="lang-en">The boy from the future; Mecha Frieza and King Cold; the android warning</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1991–92</dd></div>
+          </dl>
           <p class="lang-it">Il duello finale su un pianeta che sta esplodendo: Freezer al massimo del potere, Namecc con cinque minuti di vita, il colpo di grazia che Goku sceglie di non dare — e quello che è costretto a dare. Poi, un anno dopo sulla Terra: Freezer, ricostruito e in cerca di vendetta, viene fatto a fette in un lampo da un ragazzo misterioso con la spada e il giubbotto di Capsule Corp.</p>
           <p class="lang-en">The final duel on an exploding planet: Frieza at full power, Namek with five minutes to live, the finishing blow Goku chooses not to strike — and the one he is forced to. Then, a year later on Earth: Frieza, rebuilt and hungry for revenge, is sliced to pieces in a flash by a mysterious young man with a sword and a Capsule Corp. jacket.</p>
         </div>
@@ -616,8 +830,19 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">23</span></div>
             <img src="copertine/dragonball/ue-23.jpg" alt="Copertina Dragon Ball Ultimate Edition 23" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge lang-it">Vegeta Super Saiyan</span><span class="badge lang-en">Vegeta goes Super Saiyan</span>
+            <span class="badge lang-it">C-17 e C-18 svegli</span><span class="badge lang-en">17 and 18 awake</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">Gli androidi</dd><dd class="lang-en">The Androids</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Il dottor Gelo e C-19; C-16, C-17 e C-18; il virus al cuore di Goku</dd><dd class="lang-en">Dr. Gero and Android 19; Androids 16, 17 and 18; Goku's heart virus</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1992</dd></div>
+          </dl>
           <p class="lang-it">Il ragazzo venuto dal futuro si presenta solo a Goku: si chiama Trunks, è il figlio di Vegeta e Bulma, e nel suo tempo due androidi hanno ridotto il mondo in macerie. Tre anni dopo l'avvertimento, sull'isola compaiono C-19 e il dottor Gelo: Vegeta si rivela Super Saiyan a sorpresa, ma la caccia al laboratorio finisce male — C-17 e C-18 si svegliano.</p>
           <p class="lang-en">The boy from the future introduces himself to Goku alone: his name is Trunks, he is the son of Vegeta and Bulma, and in his time two androids have reduced the world to rubble. Three years after the warning, Android 19 and Dr. Gero appear on the island: Vegeta unveils himself as a Super Saiyan, but the hunt for the laboratory ends badly — 17 and 18 wake up.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> il futuro devastato di Trunks ha generato un intero filone: lo speciale TV La storia di Trunks — tra i più amati di sempre — e, trent'anni dopo, la saga di Goku Black in Dragon Ball Super.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> Trunks' devastated future spawned a whole strand of stories: the TV special The History of Trunks — among the most beloved ever — and, thirty years later, the Goku Black saga in Dragon Ball Super.</div>
         </div>
       </article>
     </section>
@@ -633,6 +858,14 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">24</span></div>
             <img src="copertine/dragonball/ue-24.jpg" alt="Copertina Dragon Ball Ultimate Edition 24" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge evento lang-it">Appare Cell</span><span class="badge evento lang-en">Cell appears</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">Androidi → Cell</dd><dd class="lang-en">Androids → Cell</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Cell imperfetto; la riunificazione di Piccolo e Dio; le sfere di nuovo perdute</dd><dd class="lang-en">Imperfect Cell; the reunification of Piccolo and Kami; the dragon balls lost again</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1992</dd></div>
+          </dl>
           <p class="lang-it">C-18 spezza il braccio (e l'orgoglio) di Super Vegeta, i guerrieri battono in ritirata e Goku giace a letto, divorato dal virus al cuore. Mentre Piccolo torna a fondersi con Dio pur di avere una possibilità, dalle ombre emerge una creatura che svuota intere città: Cell, l'esperimento definitivo di Gelo, venuto da un altro futuro per assorbire i gemelli e diventare perfetto.</p>
           <p class="lang-en">Android 18 breaks Super Vegeta's arm (and pride), the warriors fall back and Goku lies in bed, ravaged by the heart virus. While Piccolo reunites with Kami for even a chance at fighting, out of the shadows comes a creature that empties whole cities: Cell, Gero's ultimate experiment, arrived from another future to absorb the twins and become perfect.</p>
         </div>
@@ -650,6 +883,15 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">25</span></div>
             <img src="copertine/dragonball/ue-25.jpg" alt="Copertina Dragon Ball Ultimate Edition 25" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge lang-it">Verso la perfezione</span><span class="badge lang-en">Toward perfection</span>
+            <span class="badge lang-it">Oltre il Super Saiyan</span><span class="badge lang-en">Beyond the Super Saiyan</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd>Cell</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">La Stanza dello Spirito e del Tempo; Cell semi-perfetto e poi perfetto</dd><dd class="lang-en">The Room of Spirit and Time; semi-perfect and then perfect Cell</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1992–93</dd></div>
+          </dl>
           <p class="lang-it">La corsa contro l'assorbimento: C-16, il gigante gentile programmato solo per uccidere Goku, si schiera coi gemelli; Vegeta e Trunks escono dalla Stanza dello Spirito e del Tempo oltre il limite del Super Saiyan. Ma Cell raggiunge C-17, diventa semi-perfetto — e l'orgoglio di Vegeta, che vuole un avversario degno, gli spalanca la strada verso C-18 e la perfezione.</p>
           <p class="lang-en">The race against absorption: Android 16, the gentle giant programmed only to kill Goku, sides with the twins; Vegeta and Trunks emerge from the Room of Spirit and Time beyond the Super Saiyan limit. But Cell reaches 17, becomes semi-perfect — and Vegeta's pride, craving a worthy opponent, flings the road to 18 and perfection wide open.</p>
         </div>
@@ -667,6 +909,14 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">26</span></div>
             <img src="copertine/dragonball/ue-26.jpg" alt="Copertina Dragon Ball Ultimate Edition 26" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge evento lang-it">Il Cell Game annunciato</span><span class="badge evento lang-en">The Cell Games announced</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd>Cell Game</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Il torneo in mondovisione; il Super Saiyan "pieno relax" di Goku e Gohan</dd><dd class="lang-en">The worldwide-broadcast tournament; Goku and Gohan's full-ease Super Saiyan</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1993</dd></div>
+          </dl>
           <p class="lang-it">Cell perfetto umilia Vegeta e resiste al Trunks "gonfio" di muscoli, poi si concede il gesto più teatrale della serie: un torneo personale trasmesso in mondovisione, il Cell Game, con la Terra in palio. Goku e Gohan, padre e figlio nella Stanza dello Spirito e del Tempo, scelgono la strada opposta a tutti: il Super Saiyan come stato naturale, il "pieno relax".</p>
           <p class="lang-en">Perfect Cell humiliates Vegeta and shrugs off the muscle-bloated Trunks, then allows himself the most theatrical gesture in the series: a personal tournament broadcast worldwide, the Cell Games, with the Earth as the stake. Goku and Gohan, father and son in the Room of Spirit and Time, take the road opposite to everyone else's: the Super Saiyan as a natural state, at full ease.</p>
         </div>
@@ -684,8 +934,19 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">27</span></div>
             <img src="copertine/dragonball/ue-27.jpg" alt="Copertina Dragon Ball Ultimate Edition 27" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge start lang-it">★ Gohan Super Saiyan 2</span><span class="badge start lang-en">★ Gohan goes Super Saiyan 2</span>
+            <span class="badge lang-it">Il sacrificio di C-16</span><span class="badge lang-en">Android 16's sacrifice</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd>Cell Game</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Hercule (Mr. Satan) sul ring; i Cell Jr.; il passaggio di testimone a Gohan</dd><dd class="lang-en">Hercule (Mr. Satan) in the ring; the Cell Jrs.; the torch passing to Gohan</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1993</dd></div>
+          </dl>
           <p class="lang-it">Il Cell Game: l'irruzione di Hercule (Mr. Satan) davanti alle telecamere, il duello Goku–Cell da manuale di arti marziali, e il ritiro a sorpresa: "tocca a Gohan". Il ragazzino non vuole combattere — finché Cell non schiaccia la testa di C-16 davanti ai suoi occhi. La furia del Super Saiyan 2 che ne esplode è uno dei momenti più alti dell'intero manga.</p>
           <p class="lang-en">The Cell Games: Hercule (Mr. Satan) barging in before the cameras, a Goku–Cell duel straight out of a martial-arts manual, and the surprise forfeit: "it's Gohan's turn". The boy refuses to fight — until Cell crushes Android 16's head before his eyes. The Super Saiyan 2 fury that erupts from him is one of the highest moments in the entire manga.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> il Cell Game è il cuore di innumerevoli adattamenti, dal videogioco Dragon Ball Z: Kakarot ai picchiaduro come FighterZ — e la furia di Gohan resta il metro di paragone di ogni "risveglio" shonen.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> the Cell Games are the heart of countless adaptations, from the video game Dragon Ball Z: Kakarot to fighters like FighterZ — and Gohan's fury remains the benchmark for every shonen "awakening".</div>
         </div>
       </article>
     </section>
@@ -701,6 +962,15 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">28</span></div>
             <img src="copertine/dragonball/ue-28.jpg" alt="Copertina Dragon Ball Ultimate Edition 28" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge start lang-it">★ L'addio di Goku</span><span class="badge start lang-en">★ Goku's farewell</span>
+            <span class="badge lang-it">Sette anni dopo</span><span class="badge lang-en">Seven years later</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">Fine di Cell → Great Saiyaman</dd><dd class="lang-en">Cell's end → Great Saiyaman</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">La Kamehameha padre-figlio; Videl e il liceo di Città Satan; Goten</dd><dd class="lang-en">The father-son Kamehameha; Videl and Satan City high school; Goten</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1993–94</dd></div>
+          </dl>
           <p class="lang-it">Il sacrificio di Goku sul teletrasporto, il ritorno di Cell e la Kamehameha finale padre-figlio, con la mano di un padre morto sulla spalla: la saga si chiude e Goku sceglie di restare nell'aldilà. Sette anni dopo, Gohan è un liceale a Città Satan che si traveste da supereroe: nasce Great Saiyaman, Videl fiuta la verità e il 25° Torneo Tenkaichi chiama tutti a raccolta.</p>
           <p class="lang-en">Goku's Instant Transmission sacrifice, Cell's return and the final father-and-son Kamehameha, a dead father's hand on the boy's shoulder: the saga closes and Goku chooses to stay in the afterlife. Seven years later, Gohan is a high-schooler in Satan City moonlighting as a costumed hero: the Great Saiyaman is born, Videl smells the truth, and the 25th Tenkaichi Tournament calls everyone in.</p>
         </div>
@@ -718,6 +988,14 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">29</span></div>
             <img src="copertine/dragonball/ue-29.jpg" alt="Copertina Dragon Ball Ultimate Edition 29" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge lang-it">Il torneo di due generazioni</span><span class="badge lang-en">A two-generation tournament</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">25° Torneo Tenkaichi</dd><dd class="lang-en">25th Tenkaichi Tournament</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Shin e Kibith; la finale junior Trunks–Goten; il marchio "M" di Spopovich</dd><dd class="lang-en">Shin and Kibito; the Trunks–Goten junior final; Spopovich's "M" brand</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1994</dd></div>
+          </dl>
           <p class="lang-it">Goku ottiene un giorno di permesso dall'aldilà e conosce il secondo figlio, Goten; Videl impara a volare più in fretta del previsto; Trunks e Goten trasformano il torneo junior nella loro finale privata. Ma tra gli iscritti ci sono due misteriosi stranieri, Shin e Kibith — e due lottatori marchiati "M" che a Gohan, in pieno incontro, rubano l'energia fino all'ultima goccia.</p>
           <p class="lang-en">Goku gets a one-day pass from the afterlife and meets his second son, Goten; Videl learns to fly faster than expected; Trunks and Goten turn the junior tournament into their private final. But among the entrants are two mysterious strangers, Shin and Kibito — and two fighters branded "M" who, mid-match, drain Gohan's energy to the last drop.</p>
         </div>
@@ -735,6 +1013,14 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">30</span></div>
             <img src="copertine/dragonball/ue-30.jpg" alt="Copertina Dragon Ball Ultimate Edition 30" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge evento lang-it">Majin Vegeta</span><span class="badge evento lang-en">Majin Vegeta</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd>Babidi</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">I Kaioshin; il mago Babidi e il re dei demoni Darbula; il marchio "M" su Vegeta</dd><dd class="lang-en">The Supreme Kais; the wizard Babidi and demon king Dabura; the "M" brand on Vegeta</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1994</dd></div>
+          </dl>
           <p class="lang-it">Shin si rivela: è il Kaioshin, e l'energia rubata serve al mago Babidi per risvegliare Majin Bu, la creatura che milioni di anni prima terrorizzava gli dei. L'inseguimento porta alla navicella-tana: i livelli da superare, il re dei demoni Darbula — e la mossa più spregiudicata del manga: Vegeta si lascia marchiare dalla "M" pur di riavere la forza per sfidare Goku.</p>
           <p class="lang-en">Shin reveals himself: he is the Supreme Kai, and the stolen energy is what the wizard Babidi needs to awaken Majin Buu, the creature that terrorized the gods millions of years ago. The chase leads to his burrow-ship: floors to clear, the demon king Dabura — and the manga's most reckless move: Vegeta lets himself be branded with the "M" just to regain the strength to challenge Goku.</p>
         </div>
@@ -752,6 +1038,15 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">31</span></div>
             <img src="copertine/dragonball/ue-31.jpg" alt="Copertina Dragon Ball Ultimate Edition 31" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge evento lang-it">Il sacrificio di Vegeta</span><span class="badge evento lang-en">Vegeta's sacrifice</span>
+            <span class="badge lang-it">Esordio di Majin Bu</span><span class="badge lang-en">Majin Buu's debut</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">Majin Bu</dd><dd class="lang-en">Majin Buu</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Il duello Goku–Majin Vegeta; la schiusa dell'uovo; la Z-Sword dei Kaioshin</dd><dd class="lang-en">The Goku–Majin Vegeta duel; the egg hatching; the Supreme Kais' Z-Sword</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1994–95</dd></div>
+          </dl>
           <p class="lang-it">Goku contro Majin Vegeta, il duello rimandato da sempre, mentre l'energia dello scontro schiude l'uovo: Bu è una caramella rosa che ride — e spazza via Darbula e mezzo pianeta. Il volume culmina nel gesto che riscatta il principe: l'autodistruzione di Vegeta, "per Bulma, per Trunks... e anche per te, Kakaroth". Gohan, dato per morto, viene raccolto dai Kaioshin per estrarre la Z-Sword.</p>
           <p class="lang-en">Goku versus Majin Vegeta, the forever-postponed duel, while the clash's energy hatches the egg: Buu is a giggling pink candy — who sweeps away Dabura and half the planet. The volume peaks with the gesture that redeems the prince: Vegeta's self-destruction, "for Bulma, for Trunks... and yes, even for you, Kakarot". Gohan, presumed dead, is taken in by the Supreme Kais to draw the Z-Sword.</p>
         </div>
@@ -769,6 +1064,15 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">32</span></div>
             <img src="copertine/dragonball/ue-32.jpg" alt="Copertina Dragon Ball Ultimate Edition 32" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge start lang-it">★ Il Super Saiyan 3</span><span class="badge start lang-en">★ Super Saiyan 3</span>
+            <span class="badge evento lang-it">La scissione di Bu</span><span class="badge evento lang-en">Buu splits</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">Majin Bu</dd><dd class="lang-en">Majin Buu</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">La danza della fusione; l'amicizia Bu–Mr. Satan; Super Bu</dd><dd class="lang-en">The fusion dance; the Buu–Mr. Satan friendship; Super Buu</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1995</dd></div>
+          </dl>
           <p class="lang-it">Goku gioca la carta segreta per guadagnare tempo: il Super Saiyan 3, capelli fino alla schiena e un costo energetico spaventoso. Mentre Goten e Trunks imparano la danza della fusione, Bu stringe amicizia con Mr. Satan e con un cucciolo — finché due cecchini non rovinano tutto: dalla rabbia si scinde il Bu cattivo, che divora quello grasso. Nasce Super Bu, e l'umanità viene cancellata con un solo attacco.</p>
           <p class="lang-en">Goku plays his secret card to buy time: Super Saiyan 3, hair down his back and a terrifying energy cost. While Goten and Trunks learn the fusion dance, Buu befriends Mr. Satan and a puppy — until two snipers ruin everything: out of the rage splits the evil Buu, who devours the fat one. Super Buu is born, and humanity is erased with a single attack.</p>
         </div>
@@ -786,6 +1090,15 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">33</span></div>
             <img src="copertine/dragonball/ue-33.jpg" alt="Copertina Dragon Ball Ultimate Edition 33" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge start lang-it">★ Vegeth</span><span class="badge start lang-en">★ Vegito</span>
+            <span class="badge lang-it">Le tecniche di Gotenks</span><span class="badge lang-en">Gotenks' techniques</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">Super Bu</dd><dd class="lang-en">Super Buu</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Gotenks Super Saiyan 3; il Gohan "definitivo"; gli orecchini Potara</dd><dd class="lang-en">Super Saiyan 3 Gotenks; "ultimate" Gohan; the Potara earrings</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1995</dd></div>
+          </dl>
           <p class="lang-it">Super Bu trova la Stanza dello Spirito e del Tempo: Gotenks lo affronta a colpi di tecniche ridicole e geniali (i Kamikaze Ghost su tutti) fino al Super Saiyan 3, Piccolo fa da arbitro e da vittima, e il Gohan "definitivo" risvegliato dal vecchio Kaioshin sembra chiudere la partita. Ma Bu assorbe tutti, uno a uno — finché Goku non gioca gli orecchini Potara: la fusione con Vegeta, Vegeth, il guerriero più forte dell'intero manga.</p>
           <p class="lang-en">Super Buu finds the Room of Spirit and Time: Gotenks fights him with ridiculous, brilliant techniques (the Kamikaze Ghosts above all) up to Super Saiyan 3, Piccolo plays referee and victim, and the "ultimate" Gohan awakened by the Elder Kai seems to settle the match. But Buu absorbs them all, one by one — until Goku plays the Potara earrings: the fusion with Vegeta, Vegito, the strongest warrior in the entire manga.</p>
         </div>
@@ -803,8 +1116,19 @@
             <div class="cover-art"><span class="strip">Ultimate Edition</span><span class="logo">Dragon<br>Ball</span><span class="num">34</span></div>
             <img src="copertine/dragonball/ue-34.jpg" alt="Copertina Dragon Ball Ultimate Edition 34" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge start lang-it">★ L'ultimo capitolo</span><span class="badge start lang-en">★ The final chapter</span>
+            <span class="badge lang-it">Il vero finale</span><span class="badge lang-en">The true ending</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Saga</dt><dt class="lang-en">Arc</dt><dd class="lang-it">Il gran finale</dd><dd class="lang-en">The grand finale</dd></div>
+            <div><dt class="lang-it">Esordi e momenti chiave</dt><dt class="lang-en">Debuts and key moments</dt><dd class="lang-it">Kid Bu; la Genkidama di tutta la Terra; Ub, dieci anni dopo</dd><dd class="lang-en">Kid Buu; the whole Earth's Spirit Bomb; Uub, ten years later</dd></div>
+            <div><dt class="lang-it">Serializzazione</dt><dt class="lang-en">Serialization</dt><dd>Weekly Shonen Jump, 1995</dd></div>
+          </dl>
           <p class="lang-it">Dentro il corpo di Bu, la Terra distrutta, e l'ultima battaglia sul pianeta dei Kaioshin contro il Bu originale, puro istinto: la Genkidama costruita con l'energia di tutti i terrestri — convinti a donarla dalla voce di Mr. Satan, l'eroe per sbaglio — chiude la storia. E poi il vero finale, quello che l'anime ha diluito: dieci anni dopo, al torneo, Goku incontra Ub, la reincarnazione buona di Bu, e vola via ad allenarlo. Il cerchio si chiude com'era cominciato: cercando qualcuno più forte.</p>
           <p class="lang-en">Inside Buu's body, the Earth destroyed, and the last battle on the world of the Kais against the original Buu, pure instinct: the Spirit Bomb built from the energy of every human on Earth — persuaded to give it by the voice of Mr. Satan, the accidental hero — ends the story. And then the true finale, the one the anime watered down: ten years later, at the tournament, Goku meets Uub, Buu's good reincarnation, and flies off to train him. The circle closes the way it opened: looking for someone stronger.</p>
+          <div class="screen lang-it"><strong>Oltre la carta:</strong> da questo finale ripartono Dragon Ball Super (ambientato prima dell'ultimo capitolo) e l'eredità infinita del franchise. Alla scomparsa di Toriyama, nel marzo 2024, il mondo intero ha salutato queste pagine.</div>
+          <div class="screen lang-en"><strong>Beyond the page:</strong> from this ending spring Dragon Ball Super (set before the last chapter) and the franchise's endless legacy. When Toriyama passed away in March 2024, the whole world said goodbye to these pages.</div>
         </div>
       </article>
     </section>
@@ -820,6 +1144,14 @@
             <div class="cover-art"><span class="strip">Databook</span><span class="logo">Land<br>mark</span><span class="num">+1</span></div>
             <img src="copertine/dragonball/landmark.jpg" alt="Copertina Dragon Ball Landmark" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge lang-it">Guida ufficiale</span><span class="badge lang-en">Official guide</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Cos'è</dt><dt class="lang-en">What it is</dt><dd class="lang-it">Primo databook ufficiale della serie</dd><dd class="lang-en">The series' first official databook</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Contains</dt><dd class="lang-it">Schede di personaggi e saghe, retroscena, intervista a Toriyama</dd><dd class="lang-en">Character and arc files, behind-the-scenes, a Toriyama interview</dd></div>
+            <div><dt class="lang-it">Edizione</dt><dt class="lang-en">Edition</dt><dd class="lang-it">Giappone 2003 · Star Comics</dd><dd class="lang-en">Japan 2003 · Star Comics</dd></div>
+          </dl>
           <p class="lang-it">Il primo databook ufficiale (Giappone 2003, in Italia da Star Comics a corredo della Ultimate Edition): schede dei personaggi, mappa delle saghe e soprattutto i retroscena della serializzazione — come nasceva un capitolo a settimana, cosa suggeriva l'editor, quali svolte Toriyama improvvisava all'ultimo, intervista compresa. Il compagno di lettura da tenere aperto mentre si rileggono i 34 volumi.</p>
           <p class="lang-en">The first official databook (Japan 2003, in Italy from Star Comics alongside the Ultimate Edition): character files, a map of the arcs and above all the behind-the-scenes of the serialization — how a chapter was born every week, what the editor suggested, which twists Toriyama improvised at the last minute, interview included. The reading companion to keep open while rereading the 34 volumes.</p>
         </div>
@@ -837,6 +1169,14 @@
             <div class="cover-art"><span class="strip">Databook</span><span class="logo">For<br>ever</span><span class="num">+2</span></div>
             <img src="copertine/dragonball/forever.jpg" alt="Copertina Dragon Ball Forever" onerror="this.remove()">
           </div>
+          <div class="badge-row">
+            <span class="badge lang-it">Il libro dei lettori</span><span class="badge lang-en">The readers' book</span>
+          </div>
+          <dl class="scheda">
+            <div><dt class="lang-it">Cos'è</dt><dt class="lang-en">What it is</dt><dd class="lang-it">Secondo databook ufficiale, il sigillo della collezione</dd><dd class="lang-en">The second official databook, the collection's seal</dd></div>
+            <div><dt class="lang-it">Contiene</dt><dt class="lang-en">Contains</dt><dd class="lang-it">Le classifiche votate dai lettori, la galleria delle copertine, l'intervista-bilancio</dd><dd class="lang-en">The reader-voted rankings, the cover gallery, the career-spanning interview</dd></div>
+            <div><dt class="lang-it">Edizione</dt><dt class="lang-en">Edition</dt><dd class="lang-it">Giappone 2004 · Star Comics</dd><dd class="lang-en">Japan 2004 · Star Comics</dd></div>
+          </dl>
           <p class="lang-it">Il secondo databook (Giappone 2004) e il sigillo finale della collezione: il libro-celebrazione in cui sono i lettori a raccontare Dragon Ball attraverso le grandi classifiche votate — personaggi, battaglie, scene — con la galleria delle copertine e un'intervista-bilancio in cui Toriyama guarda indietro all'opera completa. Insieme a Landmark trasforma la Ultimate Edition da ristampa a edizione davvero definitiva.</p>
           <p class="lang-en">The second databook (Japan 2004) and the collection's final seal: the celebration book in which the readers themselves tell Dragon Ball through the great voted rankings — characters, battles, scenes — with the cover gallery and a career-spanning interview in which Toriyama looks back on the completed work. Together with Landmark it turns the Ultimate Edition from a reprint into a truly definitive edition.</p>
         </div>
