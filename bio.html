@@ -285,6 +285,17 @@
 					<h2 id="projects">Personal Projects</h2>
 					<div class="timeline">
 						<article class="tl-item">
+							<span class="tl-logo"><a href="aipantry"><img src="images/thumbs/aipantryIcon.svg" alt="AI Pantry logo" /></a></span>
+							<span class="tl-period">July 2026 - September 2026</span>
+							<h3><a href="aipantry">AI Pantry — Android app</a></h3>
+							<h5>Milano, Italy</h5>
+							<ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>Gemini Nano</li><li>LiteRT</li><li>Gemma</li><li>CameraX</li><li>Room</li><li>Koin</li></ul>
+							<ul>
+									<li>Project, design and development of the <a href="aipantry">AI Pantry Android app</a>, a Droidcon demo of a fully on-device AI pipeline: you photograph your fridge and pantry, the app recognises the ingredients and generates recipes that use only what you have. <a href="https://developer.android.com/ai/gemini-nano">Gemini Nano</a> (AICore, via the ML Kit GenAI Prompt API) and <a href="https://github.com/apple/ml-mobileclip">MobileCLIP-S2</a> zero-shot on <a href="https://ai.google.dev/edge/litert">LiteRT</a> detect the ingredients, <a href="https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm">Gemma 4 E2B</a> on LiteRT-LM generates the recipes. Inference is 100% on-device and the app does not even hold the INTERNET permission: the ~2.5 GB model is delivered through Play for On-device AI for the Play Store release, or embedded in the APK for testing. Clean Architecture and MVI with <a href="https://insert-koin.io/">Koin</a>, CameraX and Room, with a persistent GPU/CPU fallback policy for the LLM runtime.</li>
+							</ul>
+							<a class="tl-readmore" href="aipantry">Read more</a>
+						</article>
+						<article class="tl-item">
 							<span class="tl-logo"><a href="visitup"><img src="images/thumbs/visitup4.jpg" alt="Visitup logo" /></a></span>
 							<span class="tl-period">January 2023 - January 2025</span>
 							<h3><a href="visitup">Visitup — Flutter iOS, Android and Web app</a></h3>

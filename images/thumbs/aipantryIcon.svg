@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 108 108" width="108" height="108" role="img" aria-label="AI Pantry logo">
+	<rect width="108" height="108" fill="#1B5E20"/>
+	<g transform="translate(54 54) scale(1.4) translate(-54 -54) translate(27 27)">
+		<path fill="#FF8F3C" d="M22,20 C30,18 40,26 38,34 L20,52 C12,54 4,46 6,38 Z"/>
+		<path fill="#66BB6A" d="M30,14 C32,8 38,6 42,8 C40,12 36,16 32,18 Z"/>
+		<path fill="#43A047" d="M36,18 C42,14 48,16 50,20 C46,22 40,22 36,22 Z"/>
+	</g>
+</svg>
