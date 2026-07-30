@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+	<head>
+		<title>AI Pantry — Salvatore Matrisciano</title>
+		<meta name="description" content="AI Pantry: Android app with a fully on-device AI pipeline — Gemini Nano and MobileCLIP-S2 recognise the ingredients in your fridge, Gemma 4 E2B generates the recipes. No internet permission." />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="apple-touch-icon" sizes="180x180" href="images/icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="images/icon.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="images/icon.png">
+		<link rel="manifest" href="resources/site.webmanifest">
+		<link rel="mask-icon" href="resources/safari-pinned-tab.svg" color="#000000">
+		<link rel="shortcut icon" href="images/icon.ico">
+		<meta name="apple-mobile-web-app-title" content="Salvatore Matrisciano">
+		<meta name="application-name" content="Salvatore Matrisciano">
+		<meta name="msapplication-TileColor" content="#2b5797">
+		<meta name="msapplication-config" content="resources/browserconfig.xml">
+		<meta name="theme-color" content="#1B5E20">
+		<meta name="keywords" content="Salvatore Matrisciano, AI Pantry, on-device AI, Gemini Nano, Gemma, MobileCLIP, LiteRT, Android, Jetpack Compose" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/modern.css" />
+		<script src="assets/js/theme-init.js"></script>
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<a href="https://salvatorematrisciano.com" class="image avatar"><img src="images/avatar.jpg" alt="Salvatore Matrisciano" /></a>
+				<h1><strong>Salvatore Matrisciano</strong></h1>
+				<h1>Senior Mobile Developer at <a href="http://deloitte.com">Deloitte</a>,</h1>
+				<h1>Founder & Developer at <a href="https://visitupbologna.com">Visitup</a>,</h1>
+				<h1>Computer Engineering at</h1>
+				<h1><a href="https://corsi.unibo.it/laurea/IngegneriaInformatica">Alma Mater Studiorum - Università di Bologna</a></h1>
+
+				<p>
+						<ul class="icons">
+							<li><a href="https://www.facebook.com/matrisciano.s" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+							<li><a href="https://instagram.com/salvatore.matrisciano" class="icon fa-instagram"> <span class="label">Instagram</span></a></li>
+							<li><a href="https://twitter.com/matrisciano_s" class="icon fa-twitter"><span class="label">X (Twitter)</span></a></li>
+							<li><a href="https://github.com/matriscianosalvatore" class="icon fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://www.linkedin.com/in/salvatore-matrisciano"class="icon fa-linkedin"> <span class="label">Linkedin</span></a></li>
+							<li><a href="mailto:s.matrisciano@mail.com" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+							<li><a href="Salvatore Matrisciano cv.pdf" class="icon fa-file-text-o"><span class="label">CV</span></a></li>
+						</ul>
+				</p>
+
+						&copy; Salvatore Matrisciano
+
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>AI Pantry - Cook from Your Fridge</h2>
+						</header>
+
+						<p><strong>AI Pantry</strong> is an <strong>Android</strong> app, built as a <strong>Droidcon demo</strong>, of a <strong>fully on-device AI pipeline</strong>: you photograph your fridge and your pantry, the app recognises the ingredients and generates recipes that use <strong>only what you already have</strong>. Three AI engines cooperate, each on the job it was built for.</p>
+
+						<p><strong>Inference is 100% on-device and the app does not even hold the INTERNET permission</strong>: photos never leave the phone. The models arrive through the install channel — Google Play AI packs for the Play Store release, or embedded in the APK for testing — and never through an in-app download.</p>
+
+						<ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>Gemini Nano</li><li>LiteRT</li><li>Gemma</li><li>CameraX</li><li>Room</li><li>Koin</li></ul>
+
+						<h2>The three AI engines</h2>
+						<ul>
+							<li><strong><a href="https://developer.android.com/ai/gemini-nano">Gemini Nano</a> (AICore, via ML Kit GenAI)</strong> — ingredient detection on the devices that support it (Pixel 9/10, Galaxy S25/S26, …), with a multimodal photo+text prompt. It weighs <strong>zero MB in the APK</strong>: the model belongs to the system.</li>
+							<li><strong><a href="https://github.com/apple/ml-mobileclip">MobileCLIP-S2</a> (<a href="https://ai.google.dev/edge/litert">LiteRT</a>)</strong> — zero-shot detection on <strong>any</strong> device: the everywhere-fallback and the default engine.</li>
+							<li><strong><a href="https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm">Gemma 4 E2B</a> (LiteRT-LM)</strong> — recipe generation, the only genuinely generative task.</li>
+						</ul>
+
+						<h2>Demo flow</h2>
+						<ul>
+							<li><strong>Scan</strong> — photograph the fridge, then "Scan another" for the pantry; a photo from the gallery works too. The results sheet shows <strong>which engine did the work</strong>.</li>
+							<li>The detected ingredients, with their confidence (anything below 22% is discarded), land in the <strong>local inventory</strong> stored in Room.</li>
+							<li><strong>What can I cook?</strong> — the LLM generates <strong>5 recipes ranked by ingredient coverage</strong>, with time, difficulty, used and missing ingredients. Opening a recipe generates its step-by-step instructions and variations <strong>on demand</strong>.</li>
+						</ul>
+
+						<h2>Architecture</h2>
+						<p>Every feature follows <strong>Clean Architecture + MVI</strong> (<code>data / domain / presentation</code>), with dependency injection through <strong>Koin</strong>:</p>
+						<ul>
+							<li><strong>capture/</strong> — CameraX and photo picker; <code>AdaptiveIngredientDetector</code> selects the engine <strong>at runtime, on every scan</strong>: <code>checkStatus()</code> on Gemini Nano, and a silent fallback to CLIP if Nano is unavailable or fails.</li>
+							<li><strong>inventory/</strong> — Room database, ingredient inventory, model status banner, keyword emoji resolver.</li>
+							<li><strong>recipes/</strong> — <code>LlmRecipeGenerator</code> with two-stage generation and silent retries, plus a tolerant <code>RecipeJsonParser</code> (small models occasionally emit malformed JSON).</li>
+							<li><strong>core/data/ai/</strong> — <code>LlmCatalog</code>, <code>ModelSource</code> (AI packs or bundled assets), <code>ModelRepository</code> for automatic provisioning, <code>LlmEngineHolder</code> for the engine cache and the GPU/CPU policy.</li>
+						</ul>
+
+						<h2>Ingredient recognition without a training set</h2>
+						<p>The <strong><a href="https://github.com/apple/ml-mobileclip">MobileCLIP-S2</a></strong> image encoder (~140 MB, LiteRT) embeds <strong>multi-scale crops</strong> of the photo — a grid at 50% and 33% of the short side, on a pool of interpreters running in parallel — and compares them by <strong>cosine similarity</strong> against the text embeddings of <strong>864 ingredients + 6 "distractor" labels</strong>, precomputed offline.</p>
+						<p>The result is that the "classifier" is a <strong>text file</strong>: one label per line, with aliases and distractor labels that absorb the food-free crops. <strong>Adding an ingredient means adding a line</strong> and re-running the script that recomputes the embeddings — no training, no dataset, no retraining cycle.</p>
+
+						<h2>Delivering a 2.5 GB model</h2>
+						<p><a href="https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm">Gemma 4 E2B</a> ships in the <code>.litertlm</code> format at ~2.5 GB, with mixed 2/4/8-bit quantisation. Two delivery channels, both without any in-app HTTP download:</p>
+						<ul>
+							<li><strong>Play for On-device AI — for the Play Store release</strong>: 3 <em>fast-follow</em> AI packs of ~0.85 GB each (Play caps a pack at 1.5 GB), reassembled on first launch and then removed.</li>
+							<li><strong>Embedded in the APK — for testing</strong>: 3 chunks in the assets, since AGP does not package assets over 2 GB. A ~2.9 GB APK to hand out to testers, with zero action required from them.</li>
+						</ul>
+						<p>After a few seconds of "Preparing Gemma 4 E2B…" on first launch, the app is <strong>ready and offline forever</strong>.</p>
+
+						<h2>GPU/CPU resilience</h2>
+						<p>The LiteRT-LM runtime is <strong>GPU-first</strong>, and a broken GPU shows up in two very different ways: a <strong>hang</strong> in a native call that cannot be interrupted, or an <strong>immediate exception</strong> on the first inference (for example when there is no OpenCL, where engine initialisation succeeds anyway). <code>LlmEngineHolder</code> catches both — a <strong>watchdog with a timeout</strong> on a detached job for the hangs, an exception catch for the rest — and marks the GPU as broken <strong>persistently</strong> for that model, so the following launches go straight to multi-threaded CPU without paying for the attempt again. A <strong>micro-inference probe at warm-up</strong> triggers the fallback at startup, so the user's first generation never waits for it.</p>
+
+						<h2>Stack</h2>
+						<p>Kotlin 2.2 · Jetpack Compose (Material 3) · CameraX · ML Kit GenAI Prompt API (Gemini Nano / AICore) · LiteRT (MobileCLIP-S2) · LiteRT-LM (Gemma 4 E2B) · Play AI Delivery · Room · Koin · Navigation Compose · kotlinx-serialization</p>
+
+						<p>AI Pantry is my playground for <strong>on-device generative AI on Android</strong>: model delivery at the gigabyte scale, runtime engine selection, hardware fallbacks and a privacy guarantee enforced by the manifest itself rather than by a privacy policy.</p>
+
+						<p><i>July - September 2026</i>.</p>
+
+					</section>
+
+				<!-- Three -->
+					<section id="three">
+
+						<div class="col-4 col-12-small">
+							<ul class="labeled-icons">
+								<li>
+									<h3 class="icon fa-home"><span class="label">Address</span></h3>
+									<a href="https://goo.gl/maps/zFLhSRcP1H5wfWCK8">Milano, Italy</a>
+								</li>
+								<li>
+									<h3 class="icon fa-mobile"><span class="label">Phone</span></h3>
+									<a href="tel:+393405319167">+39 340 53 19 167</a>
+								</li>
+								<li>
+									<h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
+									<a href="mailto:s.matrisciano@mail.com">s.matrisciano@mail.com</a>
+								</li>
+							</ul>
+						</div>
+					</section>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+		<script src="assets/js/modern.js"></script>
+	</body>
+</html>
