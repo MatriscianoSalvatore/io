@@ -203,6 +203,33 @@ html.theme-dark .tl-item .tags li.year {
 	color: #2f9b7d;
 }
 
+/* An event that has its own page on this site */
+.event-chips li.has-page {
+	border-color: rgba(73, 191, 157, 0.6);
+	background: rgba(73, 191, 157, 0.12);
+	font-weight: 700;
+	box-shadow: 0 0 0 3px rgba(73, 191, 157, 0.1);
+}
+
+.event-chips li.has-page a {
+	color: #2f9b7d;
+}
+
+.event-chips li.has-page a:hover {
+	color: #23735d;
+}
+
+.event-chips li.has-page::after {
+	content: '\2192';
+	color: #2f9b7d;
+	line-height: 1;
+	transition: transform 0.2s ease;
+}
+
+.event-chips li.has-page:hover::after {
+	transform: translateX(2px);
+}
+
 .about-callout {
 	margin: 0 0 1.2em 0;
 	padding: 0.9em 1.2em;
@@ -250,6 +277,21 @@ html.theme-dark .event-chips a {
 
 html.theme-dark .event-chips a:hover {
 	color: #7edcc0;
+}
+
+html.theme-dark .event-chips li.has-page {
+	border-color: rgba(45, 212, 167, 0.55);
+	background: rgba(45, 212, 167, 0.12);
+	box-shadow: 0 0 0 3px rgba(45, 212, 167, 0.08);
+}
+
+html.theme-dark .event-chips li.has-page a,
+html.theme-dark .event-chips li.has-page::after {
+	color: #7edcc0;
+}
+
+html.theme-dark .event-chips li.has-page a:hover {
+	color: #b6f5e3;
 }
 
 html.theme-dark .about-callout {
@@ -651,6 +693,143 @@ html.theme-dark #bionav a.active {
 html.theme-dark #bionav .cv-btn {
 	background: #2dd4a7;
 	color: #052e22;
+}
+
+/* Horizontal timeline (both themes) --------------------------------------- */
+.hz-timeline {
+	display: flex;
+	align-items: stretch;
+	gap: 0;
+	list-style: none;
+	margin: 0 0 2.5em 0;
+	padding: 0 0 0.4em 0;
+	overflow-x: auto;
+	overscroll-behavior-x: contain;
+	scrollbar-width: thin;
+}
+
+.hz-timeline li {
+	position: relative;
+	/* narrow columns: five stops fit without scrolling down to ~600px of content width */
+	flex: 1 0 clamp(115px, 17%, 200px);
+	padding: 2.2em 0.55em 0 0.55em;
+	text-align: center;
+}
+
+/* the rail */
+.hz-timeline li::before {
+	content: '';
+	position: absolute;
+	top: 0.62em;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background: #e4e4e4;
+}
+
+.hz-timeline li:first-child::before { left: 50%; }
+.hz-timeline li:last-child::before { right: 50%; }
+
+/* the stop */
+.hz-timeline li::after {
+	content: '';
+	position: absolute;
+	top: 0.15em;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 0.95em;
+	height: 0.95em;
+	border-radius: 50%;
+	background: #ffffff;
+	border: 3px solid #c9c9c9;
+	box-sizing: border-box;
+}
+
+.hz-timeline li.hz-now::after {
+	background: #49bf9d;
+	border-color: #49bf9d;
+	box-shadow: 0 0 0 4px rgba(73, 191, 157, 0.18);
+}
+
+.hz-timeline .hz-year {
+	display: block;
+	font-size: 1.15em;
+	font-weight: 700;
+	line-height: 1.2;
+	color: #49bf9d;
+}
+
+.hz-timeline .hz-place {
+	display: block;
+	margin-top: 0.15em;
+	font-size: 0.68em;
+	font-weight: 700;
+	letter-spacing: 0.07em;
+	text-transform: uppercase;
+	color: #565656;
+}
+
+.hz-timeline .hz-note {
+	display: block;
+	margin-top: 0.45em;
+	font-size: 0.75em;
+	line-height: 1.45;
+	color: #949494;
+}
+
+html.theme-dark .hz-timeline li::before { background: var(--card-border); }
+
+html.theme-dark .hz-timeline li::after {
+	background: var(--bg);
+	border-color: rgba(255, 255, 255, 0.22);
+}
+
+html.theme-dark .hz-timeline li.hz-now::after {
+	background: var(--accent);
+	border-color: var(--accent);
+	box-shadow: 0 0 0 4px rgba(45, 212, 167, 0.18);
+}
+
+html.theme-dark .hz-timeline .hz-year { color: var(--accent); }
+html.theme-dark .hz-timeline .hz-place { color: var(--text-strong); }
+html.theme-dark .hz-timeline .hz-note { color: var(--muted); }
+
+/* Video cards: same box shape as the photo thumbnails next to them --------- */
+.mwc-video {
+	position: relative;
+	display: block;
+	/* the clips are 720x1280: same ratio as the box, so they fill it without bars */
+	aspect-ratio: 9 / 16;
+	margin: 0 0 1.5em 0;
+	border-radius: 0.35em;
+	overflow: hidden;
+	background: #10141c;
+}
+
+.mwc-video video {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	cursor: pointer;
+}
+
+/*
+	Fullscreen: the screen is not 9:16, and "cover" would crop the clip.
+	Separate rules on purpose — an unknown pseudo-class in a selector list
+	would invalidate the whole rule.
+*/
+.mwc-video video:fullscreen { object-fit: contain; }
+.mwc-video video:-webkit-full-screen { object-fit: contain; }
+.mwc-video video:-moz-full-screen { object-fit: contain; }
+
+html.theme-dark .mwc-video {
+	border: 1px solid var(--card-border);
+	border-radius: 16px;
+	background: var(--bg-raise);
+	box-shadow: 0 12px 32px -16px rgba(0, 0, 0, 0.7);
 }
 
 /* Bio: key-numbers strip (both themes) */

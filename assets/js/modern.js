@@ -64,7 +64,9 @@
 				observer.unobserve(entry.target);
 			}
 		});
-	}, { rootMargin: '0px 0px -8% 0px', threshold: 0.05 });
+	// threshold 0: a section taller than the viewport can never reach a
+	// percentage threshold, and would stay invisible forever.
+	}, { rootMargin: '0px 0px -8% 0px', threshold: 0 });
 
 	targets.forEach(function(el) { observer.observe(el); });
 
