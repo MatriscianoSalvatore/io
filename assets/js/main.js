@@ -95,23 +95,8 @@
 
 	// Main Sections: Two.
 
-		// Lightbox gallery.
-			$window.on('load', function() {
-
-				$('#two').poptrox({
-					caption: function($a) { return $a.next('h3').text(); },
-					overlayColor: '#2c2c2c',
-					overlayOpacity: 0.85,
-					popupCloserText: '',
-					popupLoaderText: '',
-					selector: '.work-item a.image',
-					usePopupCaption: true,
-					usePopupDefaultStyling: false,
-					usePopupEasyClose: false,
-					usePopupNav: true,
-					windowMargin: (breakpoints.active('<=small') ? 0 : 50)
-				});
-
-			});
+		// The lightbox gallery used to be jquery.poptrox here; that plugin is no longer
+		// loaded and its selector (.work-item a.image) no longer matches the markup.
+		// assets/js/lightbox.js does the job now.
 
 })(jQuery);
