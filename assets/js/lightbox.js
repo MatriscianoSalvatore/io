@@ -2,6 +2,8 @@
 	Lightbox per le copertine delle pagine collezione (.cover-slot) e per le
 	foto della pagina MWC (.lb): clic per ingrandire, clic/Esc per chiudere,
 	frecce laterali o frecce della tastiera per scorrere avanti e indietro.
+	Sotto la foto ingrandita compare la sua didascalia (l'h3 accanto alla
+	miniatura, o in mancanza il testo alternativo dell'immagine).
 	Aggiunge anche l'overlay "View" al passaggio del mouse, lo stesso effetto
 	delle thumbnail del tema Strata (.image.thumb di main.css).
 */
@@ -14,7 +16,14 @@
     style.textContent =
       '.lightbox-overlay{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:28px;background:rgba(0,0,0,.88);cursor:zoom-out}' +
       '.lightbox-overlay.open{display:flex}' +
-      '.lightbox-overlay img{max-width:min(92vw,860px);max-height:92vh;display:block;box-shadow:0 12px 48px rgba(0,0,0,.7)}' +
+      /* immagine e didascalia impilate; la larghezza la detta il figure, cosi'
+         il gruppo resta dentro il padding dell'overlay anche su schermo stretto */
+      '.lightbox-figure{margin:0;min-width:0;max-width:min(100%,860px);display:flex;flex-direction:column;' +
+        'align-items:center;gap:14px}' +
+      '.lightbox-overlay img{max-width:100%;max-height:calc(92vh - 54px);display:block;box-shadow:0 12px 48px rgba(0,0,0,.7)}' +
+      '.lightbox-caption{max-width:100%;color:rgba(255,255,255,.88);font-size:15px;line-height:1.4;' +
+        'text-align:center;text-shadow:0 1px 3px rgba(0,0,0,.7)}' +
+      '.lightbox-caption:empty{display:none}' +
       '.cover-slot img,.lb,.lb img{cursor:zoom-in}' +
       /* the .image.thumb overlay and its "View" pill sit on top of the photo:
          let the pointer through, or they eat both the cursor and the click */
@@ -31,25 +40,34 @@
       /* frecce avanti/indietro */
       '.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:2;display:flex;' +
         'align-items:center;justify-content:center;width:54px;height:54px;padding:0;margin:0;border:0;' +
-        'border-radius:50%;background:rgba(255,255,255,.10);color:#fff;cursor:pointer;-webkit-appearance:none;' +
-        'transition:background .2s ease-in-out}' +
-      '.lightbox-nav:hover{background:rgba(255,255,255,.24)}' +
+        /* disco scuro con un filo di bordo chiaro: si legge sia sul fondo nero
+           dell'overlay sia sopra la foto, dove finisce su schermo stretto */
+        'border-radius:50%;background:rgba(18,18,18,.5);box-shadow:inset 0 0 0 1px rgba(255,255,255,.25);' +
+        'color:#fff;cursor:pointer;-webkit-appearance:none;transition:background .2s ease-in-out}' +
+      '.lightbox-nav:hover{background:rgba(18,18,18,.78)}' +
       '.lightbox-nav:focus-visible{outline:solid 2px rgba(255,255,255,.85);outline-offset:3px}' +
       '.lightbox-prev{left:18px}' +
       '.lightbox-next{right:18px}' +
       /* con una sola immagine nel gruppo non c'e' niente da scorrere */
       '.lightbox-overlay.single .lightbox-nav{display:none}' +
-      '@media screen and (max-width:736px){.lightbox-nav{width:42px;height:42px}' +
-        '.lightbox-prev{left:4px}.lightbox-next{right:4px}}';
+      '@media screen and (max-width:736px){.lightbox-overlay{padding:20px 12px}' +
+        '.lightbox-figure{gap:10px}.lightbox-caption{font-size:14px}' +
+        '.lightbox-nav{width:42px;height:42px}.lightbox-prev{left:4px}.lightbox-next{right:4px}}';
     document.head.appendChild(style);
 
     var overlay = document.createElement('div');
     overlay.className = 'lightbox-overlay';
     overlay.setAttribute('role', 'dialog');
     overlay.setAttribute('aria-modal', 'true');
+    var figure = document.createElement('figure');
+    figure.className = 'lightbox-figure';
     var big = document.createElement('img');
     big.alt = '';
-    overlay.appendChild(big);
+    var caption = document.createElement('figcaption');
+    caption.className = 'lightbox-caption';
+    figure.appendChild(big);
+    figure.appendChild(caption);
+    overlay.appendChild(figure);
 
     function arrow(dir) {
       var b = document.createElement('button');
@@ -92,11 +110,50 @@
       return img.getAttribute('data-full') || img.src;
     }
 
+    // il testo di un elemento saltando le parti nascoste: nei titoli dei fumetti
+    // convivono la versione italiana e quella inglese (.lang-it/.lang-en), e una
+    // delle due e' sempre display:none
+    function visibleText(node) {
+      if (node.nodeType === 3) return node.nodeValue;
+      if (node.nodeType !== 1) return '';
+      if (getComputedStyle(node).display === 'none') return '';
+      var out = '';
+      for (var i = 0; i < node.childNodes.length; i++) out += visibleText(node.childNodes[i]);
+      return out;
+    }
+
+    function clean(s) {
+      return (s || '').replace(/\s+/g, ' ').trim();
+    }
+
+    // fumetti: vale il titolo del volume nel masthead dell'albo, mai l'alt della
+    // copertina, che ne e' solo la descrizione. Pagine foto: l'h3 accanto alla
+    // miniatura, con l'alt come ultima risorsa
+    function captionFor(img) {
+      if (img.closest('.cover-slot')) {
+        var albo = img.closest('.albo');
+        var h2 = albo && albo.querySelector('.masthead h2');
+        return h2 ? clean(visibleText(h2)) : '';
+      }
+      var box = img.closest('.lb') || img;
+      var next = box.nextElementSibling;
+      var h = next && /^H[1-6]$/.test(next.tagName) ? next : null;
+      if (!h) {
+        var item = img.closest('.work-item');
+        if (item) h = item.querySelector('h1,h2,h3,h4,h5,h6');
+      }
+      return clean(h ? visibleText(h) : img.alt);
+    }
+
     function show(i) {
       current = (i + group.length) % group.length;
       var img = group[current];
       big.src = fullSrc(img);
       big.alt = img.alt;
+      var text = captionFor(img);
+      caption.textContent = text;
+      if (text) overlay.setAttribute('aria-label', text);
+      else overlay.removeAttribute('aria-label');
       // la prossima e la precedente pronte in cache, cosi' il salto non lampeggia
       [group[(current + 1) % group.length], group[(current - 1 + group.length) % group.length]]
         .forEach(function (n) { if (n && n !== img) new Image().src = fullSrc(n); });
