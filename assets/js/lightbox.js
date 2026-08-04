@@ -17,8 +17,12 @@
       '.lightbox-overlay{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:28px;background:rgba(0,0,0,.88);cursor:zoom-out}' +
       '.lightbox-overlay.open{display:flex}' +
       /* immagine e didascalia impilate; la larghezza la detta il figure, cosi'
-         il gruppo resta dentro il padding dell'overlay anche su schermo stretto */
-      '.lightbox-figure{margin:0;min-width:0;max-width:min(100%,860px);display:flex;flex-direction:column;' +
+         il gruppo resta dentro il padding dell'overlay anche su schermo stretto.
+         Il tetto era 860px e teneva piccole le foto orizzontali: su un portatile
+         da 1512 di larghezza una 3:2 si fermava a 860x573 lasciando mezzo schermo
+         vuoto. Alzato a 1800 lascia decidere il max-height qui sotto, che e' il
+         vincolo giusto: la foto arriva a riempire l'altezza disponibile. */
+      '.lightbox-figure{margin:0;min-width:0;max-width:min(100%,1800px);display:flex;flex-direction:column;' +
         'align-items:center;gap:14px}' +
       '.lightbox-overlay img{max-width:100%;max-height:calc(92vh - 54px);display:block;box-shadow:0 12px 48px rgba(0,0,0,.7)}' +
       '.lightbox-caption{max-width:100%;color:rgba(255,255,255,.88);font-size:15px;line-height:1.4;' +
