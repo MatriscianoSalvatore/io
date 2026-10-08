@@ -1,12 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" width="1200" height="700" role="img" aria-label="AI Pantry">
-	<rect width="1200" height="700" fill="#1B5E20"/>
+	<defs>
+		<linearGradient id="brand" x1="0" y1="0" x2="1200" y2="700" gradientUnits="userSpaceOnUse">
+			<stop offset="0" stop-color="#0B7A4B"/>
+			<stop offset="0.55" stop-color="#14A37F"/>
+			<stop offset="1" stop-color="#0E9AA7"/>
+		</linearGradient>
+	</defs>
+	<rect width="1200" height="700" fill="url(#brand)"/>
 
-	<!-- Carrot (app launcher icon) -->
-	<g transform="translate(133 165) scale(5.5)">
-		<path fill="#FF8F3C" d="M22,20 C30,18 40,26 38,34 L20,52 C12,54 4,46 6,38 Z"/>
-		<path fill="#66BB6A" d="M30,14 C32,8 38,6 42,8 C40,12 36,16 32,18 Z"/>
-		<path fill="#43A047" d="M36,18 C42,14 48,16 50,20 C46,22 40,22 36,22 Z"/>
+	<!-- The steaming pot and the AI sparkle of the app launcher icon -->
+	<g transform="translate(-24 42) scale(6)">
+		<path fill="#FFFFFF" d="M33.5,48H74.5A2.5,2.5 0 0 1 77,50.5A2.5,2.5 0 0 1 74.5,53H33.5A2.5,2.5 0 0 1 31,50.5A2.5,2.5 0 0 1 33.5,48ZM35,55H73V67.5A9.5,9.5 0 0 1 63.5,77H44.5A9.5,9.5 0 0 1 35,67.5V55ZM31.5,57.5H33.5A2.5,2.5 0 0 1 36,60A2.5,2.5 0 0 1 33.5,62.5H31.5A2.5,2.5 0 0 1 29,60A2.5,2.5 0 0 1 31.5,57.5ZM74.5,57.5H76.5A2.5,2.5 0 0 1 79,60A2.5,2.5 0 0 1 76.5,62.5H74.5A2.5,2.5 0 0 1 72,60A2.5,2.5 0 0 1 74.5,57.5Z"/>
+		<path fill="none" stroke="#FFFFFF" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round" d="M41.5,43C39.4,40.55 39.4,38.45 41.5,36S43.6,31.45 41.5,29"/>
+		<path fill="none" stroke="#FFFFFF" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round" d="M52.5,43C50.4,40.1125 50.4,37.6375 52.5,34.75S54.6,29.3875 52.5,26.5"/>
+		<path fill="#FFB547" d="M64.5,25.8Q65.796,31.704 71.7,33Q65.796,34.296 64.5,40.2Q63.204,34.296 57.3,33Q63.204,31.704 64.5,25.8Z"/>
 	</g>
 
-	<text x="470" y="350" fill="#ffffff" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="120" font-weight="700" letter-spacing="-2" dominant-baseline="central">AI Pantry</text>
+	<text x="530" y="350" fill="#ffffff" font-family="Inter, Helvetica Neue, Helvetica, Arial, sans-serif" font-size="120" font-weight="700" letter-spacing="-2" dominant-baseline="central">AI Pantry</text>
 </svg>
