@@ -20,6 +20,7 @@
 		<meta name="keywords" content="Salvatore Matrisciano, AI Pantry, on-device AI, Gemini Nano, Gemma, MobileCLIP, EmbeddingGemma, LiteRT, LiteRT-LM, Android, Jetpack Compose, DevFest Milano 2026" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/modern.css" />
+		<link rel="stylesheet" href="assets/css/aipantry-fx.css" />
 		<script src="assets/js/theme-init.js"></script>
 	</head>
 	<body class="is-preload">
@@ -64,6 +65,13 @@
 
 						<ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>Gemini Nano</li><li>LiteRT</li><li>LiteRT-LM</li><li>Gemma</li><li>CameraX</li><li>Room</li><li>Koin</li></ul>
 
+						<div class="stat-strip fx-stats">
+							<div class="stat"><span class="stat-n" data-count="3">3</span><span class="stat-l">AI engines on the phone</span></div>
+							<div class="stat"><span class="stat-n" data-count="863">863</span><span class="stat-l">ingredients in a text file</span></div>
+							<div class="stat"><span class="stat-n" data-count="2.6" data-suffix=" GB">2.6 GB</span><span class="stat-l">model, as AI packs</span></div>
+							<div class="stat"><span class="stat-n">0</span><span class="stat-l">photos sent to a server</span></div>
+						</div>
+
 						<h2>The demo</h2>
 						<div class="video-feature">
 							<span class="mwc-video phone-video"><video src="videos/aipantry/ai-pantry-demo.mp4" poster="images/aipantry/video-demo-poster.jpg" controls preload="metadata" playsinline></video></span>
@@ -82,6 +90,11 @@
 							<li><strong>MobileCLIP-S2 zero-shot</strong>: recognition does not need a model that writes, but one that compares. Same phone, same photo: <strong>from minutes to seconds</strong>.</li>
 							<li><strong>Gemma is back</strong> for the only task that really needs an LLM: generating the recipes, text only.</li>
 						</ul>
+						<div class="fx" data-fx>
+							<div class="fx-head">Same phone, same photo of the fridge</div>
+							<div class="fx-row slow" style="--w:100%;--t:6s"><div class="fx-lab"><b>Gemma 4 E2B</b><small>an LLM that looks, then writes</small></div><div class="fx-track"><i></i></div><div class="fx-val">5–10 min</div></div>
+							<div class="fx-row" style="--w:3.5%;--t:.35s;--d:.5s"><div class="fx-lab"><b>MobileCLIP-S2</b><small>an encoder that compares</small></div><div class="fx-track"><i></i></div><div class="fx-val">~20 s</div></div>
+						</div>
 						<p>The lesson: before asking how to make a model faster, ask whether it is the right model.</p>
 						<div class="row">
 							<div class="col-6 col-12-xsmall">
@@ -107,6 +120,27 @@
 							<li><strong><a href="https://huggingface.co/litert-community/gemma-4-E2B-it-litert-lm">Gemma 4 E2B</a> (LiteRT-LM)</strong> — recipe generation on every other phone, the only genuinely generative task, and the safety net if Gemini Nano 4 fails.</li>
 						</ul>
 
+						<div class="fx" data-fx>
+							<div class="fx-head">Three engines, two interfaces, one app</div>
+							<svg viewBox="0 0 1120 470" role="img" aria-label="Architecture: three engines behind two interfaces">
+								<defs><path id="fxw1" d="M250,235 C285,235 285,120 320,120"/><path id="fxw2" d="M250,235 C285,235 285,350 320,350"/><path id="fxw3" d="M620,120 C680,120 680,72 740,72"/><path id="fxw4" d="M620,120 C680,120 680,212 740,212"/><path id="fxw5" d="M620,350 L740,370"/></defs>
+								<path class="fx-al" d="M250,235 C285,235 285,120 320,120"/><path class="fx-al" d="M250,235 C285,235 285,350 320,350"/>
+								<path class="fx-ad" d="M620,120 C680,120 680,72 740,72"/><path class="fx-al" d="M620,120 C680,120 680,212 740,212"/><path class="fx-al" d="M620,350 L740,370"/>
+								<rect class="fx-ab" x="20" y="165" width="230" height="140" rx="18"/><text class="fx-at" x="40" y="205">Jetpack Compose UI</text><text class="fx-as" x="40" y="232">one interface:</text><text class="fx-as" x="40" y="254">it never knows who answered</text><text class="fx-am" x="40" y="284">MVI · Koin · Room</text>
+								<rect class="fx-ab" x="320" y="55" width="300" height="130" rx="18"/><text class="fx-am" x="340" y="84">interface IngredientDetector</text><text class="fx-at" x="340" y="114">AdaptiveIngredientDetector</text><text class="fx-as" x="340" y="140">picks on every scan</text><text class="fx-as" x="340" y="162">Nano if present, else CLIP</text>
+								<rect class="fx-ab" x="320" y="285" width="300" height="130" rx="18"/><text class="fx-am" x="340" y="314">interface RecipeGenerator</text><text class="fx-at" x="340" y="344">LlmRecipeGenerator</text><text class="fx-as" x="340" y="370">two stages · streaming</text><text class="fx-as" x="340" y="392">defensive JSON · silent retries</text>
+								<rect class="fx-ab-g" x="740" y="20" width="360" height="104" rx="18"/><text class="fx-at" x="760" y="56">Gemini Nano · the accelerator</text><text class="fx-as" x="760" y="82">free detection on flagships</text><text class="fx-am" x="760" y="106">AICore · ML Kit GenAI</text>
+								<rect class="fx-ab-s" x="740" y="160" width="360" height="104" rx="18"/><text class="fx-at" x="760" y="196">MobileCLIP-S2 · the foundation</text><text class="fx-as" x="760" y="222">zero-shot in seconds, everywhere</text><text class="fx-am" x="760" y="246">LiteRT · ~140 MB</text>
+								<rect class="fx-ab-v" x="740" y="318" width="360" height="104" rx="18"/><text class="fx-at" x="760" y="354">Gemma 4 E2B · the creator</text><text class="fx-as" x="760" y="380">recipes: only an LLM can do it</text><text class="fx-am" x="760" y="404">LiteRT-LM · GPU → CPU</text>
+								<text class="fx-lbl" x="630" y="62">checkStatus()</text><text class="fx-lbl" x="630" y="238">OTHERWISE</text>
+								<circle r="5" class="fx-dot-g"><animateMotion dur="2s" repeatCount="indefinite"><mpath href="#fxw1"/></animateMotion></circle>
+								<circle r="5" class="fx-dot-v"><animateMotion dur="2.3s" begin=".7s" repeatCount="indefinite"><mpath href="#fxw2"/></animateMotion></circle>
+								<circle r="5" class="fx-dot-g"><animateMotion dur="1.6s" repeatCount="indefinite"><mpath href="#fxw3"/></animateMotion></circle>
+								<circle r="5" class="fx-dot-s"><animateMotion dur="1.6s" begin=".8s" repeatCount="indefinite"><mpath href="#fxw4"/></animateMotion></circle>
+								<circle r="5" class="fx-dot-v"><animateMotion dur="1.4s" begin=".4s" repeatCount="indefinite"><mpath href="#fxw5"/></animateMotion></circle>
+							</svg>
+						</div>
+
 						<h2>Demo flow</h2>
 						<ul>
 							<li><strong>Scan</strong> — photograph the fridge, then "Scan another" for the pantry; a photo from the gallery works too. While MobileCLIP works, the photo shows the areas it is looking at as a grid, coarse then fine, and every ingredient appears <strong>as soon as it is recognised</strong>. The results sheet shows <strong>which engine did the work</strong>.</li>
@@ -129,6 +163,25 @@
 
 						<h2>Ingredient recognition without a training set</h2>
 						<p>The <strong><a href="https://github.com/apple/ml-mobileclip">MobileCLIP-S2</a></strong> image encoder (~140 MB, LiteRT) embeds <strong>multi-scale crops</strong> of the photo — a grid at 50% and 33% of the short side, on a pool of interpreters running in parallel — and compares them by <strong>cosine similarity</strong> against the text embeddings of <strong>863 ingredients + 12 "distractor" labels</strong>, precomputed offline.</p>
+						<div class="fx" data-fx>
+							<div class="fx-head">Recognising is comparing</div>
+							<div class="fx-emb">
+								<svg viewBox="0 0 500 500" role="img" aria-label="Embedding space: the photo lands next to the right label">
+									<circle class="ring" cx="250" cy="250" r="200"/><path class="axis" d="M30,250H470M250,30V470"/>
+									<line class="tv best" x1="250" y1="250" x2="447" y2="215"/><text class="tl best" x="392" y="246">oranges</text>
+									<line class="tv" x1="250" y1="250" x2="350" y2="77"/><text class="tl" x="356" y="78">milk</text>
+									<line class="tv" x1="250" y1="250" x2="97" y2="121"/><text class="tl" x="40" y="112">eggs</text>
+									<line class="tv" x1="250" y1="250" x2="68" y2="333"/><text class="tl" x="40" y="360">bananas</text>
+									<line class="tv" x1="250" y1="250" x2="318" y2="438"/><text class="tl" x="300" y="470">~an empty shelf</text>
+									<g class="iv"><line x1="250" y1="250" x2="445" y2="200" stroke-linecap="round"/><text x="400" y="186" font-size="22">📷</text></g>
+									<text class="cos" text-anchor="end"><tspan x="470" y="298">highest cos θ</tspan><tspan x="470" y="321">→ oranges</tspan></text>
+								</svg>
+								<div>
+									<p>The photo crop and every label become vectors in the same 512-dimensional space, shown here in two. The crop's vector swings towards the label it matches best, and <strong>the highest cosine similarity wins</strong>.</p>
+									<p>No tokens are generated: it is a dot product, not a paragraph, so there is no decode loop to wait for and no JSON to parse.</p>
+								</div>
+							</div>
+						</div>
 						<p>The result is that the "classifier" is a <strong>text file</strong>: one label per line, with aliases, distractor labels that absorb the food-free crops, and the Italian name of every ingredient for phones set to Italian. <strong>Adding an ingredient means adding a line</strong> and re-running the script that recomputes the embeddings — no training, no dataset, no retraining cycle.</p>
 						<p>The same scan also runs on <strong><a href="https://huggingface.co/google/embeddinggemma-2">EmbeddingGemma 2</a></strong>, the open embedding model built on Gemma 4 that Google released in October 2026: it puts photos and words in the same space, understands over 100 languages and comes under Apache 2.0, while MobileCLIP's weights are for research only. It already recognises the demo's ingredients; for now, on a Pixel 7, it is slower than MobileCLIP.</p>
 
@@ -138,11 +191,26 @@
 							<li><strong>Play for On-device AI — for the Play Store release</strong>: 3 <em>fast-follow</em> AI packs of ~0.85 GB each (Play caps a pack at 1.5 GB), reassembled on first launch and then removed.</li>
 							<li><strong>Embedded in the APK — for testing</strong>: 3 chunks in the assets, since AGP does not package assets over 2 GB. A ~2.9 GB APK to hand out to testers, with zero action required from them.</li>
 						</ul>
+						<div class="fx" data-fx>
+							<div class="fx-head">Every model travels differently</div>
+							<div class="fx-sizes">
+								<div class="m"><div class="fx-box zero">AICore</div><b>Gemini Nano</b><div class="sz g">0 MB</div><small>it belongs to the system</small></div>
+								<div class="m"><div class="fx-box clip"></div><b>MobileCLIP-S2</b><div class="sz s">~140 MB</div><small>an asset in the APK</small></div>
+								<div class="m"><div class="gem fx-box"><span>AI pack 1</span><span>AI pack 2</span><span>AI pack 3</span></div><b>Gemma 4 E2B</b><div class="sz v">2.6 GB</div><small>3 fast-follow AI packs</small></div>
+							</div>
+						</div>
 						<p>After a few seconds of "Preparing Gemma 4 E2B…" on first launch, the app is <strong>ready and offline forever</strong>. On phones with Gemini Nano 4, Gemma isn't even loaded at startup: Nano writes the recipes on the phone's AI accelerator, and Gemma takes over only if Nano fails.</p>
 
 						<h2>GPU/CPU resilience</h2>
 						<p>The LiteRT-LM runtime is <strong>GPU-first</strong>, and a broken GPU shows up in two very different ways: a <strong>hang</strong> in a native call that cannot be interrupted, or an <strong>immediate exception</strong> on the first inference (for example when there is no OpenCL, where engine initialisation succeeds anyway). <code>LlmEngineHolder</code> catches both — a <strong>watchdog with a timeout</strong> on a detached job for the hangs, an exception catch for the rest — and marks the GPU as broken <strong>persistently</strong> for that model, so the following launches go straight to multi-threaded CPU without paying for the attempt again. A <strong>micro-inference probe at warm-up</strong> triggers the fallback at startup, so the user's first generation never waits for it.</p>
 						<p>The weights LiteRT-LM lays out for the hardware — <strong>XNNPack caches for the CPU, ML Drift caches for the GPU</strong> — are written into the app's own folder and kept across launches: on a Pixel 7 the engine is ready in under 2 seconds on the CPU instead of ~13, and in about 4 on the GPU instead of ~47.</p>
+						<div class="fx" data-fx>
+							<div class="fx-head">Engine ready on a Pixel 7</div>
+							<div class="fx-row slow" style="--w:27.7%;--t:1.4s"><div class="fx-lab"><b>CPU</b><small>first launch</small></div><div class="fx-track"><i></i></div><div class="fx-val">~13 s</div></div>
+							<div class="fx-row" style="--w:4.2%;--t:.25s;--d:1.7s"><div class="fx-lab"><b>CPU</b><small>XNNPack cache kept</small></div><div class="fx-track"><i></i></div><div class="fx-val">&lt; 2 s</div></div>
+							<div class="fx-row slow" style="--w:100%;--t:5s;--d:.4s"><div class="fx-lab"><b>GPU</b><small>first launch</small></div><div class="fx-track"><i></i></div><div class="fx-val">~47 s</div></div>
+							<div class="fx-row" style="--w:8.5%;--t:.45s;--d:5.6s"><div class="fx-lab"><b>GPU</b><small>ML Drift cache kept</small></div><div class="fx-track"><i></i></div><div class="fx-val">~4 s</div></div>
+						</div>
 
 						<h2>Stack</h2>
 						<p>Kotlin 2.4 · Jetpack Compose (Material 3) · CameraX · ML Kit GenAI Prompt API (Gemini Nano / AICore) · LiteRT (MobileCLIP-S2) · LiteRT-LM (Gemma 4 E2B, EmbeddingGemma 2) · Play AI Delivery · Room · Koin · Navigation Compose · kotlinx-serialization</p>
@@ -197,5 +265,6 @@
 		<script src="assets/js/modern.js"></script>
 		<script src="assets/js/lightbox.js"></script>
 		<script src="assets/js/video-play.js"></script>
+		<script src="assets/js/aipantry-fx.js"></script>
 	</body>
 </html>

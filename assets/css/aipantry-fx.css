@@ -1,0 +1,309 @@
+/*
+	AI Pantry page: small animated diagrams, in the spirit of the AI On-Device
+	presentation. Everything waits for .play (set by aipantry-fx.js when the
+	element scrolls into view) and stays still for reduced motion.
+*/
+
+.fx {
+	--fx-ink: #555;
+	--fx-strong: #3c3b3b;
+	--fx-muted: #8a9198;
+	--fx-line: rgba(0, 0, 0, 0.11);
+	--fx-line2: rgba(0, 0, 0, 0.2);
+	--fx-card: #ffffff;
+	--fx-box: #f7f9f8;
+	--fx-g: #49bf9d;
+	--fx-s: #3b8fd9;
+	--fx-v: #8b5cf6;
+	--fx-r: #e0566b;
+	--fx-a: #e3a23b;
+	--fx-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+	position: relative;
+	margin: 0.4em 0 2em 0;
+	padding: 1.2em 1.4em;
+	border: 1px solid var(--fx-line);
+	border-radius: 14px;
+	background: var(--fx-card);
+	box-shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.25);
+	color: var(--fx-ink);
+}
+
+html.theme-dark .fx {
+	--fx-ink: var(--text);
+	--fx-strong: var(--text-strong);
+	--fx-muted: var(--muted);
+	--fx-line: var(--card-border);
+	--fx-line2: rgba(255, 255, 255, 0.18);
+	--fx-card: var(--card);
+	--fx-box: rgba(255, 255, 255, 0.04);
+	--fx-g: #2dd4a7;
+	--fx-s: #4aa8ff;
+	--fx-v: #a98bff;
+	--fx-r: #ff7a8a;
+	--fx-a: #fbbf24;
+	box-shadow: 0 12px 32px -16px rgba(0, 0, 0, 0.7);
+}
+
+.fx-head {
+	font-size: 0.72em;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	color: var(--fx-g);
+	margin-bottom: 1em;
+}
+
+.fx-note {
+	margin: 0.9em 0 0 0;
+	font-size: 0.85em;
+	color: var(--fx-muted);
+}
+
+.fx svg {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+/* --- key numbers: counted up when they appear -------------------------- */
+.fx-stats { margin-top: 0.4em; }
+
+/* --- bars: minutes vs seconds, cold vs warm ------------------------------ */
+.fx-row {
+	display: grid;
+	grid-template-columns: minmax(9em, 0.38fr) 1fr auto;
+	gap: 0.9em;
+	align-items: center;
+	margin: 0.7em 0;
+}
+
+.fx-lab b {
+	display: block;
+	color: var(--fx-strong);
+	font-size: 0.95em;
+}
+
+.fx-lab small {
+	display: block;
+	color: var(--fx-muted);
+	font-size: 0.78em;
+	line-height: 1.3;
+}
+
+.fx-track {
+	height: 14px;
+	border-radius: 8px;
+	background: var(--fx-line);
+	overflow: hidden;
+}
+
+.fx-track i {
+	display: block;
+	height: 100%;
+	width: 0;
+	border-radius: 8px;
+	background: linear-gradient(90deg, var(--fx-g), var(--fx-s));
+}
+
+.fx-row.slow .fx-track i { background: linear-gradient(90deg, var(--fx-a), var(--fx-r)); }
+
+.fx-val {
+	font-family: var(--fx-mono);
+	font-weight: 700;
+	font-size: 0.95em;
+	white-space: nowrap;
+	color: var(--fx-g);
+}
+
+.fx-row.slow .fx-val { color: var(--fx-r); }
+
+/* each bar fills to --w in a time proportional to the seconds it stands for */
+.fx.play .fx-track i {
+	width: var(--w);
+	transition: width var(--t, 1s) linear var(--d, 0.2s);
+}
+
+/* --- the architecture and the embedding space --------------------------- */
+.fx-ab { fill: var(--fx-box); stroke: var(--fx-line2); stroke-width: 1.4; }
+.fx-ab-g { fill: color-mix(in srgb, var(--fx-g) 12%, var(--fx-card)); stroke: color-mix(in srgb, var(--fx-g) 60%, transparent); stroke-width: 1.6; }
+.fx-ab-s { fill: color-mix(in srgb, var(--fx-s) 12%, var(--fx-card)); stroke: color-mix(in srgb, var(--fx-s) 60%, transparent); stroke-width: 1.6; }
+.fx-ab-v { fill: color-mix(in srgb, var(--fx-v) 12%, var(--fx-card)); stroke: color-mix(in srgb, var(--fx-v) 60%, transparent); stroke-width: 1.6; }
+.fx-at { fill: var(--fx-strong); font-size: 19px; font-weight: 700; }
+.fx-as { fill: var(--fx-muted); font-size: 14px; }
+.fx-am { fill: var(--fx-muted); font: 600 12.5px var(--fx-mono); }
+.fx-lbl { fill: var(--fx-muted); font: 700 11px var(--fx-mono); letter-spacing: 0.05em; }
+.fx-al { fill: none; stroke: var(--fx-line2); stroke-width: 1.8; }
+.fx-ad { fill: none; stroke: var(--fx-g); stroke-width: 1.8; stroke-dasharray: 6 6; }
+.fx.play .fx-ad { animation: fx-dash 1.4s linear infinite; }
+@keyframes fx-dash { to { stroke-dashoffset: -24; } }
+.fx-dot-g { fill: var(--fx-g); }
+.fx-dot-s { fill: var(--fx-s); }
+.fx-dot-v { fill: var(--fx-v); }
+
+.fx-emb {
+	display: grid;
+	grid-template-columns: minmax(0, 360px) 1fr;
+	gap: 1.4em;
+	align-items: center;
+}
+
+.fx-emb .ring { fill: none; stroke: var(--fx-line2); stroke-dasharray: 4 6; }
+.fx-emb .axis { fill: none; stroke: var(--fx-line); }
+.fx-emb .tv { stroke: var(--fx-muted); stroke-width: 2; }
+.fx-emb .tv.best { stroke: var(--fx-g); stroke-width: 3; }
+.fx-emb .tl { fill: var(--fx-muted); font: 600 15px var(--fx-mono); }
+.fx-emb .tl.best { fill: var(--fx-g); }
+.fx-emb .iv { stroke: var(--fx-s); stroke-width: 4; transform-origin: 250px 250px; transform: rotate(-70deg); transition: transform 2.4s cubic-bezier(0.4, 0, 0.2, 1) 0.3s; }
+.fx.play .fx-emb .iv { transform: rotate(0deg); }
+.fx-emb .cos { fill: var(--fx-g); font: 700 17px var(--fx-mono); opacity: 0; transition: opacity 0.6s 2.5s; }
+.fx.play .fx-emb .cos { opacity: 1; }
+.fx-emb p { margin: 0 0 0.7em 0; font-size: 0.92em; }
+
+/* --- model sizes and the three AI packs ---------------------------------- */
+.fx-sizes {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: 1em;
+	align-items: end;
+	text-align: center;
+}
+
+.fx-sizes .m {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.45em;
+}
+
+.fx-sizes .fx-box { display: grid; place-items: center; border-radius: 9px; transform: scale(0.4); transition: transform 0.9s cubic-bezier(0.5, 1.6, 0.4, 1) 0.2s; }
+.fx.play .fx-sizes .fx-box { transform: none; }
+.fx-sizes .zero { width: 78px; height: 78px; border: 2px dashed var(--fx-line2); color: var(--fx-muted); font: 700 12px var(--fx-mono); }
+.fx-sizes .clip { width: 30px; height: 30px; background: linear-gradient(135deg, var(--fx-s), var(--fx-g)); }
+.fx-sizes .gem { width: 132px; height: 132px; display: grid; grid-template-rows: repeat(3, 1fr); place-items: stretch; gap: 4px; transform: none; }
+.fx-sizes .gem span { display: grid; place-items: center; border-radius: 7px; background: linear-gradient(135deg, var(--fx-v), #7c3aed); color: #fff; font: 700 11px var(--fx-mono); opacity: 0; transform: translateY(-40px); }
+.fx.play .fx-sizes .gem span { animation: fx-pack 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards; }
+.fx.play .fx-sizes .gem span:nth-child(2) { animation-delay: 0.35s; }
+.fx.play .fx-sizes .gem span:nth-child(3) { animation-delay: 0.7s; }
+@keyframes fx-pack { to { opacity: 1; transform: none; } }
+.fx-sizes b { color: var(--fx-strong); font-size: 0.95em; }
+.fx-sizes .sz { font: 700 1.25em var(--fx-mono); }
+.fx-sizes .sz.g { color: var(--fx-g); }
+.fx-sizes .sz.s { color: var(--fx-s); }
+.fx-sizes .sz.v { color: var(--fx-v); }
+.fx-sizes small { color: var(--fx-muted); font-size: 0.78em; line-height: 1.35; }
+
+/* --- full screen: a button on every card, and the overlay it opens -------- */
+.fx[data-fx] { cursor: zoom-in; }
+.fx[data-fx] .fx-head { padding-right: 2.8em; }
+
+.fx-fs {
+	position: absolute;
+	top: 12px;
+	right: 12px;
+	z-index: 2;
+	width: 32px;
+	height: 32px;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	place-items: center;
+	border: 1px solid var(--fx-line);
+	border-radius: 8px;
+	background: var(--fx-box);
+	color: var(--fx-muted);
+	line-height: 0;
+	cursor: pointer;
+	transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.fx-fs:hover { color: #fff; background: var(--fx-g); border-color: var(--fx-g); transform: scale(1.06); }
+.fx-fs:focus-visible { outline: 2px solid var(--fx-g); outline-offset: 2px; }
+.fx-fs svg { width: 16px; height: 16px; }
+
+html.fx-lock,
+html.fx-lock body { overflow: hidden; }
+
+.fx-over {
+	position: fixed;
+	inset: 0;
+	z-index: 10010;
+	display: none;
+	background: rgba(0, 0, 0, 0.88);
+	cursor: zoom-out;
+}
+
+.fx-over.open { display: block; }
+
+.fx-stage {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* the enlarged copy: laid out at column width, then scaled by aipantry-fx.js */
+.fx-over .fx {
+	flex: none;
+	margin: 0;
+	cursor: default;
+	box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6);
+}
+
+html.theme-dark .fx-over .fx { background: var(--bg-raise); }
+
+.fx-x,
+.fx-nav {
+	position: absolute;
+	z-index: 2;
+	width: 48px;
+	height: 48px;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 0;
+	border-radius: 50%;
+	background: rgba(18, 18, 18, 0.5);
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+	color: #fff;
+	line-height: 0;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+}
+
+.fx-x:hover,
+.fx-nav:hover { background: rgba(18, 18, 18, 0.78); }
+.fx-x:focus-visible,
+.fx-nav:focus-visible { outline: 2px solid rgba(255, 255, 255, 0.85); outline-offset: 3px; }
+.fx-x svg,
+.fx-nav svg { width: 24px; height: 24px; }
+.fx-x { top: 16px; right: 16px; }
+.fx-nav { top: 50%; transform: translateY(-50%); }
+.fx-prev { left: 18px; }
+.fx-next { right: 18px; }
+
+@media screen and (max-width: 736px) {
+	.fx { padding: 1em; }
+	.fx-x { top: 14px; right: 14px; width: 42px; height: 42px; }
+	.fx-nav { top: auto; bottom: 16px; transform: none; width: 42px; height: 42px; }
+	.fx-prev { left: calc(50% - 54px); }
+	.fx-next { right: calc(50% - 54px); }
+	.fx-row { grid-template-columns: 1fr auto; }
+	.fx-row .fx-track { grid-column: 1 / -1; grid-row: 2; }
+	.fx-emb { grid-template-columns: 1fr; }
+	.fx-emb svg { max-width: 300px; margin: 0 auto; }
+	.fx-sizes { gap: 0.5em; }
+	.fx-sizes .gem { width: 96px; height: 96px; }
+	.fx-sizes b { font-size: 0.8em; }
+	.fx-sizes .sz { font-size: 1.05em; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.fx .fx-track i { width: var(--w); transition: none; }
+	.fx-emb .iv { transform: none; transition: none; }
+	.fx-emb .cos, .fx-sizes .gem span { opacity: 1; transform: none; animation: none; }
+	.fx-sizes .fx-box { transform: none; transition: none; }
+	.fx-ad { animation: none; }
+}
