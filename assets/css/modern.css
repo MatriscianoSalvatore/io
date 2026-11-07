@@ -876,6 +876,43 @@ html.theme-dark .hz-timeline .hz-note { color: var(--muted); }
 .mwc-video video:-webkit-full-screen { object-fit: contain; }
 .mwc-video video:-moz-full-screen { object-fit: contain; }
 
+/* A callout with its media on the right (bio, DevFest): the accent bar moves to the right too */
+.about-callout.media-right {
+	border-left: 0;
+	border-right: 4px solid #49bf9d;
+	border-radius: 8px 0 0 8px;
+}
+html.theme-dark .about-callout.media-right { border-right-color: #2dd4a7; }
+
+/* A small clip in a callout (bio): at 150px the browser tucks its own full-screen
+   button into the ⋮ menu, so the clip gets a visible one in the corner. */
+.callout-video { position: relative; }
+.callout-video video { aspect-ratio: 9 / 16; object-fit: cover; background: #10141c; }
+.callout-video video:fullscreen { object-fit: contain; }
+.callout-video video:-webkit-full-screen { object-fit: contain; }
+.callout-video .video-fs {
+	position: absolute;
+	top: 6px;
+	right: 6px;
+	width: 30px;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+	display: grid;
+	place-items: center;
+	border: 0;
+	border-radius: 8px;
+	background: rgba(16, 20, 28, 0.4);
+	-webkit-backdrop-filter: blur(4px);
+	backdrop-filter: blur(4px);
+	color: #fff;
+	line-height: 0;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+.callout-video .video-fs:hover { background: #49bf9d; transform: scale(1.06); }
+.callout-video .video-fs svg { width: 16px; height: 16px; }
+
 /* DevFest: the card that opens the talk's own page (both themes) */
 .talk-card {
 	display: grid;

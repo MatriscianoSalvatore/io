@@ -13,7 +13,27 @@
 (function () {
 	var CONTROLS_STRIP = 46; // px
 
+	/*
+		Video piccoli (il riquadro nella bio): a quella larghezza il browser
+		nasconde il suo tasto schermo intero nel menu ⋮, quindi un tasto visibile
+		apre il video a schermo intero e lo avvia. iPhone usa webkitEnterFullscreen.
+	*/
+	function fullscreenButtons() {
+		document.querySelectorAll('.video-fs').forEach(function (b) {
+			b.addEventListener('click', function () {
+				var v = b.parentNode.querySelector('video');
+				if (!v) return;
+				if (v.requestFullscreen) v.requestFullscreen().catch(function () {});
+				else if (v.webkitRequestFullscreen) v.webkitRequestFullscreen();
+				else if (v.webkitEnterFullscreen) v.webkitEnterFullscreen();
+				var p = v.play();
+				if (p && p.catch) p.catch(function () {});
+			});
+		});
+	}
+
 	function init() {
+		fullscreenButtons();
 		var videos = document.querySelectorAll('.mwc-video video');
 		if (!videos.length) return;
 
