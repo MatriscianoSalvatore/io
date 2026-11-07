@@ -1791,6 +1791,16 @@ html.theme-dark .wide-video {
 	margin-bottom: 0;
 }
 
+/* A screen recording is taller than 9:16, and cropping it would cut off the
+   status bar and the bottom of the app: show all of it. */
+.mwc-video.phone-video {
+	aspect-ratio: 9 / 20;
+}
+
+.mwc-video.phone-video video {
+	object-fit: contain;
+}
+
 @media screen and (max-width: 736px) {
 	.video-feature {
 		grid-template-columns: minmax(0, 1fr);

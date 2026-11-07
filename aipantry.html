@@ -58,14 +58,24 @@
 							<h2>AI Pantry - Cook from Your Fridge</h2>
 						</header>
 
-						<p><strong>AI Pantry</strong> is an <strong>Android</strong> app with a <strong>fully on-device AI pipeline</strong>, and the demo of <strong>AI On-Device</strong>, my <strong>DevFest Milano 2026</strong> talk with Stefano Soriano: you photograph your fridge and your pantry, the app recognises the ingredients and generates recipes that use <strong>only what you already have</strong>. Three AI engines cooperate, each on the job it was built for.</p>
+						<p><strong>AI Pantry</strong> is an <strong>Android</strong> app with a <strong>fully on-device AI pipeline</strong>, and the demo of <strong>AI On-Device</strong>, my <strong><a href="df26">DevFest Milano 2026</a></strong> talk with Stefano Soriano: you photograph your fridge and your pantry, the app recognises the ingredients and generates recipes that use <strong>only what you already have</strong>. Three AI engines cooperate, each on the job it was built for.</p>
 
 						<p><strong>Inference is 100% on-device: photos and prompts never leave the phone.</strong> The app's own code makes no network calls — the only INTERNET permission in the merged manifest comes from ML Kit's telemetry library, which sends usage metrics, not photos or prompts. The models arrive through the install channel — Google Play AI packs for the Play Store release, or embedded in the APK for testing — and never through an in-app download.</p>
 
 						<ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>Gemini Nano</li><li>LiteRT</li><li>LiteRT-LM</li><li>Gemma</li><li>CameraX</li><li>Room</li><li>Koin</li></ul>
 
+						<h2>The demo</h2>
+						<div class="video-feature">
+							<span class="mwc-video phone-video"><video src="videos/aipantry/ai-pantry-demo.mp4" poster="images/aipantry/video-demo-poster.jpg" controls preload="metadata" playsinline></video></span>
+							<div class="video-feature-text">
+								<h3>From the fridge to a recipe, on the phone</h3>
+								<p>The whole flow in three and a half minutes, recorded on the phone with the app in Italian. The fridge first: MobileCLIP goes over the photo zone by zone, 43 of them, and every ingredient appears on the photo as soon as it is recognised. Then the pantry, the same way.</p>
+								<p>With 27 ingredients in the inventory, <strong>What can I cook?</strong> writes four recipes one after the other, and opening one — pasta with tomato and mozzarella, a mushroom risotto — writes its quantities and its steps on the spot, with Gemma 4 E2B running on LiteRT-LM. Nothing in the video leaves the phone.</p>
+							</div>
+						</div>
+
 						<h2>The talk</h2>
-						<p><strong>AI On-Device — Cooking from your fridge with Gemini Nano, MobileCLIP and Gemma</strong> follows the path that led to this architecture. The slides, in Italian and English with speaker notes, are in the <a href="https://github.com/MatriscianoSalvatore/ai-pantry">GitHub repo</a>, next to the code.</p>
+						<p><strong>AI On-Device — Cooking from your fridge with Gemini Nano, MobileCLIP and Gemma</strong> follows the path that led to this architecture. Stefano Soriano and I gave it at <strong><a href="df26">DevFest Milano 2026</a></strong>, on Saturday 10 October at the Randstad Box, 11:30 in the Coworking track: the photos and a clip from the talk are on <a href="df26">the DevFest page</a>. The slides, in Italian and English with speaker notes, are in the <a href="https://github.com/MatriscianoSalvatore/ai-pantry">GitHub repo</a>, next to the code, and the whole talk has <a href="ai-on-device">its own page</a> too: every slide with our speaker notes, to read as a document or play as a presentation, in Italian or English, with the demo and all the photos.</p>
 						<ul>
 							<li><strong>Gemini Nano</strong> was the obvious choice, but it runs only on recent flagships: an upgrade, never the base.</li>
 							<li><strong>Gemma 4 E2B doing everything</strong>, detection and recipes, worked, but a single scan took <strong>5-10 minutes</strong> on a Pixel 7: the multimodal prefill and the token-by-token decode cost too much on a phone.</li>
@@ -73,6 +83,22 @@
 							<li><strong>Gemma is back</strong> for the only task that really needs an LLM: generating the recipes, text only.</li>
 						</ul>
 						<p>The lesson: before asking how to make a model faster, ask whether it is the right model.</p>
+						<div class="row">
+							<div class="col-6 col-12-xsmall">
+								<article class="work-item">
+									<span class="image fit thumb lb"><img src="images/ai-on-device/photos/00.jpg" alt="The AI On-Device title slide on the screen at DevFest Milano 2026, the room full in front of it" loading="lazy" /></span>
+									<h3>The title slide, just before we started</h3>
+								</article>
+								<article class="work-item">
+									<span class="image fit thumb lb"><img src="images/df26/talk-slide-what-happens.jpg" alt="The slide asking what happens when you run all of your app's AI directly on the phone, with Salvatore Matrisciano speaking" loading="lazy" /></span>
+									<h3>The opening question: what if all of the AI ran on the phone?</h3>
+								</article>
+							</div>
+							<article class="col-6 col-12-xsmall work-item">
+								<span class="mwc-video"><video src="videos/df26/ai-on-device-talk-salvatore.mp4" poster="images/df26/video-talk-salvatore-poster.jpg" controls preload="metadata" playsinline></video></span>
+								<h3>Me, a couple of minutes in</h3>
+							</article>
+						</div>
 
 						<h2>The three AI engines</h2>
 						<ul>
@@ -123,6 +149,17 @@
 
 						<p>AI Pantry is my playground for <strong>on-device generative AI on Android</strong>: model delivery at the gigabyte scale, runtime engine selection, hardware fallbacks, and a privacy guarantee built into the architecture: nothing the user photographs or asks ever leaves the phone.</p>
 
+						<div class="talk-card">
+							<a class="talk-card-cover" href="ai-on-device"><img src="images/ai-on-device/cover.jpg" alt="The cover of the AI On-Device talk page: the AI Pantry icon, the title and Cooking from your fridge with Gemini Nano, MobileCLIP and Gemma" loading="lazy" /></a>
+							<div class="talk-card-body">
+								<span class="talk-card-kicker">The whole talk, on its own page</span>
+								<h3><a href="ai-on-device">AI On-Device, slide by slide</a></h3>
+								<p>All the slides with our speaker notes, the real screens of the app, the demo recording and every photo from the room — to read as a document or to play as a presentation, in Italian or English.</p>
+								<ul class="talk-card-facts"><li><b>29</b> slides</li><li>speaker notes</li><li>demo recording</li><li><b>22</b> photos</li></ul>
+								<ul class="actions"><li><a href="ai-on-device" class="button primary small">Read it</a></li><li><a href="ai-on-device#slide-1" class="button small">Present it</a></li></ul>
+							</div>
+						</div>
+
 						<p><i>July - October 2026</i>.</p>
 
 					</section>
@@ -158,5 +195,7 @@
 			<script src="assets/js/main.js"></script>
 
 		<script src="assets/js/modern.js"></script>
+		<script src="assets/js/lightbox.js"></script>
+		<script src="assets/js/video-play.js"></script>
 	</body>
 </html>
