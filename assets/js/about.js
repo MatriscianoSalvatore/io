@@ -303,9 +303,6 @@
 		} catch (err) { return null; }
 		root.classList.add('gl');
 		renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-		// WebGL dithers by default. On iPhone that noise lands on the nearly transparent pixels of the glow,
-		// where colour ends up brighter than its own alpha, and the page shows them as green and blue specks.
-		(function () { const g = renderer.getContext(); g.disable(g.DITHER); })();
 		renderer.setClearColor(0x000000, 0);
 
 		const FOV = 30, DIST = 9, VIEW_H = 2 * DIST * Math.tan(FOV * Math.PI / 360);
@@ -346,6 +343,22 @@
 			return tex;
 		}
 		function canvasOf(w, h) { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; }
+		// White with a soft alpha, computed byte by byte and not painted as a canvas gradient: Safari on iPhone adds
+		// noise to canvas gradients, and on the way into WebGL that noise came out as blue, green and black specks.
+		// alphaAt(u, v) gets 0..1 from the left and from the top.
+		function softTex(w, h, alphaAt) {
+			const data = new Uint8Array(w * h * 4);
+			for (let y = 0; y < h; y++) for (let x = 0; x < w; x++) {
+				const i = (y * w + x) * 4;
+				data[i] = data[i + 1] = data[i + 2] = 255;
+				data[i + 3] = Math.round(255 * clamp(alphaAt((x + 0.5) / w, 1 - (y + 0.5) / h)));
+			}
+			const tex = new THREE.DataTexture(data, w, h, THREE.RGBAFormat);
+			tex.magFilter = tex.minFilter = THREE.LinearFilter; tex.needsUpdate = true;
+			return tex;
+		}
+		// alpha a0 at 0, a1 at t = mid, nothing at 1: the two-step fade both soft textures use
+		const fade = (t, a0, mid, a1) => t < mid ? a0 + (a1 - a0) * t / mid : a1 * (1 - (t - mid) / (1 - mid));
 
 		/* --- the phone display: one canvas, fed by the app screens --- */
 		const DW = 720, DH = 1560, DS = DW / UI.W;
@@ -612,13 +625,9 @@
 		const scr = new THREE.Mesh(flat(SCW, SCH, SCR), new THREE.MeshBasicMaterial({ map: dispTex }));
 		scr.position.z = 0.003; screenG.add(scr);
 
-		const sheenCv = canvasOf(64, 128);
-		(function () {
-			const x = sheenCv.getContext('2d'), g = x.createLinearGradient(0, 0, 64, 128);
-			g.addColorStop(0, 'rgba(255,255,255,0.18)'); g.addColorStop(0.38, 'rgba(255,255,255,0.02)'); g.addColorStop(1, 'rgba(255,255,255,0)');
-			x.fillStyle = g; x.fillRect(0, 0, 64, 128);
-		})();
-		const sheen = new THREE.Mesh(flat(SCW, SCH, SCR), new THREE.MeshBasicMaterial({ map: new THREE.CanvasTexture(sheenCv), transparent: true, depthWrite: false }));
+		// a diagonal reflection, strongest in the top left corner
+		const sheenTex = softTex(64, 128, (u, v) => fade(0.2 * u + 0.8 * v, 0.18, 0.38, 0.02));
+		const sheen = new THREE.Mesh(flat(SCW, SCH, SCR), new THREE.MeshBasicMaterial({ map: sheenTex, transparent: true, depthWrite: false }));
 		sheen.position.z = 0.006; sheen.renderOrder = 21; screenG.add(sheen);
 		const hole = new THREE.Mesh(new THREE.CircleGeometry(0.022, 24), new THREE.MeshBasicMaterial({ color: 0x05070d }));
 		hole.position.set(0, SCH / 2 - 0.075, 0.0075); hole.renderOrder = 22; screenG.add(hole);
@@ -634,13 +643,7 @@
 			return { mesh, cap, side, t: 0 };
 		});
 
-		const glowCv = canvasOf(128, 128);
-		(function () {
-			const x = glowCv.getContext('2d'), g = x.createRadialGradient(64, 64, 0, 64, 64, 64);
-			g.addColorStop(0, 'rgba(255,255,255,0.75)'); g.addColorStop(0.45, 'rgba(255,255,255,0.22)'); g.addColorStop(1, 'rgba(255,255,255,0)');
-			x.fillStyle = g; x.fillRect(0, 0, 128, 128);
-		})();
-		const glowTex = new THREE.CanvasTexture(glowCv);
+		const glowTex = softTex(128, 128, (u, v) => { const r = 2 * Math.hypot(u - 0.5, v - 0.5); return r < 1 ? fade(r, 0.75, 0.45, 0.22) : 0; });
 		const glow = new THREE.Sprite(new THREE.SpriteMaterial({ map: glowTex, color: 0x2dd4a7, transparent: true, opacity: 0.5, depthWrite: false }));
 		glow.scale.set(4.2, 4.2, 1); glow.position.z = -1.2; glow.renderOrder = -5;
 		rig.add(glow);
