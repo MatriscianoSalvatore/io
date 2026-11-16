@@ -1841,6 +1841,14 @@ html.theme-dark .story-note {
 	background: rgba(45, 212, 167, 0.08);
 }
 
+/* Images carry width and height so the browser knows their shape before they load (no jumps while
+   the page fills in). The attributes must not size them, though: with zero specificity this rule only
+   beats the attributes, so every image keeps the size the rest of the CSS already gives it. */
+:where(img[width][height]) {
+	width: auto;
+	height: auto;
+}
+
 /* Accessibility ---------------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {

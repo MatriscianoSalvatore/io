@@ -40,7 +40,7 @@
 			if (toIt) root.setAttribute('data-lang', 'it'); else root.removeAttribute('data-lang');
 			root.lang = toIt ? 'it' : 'en';
 			b.setAttribute('aria-checked', toIt ? 'true' : 'false');
-			try { localStorage.setItem('sm-lang', toIt ? 'it' : 'en'); } catch (err) {}
+			try { localStorage.setItem('sm-about-lang', toIt ? 'it' : 'en'); } catch (err) {}
 		});
 		document.body.appendChild(b);
 	})();
@@ -303,6 +303,9 @@
 		} catch (err) { return null; }
 		root.classList.add('gl');
 		renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+		// WebGL dithers by default. On iPhone that noise lands on the nearly transparent pixels of the glow,
+		// where colour ends up brighter than its own alpha, and the page shows them as green and blue specks.
+		(function () { const g = renderer.getContext(); g.disable(g.DITHER); })();
 		renderer.setClearColor(0x000000, 0);
 
 		const FOV = 30, DIST = 9, VIEW_H = 2 * DIST * Math.tan(FOV * Math.PI / 360);
@@ -877,11 +880,11 @@
 				spin.y -= spin.y * (1 - Math.exp(-dt * (3.2 + face * 7)));
 				spin.x -= spin.x * (1 - Math.exp(-dt * (4 + face * 7)));
 			}
-			// The phone faces you, dead straight and still, whenever it sits in its place showing a screen that
-			// can be used; it also does while you point at it or have just used it. A slot marked data-tilt
-			// (the opening one) keeps its angle until then.
-			// (the tech-stack phone too: it stands straight until it opens into its layers, and `calm` hands over to that view)
-			const usable = !!(cur && curE && curE.hots.length && !cur.hasAttribute('data-tilt'));
+			// The phone faces you, dead straight and still, whenever it sits in its place; it also does while
+			// you point at it or have just used it. It only tilts on the way from one place to the next.
+			// That goes for every screen, tappable or not, and for the tech-stack phone too: it stands straight
+			// until it opens into its layers, and `calm` hands over to that view.
+			const usable = !!(cur && curE);
 			// (the full turn it makes when the app changes does not undo this: it spins and lands straight)
 			const facing = down || (usable && tr >= 1) || now - lastOver < 900 || now - lastUse < 2800 ? 1 : 0;
 			face += (facing - face) * (1 - Math.exp(-dt * 10));
