@@ -1752,6 +1752,95 @@ html.theme-dark .bio-cta:focus {
 	100% { box-shadow: 0 10px 30px -10px rgba(45, 212, 167, 0.9), 0 0 0 0 rgba(45, 212, 167, 0); }
 }
 
+/* Links to the interactive story (about) ---------------------------------- */
+
+/* Home: the two calls to action side by side, the story first */
+.cta-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.9em 1em;
+	margin-top: 1.45em;
+}
+
+.cta-row .bio-cta {
+	margin-top: 0;
+}
+
+.bio-cta.bio-cta-ghost {
+	background: transparent;
+	color: #2f9b7d !important;
+	box-shadow: inset 0 0 0 2px #49bf9d;
+	animation: none;
+}
+
+.bio-cta.bio-cta-ghost:hover,
+.bio-cta.bio-cta-ghost:focus {
+	background: rgba(73, 191, 157, 0.12);
+	color: #2f9b7d !important;
+	box-shadow: inset 0 0 0 2px #49bf9d;
+}
+
+html.theme-dark .bio-cta.bio-cta-ghost {
+	background: transparent;
+	color: #7edcc0 !important;
+	box-shadow: inset 0 0 0 2px #2dd4a7;
+	animation: none;
+}
+
+html.theme-dark .bio-cta.bio-cta-ghost:hover,
+html.theme-dark .bio-cta.bio-cta-ghost:focus {
+	background: rgba(45, 212, 167, 0.12);
+	color: #7edcc0 !important;
+	box-shadow: inset 0 0 0 2px #2dd4a7;
+}
+
+/* Sticky bar: the story, pinned on the right next to the CV button */
+#bionav .story-btn {
+	flex: 0 0 auto;
+	color: #2f9b7d;
+	box-shadow: inset 0 0 0 1.5px #49bf9d;
+}
+
+#bionav .story-btn:hover {
+	background: rgba(73, 191, 157, 0.13);
+	color: #2f9b7d;
+}
+
+html.theme-dark #bionav .story-btn {
+	color: #7edcc0;
+	box-shadow: inset 0 0 0 1.5px #2dd4a7;
+}
+
+html.theme-dark #bionav .story-btn:hover {
+	background: rgba(45, 212, 167, 0.12);
+	color: #7edcc0;
+}
+
+/* Bio: the invitation to the interactive version, under the title */
+.story-note {
+	margin: 0 0 1.6em 0;
+	padding: 0.7em 1em;
+	border-left: 3px solid #49bf9d;
+	border-radius: 0 10px 10px 0;
+	background: rgba(73, 191, 157, 0.09);
+	font-size: 0.92em;
+}
+
+.story-note a {
+	font-weight: 700;
+	white-space: nowrap;
+}
+
+.story-note a::after {
+	content: ' \2192';
+}
+
+html.theme-dark .story-note {
+	border-left-color: #2dd4a7;
+	background: rgba(45, 212, 167, 0.08);
+}
+
 /* Accessibility ---------------------------------------------------------- */
 
 @media (prefers-reduced-motion: reduce) {
