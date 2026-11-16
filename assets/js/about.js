@@ -293,6 +293,7 @@
 	/* -------------------------------------------------------------- WebGL */
 
 	const gl = initGL();
+	if (!gl) root.classList.add('no-gl');
 
 	function initGL() {
 		if (!window.THREE || !UI) return null;

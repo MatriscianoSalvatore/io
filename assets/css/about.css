@@ -386,8 +386,11 @@ html.grabbing, html.grabbing body * { cursor: grabbing !important; -webkit-user-
 	border-radius: 30px;
 	border: 7px solid #111a2e;
 	box-shadow: 0 30px 80px -20px rgba(0, 0, 0, 0.7);
+	visibility: hidden;
 }
-html.gl .slot .fallback { visibility: hidden; }
+/* The pictures standing in for the 3D phone show only once the script finds there is no WebGL (or with no script
+   at all, see the noscript rule in the page), never while the page is still loading. */
+html.no-gl .slot .fallback { visibility: visible; }
 
 /* ----------------------------------------------------------------- hero */
 
