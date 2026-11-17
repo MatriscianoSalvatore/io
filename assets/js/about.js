@@ -15,6 +15,9 @@
 	const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 	const narrow = window.matchMedia('(max-width: 860px)');
 	const fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+	// Wheel scrolling is smoothed by the script on desktop; everywhere else the browser scrolls natively.
+	const smoothWheel = !!(window.Lenis && fine && !reduce);
+	if (!smoothWheel) root.classList.add('native-scroll');
 	const UI = window.AboutUI, CITIES = window.AboutCities;
 	const $ = (s, c) => (c || document).querySelector(s);
 	const $$ = (s, c) => Array.from((c || document).querySelectorAll(s));
@@ -683,6 +686,72 @@
 		const pose = { x: 0, y: 0, s: 0.001, rx: 0, ry: 0, rz: 0 };
 		let from = null, off = null, tr = 1, dur = 0.95, cur = null, started = false;
 		let e = 0, W = 0, H = 0;
+
+		/* --- where the canvas sits ---
+		   With native scrolling (touch) the browser moves the page on its own, a few frames ahead of what the script
+		   sees: a canvas pinned to the window showed the phone trailing behind the page and catching up in jerks.
+		   There the canvas is not moved by the script while you scroll. It is a sticky box inside a "rail" laid on
+		   the page, and the rail is shaped so that the browser itself moves the canvas exactly as it moves the
+		   phone's placeholder: along with the page where the placeholder scrolls, held in place where the
+		   placeholder is held (it is sticky too, or its section is pinned). The script only re-centres the canvas
+		   on the window from time to time, redrawing the phone at the matching spot, so nothing is seen to move.
+		   The canvas is taller than the window by PAD above and below, to cover what the script has not caught up
+		   with yet. With the smoothed wheel the script moves the page itself, and the canvas stays pinned to the
+		   window as it always was. */
+		const follows = !smoothWheel, PADF = follows ? 0.25 : 0;
+		let HC = 0, PAD = 0, cTop = 0, placed = '', viewKey = '';
+		let rail = null, held = null, miss = 0, pinned = false, seenEl = null, seenTop = 0, seenY = 0;
+		if (follows) {
+			rail = document.createElement('div'); rail.className = 'gl-rail';
+			canvas.parentNode.insertBefore(rail, canvas); rail.appendChild(canvas);
+			canvas.style.height = (100 + 200 * PADF) + 'vh';   // vh, not %: it must not change when a phone's toolbar hides
+		}
+		// A sticky placeholder is held in place while the page is between two positions: found by asking the layout
+		// where the placeholder sits with nothing holding it, and how far it can be pushed.
+		function heldRange(el, sy) {
+			const cs = getComputedStyle(el), st = parseFloat(cs.top);
+			if (cs.position !== 'sticky' || isNaN(st)) return null;
+			const keep = el.style.top;
+			el.style.top = '-99999px'; const first = el.getBoundingClientRect().top + sy;
+			el.style.top = '99999px'; const last = el.getBoundingClientRect().top + sy;
+			el.style.top = keep;
+			return { st, a: first - st, b: Math.max(first, last) - st };
+		}
+		function place(now) {
+			if (follows) {
+				// the page's position as the rectangles see it (on a phone window.scrollY can differ while its toolbar moves)
+				const sy = -root.getBoundingClientRect().top, docH = document.body.offsetHeight;
+				let a = 0, b = 0;   // the placeholder is held while the page is between a and b; a = b: it only scrolls
+				if (cur) {
+					const top = cur.getBoundingClientRect().top;
+					if (!held || held.el !== cur || held.docH !== docH || held.w !== W || (miss > 2 && now - held.at > 400)) {
+						held = { el: cur, docH, w: W, at: now, range: heldRange(cur, sy) };
+						miss = 0; pinned = false; seenEl = null;
+					}
+					if (held.range) {
+						a = held.range.a; b = held.range.b;
+						// not where the range says (something above changed height, a reveal is running): measure again soon
+						miss = Math.abs(top - (clamp(sy, a, b) + held.range.st - sy)) > 2 ? miss + 1 : 0;
+					} else {
+						// not sticky itself, but its section may be pinned: two frames tell
+						if (seenEl === cur && Math.abs(sy - seenY) > 0.5) pinned = Math.abs(top - seenTop) < Math.abs(sy - seenY) * 0.5;
+						seenEl = cur; seenTop = top; seenY = sy;
+						if (pinned) { a = -Infinity; b = Infinity; }
+					}
+				}
+				// The canvas goes PAD above the window now, and from there moves as the placeholder does.
+				const c = Math.round(sy - PAD - clamp(sy, a, b));
+				// never past the end of the page, or the canvas itself would make the page longer
+				const end = Math.round(Math.min(b + c, docH - HC)), top = Math.round(Math.min(a === -Infinity ? -PAD : a + c, end));
+				const key = top + ' ' + end + ' ' + c;
+				if (key !== placed) { placed = key; rail.style.top = top + 'px'; rail.style.height = (end - top + HC) + 'px'; canvas.style.top = c + 'px'; }
+				cTop = canvas.getBoundingClientRect().top;
+			}
+			// The camera keeps looking at the middle of the window, wherever the canvas is around it.
+			const vk = W + ' ' + H + ' ' + HC + ' ' + cTop;
+			if (vk !== viewKey) { viewKey = vk; camera.setViewOffset(W, H, 0, cTop, W, HC); }
+		}
+
 		const glowTo = new THREE.Color(0x2dd4a7);
 		const ptr = { x: 0, y: 0, tx: 0, ty: 0, cx: -1, cy: -1 };
 		const spin = { x: 0, y: 0 };
@@ -693,7 +762,7 @@
 		const ray = new THREE.Raycaster(), ndc = new THREE.Vector2();
 		function hit(cx, cy) {
 			if (!W || !cur) return null;
-			ndc.set(cx / W * 2 - 1, -(cy / H) * 2 + 1);
+			ndc.set(cx / W * 2 - 1, -((cy - cTop) / HC) * 2 + 1);
 			ray.setFromCamera(ndc, camera);
 			const s = e < 0.05 ? ray.intersectObject(scr, false)[0] : null;
 			if (s && s.uv) return { screen: true, x: s.uv.x * UI.W, y: (1 - s.uv.y) * UI.H };
@@ -748,11 +817,11 @@
 		}, true);
 
 		function resize() {
-			const w = canvas.clientWidth, h = canvas.clientHeight;
-			if (!w || !h || (w === W && h === H)) return;
-			W = w; H = h;
-			renderer.setSize(w, h, false);
-			camera.aspect = w / h; camera.updateProjectionMatrix();
+			const w = canvas.clientWidth, hc = canvas.clientHeight;
+			if (!w || !hc || (w === W && hc === HC)) return;
+			W = w; HC = hc; H = hc / (1 + 2 * PADF); PAD = H * PADF;   // H: the window; HC: the canvas, with its margins
+			renderer.setSize(w, hc, false);
+			placed = ''; viewKey = '';
 		}
 		function vis(el) {
 			const r = el.getBoundingClientRect();
@@ -798,6 +867,7 @@
 				}
 				if (reduce) tr = 1;
 			}
+			place(now);
 			const target = cur ? slotPose(cur) : off;
 			if (target) {
 				if (tr < 1) {
@@ -950,7 +1020,7 @@
 
 	// Smooth wheel scrolling on desktop; touch keeps the native scroll.
 	let lenis = null;
-	if (window.Lenis && fine && !reduce) {
+	if (smoothWheel) {
 		lenis = new Lenis({ lerp: 0.12 });
 		if (window.gsap && window.ScrollTrigger) {
 			lenis.on('scroll', ScrollTrigger.update);
@@ -1057,7 +1127,8 @@
 			peek.style.transform = 'translate3d(' + pk.x.toFixed(1) + 'px,' + pk.y.toFixed(1) + 'px,0) rotate(' + clamp((tx - pk.x) * 0.08, -8, 8).toFixed(2) + 'deg)';
 		}
 		if (reduce) return;
-		if (heroCopy && y < vh * 1.3) {
+		// With native scrolling the script runs behind the page and this drift came in jumps: there CSS does it (see .hero-copy).
+		if (heroCopy && smoothWheel && y < vh * 1.3) {
 			heroCopy.style.transform = 'translate3d(0,' + (y * -0.16).toFixed(1) + 'px,0)';
 			heroCopy.style.opacity = clamp(1 - y / (vh * 0.8)).toFixed(3);
 		}

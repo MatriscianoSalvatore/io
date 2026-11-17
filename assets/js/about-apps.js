@@ -1132,7 +1132,7 @@
 	apps.devfest = { start: 'video', order: ['video'], auto: false, screens: {
 		video(k) {
 			k.fill('#0b0d12');
-			k.img('images/about/devfest-poster.jpg', 0, 0, W, H, 0, { ph: '#0b0d12' });
+			k.img('images/about/devfest-poster.jpg?v=2', 0, 0, W, H, 0, { ph: '#0b0d12' });
 			k.hot(36, H - 152, W - 72, 78, { modal: 'devfest' });
 			return { live(q, env) {
 				const x = q.x, v = env.video;

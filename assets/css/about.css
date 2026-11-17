@@ -165,6 +165,9 @@ h1 em, h2 em, .tagline em {
 	display: none;
 }
 html.gl #gl { display: block; }
+/* Touch devices: the canvas is a sticky box inside a rail laid on the page (see "where the canvas sits" in about.js). */
+.gl-rail { position: absolute; left: 0; top: 0; width: 100%; z-index: 20; pointer-events: none; }
+.gl-rail #gl { position: sticky; inset: auto; top: 0; }
 
 .progress { position: fixed; inset: 0 0 auto 0; height: 2px; z-index: 40; }
 .progress i { display: block; height: 100%; background: var(--grad); transform-origin: left; transform: scaleX(0); }
@@ -406,6 +409,18 @@ html.no-gl .slot .fallback { visibility: visible; }
 	padding: 84px max(var(--gut), env(safe-area-inset-right, 0px)) 40px max(var(--gut), env(safe-area-inset-left, 0px));
 }
 .hero-copy { display: grid; gap: clamp(1rem, 2.4vh, 1.7rem); justify-items: start; min-width: 0; }
+/* The hero text drifts up a little faster than the page and fades. Where the browser scrolls natively (touch) the
+   script cannot keep up with the page, so the browser itself ties the effect to the scroll position, where it can. */
+@supports (animation-timeline: scroll()) {
+	@media (prefers-reduced-motion: no-preference) {
+		html.native-scroll .hero-copy { animation: hero-out linear both; animation-timeline: scroll(root block); animation-range: 0px 130vh; }
+	}
+}
+@keyframes hero-out {
+	0% { transform: translate3d(0, 0, 0); opacity: 1; }
+	61.5% { opacity: 0; }
+	100% { transform: translate3d(0, -20.8vh, 0); opacity: 0; }
+}
 .hero-copy > * { animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
 .hero-copy > :nth-child(2) { animation-delay: 0.08s; }
 .hero-copy > :nth-child(3) { animation-delay: 0.18s; }
