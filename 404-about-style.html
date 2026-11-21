@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<!-- Enforce HTTPS is unavailable on GitHub Pages for now: send http visitors to https -->
+	<script>if(location.protocol==="http:"&&location.hostname==="salvatorematrisciano.com")location.replace("https://salvatorematrisciano.com"+location.pathname+location.search+location.hash)</script>
+	<title>Page not found — Salvatore Matrisciano</title>
+	<meta name="description" content="This page doesn't exist. Head back to Salvatore Matrisciano's site.">
+	<meta name="robots" content="noindex">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/icon.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/icon.png">
+	<meta name="theme-color" content="#070b16">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Roboto+Flex:opsz,wdth,wght@8..144,75..125,300..900&display=swap">
+	<!-- GitHub Pages serves this page for any address that does not exist, at any depth: every link is root-absolute.
+	     It borrows the look of the About page (aurora, mark, type, buttons, footer) and adds its own phone below. -->
+	<link rel="stylesheet" href="/assets/css/about.css?v=4">
+	<style>
+		body { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; }
+		main { flex: 1; display: grid; }
+
+		.nf { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr); align-items: center; gap: 2rem; width: 100%; max-width: calc(var(--max) + 2 * var(--gut)); margin-inline: auto; padding: 100px max(var(--gut), env(safe-area-inset-right, 0px)) 56px max(var(--gut), env(safe-area-inset-left, 0px)); }
+		.nf .eyebrow { display: flex; align-items: center; gap: 0.7rem; }
+		.nf-dot { background: #ff5d73; box-shadow: 0 0 0 5px rgba(255, 93, 115, 0.18); animation: nf-blink 1.6s ease-in-out infinite; }
+		.nf .tagline { max-width: 26ch; }
+
+		/* The address that was asked for, as a request line */
+		.nf-path { display: inline-flex; flex-wrap: wrap; align-items: center; gap: 0.35rem 0.7rem; max-width: 100%; padding: 0.6rem 0.9rem; border: 1px solid var(--line); border-radius: 12px; background: rgba(13, 20, 37, 0.6); font: 500 0.8rem/1.4 var(--mono); letter-spacing: 0.02em; color: var(--muted); }
+		.nf-path b { min-width: 0; font-weight: 500; color: var(--strong); overflow-wrap: anywhere; }
+		.nf-path i { font-style: normal; color: #ff8fa0; }
+
+		/* The phone: the top layer of three, like the mark. It leans the way the About phone does. */
+		.nf-phone { position: relative; display: grid; place-items: center; min-height: clamp(380px, 64vh, 640px); perspective: 1300px; }
+		.nf-stack { position: relative; width: clamp(200px, 21vw, 270px); aspect-ratio: 9 / 19; transform-style: preserve-3d; transform: rotateX(calc(6deg + var(--ty, 0deg))) rotateY(calc(-22deg + var(--tx, 0deg))) rotateZ(3deg); animation: nf-float 6s ease-in-out infinite alternate; }
+		.nf-layer { position: absolute; inset: 0; border-radius: 13% / 6.2%; }
+		.nf-layer--1 { background: var(--violet); transform: translate3d(13%, 5.5%, -70px) rotate(7deg); opacity: 0.85; }
+		.nf-layer--2 { background: var(--blue); transform: translate3d(6.5%, 2.75%, -35px) rotate(3.5deg); opacity: 0.9; }
+		.nf-device { position: absolute; inset: 0; padding: 3.6%; border-radius: 13% / 6.2%; background: linear-gradient(150deg, #26324f, #0a101f); border: 1px solid rgba(255, 255, 255, 0.24); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 44px 90px -34px rgba(45, 212, 167, 0.5), 0 30px 60px -20px rgba(0, 0, 0, 0.75); }
+		.nf-screen { position: relative; height: 100%; display: flex; flex-direction: column; border-radius: 10.5% / 5%; overflow: hidden; container-type: inline-size; background: radial-gradient(120% 55% at 50% 0%, rgba(74, 168, 255, 0.2), transparent 62%), radial-gradient(90% 40% at 50% 100%, rgba(139, 92, 246, 0.18), transparent 70%), #070b16; }
+		.nf-screen::before { content: ""; position: absolute; top: 3.2cqw; left: 50%; width: 4.4cqw; height: 4.4cqw; translate: -50% 0; border-radius: 50%; background: #000; box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.14); }
+		.nf-status { display: flex; justify-content: space-between; align-items: center; padding: 3.4cqw 7cqw 0; font: 600 5cqw/1 var(--sans); color: var(--strong); }
+		.nf-signal { display: flex; align-items: flex-end; gap: 1.1cqw; height: 4.6cqw; }
+		.nf-signal i { width: 1.5cqw; border-radius: 1px; background: var(--strong); }
+		.nf-signal i:nth-child(1) { height: 35%; }
+		.nf-signal i:nth-child(2) { height: 60%; }
+		.nf-signal i:nth-child(3) { height: 85%; opacity: 0.35; }
+		.nf-signal i:nth-child(4) { height: 100%; opacity: 0.35; }
+		.nf-app { flex: 1; display: grid; align-content: center; justify-items: center; gap: 2.6cqw; padding: 0 7cqw; text-align: center; }
+		.nf-num { font: 850 34cqw/0.9 var(--sans); font-stretch: 118%; letter-spacing: -0.05em; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+		.nf-title { font: 650 7cqw/1.2 var(--sans); color: var(--strong); }
+		.nf-sub { max-width: 24ch; font: 400 5cqw/1.45 var(--sans); color: var(--muted); }
+		.nf-log { width: 100%; margin: 2cqw 0 0; padding: 4cqw 4.4cqw; border: 1px solid var(--line); border-radius: 5cqw; background: rgba(255, 255, 255, 0.04); font: 500 4.1cqw/1.7 var(--mono); text-align: left; color: var(--muted); white-space: pre-wrap; overflow-wrap: anywhere; }
+		.nf-log b { font-weight: 500; color: #ff8fa0; }
+		.nf-log u { text-decoration: none; color: var(--teal); }
+		.nf-back { margin-top: 2cqw; padding: 3.6cqw 7cqw; border-radius: 999px; background: var(--grad); font: 700 5cqw/1 var(--sans); color: #04121a; }
+		.nf-home { flex: none; width: 34%; height: 1.8cqw; margin: 0 auto 4cqw; border-radius: 99px; background: rgba(255, 255, 255, 0.5); }
+
+		@keyframes nf-float { from { translate: 0 -8px; } to { translate: 0 10px; } }
+		@keyframes nf-blink { 50% { opacity: 0.35; } }
+
+		@media (max-width: 860px) {
+			.nf { grid-template-columns: minmax(0, 1fr); gap: 1.4rem; padding-top: 92px; padding-bottom: 36px; }
+			.nf-phone { min-height: 0; padding: 18px 0 30px; }
+			.nf-stack { width: clamp(160px, 46vw, 210px); }
+		}
+		@media (prefers-reduced-motion: reduce) {
+			.nf-stack, .nf-dot { animation: none; }
+		}
+	</style>
+	<script>try{if(localStorage.getItem("sm-about-lang")==="it"){document.documentElement.setAttribute("data-lang","it");document.documentElement.lang="it";}}catch(e){}</script>
+</head>
+<body>
+
+	<div class="aurora" aria-hidden="true"></div>
+
+	<header class="nav">
+		<a class="mark" href="/" aria-label="Salvatore Matrisciano, home"><span class="logo" aria-hidden="true"><i></i><i></i><i></i><b>SM</b></span><span class="mark-name">Salvatore <strong>Matrisciano</strong></span></a>
+	</header>
+
+	<main>
+
+		<!-- Not found -->
+		<section class="nf" id="top">
+			<div class="hero-copy">
+				<p class="eyebrow"><span class="live nf-dot"></span><span class="lang-it">Errore 404 · Pagina non trovata</span><span class="lang-en">Error 404 · Page not found</span></p>
+				<h1 class="display lang-en"><span>Page</span><span>not found.</span></h1>
+				<h1 class="display lang-it"><span>Pagina</span><span>non trovata.</span></h1>
+				<p class="tagline">
+					<span class="lang-it">Costruisco app uno strato alla volta. <em>Questo qui non c'è.</em></span>
+					<span class="lang-en">I build apps one layer at a time. <em>This one isn't here.</em></span>
+				</p>
+				<p class="nf-path" aria-hidden="true">GET <b data-nf-url>/</b> <i>404</i></p>
+				<div class="cta">
+					<a class="btn primary" href="/"><span class="lang-it">Torna alla home</span><span class="lang-en">Back to home</span></a>
+					<a class="btn" href="/about"><span class="lang-it">La mia storia</span><span class="lang-en">My story</span></a>
+				</div>
+			</div>
+
+			<div class="nf-phone" aria-hidden="true">
+				<div class="nf-stack">
+					<span class="nf-layer nf-layer--1"></span>
+					<span class="nf-layer nf-layer--2"></span>
+					<div class="nf-device">
+						<div class="nf-screen">
+							<div class="nf-status"><span>4:04</span><span class="nf-signal"><i></i><i></i><i></i><i></i></span></div>
+							<div class="nf-app">
+								<p class="nf-num">404</p>
+								<p class="nf-title"><span class="lang-it">Schermata non trovata</span><span class="lang-en">Screen not found</span></p>
+								<p class="nf-sub"><span class="lang-it">Questo percorso non è nell'app.</span><span class="lang-en">This route isn't in the app.</span></p>
+								<pre class="nf-log"><b>E/Router</b> no route for
+<span data-nf-url>/</span>
+<u>I/Hint</u> try "/" or "/about"</pre>
+								<p class="nf-back"><span class="lang-it">Indietro</span><span class="lang-en">Go back</span></p>
+							</div>
+							<span class="nf-home"></span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="foot">
+		<span>© Salvatore Matrisciano</span>
+		<span><a href="/">Home</a><a href="/about"><span class="lang-it">Storia</span><span class="lang-en">Story</span></a><a href="/bio">Bio &amp; CV</a></span>
+	</footer>
+
+	<script>
+		(function () {
+			var root = document.documentElement;
+
+			// Language switch: the same control and the same saved choice as the About page.
+			var isEn = function () { return root.getAttribute('data-lang') !== 'it'; };
+			var b = document.createElement('button');
+			b.className = 'lang-toggle'; b.type = 'button';
+			b.setAttribute('role', 'switch'); b.setAttribute('aria-label', 'Italiano');
+			b.setAttribute('aria-checked', isEn() ? 'false' : 'true');
+			b.innerHTML = '<span class="lt lt-en" aria-hidden="true">EN</span><span class="lt lt-it" aria-hidden="true">IT</span><span class="lt-knob" aria-hidden="true"></span>';
+			b.addEventListener('click', function () {
+				var toIt = isEn();
+				if (toIt) root.setAttribute('data-lang', 'it'); else root.removeAttribute('data-lang');
+				root.lang = toIt ? 'it' : 'en';
+				b.setAttribute('aria-checked', toIt ? 'true' : 'false');
+				try { localStorage.setItem('sm-about-lang', toIt ? 'it' : 'en'); } catch (err) {}
+			});
+			document.body.appendChild(b);
+
+			// The address that was asked for, shown on the page and on the phone.
+			var path = location.pathname;
+			try { path = decodeURIComponent(path); } catch (err) {}
+			if (path.length > 40) path = path.slice(0, 38) + '…';
+			Array.prototype.forEach.call(document.querySelectorAll('[data-nf-url]'), function (el) { el.textContent = path; });
+
+			// With a mouse, the light in the background and the lean of the phone follow the pointer.
+			var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+			var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+			if (fine && !calm) {
+				window.addEventListener('pointermove', function (e) {
+					root.style.setProperty('--mx', e.clientX + 'px');
+					root.style.setProperty('--my', e.clientY + 'px');
+					root.style.setProperty('--tx', ((e.clientX / window.innerWidth - 0.5) * 12).toFixed(2) + 'deg');
+					root.style.setProperty('--ty', ((0.5 - e.clientY / window.innerHeight) * 9).toFixed(2) + 'deg');
+				}, { passive: true });
+			}
+		})();
+	</script>
+</body>
+</html>
